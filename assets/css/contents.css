@@ -19,7 +19,7 @@
     left: 0;
     width: 947px;
     height: 947px;
-    background: url("/cm/static/images/join_bg_left.svg") 0 0 no-repeat
+    background: url("https://www.work24.go.kr/cm/static/images/join_bg_left.svg") 0 0 no-repeat
 }
 
 .join_container_wrap:after {
@@ -27,7 +27,7 @@
     right: -280px;
     width: 800px;
     height: 800px;
-    background: url("/cm/static/images/join_bg_right.svg") 0 0 no-repeat
+    background: url("https://www.work24.go.kr/cm/static/images/join_bg_right.svg") 0 0 no-repeat
 }
 
 .join_container .box_form_login {
@@ -74,7 +74,7 @@
     top: 2px;
     width: 16px;
     height: 16px;
-    background: url("/cm/static/images/ico16_arrow_right.svg")
+    background: url("https://www.work24.go.kr/cm/static/images/ico16_arrow_right.svg")
 }
 
 .box_join_group .join_inner {
@@ -135,7 +135,7 @@
 .box_join_complete {
     max-width: 660px;
     margin: 26px auto 0;
-    background: url("/cm/static/images/join_complete_bg.svg") 0 0 no-repeat
+    background: url("https://www.work24.go.kr/cm/static/images/join_complete_bg.svg") 0 0 no-repeat
 }
 
 .box_join_complete .complete_hd {
@@ -156,11 +156,11 @@
     width: 80px;
     height: 80px;
     margin-left: -40px;
-    background: url("/cm/static/images/join_complete_img.svg")
+    background: url("https://www.work24.go.kr/cm/static/images/join_complete_img.svg")
 }
 
 .complete_hd.type2 > [class^='h']:before {
-    background: url("/cm/static/images/join_complete_img02.svg")
+    background: url("https://www.work24.go.kr/cm/static/images/join_complete_img02.svg")
 }
 
 .complete_hd .txt {
@@ -182,13 +182,13 @@
     width: 80px;
     height: 80px;
     margin-left: -40px;
-    background: url("/cm/static/images/ico24_ui_!_filled.svg");
+    background: url("https://www.work24.go.kr/cm/static/images/ico24_ui_!_filled.svg");
     background-repeat: no-repeat;
     background-size: contain;
 }
 
 .failed_hd.type2 > [class^='h']:before {
-    background: url("/cm/static/images/ico24_ui_!_filled.svg")
+    background: url("https://www.work24.go.kr/cm/static/images/ico24_ui_!_filled.svg")
 }
 
 .failed_hd .txt {
@@ -299,7 +299,7 @@
 }
 
 .box_join_complete.company .h1_sb:before {
-    background: url("/cm/static/images/join_complete_img02.svg")
+    background: url("https://www.work24.go.kr/cm/static/images/join_complete_img02.svg")
 }
 
 .box_join_group .box_progress.type2 {
@@ -469,7 +469,7 @@
 }
 
 .btn_ico.kakaobank:before {
-    background: #ffe400 url("/cm/static/images/logo24_bank_kakao.svg");
+    background: #ffe400 url("https://www.work24.go.kr/cm/static/images/logo24_bank_kakao.svg");
     border-radius: 50%;
 }
 
@@ -566,15 +566,15 @@
 }
 
 .list_tit.company:before {
-    background: url("/cm/static/images/ico24_home_center.svg")
+    background: url("https://www.work24.go.kr/cm/static/images/ico24_home_center.svg")
 }
 
 .list_tit.c_number:before {
-    background: url("/cm/static/images/ico24_lock.svg")
+    background: url("https://www.work24.go.kr/cm/static/images/ico24_lock.svg")
 }
 
 .list_tit.member02:before {
-    background: url("/cm/static/images/ico24_member_mypage.svg")
+    background: url("https://www.work24.go.kr/cm/static/images/ico24_member_mypage.svg")
 }
 
 .box_form_login .box_table_hd, .box_form_login .t1_sb {
@@ -1112,7 +1112,7 @@
     margin-left: -40px;
     width: 80px;
     height: 80px;
-    background: url("/cm/static/images/ico_secession.svg")
+    background: url("https://www.work24.go.kr/cm/static/images/ico_secession.svg")
 }
 
 .box_secession_wrap .box_message_wrap {
@@ -1587,139 +1587,139 @@
 }
 
 .box_map_area .sh label:before {
-    background: url("/cm/static/images/logo24_bank_SH_JEJU.svg")
+    background: url("https://www.work24.go.kr/cm/static/images/logo24_bank_SH_JEJU.svg")
 }
 
 .box_map_area .jeju label:before {
-    background: url("/cm/static/images/logo24_bank_SH_JEJU.svg")
+    background: url("https://www.work24.go.kr/cm/static/images/logo24_bank_SH_JEJU.svg")
 }
 
 .box_map_area .citi label:before {
-    background: url("/cm/static/images/logo24_bank_citi.svg")
+    background: url("https://www.work24.go.kr/cm/static/images/logo24_bank_citi.svg")
 }
 
 .box_map_area .kakao label:before {
-    background: url("/cm/static/images/logo24_bank_kakao.svg")
+    background: url("https://www.work24.go.kr/cm/static/images/logo24_bank_kakao.svg")
 }
 
 .box_map_area .kb label:before {
-    background: url("/cm/static/images/logo24_bank_KB.svg")
+    background: url("https://www.work24.go.kr/cm/static/images/logo24_bank_KB.svg")
 }
 
 .box_map_area .ibk label:before {
-    background: url("/cm/static/images/logo24_bank_IBK.svg")
+    background: url("https://www.work24.go.kr/cm/static/images/logo24_bank_IBK.svg")
 }
 
 .box_map_area .bank_k label:before {
-    background: url("/cm/static/images/logo24_bank_K.svg")
+    background: url("https://www.work24.go.kr/cm/static/images/logo24_bank_K.svg")
 }
 
 .box_map_area .toss label:before {
-    background: url("/cm/static/images/logo24_bank_toss.svg")
+    background: url("https://www.work24.go.kr/cm/static/images/logo24_bank_toss.svg")
 }
 
 .box_map_area .nh label:before {
-    background: url("/cm/static/images/logo24_bank_NH.svg")
+    background: url("https://www.work24.go.kr/cm/static/images/logo24_bank_NH.svg")
 }
 
 .box_map_area .kdb label:before {
-    background: url("/cm/static/images/logo24_bank_KDB.svg")
+    background: url("https://www.work24.go.kr/cm/static/images/logo24_bank_KDB.svg")
 }
 
 .box_map_area .bnk label:before {
-    background: url("/cm/static/images/logo24_bank_BNK.svg")
+    background: url("https://www.work24.go.kr/cm/static/images/logo24_bank_BNK.svg")
 }
 
 .box_map_area .gwanju label:before {
-    background: url("/cm/static/images/logo24_bank_Gwangju.svg")
+    background: url("https://www.work24.go.kr/cm/static/images/logo24_bank_Gwangju.svg")
 }
 
 .box_map_area .suhyup label:before {
-    background: url("/cm/static/images/logo24_bank_suhyup.svg")
+    background: url("https://www.work24.go.kr/cm/static/images/logo24_bank_suhyup.svg")
 }
 
 .box_map_area .sinhyup label:before {
-    background: url("/cm/static/images/logo24_bank_sinhyup.svg")
+    background: url("https://www.work24.go.kr/cm/static/images/logo24_bank_sinhyup.svg")
 }
 
 .box_map_area .dgb label:before {
-    background: url("/cm/static/images/logo24_bank_DGB.svg")
+    background: url("https://www.work24.go.kr/cm/static/images/logo24_bank_DGB.svg")
 }
 
 .box_map_area .bn label:before {
-    background: url("/cm/static/images/logo24_bank_BN.svg")
+    background: url("https://www.work24.go.kr/cm/static/images/logo24_bank_BN.svg")
 }
 
 .box_map_area .worri label:before {
-    background: url("/cm/static/images/logo24_bank_worri.svg")
+    background: url("https://www.work24.go.kr/cm/static/images/logo24_bank_worri.svg")
 }
 
 .box_map_area .hana label:before {
-    background: url("/cm/static/images/logo24_bank_hana.svg")
+    background: url("https://www.work24.go.kr/cm/static/images/logo24_bank_hana.svg")
 }
 
 .box_map_area .gwanju02 label:before {
-    background: url("/cm/static/images/logo24_bank_Gwangju02.svg")
+    background: url("https://www.work24.go.kr/cm/static/images/logo24_bank_Gwangju02.svg")
 }
 
 .box_map_area .mg label:before {
-    background: url("/cm/static/images/logo24_bank_MG.svg")
+    background: url("https://www.work24.go.kr/cm/static/images/logo24_bank_MG.svg")
 }
 
 .box_map_area .epost label:before {
-    background: url("/cm/static/images/logo24_bank_epost.svg")
+    background: url("https://www.work24.go.kr/cm/static/images/logo24_bank_epost.svg")
 }
 
 .box_map_area .sb label:before {
-    background: url("/cm/static/images/logo24_bank_SB.svg")
+    background: url("https://www.work24.go.kr/cm/static/images/logo24_bank_SB.svg")
 }
 
 .box_map_area .jp label:before {
-    background: url("/cm/static/images/logo24_bank_JP.svg")
+    background: url("https://www.work24.go.kr/cm/static/images/logo24_bank_JP.svg")
 }
 
 .box_map_area .sc label:before {
-    background: url("/cm/static/images/logo24_bank_SC.svg")
+    background: url("https://www.work24.go.kr/cm/static/images/logo24_bank_SC.svg")
 }
 
 .box_map_area .nonghyup label:before {
-    background: url("/cm/static/images/logo24_bank_Nonghyup.svg")
+    background: url("https://www.work24.go.kr/cm/static/images/logo24_bank_Nonghyup.svg")
 }
 
 .box_map_area .deutsche label:before {
-    background: url("/cm/static/images/logo24_bank_Deutsche.svg")
+    background: url("https://www.work24.go.kr/cm/static/images/logo24_bank_Deutsche.svg")
 }
 
 .box_map_area .sj label:before {
-    background: url("/cm/static/images/logo24_bank_sj.svg")
+    background: url("https://www.work24.go.kr/cm/static/images/logo24_bank_sj.svg")
 }
 
 .box_map_area .nation label:before {
-    background: url("/cm/static/images/logo24_bank_nation.svg")
+    background: url("https://www.work24.go.kr/cm/static/images/logo24_bank_nation.svg")
 }
 
 .box_map_area .china label:before {
-    background: url("/cm/static/images/logo24_bank_china.svg")
+    background: url("https://www.work24.go.kr/cm/static/images/logo24_bank_china.svg")
 }
 
 .box_map_area .ccb label:before {
-    background: url("/cm/static/images/logo24_bank_ccb.svg")
+    background: url("https://www.work24.go.kr/cm/static/images/logo24_bank_ccb.svg")
 }
 
 .box_map_area .industrial label:before {
-    background: url("/cm/static/images/logo24_bank_china_industrial.svg")
+    background: url("https://www.work24.go.kr/cm/static/images/logo24_bank_china_industrial.svg")
 }
 
 .box_map_area .bnp label:before {
-    background: url("/cm/static/images/logo24_bank_BNP.svg")
+    background: url("https://www.work24.go.kr/cm/static/images/logo24_bank_BNP.svg")
 }
 
 .box_map_area .boa label:before {
-    background: url("/cm/static/images/logo24_bank_BOA.svg")
+    background: url("https://www.work24.go.kr/cm/static/images/logo24_bank_BOA.svg")
 }
 
 .box_map_area .hsbc label:before {
-    background: url("/cm/static/images/logo24_bank_HSBC.svg")
+    background: url("https://www.work24.go.kr/cm/static/images/logo24_bank_HSBC.svg")
 }
 
 /* 내배카 슬라이드 팝업 */
@@ -1800,17 +1800,17 @@
 }
 
 .box_card_list.type01 li:nth-child(1)::after, .box_card_list.type01 li:nth-child(2)::after {
-    background: url("/cm/static/images/ico24_minus_blue.svg") no-repeat 0 0;
+    background: url("https://www.work24.go.kr/cm/static/images/ico24_minus_blue.svg") no-repeat 0 0;
     background-size: 24px
 }
 
 .box_card_list.type01 li:nth-child(3)::after {
-    background: url("/cm/static/images/ico24_plus_blue.svg") no-repeat 0 0;
+    background: url("https://www.work24.go.kr/cm/static/images/ico24_plus_blue.svg") no-repeat 0 0;
     background-size: 24px
 }
 
 .box_card_list.type01 li:nth-child(4)::after {
-    background: url("/cm/static/images/ico24_equal_blue.svg") no-repeat 0 0;
+    background: url("https://www.work24.go.kr/cm/static/images/ico24_equal_blue.svg") no-repeat 0 0;
     background-size: 24px
 }
 
@@ -1891,7 +1891,7 @@
     top: 38px;
     width: 24px;
     height: 24px;
-    background: url("/cm/static/images/ico24_arrow2_right_gray.svg")
+    background: url("https://www.work24.go.kr/cm/static/images/ico24_arrow2_right_gray.svg")
 }
 
 .box_round_item {
@@ -2471,15 +2471,15 @@ th[class*='legend_bg'], td[class*='legend_bg'] {
 }
 
 .card_reason_wrap .item.bg01 {
-    background: url('/cm/static/images/Rectangle_153464.png') no-repeat 0
+    background: url('https://www.work24.go.kr/cm/static/images/Rectangle_153464.png') no-repeat 0
 }
 
 .card_reason_wrap .item.bg02 {
-    background: url('/cm/static/images/Rectangle_153465.png') no-repeat 0
+    background: url('https://www.work24.go.kr/cm/static/images/Rectangle_153465.png') no-repeat 0
 }
 
 .card_reason_wrap .item.bg03 {
-    background: url('/cm/static/images/Rectangle_153466.png') no-repeat 0
+    background: url('https://www.work24.go.kr/cm/static/images/Rectangle_153466.png') no-repeat 0
 }
 
 .card_reason_wrap .item .num {
@@ -2527,15 +2527,15 @@ th[class*='legend_bg'], td[class*='legend_bg'] {
 }
 
 .card_apply_info .info.ico01 {
-    background: url("/cm/static/images/ico24_home_smile.svg") no-repeat;
+    background: url("https://www.work24.go.kr/cm/static/images/ico24_home_smile.svg") no-repeat;
 }
 
 .card_apply_info .info.ico02 {
-    background: url("/cm/static/images/ico24_home_home.svg") no-repeat;
+    background: url("https://www.work24.go.kr/cm/static/images/ico24_home_home.svg") no-repeat;
 }
 
 .card_apply_info .info.ico03 {
-    background: url("/cm/static/images/ico24_home_center.svg") no-repeat;
+    background: url("https://www.work24.go.kr/cm/static/images/ico24_home_center.svg") no-repeat;
 }
 
 .card_apply_info .info .b1_sb {
@@ -2618,11 +2618,11 @@ th[class*='legend_bg'], td[class*='legend_bg'] {
 }
 
 .card_upload_box .box.personal .tit {
-    background: url("/cm/static/images/ico24_profile_green.svg") no-repeat left center;
+    background: url("https://www.work24.go.kr/cm/static/images/ico24_profile_green.svg") no-repeat left center;
 }
 
 .card_upload_box .box.business .tit {
-    background: url("/cm/static/images/ico_building_blue.svg") no-repeat left center;
+    background: url("https://www.work24.go.kr/cm/static/images/ico_building_blue.svg") no-repeat left center;
 }
 
 .card_upload_box .box.personal .button_wrap {
@@ -2649,11 +2649,11 @@ th[class*='legend_bg'], td[class*='legend_bg'] {
 }
 
 .card_upload_box .box.personal .ico_call {
-    background: url("/cm/static/images/ico16_call_filled.svg") no-repeat left center;
+    background: url("https://www.work24.go.kr/cm/static/images/ico16_call_filled.svg") no-repeat left center;
 }
 
 .card_upload_box .box.personal .ico_ipin {
-    background: url("/cm/static/images/ico16_ipin.svg") no-repeat left center;
+    background: url("https://www.work24.go.kr/cm/static/images/ico16_ipin.svg") no-repeat left center;
 }
 
 .card_upload_box .box.business .box_table_group {
@@ -2881,7 +2881,7 @@ th[class*='legend_bg'], td[class*='legend_bg'] {
     top: 0;
     left: 50%;
     margin-left: -12px;
-    background: url("/cm/static/images/ico24_ui_ok_disabled.svg") no-repeat center
+    background: url("https://www.work24.go.kr/cm/static/images/ico24_ui_ok_disabled.svg") no-repeat center
 }
 
 .result_my_check .item.check {
@@ -2896,7 +2896,7 @@ th[class*='legend_bg'], td[class*='legend_bg'] {
 }
 
 .result_my_check .item.check span:before {
-    background: url("/cm/static/images/ico24_ui_ok_blue.svg") no-repeat center
+    background: url("https://www.work24.go.kr/cm/static/images/ico24_ui_ok_blue.svg") no-repeat center
 }
 
 .box_graph_wrap {
@@ -2935,7 +2935,7 @@ th[class*='legend_bg'], td[class*='legend_bg'] {
     width: 24px;
     height: 24px;
     margin: -12px 0 0 -12px;
-    background: url("/cm/static/images/ico24_arrow2_down.svg") no-repeat center
+    background: url("https://www.work24.go.kr/cm/static/images/ico24_arrow2_down.svg") no-repeat center
 }
 
 .type_updown_wrap .updown.icon_up::after {
@@ -2946,7 +2946,7 @@ th[class*='legend_bg'], td[class*='legend_bg'] {
     width: 24px;
     height: 24px;
     margin: -12px 0 0 -12px;
-    background: url("/cm/static/images/ico24_arrow2_up.svg") no-repeat center
+    background: url("https://www.work24.go.kr/cm/static/images/ico24_arrow2_up.svg") no-repeat center
 }
 
 .type_updown_wrap .box_wrap li {
@@ -3251,7 +3251,7 @@ th[class*='legend_bg'], td[class*='legend_bg'] {
     width: 24px;
     height: 24px;
     margin-left: 8px;
-    background: url("/cm/static/images/ico24_arrow2_up_color.svg") no-repeat center
+    background: url("https://www.work24.go.kr/cm/static/images/ico24_arrow2_up_color.svg") no-repeat center
 }
 
 .btn_slide_more.on .txt:after {
@@ -3262,7 +3262,7 @@ th[class*='legend_bg'], td[class*='legend_bg'] {
     width: 24px;
     height: 24px;
     margin-left: 8px;
-    background: url("/cm/static/images/ico24_arrow2_down.svg") no-repeat center
+    background: url("https://www.work24.go.kr/cm/static/images/ico24_arrow2_down.svg") no-repeat center
 }
 
 .floating_bottom_area {
@@ -3334,11 +3334,11 @@ th[class*='legend_bg'], td[class*='legend_bg'] {
 }
 
 .floating_bottom_area .swiper-button.swiper-button-next {
-    background: url('/cm/static/images/btn_arrow_next.svg') no-repeat 0
+    background: url('https://www.work24.go.kr/cm/static/images/btn_arrow_next.svg') no-repeat 0
 }
 
 .floating_bottom_area .swiper-button.swiper-button-prev {
-    background: url('/cm/static/images/btn_arrow_prev.svg') no-repeat 0
+    background: url('https://www.work24.go.kr/cm/static/images/btn_arrow_prev.svg') no-repeat 0
 }
 
 .floating_bottom_area .bottom_btn_area {
@@ -3361,7 +3361,7 @@ th[class*='legend_bg'], td[class*='legend_bg'] {
 
 .box_table td.type_inner_step {
     padding-left: 32px;
-    background: url('/cm/static/images/ico16_reply.svg') no-repeat 8px 16px
+    background: url('https://www.work24.go.kr/cm/static/images/ico16_reply.svg') no-repeat 8px 16px
 }
 
 .box_table td.type_inner_step .vline_group.type3 dt, .box_table td.type_inner_step .vline_group.type3 dd {
@@ -3571,7 +3571,7 @@ th[class*='legend_bg'], td[class*='legend_bg'] {
     right: -2px;
     width: 25px;
     height: 25px;
-    background: url('/cm/static/images/mask_kakao.svg') no-repeat;
+    background: url('https://www.work24.go.kr/cm/static/images/mask_kakao.svg') no-repeat;
     z-index: 1
 }
 
@@ -3649,7 +3649,7 @@ th[class*='legend_bg'], td[class*='legend_bg'] {
     right: -2px;
     width: 25px;
     height: 25px;
-    background: url('/cm/static/images/mask_kakao.svg') no-repeat;
+    background: url('https://www.work24.go.kr/cm/static/images/mask_kakao.svg') no-repeat;
     z-index: 1
 }
 
@@ -3744,7 +3744,7 @@ th[class*='legend_bg'], td[class*='legend_bg'] {
 .loading_page_wrap .ico80_roding_01 {
     width: 80px;
     height: 80px;
-    background: url("/cm/static/images/ico80_roding_01.svg")
+    background: url("https://www.work24.go.kr/cm/static/images/ico80_roding_01.svg")
 }
 
 /* mypage main */
@@ -3772,7 +3772,7 @@ th[class*='legend_bg'], td[class*='legend_bg'] {
     right: 16px;
     width: 24px;
     height: 24px;
-    background: url('/cm/static/images/ico24_ui_close_circle.svg') no-repeat right center
+    background: url('https://www.work24.go.kr/cm/static/images/ico24_ui_close_circle.svg') no-repeat right center
 }
 
 .top_banner_area .banner_slide {
@@ -3793,7 +3793,7 @@ th[class*='legend_bg'], td[class*='legend_bg'] {
 .top_banner_area .banner_slide .link span {
     display: inline-block;
     padding-right: 20px;
-    background: url('/cm/static/images/ico16_arrow_right_white.svg') no-repeat right center
+    background: url('https://www.work24.go.kr/cm/static/images/ico16_arrow_right_white.svg') no-repeat right center
 }
 
 .top_banner_area .banner_slide .swiper-wrapper {
@@ -3826,11 +3826,11 @@ th[class*='legend_bg'], td[class*='legend_bg'] {
 }
 
 .top_banner_area .banner_slide .btn_container .btn.pause {
-    background: url('/cm/static/images/btn24_pause_white.png') no-repeat center;
+    background: url('https://www.work24.go.kr/cm/static/images/btn24_pause_white.png') no-repeat center;
 }
 
 .top_banner_area .banner_slide .btn_container .btn.play {
-    background: url('/cm/static/images/btn24_play_white.png') no-repeat center;
+    background: url('https://www.work24.go.kr/cm/static/images/btn24_play_white.png') no-repeat center;
 }
 
 .company .top_banner_area {
@@ -3851,7 +3851,7 @@ th[class*='legend_bg'], td[class*='legend_bg'] {
 .my_info_area .intro .profile_img {
     width: 80px;
     height: 81px;
-    background: url("/cm/static/images/tmp/tmp_person01.png") no-repeat 0
+    background: url("https://www.work24.go.kr/cm/static/images/tmp/tmp_person01.png") no-repeat 0
 }
 
 .my_info_area .data {
@@ -3958,7 +3958,7 @@ th[class*='legend_bg'], td[class*='legend_bg'] {
 }
 
 .company .my_info_area .intro .profile_img {
-    background: url("/cm/static/images/tmp/tmp_company01.svg") no-repeat 0
+    background: url("https://www.work24.go.kr/cm/static/images/tmp/tmp_company01.svg") no-repeat 0
 }
 
 .company .my_info_area .data {
@@ -4155,15 +4155,15 @@ th[class*='legend_bg'], td[class*='legend_bg'] {
 }
 
 .detail_card_list .list > li .t2_sb.tit_alert01 {
-    background: url('/cm/static/images/img_alert_tit01.png') no-repeat left center
+    background: url('https://www.work24.go.kr/cm/static/images/img_alert_tit01.png') no-repeat left center
 }
 
 .detail_card_list .list > li .t2_sb.tit_alert02 {
-    background: url('/cm/static/images/img_alert_tit02.png') no-repeat left center
+    background: url('https://www.work24.go.kr/cm/static/images/img_alert_tit02.png') no-repeat left center
 }
 
 .detail_card_list .list > li .t2_sb.tit_alert03 {
-    background: url('/cm/static/images/img_alert_tit03.png') no-repeat left center
+    background: url('https://www.work24.go.kr/cm/static/images/img_alert_tit03.png') no-repeat left center
 }
 
 .detail_card_list .list > li .data_list {
@@ -4201,7 +4201,7 @@ th[class*='legend_bg'], td[class*='legend_bg'] {
     display: block;
     width: 100%;
     padding-right: 16px;
-    background: url('/cm/static/images/ico16_arrow_right_white.svg') no-repeat right center
+    background: url('https://www.work24.go.kr/cm/static/images/ico16_arrow_right_white.svg') no-repeat right center
 }
 
 .detail_card_list .list > li .big_text {
@@ -4243,7 +4243,7 @@ th[class*='legend_bg'], td[class*='legend_bg'] {
 .detail_card_list .list > li .link_more span {
     display: inline-block;
     padding-right: 18px;
-    background: url('/cm/static/images/ico16_arrow_right_white.svg') no-repeat right center
+    background: url('https://www.work24.go.kr/cm/static/images/ico16_arrow_right_white.svg') no-repeat right center
 }
 
 .detail_card_list .list > li.bg_green .t2_sb {
@@ -4257,15 +4257,15 @@ th[class*='legend_bg'], td[class*='legend_bg'] {
 }
 
 .detail_card_list .list > li.bg_green .t2_sb.tit_alert01 {
-    background: url('/cm/static/images/img_alert_tit01.png') no-repeat left center
+    background: url('https://www.work24.go.kr/cm/static/images/img_alert_tit01.png') no-repeat left center
 }
 
 .detail_card_list .list > li.bg_green .t2_sb.tit_alert02 {
-    background: url('/cm/static/images/img_alert_tit02.png') no-repeat left center
+    background: url('https://www.work24.go.kr/cm/static/images/img_alert_tit02.png') no-repeat left center
 }
 
 .detail_card_list .list > li.bg_green .t2_sb.tit_alert03 {
-    background: url('/cm/static/images/img_alert_tit03.png') no-repeat left center
+    background: url('https://www.work24.go.kr/cm/static/images/img_alert_tit03.png') no-repeat left center
 }
 
 .detail_card_list .list > li.bg_green .data_list {
@@ -4303,7 +4303,7 @@ th[class*='legend_bg'], td[class*='legend_bg'] {
     display: block;
     width: 100%;
     padding-right: 16px;
-    background: url('/cm/static/images/ico16_arrow_right_white.svg') no-repeat right center
+    background: url('https://www.work24.go.kr/cm/static/images/ico16_arrow_right_white.svg') no-repeat right center
 }
 
 .detail_card_list .list > li.bg_green .big_text {
@@ -4337,7 +4337,7 @@ th[class*='legend_bg'], td[class*='legend_bg'] {
     color: var(--col_body);
     display: inline-block;
     padding-right: 18px;
-    background: url('/cm/static/images/ico16_arrow_right_black.svg') no-repeat right center
+    background: url('https://www.work24.go.kr/cm/static/images/ico16_arrow_right_black.svg') no-repeat right center
 }
 
 .box_block_wrap {
@@ -4382,12 +4382,12 @@ th[class*='legend_bg'], td[class*='legend_bg'] {
 
 .box_block_wrap .bd_box.bg_navy .link_more a {
     color: #4AB877;
-    background: url('/cm/static/images/ico16_arrow_right_green.svg') no-repeat right center;
+    background: url('https://www.work24.go.kr/cm/static/images/ico16_arrow_right_green.svg') no-repeat right center;
 }
 
 .box_block_wrap .bd_box.bg_blue02 .link_more a {
     color: var(--col_white);
-    background: url('/cm/static/images/ico16_arrow_right_white.svg') no-repeat right center;
+    background: url('https://www.work24.go.kr/cm/static/images/ico16_arrow_right_white.svg') no-repeat right center;
 }
 
 .box_block_wrap .bd_box .t2_sb i {
@@ -4412,7 +4412,7 @@ th[class*='legend_bg'], td[class*='legend_bg'] {
 .box_block_wrap .bd_box .link_more a {
     padding-right: 18px;
     color: var(--col_blue);
-    background: url('/cm/static/images/ico16_arrow_right_blue.svg') no-repeat right center
+    background: url('https://www.work24.go.kr/cm/static/images/ico16_arrow_right_blue.svg') no-repeat right center
 }
 
 .box_block_wrap .bd_box .title_area {
@@ -4425,7 +4425,7 @@ th[class*='legend_bg'], td[class*='legend_bg'] {
     margin-top: 0;
     color: var(--col_blue);
     padding-right: 18px;
-    background: url('/cm/static/images/ico16_arrow_right.svg') no-repeat right center
+    background: url('https://www.work24.go.kr/cm/static/images/ico16_arrow_right.svg') no-repeat right center
 }
 
 .scrap_list {
@@ -4574,19 +4574,19 @@ th[class*='legend_bg'], td[class*='legend_bg'] {
 }
 
 .recommand_service_wrap ul li.list .img01 {
-    background: url("/cm/static/images/ico_main_sr01.png") no-repeat 0 32px;
+    background: url("https://www.work24.go.kr/cm/static/images/ico_main_sr01.png") no-repeat 0 32px;
 }
 
 .recommand_service_wrap ul li.list .img02 {
-    background: url("/cm/static/images/ico_main_sr02.png") no-repeat 0 32px;
+    background: url("https://www.work24.go.kr/cm/static/images/ico_main_sr02.png") no-repeat 0 32px;
 }
 
 .recommand_service_wrap ul li.list .img03 {
-    background: url("/cm/static/images/ico_main_sr03.png") no-repeat 0 32px;
+    background: url("https://www.work24.go.kr/cm/static/images/ico_main_sr03.png") no-repeat 0 32px;
 }
 
 .recommand_service_wrap ul li.list .img04 {
-    background: url("/cm/static/images/ico_main_sr04.png") no-repeat 0 32px;
+    background: url("https://www.work24.go.kr/cm/static/images/ico_main_sr04.png") no-repeat 0 32px;
 }
 
 .recommand_service_wrap ul li.list .b1_r {
@@ -4657,7 +4657,7 @@ th[class*='legend_bg'], td[class*='legend_bg'] {
 }
 
 .recommand_service_wrap ul li.list .box_list_area .txt_list {
-    background: url("/cm/static/images/ico16_arrow_right_white.svg") no-repeat right center
+    background: url("https://www.work24.go.kr/cm/static/images/ico16_arrow_right_white.svg") no-repeat right center
 }
 
 .recommand_service_wrap ul li.list .box_list_area .txt_list:before {
@@ -4669,7 +4669,7 @@ th[class*='legend_bg'], td[class*='legend_bg'] {
 }
 
 .recommand_service_wrap ul li.list.bg_green02 .box_list_area .txt_list {
-    background: url(/cm/static/images/ico16_arrow_right.svg) no-repeat right center
+    background: url(https://www.work24.go.kr/cm/static/images/ico16_arrow_right.svg) no-repeat right center
 }
 
 .recommand_service_wrap ul li.list.bg_green02 .box_list_area .txt_list:before {
@@ -4709,7 +4709,7 @@ th[class*='legend_bg'], td[class*='legend_bg'] {
 }
 
 .recommand_service_wrap_company ul li.list .box_list_area.link_type .txt_list {
-    background: url('/cm/static/images/ico16_arrow_right_black.svg') no-repeat right center;
+    background: url('https://www.work24.go.kr/cm/static/images/ico16_arrow_right_black.svg') no-repeat right center;
     padding-right: 18px
 }
 
@@ -4743,7 +4743,7 @@ th[class*='legend_bg'], td[class*='legend_bg'] {
 .recommand_service_wrap_company ul li.list .link_area a span {
     padding-right: 18px;
     display: inline-block;
-    background: url('/cm/static/images/ico16_arrow_right_blue.svg') no-repeat right center;
+    background: url('https://www.work24.go.kr/cm/static/images/ico16_arrow_right_blue.svg') no-repeat right center;
 }
 
 .recommand_service_wrap_company ul li.list .last {
@@ -4768,7 +4768,7 @@ th[class*='legend_bg'], td[class*='legend_bg'] {
 .more_btn_wrap a span {
     display: inline-block;
     padding-right: 20px;
-    background: url('/cm/static/images/ico16_arrow_right.svg') no-repeat right center
+    background: url('https://www.work24.go.kr/cm/static/images/ico16_arrow_right.svg') no-repeat right center
 }
 
 .result_area {
@@ -4886,7 +4886,7 @@ th[class*='legend_bg'], td[class*='legend_bg'] {
     width: 24px;
     height: 24px;
     display: inline-block;
-    background: url("/cm/static/images/ico24_location_blue.svg") no-repeat;
+    background: url("https://www.work24.go.kr/cm/static/images/ico24_location_blue.svg") no-repeat;
     vertical-align: middle;
     margin-right: 4px
 }
@@ -4947,7 +4947,7 @@ th[class*='legend_bg'], td[class*='legend_bg'] {
     content: '';
     width: 24px;
     height: 24px;
-    background: url("/cm/static/images/ico24_plus.svg") no-repeat;
+    background: url("https://www.work24.go.kr/cm/static/images/ico24_plus.svg") no-repeat;
     position: absolute;
     top: 50%;
     left: -30px;
@@ -4960,7 +4960,7 @@ th[class*='legend_bg'], td[class*='legend_bg'] {
 }
 
 .box_calc_wrap .calc_box.result::before {
-    background: url("/cm/static/images/ico24_equal.svg") no-repeat
+    background: url("https://www.work24.go.kr/cm/static/images/ico24_equal.svg") no-repeat
 }
 
 /* 데이터 들어가는 테이블 */
@@ -4987,7 +4987,7 @@ th[class*='legend_bg'], td[class*='legend_bg'] {
     padding-left: 18px;
     /*border:1px solid var(--col_btn);border-radius:4px;*/
     min-width: 88px;
-    background: url("/cm/static/images/ico16_check_ddd.svg") no-repeat 8px 8px;
+    background: url("https://www.work24.go.kr/cm/static/images/ico16_check_ddd.svg") no-repeat 8px 8px;
     color: var(--col_p)
 }
 
@@ -5021,11 +5021,11 @@ th[class*='legend_bg'], td[class*='legend_bg'] {
     width: 40px;
     height: 40px;
     margin: 0 auto;
-    background: url("/cm/static/images/ico40_stamp_pig_gray.svg") no-repeat center
+    background: url("https://www.work24.go.kr/cm/static/images/ico40_stamp_pig_gray.svg") no-repeat center
 }
 
 .box_table.data_chk .chk_box.stamp.check:before {
-    background: url("/cm/static/images/ico40_stamp_pig_blue.svg") no-repeat center
+    background: url("https://www.work24.go.kr/cm/static/images/ico40_stamp_pig_blue.svg") no-repeat center
 }
 
 /* 뉴스 리스트 컨텐츠  */
@@ -5286,11 +5286,11 @@ th[class*='legend_bg'], td[class*='legend_bg'] {
 .box_side_wrap.job_company .side_inner .info .fav {
     width: 24px;
     height: 24px;
-    background: url("/cm/static/images/ico24_ui_like.svg")
+    background: url("https://www.work24.go.kr/cm/static/images/ico24_ui_like.svg")
 }
 
 .box_side_wrap.job_company .side_inner .info .fav.active {
-    background: url("/cm/static/images/ico24_ui_like_filled.svg")
+    background: url("https://www.work24.go.kr/cm/static/images/ico24_ui_like_filled.svg")
 }
 
 .btn_txt_icon {
@@ -5302,7 +5302,7 @@ th[class*='legend_bg'], td[class*='legend_bg'] {
 }
 
 .btn_txt_icon.active {
-    background-image: url("/cm/static/images/ico16_search_blue.svg");
+    background-image: url("https://www.work24.go.kr/cm/static/images/ico16_search_blue.svg");
     color: var(--col_blue);
     font-weight: 600;
     text-decoration: underline;
@@ -5333,7 +5333,7 @@ th[class*='legend_bg'], td[class*='legend_bg'] {
 .fold_type .acd_btn {
     margin-bottom: 0;
     padding-right: 32px;
-    background: url("/cm/static/images/ico24_arrow2_up_color.svg") no-repeat right 12px center;
+    background: url("https://www.work24.go.kr/cm/static/images/ico24_arrow2_up_color.svg") no-repeat right 12px center;
     background-size: 16px 16px
 }
 
@@ -5516,7 +5516,7 @@ th[class*='legend_bg'], td[class*='legend_bg'] {
 
 .reply_type .re_txt {
     padding-left: 20px;
-    background: url('/cm/static/images/ico16_reply.svg') no-repeat 0 6px
+    background: url('https://www.work24.go.kr/cm/static/images/ico16_reply.svg') no-repeat 0 6px
 }
 
 .write_box .write_top {
@@ -5589,7 +5589,7 @@ th[class*='legend_bg'], td[class*='legend_bg'] {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: url("/cm/static/images/ico24_speaker.svg") no-repeat 24px 16px;
+    background: url("https://www.work24.go.kr/cm/static/images/ico24_speaker.svg") no-repeat 24px 16px;
     padding: 0 24px
 }
 
@@ -5601,7 +5601,7 @@ th[class*='legend_bg'], td[class*='legend_bg'] {
     width: 24px;
     height: 24px;
     border: 1px solid var(--col_btn);
-    background: url("/cm/static/images/btn24_normal_plus.svg") no-repeat center
+    background: url("https://www.work24.go.kr/cm/static/images/btn24_normal_plus.svg") no-repeat center
 }
 
 .notice_slide_wrap .swiper-vertical {
@@ -5611,7 +5611,7 @@ th[class*='legend_bg'], td[class*='legend_bg'] {
     padding: 0 20px 0 56px;
     display: flex;
     align-items: center;
-    background: url("/cm/static/images/ico24_article.svg") no-repeat 24px 18px
+    background: url("https://www.work24.go.kr/cm/static/images/ico24_article.svg") no-repeat 24px 18px
 }
 
 .notice_slide_wrap .inner {
@@ -5643,12 +5643,12 @@ th[class*='legend_bg'], td[class*='legend_bg'] {
     height: 24px;
     border-radius: 4px;
     border: 1px solid var(--col_btn);
-    background: url("/cm/static/images/btn24_stop.svg") center
+    background: url("https://www.work24.go.kr/cm/static/images/btn24_stop.svg") center
 }
 
 /* 플레이 이미지 디자인요청 */
 .btn_autoplay[aria-pressed="true"] {
-    background: url("/cm/static/images/btn24_play.svg") center
+    background: url("https://www.work24.go.kr/cm/static/images/btn24_play.svg") center
 }
 
 .cert_img {
@@ -5678,7 +5678,7 @@ th[class*='legend_bg'], td[class*='legend_bg'] {
     transform: translateY(-50%);
     width: 24px;
     height: 24px;
-    background: url("/cm/static/images/ico24_arrow2_right_gray.svg")
+    background: url("https://www.work24.go.kr/cm/static/images/ico24_arrow2_right_gray.svg")
 }
 
 .box_arrow_group .item dt {
@@ -5750,103 +5750,103 @@ th[class*='legend_bg'], td[class*='legend_bg'] {
 }
 
 .box_list_set ul li a.active .ico40_menu {
-    background: url("/cm/static/images/ico40_menu_blue.svg") no-repeat 0 0
+    background: url("https://www.work24.go.kr/cm/static/images/ico40_menu_blue.svg") no-repeat 0 0
 }
 
 .box_list_set ul li a.active .ico40_board {
-    background: url("/cm/static/images/ico40_board_blue.svg") no-repeat 0 0
+    background: url("https://www.work24.go.kr/cm/static/images/ico40_board_blue.svg") no-repeat 0 0
 }
 
 .box_list_set ul li a.active .ico40_bag {
-    background: url("/cm/static/images/ico40_bag_blue.svg") no-repeat 0 0
+    background: url("https://www.work24.go.kr/cm/static/images/ico40_bag_blue.svg") no-repeat 0 0
 }
 
 .box_list_set ul li a.active .ico40_cash {
-    background: url("/cm/static/images/ico40_cash_blue.svg") no-repeat 0 0
+    background: url("https://www.work24.go.kr/cm/static/images/ico40_cash_blue.svg") no-repeat 0 0
 }
 
 .box_list_set ul li a.active .ico40_edu {
-    background: url("/cm/static/images/ico40_edu_blue.svg") no-repeat 0 0
+    background: url("https://www.work24.go.kr/cm/static/images/ico40_edu_blue.svg") no-repeat 0 0
 }
 
 .box_list_set ul li a.active .ico40_law {
-    background: url("/cm/static/images/ico40_law_blue.svg") no-repeat 0 0
+    background: url("https://www.work24.go.kr/cm/static/images/ico40_law_blue.svg") no-repeat 0 0
 }
 
 .box_list_set ul li a.active .ico40_cross {
-    background: url("/cm/static/images/ico40_cross_blue.svg") no-repeat 0 0
+    background: url("https://www.work24.go.kr/cm/static/images/ico40_cross_blue.svg") no-repeat 0 0
 }
 
 .box_list_set ul li a.active .ico40_religion {
-    background: url("/cm/static/images/ico40_religion_blue.svg") no-repeat 0 0
+    background: url("https://www.work24.go.kr/cm/static/images/ico40_religion_blue.svg") no-repeat 0 0
 }
 
 .box_list_set ul li a.active .ico40_mike {
-    background: url("/cm/static/images/ico40_mike_blue.svg") no-repeat 0 0
+    background: url("https://www.work24.go.kr/cm/static/images/ico40_mike_blue.svg") no-repeat 0 0
 }
 
 .box_list_set ul li a.active .ico40_truck {
-    background: url("/cm/static/images/ico40_truck_blue.svg") no-repeat 0 0
+    background: url("https://www.work24.go.kr/cm/static/images/ico40_truck_blue.svg") no-repeat 0 0
 }
 
 .box_list_set ul li a.active .ico40_bag2 {
-    background: url("/cm/static/images/ico40_bag2_blue.svg") no-repeat 0 0
+    background: url("https://www.work24.go.kr/cm/static/images/ico40_bag2_blue.svg") no-repeat 0 0
 }
 
 .box_list_set ul li a.active .ico40_cleaning {
-    background: url("/cm/static/images/ico40_cleaning_blue.svg") no-repeat 0 0
+    background: url("https://www.work24.go.kr/cm/static/images/ico40_cleaning_blue.svg") no-repeat 0 0
 }
 
 .box_list_set ul li a.active .ico40_bag3 {
-    background: url("/cm/static/images/ico40_bag3_blue.svg") no-repeat 0 0
+    background: url("https://www.work24.go.kr/cm/static/images/ico40_bag3_blue.svg") no-repeat 0 0
 }
 
 .box_list_set ul li a.active .ico40_service {
-    background: url("/cm/static/images/ico40_service_blue.svg") no-repeat 0 0
+    background: url("https://www.work24.go.kr/cm/static/images/ico40_service_blue.svg") no-repeat 0 0
 }
 
 .box_list_set ul li a.active .ico40_building {
-    background: url("/cm/static/images/ico40_building_blue.svg") no-repeat 0 0
+    background: url("https://www.work24.go.kr/cm/static/images/ico40_building_blue.svg") no-repeat 0 0
 }
 
 .box_list_set ul li a.active .ico40_tool {
-    background: url("/cm/static/images/ico40_tool_blue.svg") no-repeat 0 0
+    background: url("https://www.work24.go.kr/cm/static/images/ico40_tool_blue.svg") no-repeat 0 0
 }
 
 .box_list_set ul li a.active .ico40_material {
-    background: url("/cm/static/images/ico40_material_blue.svg") no-repeat 0 0
+    background: url("https://www.work24.go.kr/cm/static/images/ico40_material_blue.svg") no-repeat 0 0
 }
 
 .box_list_set ul li a.active .ico40_chemistry {
-    background: url("/cm/static/images/ico40_chemistry_blue.svg") no-repeat 0 0
+    background: url("https://www.work24.go.kr/cm/static/images/ico40_chemistry_blue.svg") no-repeat 0 0
 }
 
 .box_list_set ul li a.active .ico40_clothes {
-    background: url("/cm/static/images/ico40_clothes_blue.svg") no-repeat 0 0
+    background: url("https://www.work24.go.kr/cm/static/images/ico40_clothes_blue.svg") no-repeat 0 0
 }
 
 .box_list_set ul li a.active .ico40_elec {
-    background: url("/cm/static/images/ico40_elec_blue.svg") no-repeat 0 0
+    background: url("https://www.work24.go.kr/cm/static/images/ico40_elec_blue.svg") no-repeat 0 0
 }
 
 .box_list_set ul li a.active .ico40_comm {
-    background: url("/cm/static/images/ico40_comm_blue.svg") no-repeat 0 0
+    background: url("https://www.work24.go.kr/cm/static/images/ico40_comm_blue.svg") no-repeat 0 0
 }
 
 .box_list_set ul li a.active .ico40_burger {
-    background: url("/cm/static/images/ico40_burger_blue.svg") no-repeat 0 0
+    background: url("https://www.work24.go.kr/cm/static/images/ico40_burger_blue.svg") no-repeat 0 0
 }
 
 .box_list_set ul li a.active .ico40_wood {
-    background: url("/cm/static/images/ico40_wood_blue.svg") no-repeat 0 0
+    background: url("https://www.work24.go.kr/cm/static/images/ico40_wood_blue.svg") no-repeat 0 0
 }
 
 .box_list_set ul li a.active .ico40_airplane {
-    background: url("/cm/static/images/ico40_airplane_blue.svg") no-repeat 0 0
+    background: url("https://www.work24.go.kr/cm/static/images/ico40_airplane_blue.svg") no-repeat 0 0
 }
 
 .box_list_set ul li a.active .ico40_tree {
-    background: url("/cm/static/images/ico40_tree_blue.svg") no-repeat 0 0
+    background: url("https://www.work24.go.kr/cm/static/images/ico40_tree_blue.svg") no-repeat 0 0
 }
 
 .img_box_tbl {
@@ -5921,11 +5921,11 @@ th[class*='legend_bg'], td[class*='legend_bg'] {
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
-    background: url("/cm/static/images/ico16_ui_ok_disabled.svg") no-repeat 0 50%
+    background: url("https://www.work24.go.kr/cm/static/images/ico16_ui_ok_disabled.svg") no-repeat 0 50%
 }
 
 .jobs_confirm .confirm_layer li.checked .info_txt {
-    background: url("/cm/static/images/ico16_ui_ok_blue.svg") no-repeat 0 50%;
+    background: url("https://www.work24.go.kr/cm/static/images/ico16_ui_ok_blue.svg") no-repeat 0 50%;
     font-weight: 600
 }
 
@@ -5942,17 +5942,17 @@ th[class*='legend_bg'], td[class*='legend_bg'] {
 
 .visual_contents_box.bg01 {
     height: 240px;
-    background: url("/cm/static/images/bg_contents_guide01.png") no-repeat 0 50%
+    background: url("https://www.work24.go.kr/cm/static/images/bg_contents_guide01.png") no-repeat 0 50%
 }
 
 .visual_contents_box.bg02 {
     height: 312px;
-    background: url("/cm/static/images/bg_contents_guide02.png") no-repeat 0 50%
+    background: url("https://www.work24.go.kr/cm/static/images/bg_contents_guide02.png") no-repeat 0 50%
 }
 
 .visual_contents_box.bg03 {
     height: 188px;
-    background: url("/cm/static/images/bg_contents_guide03.png") no-repeat 0 50%
+    background: url("https://www.work24.go.kr/cm/static/images/bg_contents_guide03.png") no-repeat 0 50%
 }
 
 .visual_contents_box [class^='btn'].type02 {
@@ -6006,7 +6006,7 @@ th[class*='legend_bg'], td[class*='legend_bg'] {
 
 .box_group .icon_cooperation {
     padding-left: 28px;
-    background: url("/cm/static/images/ico24_group.svg") no-repeat 0 50%
+    background: url("https://www.work24.go.kr/cm/static/images/ico24_group.svg") no-repeat 0 50%
 }
 
 .box_group .cover_letter {
@@ -6062,47 +6062,47 @@ th[class*='legend_bg'], td[class*='legend_bg'] {
 
 .box_group .icon_note_check {
     padding-left: 28px;
-    background: url("/cm/static/images/ico24_group.svg") no-repeat 0 50%
+    background: url("https://www.work24.go.kr/cm/static/images/ico24_group.svg") no-repeat 0 50%
 }
 
 .box_group .icon_bulb {
     padding-left: 28px;
-    background: url("/cm/static/images/ico24_light.svg") no-repeat 0 50%
+    background: url("https://www.work24.go.kr/cm/static/images/ico24_light.svg") no-repeat 0 50%
 }
 
 .box_table_wrap .icon_check_list {
     padding-left: 28px;
-    background: url("/cm/static/images/ico24_memo_check.svg") no-repeat 0 50%
+    background: url("https://www.work24.go.kr/cm/static/images/ico24_memo_check.svg") no-repeat 0 50%
 }
 
 .box_group .icon_me {
     padding-left: 28px;
-    background: url("/cm/static/images/ico24_member_mypage.svg") no-repeat 0 50%
+    background: url("https://www.work24.go.kr/cm/static/images/ico24_member_mypage.svg") no-repeat 0 50%
 }
 
 .box_group .icon_bd {
     padding-left: 28px;
-    background: url("/cm/static/images/ico24_home_center.svg") no-repeat 0 50%
+    background: url("https://www.work24.go.kr/cm/static/images/ico24_home_center.svg") no-repeat 0 50%
 }
 
 .box_group .icon_pen {
     padding-left: 28px;
-    background: url("/cm/static/images/ico24_member_register.svg") no-repeat 0 50%
+    background: url("https://www.work24.go.kr/cm/static/images/ico24_member_register.svg") no-repeat 0 50%
 }
 
 .box_group .icon_medal {
     padding-left: 28px;
-    background: url("/cm/static/images/ico24_medal_star.svg") no-repeat 0 50%
+    background: url("https://www.work24.go.kr/cm/static/images/ico24_medal_star.svg") no-repeat 0 50%
 }
 
 .box_group .icon_paper {
     padding-left: 28px;
-    background: url("/cm/static/images/ico_24_news.svg") no-repeat 0 50%
+    background: url("https://www.work24.go.kr/cm/static/images/ico_24_news.svg") no-repeat 0 50%
 }
 
 .box_group .icon_caution_red {
     padding-left: 28px;
-    background: url("/cm/static/images/ico24_ui_!_red.svg") no-repeat 0 50%
+    background: url("https://www.work24.go.kr/cm/static/images/ico24_ui_!_red.svg") no-repeat 0 50%
 }
 
 .box_list.box_type01 {
@@ -6154,23 +6154,23 @@ th[class*='legend_bg'], td[class*='legend_bg'] {
 }
 
 .box_group .caution_box > ul > li:nth-child(1) {
-    background: url("/cm/static/images/ico40_memo_edit.svg") no-repeat 50% 0
+    background: url("https://www.work24.go.kr/cm/static/images/ico40_memo_edit.svg") no-repeat 50% 0
 }
 
 .box_group .caution_box > ul > li:nth-child(2) {
-    background: url("/cm/static/images/ico40_talk_no.svg") no-repeat 50% 0
+    background: url("https://www.work24.go.kr/cm/static/images/ico40_talk_no.svg") no-repeat 50% 0
 }
 
 .box_group .caution_box > ul > li:nth-child(3) {
-    background: url("/cm/static/images/ico40_write.svg") no-repeat 50% 0
+    background: url("https://www.work24.go.kr/cm/static/images/ico40_write.svg") no-repeat 50% 0
 }
 
 .box_group .caution_box > ul > li:nth-child(4) {
-    background: url("/cm/static/images/ico40_memo_check.svg") no-repeat 50% 0
+    background: url("https://www.work24.go.kr/cm/static/images/ico40_memo_check.svg") no-repeat 50% 0
 }
 
 .box_group .caution_box > ul > li:nth-child(5) {
-    background: url("/cm/static/images/ico40_task.svg") no-repeat 50% 0
+    background: url("https://www.work24.go.kr/cm/static/images/ico40_task.svg") no-repeat 50% 0
 }
 
 /* 공통 정렬 수정 적용 (왼쪽정렬로) */
@@ -6244,7 +6244,7 @@ th[class*='legend_bg'], td[class*='legend_bg'] {
     width: 24px;
     height: 24px;
     vertical-align: top;
-    background: url("/cm/static/images/ico_phone.png") no-repeat center;
+    background: url("https://www.work24.go.kr/cm/static/images/ico_phone.png") no-repeat center;
     background-size: 70%;
     line-height: 28px
 }
@@ -6676,12 +6676,12 @@ th[class*='legend_bg'], td[class*='legend_bg'] {
     display: block;
     width: 24px;
     height: 24px;
-    background: url("/cm/static/images/ico24_call3_filled.svg") no-repeat 0
+    background: url("https://www.work24.go.kr/cm/static/images/ico24_call3_filled.svg") no-repeat 0
 }
 
 /* 사업자등록번화확인 아이콘 */
 .list_tit.caledar:before {
-    background: url("/cm/static/images/ico24_calendar.svg")
+    background: url("https://www.work24.go.kr/cm/static/images/ico24_calendar.svg")
 }
 
 /* 은행선택 */
@@ -6704,179 +6704,179 @@ th[class*='legend_bg'], td[class*='legend_bg'] {
 }
 
 .box_map_area .sh:before {
-    background: url("/cm/static/images/logo24_bank_SH_JEJU.svg")
+    background: url("https://www.work24.go.kr/cm/static/images/logo24_bank_SH_JEJU.svg")
 }
 
 .box_map_area .jeju:before {
-    background: url("/cm/static/images/logo24_bank_SH_JEJU.svg")
+    background: url("https://www.work24.go.kr/cm/static/images/logo24_bank_SH_JEJU.svg")
 }
 
 .box_map_area .citi:before {
-    background: url("/cm/static/images/logo24_bank_citi.svg")
+    background: url("https://www.work24.go.kr/cm/static/images/logo24_bank_citi.svg")
 }
 
 .box_map_area .kakao:before {
-    background: url("/cm/static/images/logo24_bank_kakao.svg")
+    background: url("https://www.work24.go.kr/cm/static/images/logo24_bank_kakao.svg")
 }
 
 .box_map_area .kb:before {
-    background: url("/cm/static/images/logo24_bank_KB.svg")
+    background: url("https://www.work24.go.kr/cm/static/images/logo24_bank_KB.svg")
 }
 
 .box_map_area .ibk:before {
-    background: url("/cm/static/images/logo24_bank_IBK.svg")
+    background: url("https://www.work24.go.kr/cm/static/images/logo24_bank_IBK.svg")
 }
 
 .box_map_area .bank_k:before {
-    background: url("/cm/static/images/logo24_bank_K.svg")
+    background: url("https://www.work24.go.kr/cm/static/images/logo24_bank_K.svg")
 }
 
 .box_map_area .toss:before {
-    background: url("/cm/static/images/logo24_bank_toss.svg")
+    background: url("https://www.work24.go.kr/cm/static/images/logo24_bank_toss.svg")
 }
 
 .box_map_area .nh:before {
-    background: url("/cm/static/images/logo24_bank_NH.svg")
+    background: url("https://www.work24.go.kr/cm/static/images/logo24_bank_NH.svg")
 }
 
 .box_map_area .kdb:before {
-    background: url("/cm/static/images/logo24_bank_KDB.svg")
+    background: url("https://www.work24.go.kr/cm/static/images/logo24_bank_KDB.svg")
 }
 
 .box_map_area .bnk:before {
-    background: url("/cm/static/images/logo24_bank_BNK.svg")
+    background: url("https://www.work24.go.kr/cm/static/images/logo24_bank_BNK.svg")
 }
 
 .box_map_area .gwanju:before {
-    background: url("/cm/static/images/logo24_bank_Gwangju.svg")
+    background: url("https://www.work24.go.kr/cm/static/images/logo24_bank_Gwangju.svg")
 }
 
 .box_map_area .suhyup:before {
-    background: url("/cm/static/images/logo24_bank_suhyup.svg")
+    background: url("https://www.work24.go.kr/cm/static/images/logo24_bank_suhyup.svg")
 }
 
 .box_map_area .sinhyup:before {
-    background: url("/cm/static/images/logo24_bank_sinhyup.svg")
+    background: url("https://www.work24.go.kr/cm/static/images/logo24_bank_sinhyup.svg")
 }
 
 .box_map_area .dgb:before {
-    background: url("/cm/static/images/logo24_bank_DGB.svg")
+    background: url("https://www.work24.go.kr/cm/static/images/logo24_bank_DGB.svg")
 }
 
 .box_map_area .bn:before {
-    background: url("/cm/static/images/logo24_bank_BN.svg")
+    background: url("https://www.work24.go.kr/cm/static/images/logo24_bank_BN.svg")
 }
 
 .box_map_area .worri:before {
-    background: url("/cm/static/images/logo24_bank_worri.svg")
+    background: url("https://www.work24.go.kr/cm/static/images/logo24_bank_worri.svg")
 }
 
 .box_map_area .hana:before {
-    background: url("/cm/static/images/logo24_bank_hana.svg")
+    background: url("https://www.work24.go.kr/cm/static/images/logo24_bank_hana.svg")
 }
 
 .box_map_area .gwanju02:before {
-    background: url("/cm/static/images/logo24_bank_Gwangju02.svg")
+    background: url("https://www.work24.go.kr/cm/static/images/logo24_bank_Gwangju02.svg")
 }
 
 .box_map_area .mg:before {
-    background: url("/cm/static/images/logo24_bank_MG.svg")
+    background: url("https://www.work24.go.kr/cm/static/images/logo24_bank_MG.svg")
 }
 
 .box_map_area .epost:before {
-    background: url("/cm/static/images/logo24_bank_epost.svg")
+    background: url("https://www.work24.go.kr/cm/static/images/logo24_bank_epost.svg")
 }
 
 .box_map_area .sb:before {
-    background: url("/cm/static/images/logo24_bank_SB.svg")
+    background: url("https://www.work24.go.kr/cm/static/images/logo24_bank_SB.svg")
 }
 
 .box_map_area .jp:before {
-    background: url("/cm/static/images/logo24_bank_JP.svg")
+    background: url("https://www.work24.go.kr/cm/static/images/logo24_bank_JP.svg")
 }
 
 .box_map_area .sc:before {
-    background: url("/cm/static/images/logo24_bank_SC.svg")
+    background: url("https://www.work24.go.kr/cm/static/images/logo24_bank_SC.svg")
 }
 
 .box_map_area .nonghyup:before {
-    background: url("/cm/static/images/logo24_bank_Nonghyup.svg")
+    background: url("https://www.work24.go.kr/cm/static/images/logo24_bank_Nonghyup.svg")
 }
 
 .box_map_area .deutsche:before {
-    background: url("/cm/static/images/logo24_bank_Deutsche.svg")
+    background: url("https://www.work24.go.kr/cm/static/images/logo24_bank_Deutsche.svg")
 }
 
 .box_map_area .sj:before {
-    background: url("/cm/static/images/logo24_bank_sj.svg")
+    background: url("https://www.work24.go.kr/cm/static/images/logo24_bank_sj.svg")
 }
 
 .box_map_area .nation:before {
-    background: url("/cm/static/images/logo24_bank_nation.svg")
+    background: url("https://www.work24.go.kr/cm/static/images/logo24_bank_nation.svg")
 }
 
 .box_map_area .china:before {
-    background: url("/cm/static/images/logo24_bank_china.svg")
+    background: url("https://www.work24.go.kr/cm/static/images/logo24_bank_china.svg")
 }
 
 .box_map_area .ccb:before {
-    background: url("/cm/static/images/logo24_bank_ccb.svg")
+    background: url("https://www.work24.go.kr/cm/static/images/logo24_bank_ccb.svg")
 }
 
 .box_map_area .industrial:before {
-    background: url("/cm/static/images/logo24_bank_china_industrial.svg")
+    background: url("https://www.work24.go.kr/cm/static/images/logo24_bank_china_industrial.svg")
 }
 
 .box_map_area .bnp:before {
-    background: url("/cm/static/images/logo24_bank_BNP.svg")
+    background: url("https://www.work24.go.kr/cm/static/images/logo24_bank_BNP.svg")
 }
 
 .box_map_area .boa:before {
-    background: url("/cm/static/images/logo24_bank_BOA.svg")
+    background: url("https://www.work24.go.kr/cm/static/images/logo24_bank_BOA.svg")
 }
 
 .box_map_area .hsbc:before {
-    background: url("/cm/static/images/logo24_bank_HSBC.svg")
+    background: url("https://www.work24.go.kr/cm/static/images/logo24_bank_HSBC.svg")
 }
 
 .box_map_area .chungbuk:before {
-    background: url("/cm/static/images/logo24_bank_chungbuk.svg")
+    background: url("https://www.work24.go.kr/cm/static/images/logo24_bank_chungbuk.svg")
 }
 
 .box_map_area .kodit:before {
-    background: url("/cm/static/images/logo24_bank_kodit.svg")
+    background: url("https://www.work24.go.kr/cm/static/images/logo24_bank_kodit.svg")
 }
 
 .box_map_area .kibo:before {
-    background: url("/cm/static/images/logo24_bank_kibo.svg")
+    background: url("https://www.work24.go.kr/cm/static/images/logo24_bank_kibo.svg")
 }
 
 .box_map_area .boram:before {
-    background: url("/cm/static/images/logo24_bank_boram.svg")
+    background: url("https://www.work24.go.kr/cm/static/images/logo24_bank_boram.svg")
 }
 
 .box_map_area .peace:before {
-    background: url("/cm/static/images/logo24_bank_peace.svg")
+    background: url("https://www.work24.go.kr/cm/static/images/logo24_bank_peace.svg")
 }
 
 .box_map_area .fsb:before {
-    background: url("/cm/static/images/logo24_bank_fsb.svg")
+    background: url("https://www.work24.go.kr/cm/static/images/logo24_bank_fsb.svg")
 }
 
 .box_map_area .morgan:before {
-    background: url("/cm/static/images/logo24_bank_morgan.svg")
+    background: url("https://www.work24.go.kr/cm/static/images/logo24_bank_morgan.svg")
 }
 
 .box_map_area .mhcbjpjt:before {
-    background: url("/cm/static/images/logo24_bank_mhcbjpjt.svg")
+    background: url("https://www.work24.go.kr/cm/static/images/logo24_bank_mhcbjpjt.svg")
 }
 
 .box_map_area .ufj:before {
-    background: url("/cm/static/images/logo24_bank_ufj.svg")
+    background: url("https://www.work24.go.kr/cm/static/images/logo24_bank_ufj.svg")
 }
 
 .box_map_area .rbs:before {
-    background: url("/cm/static/images/logo24_bank_rbs.svg")
+    background: url("https://www.work24.go.kr/cm/static/images/logo24_bank_rbs.svg")
 }
 
 /* 기관찾기 */
@@ -6920,7 +6920,7 @@ th[class*='legend_bg'], td[class*='legend_bg'] {
     margin: -25px 0 0 0;
     padding: 0;
     text-align: center;
-    background: url("/cm/static/images/bg_balloon.svg") no-repeat 0 0;
+    background: url("https://www.work24.go.kr/cm/static/images/bg_balloon.svg") no-repeat 0 0;
     font-weight: 600;
     font-size: 11px;
     color: var(--col_white)
@@ -7274,7 +7274,7 @@ th[class*='legend_bg'], td[class*='legend_bg'] {
     top: 8px;
     width: 24px;
     height: 24px;
-    background: url("/cm/static/images/ico32_close.svg") no-repeat 0 0;
+    background: url("https://www.work24.go.kr/cm/static/images/ico32_close.svg") no-repeat 0 0;
     background-size: 24px
 }
 
@@ -7366,12 +7366,12 @@ th[class*='legend_bg'], td[class*='legend_bg'] {
     width: 16px;
     height: 16px;
     margin-top: -8px;
-    background: url("/cm/static/images/ico24_arrow2_down.svg") no-repeat 0 0;
+    background: url("https://www.work24.go.kr/cm/static/images/ico24_arrow2_down.svg") no-repeat 0 0;
     background-size: contain
 }
 
 .box_border_expand .btn_txt_expand .btn_arrexp.on::after {
-    background: url("/cm/static/images/ico24_arrow2_down.svg") no-repeat 0 0;
+    background: url("https://www.work24.go.kr/cm/static/images/ico24_arrow2_down.svg") no-repeat 0 0;
     background-size: contain;
     transform: rotate(180deg)
 }
@@ -7414,7 +7414,7 @@ th[class*='legend_bg'], td[class*='legend_bg'] {
     margin-top: -12px;
     width: 24px;
     height: 24px;
-    background: url("/cm/static/images/ico24_search_mo.svg") no-repeat
+    background: url("https://www.work24.go.kr/cm/static/images/ico24_search_mo.svg") no-repeat
 }
 
 .keyword_search_wrap {
@@ -7487,13 +7487,13 @@ th[class*='legend_bg'], td[class*='legend_bg'] {
     display: inline-block;
     width: 24px;
     height: 24px;
-    background: url("/cm/static/images/ico24_arrow2_down.svg") no-repeat;
+    background: url("https://www.work24.go.kr/cm/static/images/ico24_arrow2_down.svg") no-repeat;
     transform: rotate(0deg);
     transform-style: preserve-3d
 }
 
 .btn_arrow_type.exp:after {
-    background: url(/cm/static/images/ico24_arrow2_up_color.svg) no-repeat;
+    background: url(https://www.work24.go.kr/cm/static/images/ico24_arrow2_up_color.svg) no-repeat;
     transform: rotate(0deg)
 }
 
@@ -7505,7 +7505,7 @@ th[class*='legend_bg'], td[class*='legend_bg'] {
     margin: 0 0 0 2px;
     width: 16px;
     height: 16px;
-    background: url("/cm/static/images/ico16_arrow_right_fill.svg") no-repeat
+    background: url("https://www.work24.go.kr/cm/static/images/ico16_arrow_right_fill.svg") no-repeat
 }
 
 .box_side_wrap .side_inner.type03 {
@@ -7703,11 +7703,11 @@ th[class*='legend_bg'], td[class*='legend_bg'] {
 }
 
 .box_list_doc .btn_txt .ico16_doc {
-    background: url("/cm/static/images/ico16_arrow_right_blue.svg");
+    background: url("https://www.work24.go.kr/cm/static/images/ico16_arrow_right_blue.svg");
 }
 
 .box_list_doc .btn_txt.active .ico16_doc {
-    background: url("/cm/static/images/ico16_arrow_right.svg");
+    background: url("https://www.work24.go.kr/cm/static/images/ico16_arrow_right.svg");
 }
 
 .box_list_doc.type02 li a {
@@ -7728,11 +7728,11 @@ th[class*='legend_bg'], td[class*='legend_bg'] {
 
 /* 20250515 추가 */
 .ico16_doc {
-    background: url("/cm/static/images/ico16_document.svg")
+    background: url("https://www.work24.go.kr/cm/static/images/ico16_document.svg")
 }
 
 .ico24_circle_filled {
-    background: url("/cm/static/images/ico24_ui_close_circle_filled.svg")
+    background: url("https://www.work24.go.kr/cm/static/images/ico24_ui_close_circle_filled.svg")
 }
 
 .ico80_benefit {
@@ -7873,7 +7873,7 @@ th[class*='legend_bg'], td[class*='legend_bg'] {
     top: 152px;
     width: 24px;
     height: 24px;
-    background: url("/cm/static/images/ico16_arrow_right.svg") center center no-repeat;
+    background: url("https://www.work24.go.kr/cm/static/images/ico16_arrow_right.svg") center center no-repeat;
     transform: rotate(-180deg);
 }
 
@@ -7882,7 +7882,7 @@ th[class*='legend_bg'], td[class*='legend_bg'] {
     top: 152px;
     width: 24px;
     height: 24px;
-    background: url("/cm/static/images/ico16_arrow_right.svg") center center no-repeat;
+    background: url("https://www.work24.go.kr/cm/static/images/ico16_arrow_right.svg") center center no-repeat;
 }
 
 .policy_list_wrp {
@@ -7930,7 +7930,7 @@ th[class*='legend_bg'], td[class*='legend_bg'] {
     bottom: -12px;
     width: 16px;
     height: 12px;
-    background: url("/cm/static/images/ico_tipbtm_arrow.png") 0 0 no-repeat;
+    background: url("https://www.work24.go.kr/cm/static/images/ico_tipbtm_arrow.png") 0 0 no-repeat;
     transform: translateX(-50%);
     content: "";
 }
@@ -7962,7 +7962,7 @@ th[class*='legend_bg'], td[class*='legend_bg'] {
 }
 
 .box_side_wrap .side_inner.ty_hover .title.arr_right:after {
-    background: url("/cm/static/images/ico16_arrow_right.svg") 0 0 no-repeat;
+    background: url("https://www.work24.go.kr/cm/static/images/ico16_arrow_right.svg") 0 0 no-repeat;
 }
 
 .box_side_wrap .side_inner.ty_hover .box_line:hover .title {
@@ -7971,7 +7971,7 @@ th[class*='legend_bg'], td[class*='legend_bg'] {
 }
 
 .box_side_wrap .side_inner.ty_hover .box_line:hover .title.arr_right:after {
-    background: url("/cm/static/images/ico16_arrow_right_fill.svg") 0 0 no-repeat;
+    background: url("https://www.work24.go.kr/cm/static/images/ico16_arrow_right_fill.svg") 0 0 no-repeat;
 }
 
 /* E: 고용정책 개편 */
@@ -8023,19 +8023,19 @@ th[class*='legend_bg'], td[class*='legend_bg'] {
 }
 
 .ico24_memo_search_white {
-    background: url("/cm/static/images/ico24_memo_search_white.svg") no-repeat center
+    background: url("https://www.work24.go.kr/cm/static/images/ico24_memo_search_white.svg") no-repeat center
 }
 
 .ico24_graduation_white {
-    background: url("/cm/static/images/ico24_graduation_white.svg") no-repeat center
+    background: url("https://www.work24.go.kr/cm/static/images/ico24_graduation_white.svg") no-repeat center
 }
 
 .ico24_jobfind_check_white {
-    background: url("/cm/static/images/ico24_jobfind_check_white.svg") no-repeat center
+    background: url("https://www.work24.go.kr/cm/static/images/ico24_jobfind_check_white.svg") no-repeat center
 }
 
 .ico24_Certified02_white {
-    background: url("/cm/static/images/ico24_Certified02_white.svg") no-repeat center
+    background: url("https://www.work24.go.kr/cm/static/images/ico24_Certified02_white.svg") no-repeat center
 }
 
 .history_intro {
@@ -8123,7 +8123,7 @@ th[class*='legend_bg'], td[class*='legend_bg'] {
 }
 
 .expand_cont_type .btn_expand_section.exp .btn_arrow_type:after {
-    background: url(/cm/static/images/ico24_arrow2_up_color.svg) no-repeat;
+    background: url(https://www.work24.go.kr/cm/static/images/ico24_arrow2_up_color.svg) no-repeat;
     transform: rotate(0deg)
 }
 
@@ -8163,15 +8163,15 @@ th[class*='legend_bg'], td[class*='legend_bg'] {
 }
 
 .ico24_memo_search {
-    background: url("/cm/static/images/ico24_memo_search.svg") no-repeat center
+    background: url("https://www.work24.go.kr/cm/static/images/ico24_memo_search.svg") no-repeat center
 }
 
 .ico24_memo_search_check {
-    background: url("/cm/static/images/ico24_memo_search_check.svg") no-repeat center
+    background: url("https://www.work24.go.kr/cm/static/images/ico24_memo_search_check.svg") no-repeat center
 }
 
 .ico24_memo_search_like {
-    background: url("/cm/static/images/ico24_memo_search_like.svg") no-repeat center
+    background: url("https://www.work24.go.kr/cm/static/images/ico24_memo_search_like.svg") no-repeat center
 }
 
 /* 가이드 추가 */
@@ -8249,7 +8249,7 @@ select[readonly="readonly"] {
 
 .t_wrap .ico16_delete {
     margin-left: 4px;
-    background: url("/cm/static/images/ico16_close.svg") 0 center no-repeat
+    background: url("https://www.work24.go.kr/cm/static/images/ico16_close.svg") 0 center no-repeat
 }
 
 .box_chk-group.flex_al > span + span, .box_radio-group.flex_al > span + span {
@@ -8265,11 +8265,11 @@ select[readonly="readonly"] {
 }
 
 .btn_ico.medal_star:before {
-    background: url("/cm/static/images/ico24_medal_star.svg") 0 0 no-repeat
+    background: url("https://www.work24.go.kr/cm/static/images/ico24_medal_star.svg") 0 0 no-repeat
 }
 
 .btn_ico.cal_normal:before {
-    background: url("/cm/static/images/ico24_cal_normal.svg") 0 0 no-repeat
+    background: url("https://www.work24.go.kr/cm/static/images/ico24_cal_normal.svg") 0 0 no-repeat
 }
 
 .box_help-data.w_wide {
@@ -8329,7 +8329,7 @@ select[readonly="readonly"] {
     right: 10px;
     width: 16px;
     height: 16px;
-    background: url("/cm/static/images/ico24_arrow2_down.svg") no-repeat;
+    background: url("https://www.work24.go.kr/cm/static/images/ico24_arrow2_down.svg") no-repeat;
     transform: rotate(0deg) translateY(-50%);
     transform-style: preserve-3d;
     background-size: contain
@@ -8338,7 +8338,7 @@ select[readonly="readonly"] {
 [class^='btn'].btn_form.active:before {
     width: 16px;
     height: 16px;
-    background: url("/cm/static/images/ico24_arrow2_up_color.svg") no-repeat;
+    background: url("https://www.work24.go.kr/cm/static/images/ico24_arrow2_up_color.svg") no-repeat;
     transform: rotate(0deg) translateY(-50%);
     background-size: contain
 }
@@ -8644,15 +8644,15 @@ select[readonly="readonly"] {
 }
 
 .tit_mark_01:before {
-    background: url(/cm/static/images/ico24_member_mypage2_filled.svg) 0 0 no-repeat
+    background: url(https://www.work24.go.kr/cm/static/images/ico24_member_mypage2_filled.svg) 0 0 no-repeat
 }
 
 .tit_mark_02:before {
-    background: url(/cm/static/images/ico24_memo_search_filled.svg) 0 0 no-repeat
+    background: url(https://www.work24.go.kr/cm/static/images/ico24_memo_search_filled.svg) 0 0 no-repeat
 }
 
 .tit_mark_03:before {
-    background: url(/cm/static/images/medal-star.svg) 0 0 no-repeat
+    background: url(https://www.work24.go.kr/cm/static/images/medal-star.svg) 0 0 no-repeat
 }
 
 .tit_mark_04 {
@@ -8662,11 +8662,11 @@ select[readonly="readonly"] {
 .tit_mark_04:before {
     width: 32px;
     height: 32px;
-    background: url(/cm/static/images/ico32_jobfind_filled.svg) 0 0 no-repeat
+    background: url(https://www.work24.go.kr/cm/static/images/ico32_jobfind_filled.svg) 0 0 no-repeat
 }
 
 .tit_mark_05:before {
-    background: url(/cm/static/images/ico24_proof.svg) 0 0 no-repeat
+    background: url(https://www.work24.go.kr/cm/static/images/ico24_proof.svg) 0 0 no-repeat
 }
 
 /* 20241118 추가 */
@@ -8751,7 +8751,7 @@ select[readonly="readonly"] {
 .box_table.data01 td .situation {
     width: 24px;
     height: 24px;
-    background: url(/cm/static/images/ico24_ui_ok_blue.svg) no-repeat center;
+    background: url(https://www.work24.go.kr/cm/static/images/ico24_ui_ok_blue.svg) no-repeat center;
     overflow: hidden;
     text-indent: -9999px;
     position: absolute;
@@ -8793,7 +8793,7 @@ select[readonly="readonly"] {
     position: absolute;
     top: 8px;
     right: 8px;
-    background: url("/cm/static/images/ico16_close.svg") 0 0 no-repeat
+    background: url("https://www.work24.go.kr/cm/static/images/ico16_close.svg") 0 0 no-repeat
 }
 
 .box_display_data {
@@ -8899,7 +8899,7 @@ select[readonly="readonly"] {
 .part_wrap .part_arrow {
     width: 24px;
     height: 24px;
-    background: url(/cm/static/images/ico24_arrow1_right_circle.svg) 0 0 no-repeat;
+    background: url(https://www.work24.go.kr/cm/static/images/ico24_arrow1_right_circle.svg) 0 0 no-repeat;
     margin: 0 40px
 }
 
@@ -8936,7 +8936,7 @@ select[readonly="readonly"] {
     position: relative;
     width: auto;
     padding-left: 100px;
-    background: url("/cm/static/images/Group_818193.svg") 0 center no-repeat
+    background: url("https://www.work24.go.kr/cm/static/images/Group_818193.svg") 0 center no-repeat
 }
 
 .box_satisfaction.type3 .page_survey_wrap .rating:before {
@@ -8946,7 +8946,7 @@ select[readonly="readonly"] {
     position: absolute;
     top: 4px;
     left: 0;
-    background: url(/cm/static/images/ico_star_bule.svg) 0 0 no-repeat;
+    background: url(https://www.work24.go.kr/cm/static/images/ico_star_bule.svg) 0 0 no-repeat;
     filter: invert(0%) sepia(4%) saturate(7484%) hue-rotate(182deg) brightness(98%) contrast(106%)
 }
 
@@ -9028,31 +9028,31 @@ select[readonly="readonly"] {
 }
 
 .box_progress li .in_step_1_1 .t_bundle:after {
-    background: url(/cm/static/images/ico80_step01.svg) 0 0 no-repeat
+    background: url(https://www.work24.go.kr/cm/static/images/ico80_step01.svg) 0 0 no-repeat
 }
 
 .box_progress li .in_step_1_2 .t_bundle:after, .box_progress li .in_step_2_2 .t_bundle:after {
-    background: url(/cm/static/images/ico80_step02.svg) 0 0 no-repeat
+    background: url(https://www.work24.go.kr/cm/static/images/ico80_step02.svg) 0 0 no-repeat
 }
 
 .box_progress li .in_step_1_3 .t_bundle:after {
-    background: url(/cm/static/images/ico80_step03.svg) 0 0 no-repeat
+    background: url(https://www.work24.go.kr/cm/static/images/ico80_step03.svg) 0 0 no-repeat
 }
 
 .box_progress li .in_step_1_4 .t_bundle:after, .box_progress li .in_step_2_3 .t_bundle:after {
-    background: url(/cm/static/images/ico80_step04.svg) 0 0 no-repeat
+    background: url(https://www.work24.go.kr/cm/static/images/ico80_step04.svg) 0 0 no-repeat
 }
 
 .box_progress li .in_step_1_5 .t_bundle:after {
-    background: url(/cm/static/images/ico80_step05.svg) 0 0 no-repeat
+    background: url(https://www.work24.go.kr/cm/static/images/ico80_step05.svg) 0 0 no-repeat
 }
 
 .box_progress li .in_step_1_6 .t_bundle:after, .box_progress li .in_step_2_4 .t_bundle:after {
-    background: url(/cm/static/images/ico80_step06.svg) 0 0 no-repeat
+    background: url(https://www.work24.go.kr/cm/static/images/ico80_step06.svg) 0 0 no-repeat
 }
 
 .box_progress li .in_step_2_1 .t_bundle:after {
-    background: url(/cm/static/images/ico80_step07.svg) 0 0 no-repeat
+    background: url(https://www.work24.go.kr/cm/static/images/ico80_step07.svg) 0 0 no-repeat
 }
 
 /* 구인신청 > 구인신청 등록 HPWKAC2130M01 */
@@ -9556,7 +9556,7 @@ select[readonly="readonly"] {
     left: 30px;
     width: 48px;
     height: 52px;
-    background: url("/cm/static/images/ico48_notice_type_01.svg") no-repeat 0 0
+    background: url("https://www.work24.go.kr/cm/static/images/ico48_notice_type_01.svg") no-repeat 0 0
 }
 
 .box_message_wrap.type_person .txt_list {
@@ -9614,7 +9614,7 @@ select[readonly="readonly"] {
     width: 24px;
     height: 24px;
     margin-right: 8px;
-    background: url("/cm/static/images/ico24_authentication_certificate.svg") no-repeat 0 0
+    background: url("https://www.work24.go.kr/cm/static/images/ico24_authentication_certificate.svg") no-repeat 0 0
 }
 
 .authentication_certificate_wrap .guide_section01 dd {
@@ -9669,7 +9669,7 @@ select[readonly="readonly"] {
     width: 16px;
     height: 16px;
     margin-right: 4px;
-    background: url("/cm/static/images/ico16_call_filled.svg") no-repeat 0 0
+    background: url("https://www.work24.go.kr/cm/static/images/ico16_call_filled.svg") no-repeat 0 0
 }
 
 .st_ing {
@@ -9758,27 +9758,27 @@ select[readonly="readonly"] {
 }
 
 .usage_guide_mobile .guide_section02 li:nth-child(1) {
-    background: url("/cm/static/images/process_job_seeking_step01.png") no-repeat 0 0
+    background: url("https://www.work24.go.kr/cm/static/images/process_job_seeking_step01.png") no-repeat 0 0
 }
 
 .usage_guide_mobile .guide_section02 li:nth-child(2) {
-    background: url("/cm/static/images/process_job_seeking_step02.png") no-repeat 0 0
+    background: url("https://www.work24.go.kr/cm/static/images/process_job_seeking_step02.png") no-repeat 0 0
 }
 
 .usage_guide_mobile .guide_section02 li:nth-child(3) {
-    background: url("/cm/static/images/process_job_seeking_step03.png") no-repeat 0 0
+    background: url("https://www.work24.go.kr/cm/static/images/process_job_seeking_step03.png") no-repeat 0 0
 }
 
 .usage_guide_mobile .guide_section02 li:nth-child(4) {
-    background: url("/cm/static/images/process_job_seeking_step04.png") no-repeat 0 0
+    background: url("https://www.work24.go.kr/cm/static/images/process_job_seeking_step04.png") no-repeat 0 0
 }
 
 .usage_guide_mobile .guide_section02 li:nth-child(5) {
-    background: url("/cm/static/images/process_job_seeking_step05.png") no-repeat 0 0
+    background: url("https://www.work24.go.kr/cm/static/images/process_job_seeking_step05.png") no-repeat 0 0
 }
 
 .usage_guide_mobile .guide_section02 li:nth-child(6) {
-    background: url("/cm/static/images/process_job_seeking_step06.png") no-repeat 0 0
+    background: url("https://www.work24.go.kr/cm/static/images/process_job_seeking_step06.png") no-repeat 0 0
 }
 
 .usage_guide_mobile .guide_section03 {
@@ -9799,11 +9799,11 @@ select[readonly="readonly"] {
 }
 
 .usage_guide_mobile .guide_section03 li:nth-child(1) {
-    background: url("/cm/static/images/process_job_certification01.png") no-repeat 0 0
+    background: url("https://www.work24.go.kr/cm/static/images/process_job_certification01.png") no-repeat 0 0
 }
 
 .usage_guide_mobile .guide_section03 li:nth-child(2) {
-    background: url("/cm/static/images/process_job_certification02.png") no-repeat 0 0
+    background: url("https://www.work24.go.kr/cm/static/images/process_job_certification02.png") no-repeat 0 0
 }
 
 .copyright_policy {
@@ -9862,7 +9862,7 @@ select[readonly="readonly"] {
     width: 24px;
     height: 24px;
     margin-right: 8px;
-    background: url("/cm/static/images/ico24_diagram_down.svg") no-repeat 0 0
+    background: url("https://www.work24.go.kr/cm/static/images/ico24_diagram_down.svg") no-repeat 0 0
 }
 
 .job_budget_section ul li {
@@ -10024,19 +10024,19 @@ select[readonly="readonly"] {
 .error_page_section .ico_error {
     width: 80px;
     height: 80px;
-    background: url("/cm/static/images/ico80_non_file.svg") no-repeat 0 0
+    background: url("https://www.work24.go.kr/cm/static/images/ico80_non_file.svg") no-repeat 0 0
 }
 
 .error_page_section .ico_err_red {
     width: 80px;
     height: 80px;
-    background: url("/cm/static/images/ico80_err_red.svg") no-repeat 0 0
+    background: url("https://www.work24.go.kr/cm/static/images/ico80_err_red.svg") no-repeat 0 0
 }
 
 .error_page_section .ico_err_red_fill {
     width: 80px;
     height: 80px;
-    background: url("/cm/static/images/ico80_err_red_fill.svg") no-repeat 0 0
+    background: url("https://www.work24.go.kr/cm/static/images/ico80_err_red_fill.svg") no-repeat 0 0
 }
 
 .error_page_section h3 {
@@ -10063,19 +10063,19 @@ select[readonly="readonly"] {
 }
 
 .box_border_type.company_info .in_box_wrap > li:nth-child(1) {
-    background: url("/cm/static/images/ico40_center_c.svg") no-repeat 50% 0
+    background: url("https://www.work24.go.kr/cm/static/images/ico40_center_c.svg") no-repeat 50% 0
 }
 
 .box_border_type.company_info .in_box_wrap > li:nth-child(2) {
-    background: url("/cm/static/images/ico40_money_c.svg") no-repeat 50% 0
+    background: url("https://www.work24.go.kr/cm/static/images/ico40_money_c.svg") no-repeat 50% 0
 }
 
 .box_border_type.company_info .in_box_wrap > li:nth-child(3) {
-    background: url("/cm/static/images/ico40_group_c.svg") no-repeat 50% 0
+    background: url("https://www.work24.go.kr/cm/static/images/ico40_group_c.svg") no-repeat 50% 0
 }
 
 .box_border_type.company_info .in_box_wrap > li:nth-child(4) {
-    background: url("/cm/static/images/ico40_grow_c.svg") no-repeat 50% 0
+    background: url("https://www.work24.go.kr/cm/static/images/ico40_grow_c.svg") no-repeat 50% 0
 }
 
 .box_border_type.company_info .in_box_wrap > li .t3_sb {
@@ -10172,31 +10172,31 @@ select[readonly="readonly"] {
 }
 
 .box_group_wrap .welfare_box > li.on .ico40_bed {
-    background: url("/cm/static/images/ico40_bed_blue.svg") no-repeat 0 0
+    background: url("https://www.work24.go.kr/cm/static/images/ico40_bed_blue.svg") no-repeat 0 0
 }
 
 .box_group_wrap .welfare_box > li.on .ico40_car_center {
-    background: url("/cm/static/images/ico40_car_center_blue.svg") no-repeat 0 0
+    background: url("https://www.work24.go.kr/cm/static/images/ico40_car_center_blue.svg") no-repeat 0 0
 }
 
 .box_group_wrap .welfare_box > li.on .ico40_baby {
-    background: url("/cm/static/images/ico40_baby_blue.svg") no-repeat 0 0
+    background: url("https://www.work24.go.kr/cm/static/images/ico40_baby_blue.svg") no-repeat 0 0
 }
 
 .box_group_wrap .welfare_box > li.on .ico40_house {
-    background: url("/cm/static/images/ico40_house_blue.svg") no-repeat 0 0
+    background: url("https://www.work24.go.kr/cm/static/images/ico40_house_blue.svg") no-repeat 0 0
 }
 
 .box_group_wrap .welfare_box > li.on .ico40_bus {
-    background: url("/cm/static/images/ico40_bus_blue.svg") no-repeat 0 0
+    background: url("https://www.work24.go.kr/cm/static/images/ico40_bus_blue.svg") no-repeat 0 0
 }
 
 .box_group_wrap .welfare_box > li.on .ico40_graduation_cap {
-    background: url("/cm/static/images/ico40_graduation_cap_blue.svg") no-repeat 0 0
+    background: url("https://www.work24.go.kr/cm/static/images/ico40_graduation_cap_blue.svg") no-repeat 0 0
 }
 
 .box_group_wrap .welfare_box > li.on .ico40_service {
-    background: url("/cm/static/images/ico40_service_blue.svg") no-repeat 0 0
+    background: url("https://www.work24.go.kr/cm/static/images/ico40_service_blue.svg") no-repeat 0 0
 }
 
 .q_a_wrap .q, .q_a_wrap .a {
@@ -10256,7 +10256,7 @@ select[readonly="readonly"] {
     width: 24px;
     height: 24px;
     margin-top: -12px;
-    background: url("/cm/static/images/ico24_arrow2_right_gray.svg")
+    background: url("https://www.work24.go.kr/cm/static/images/ico24_arrow2_right_gray.svg")
 }
 
 .recruit_proc ul > li:last-child::after {
@@ -10336,13 +10336,13 @@ select[readonly="readonly"] {
     right: 0;
     width: 24px;
     height: 24px;
-    background: url("/cm/static/images/ico24_arrow2_down.svg") no-repeat;
+    background: url("https://www.work24.go.kr/cm/static/images/ico24_arrow2_down.svg") no-repeat;
     transform: rotate(0deg) translateY(-50%);
     transform-style: preserve-3d;
 }
 
 .code_acd_wrap .cont .code_acd .depth_1.on > .code_acd_header .b1_r::after {
-    background: url("/cm/static/images/ico24_arrow2_up.svg") no-repeat;
+    background: url("https://www.work24.go.kr/cm/static/images/ico24_arrow2_up.svg") no-repeat;
 }
 
 .code_acd_wrap .cont .code_acd .depth_1 > .code_acd_content {
@@ -10368,7 +10368,7 @@ select[readonly="readonly"] {
     left: 0;
     width: 16px;
     height: 16px;
-    background: url("/cm/static/images/ico_fill_arrow.svg") no-repeat;
+    background: url("https://www.work24.go.kr/cm/static/images/ico_fill_arrow.svg") no-repeat;
     transform: rotate(90deg);
 }
 
@@ -11215,7 +11215,7 @@ span.box_ipt.w530 {
     display: block;
     width: 16px;
     height: 16px;
-    background: url("/cm/static/images/ico16_arrow_right.svg") 0 0 no-repeat;
+    background: url("https://www.work24.go.kr/cm/static/images/ico16_arrow_right.svg") 0 0 no-repeat;
     transform: translateY(-50%);
     content: "";
 }
@@ -11244,7 +11244,7 @@ span.box_ipt.w530 {
 .ban_link_gray .ico_link {
     display: block;
     padding-right: 32px;
-    background: url('/cm/static/images/ico16_arrow_right_black.svg') right center no-repeat;
+    background: url('https://www.work24.go.kr/cm/static/images/ico16_arrow_right_black.svg') right center no-repeat;
 }
 
 .ban_link_gray > li {
@@ -11278,11 +11278,11 @@ span.box_ipt.w530 {
 }
 
 .ban_link_gray > li .bg_guide1 {
-    background: url('/cm/static/images/ico40_directbox_cir.svg') 0 center no-repeat;
+    background: url('https://www.work24.go.kr/cm/static/images/ico40_directbox_cir.svg') 0 center no-repeat;
 }
 
 .ban_link_gray > li .bg_guide2 {
-    background: url('/cm/static/images/ico40_digitalbadge_cir.svg') 0 center no-repeat;
+    background: url('https://www.work24.go.kr/cm/static/images/ico40_digitalbadge_cir.svg') 0 center no-repeat;
 }
 
 .emp_info_dtl > li {
@@ -11302,17 +11302,17 @@ span.box_ipt.w530 {
 
 .emp_info_dtl li.dollar {
     padding-left: 22px;
-    background: url('/cm/static/images/ico16_coin2.svg') 0 6px no-repeat;
+    background: url('https://www.work24.go.kr/cm/static/images/ico16_coin2.svg') 0 6px no-repeat;
 }
 
 .emp_info_dtl li.site {
     padding-left: 22px;
-    background: url('/cm/static/images/ico16_location.svg') 0 6px no-repeat;
+    background: url('https://www.work24.go.kr/cm/static/images/ico16_location.svg') 0 6px no-repeat;
 }
 
 .emp_info_dtl li.job {
     padding-left: 22px;
-    background: url('/cm/static/images/ico16_job.svg') 0 6px no-repeat;
+    background: url('https://www.work24.go.kr/cm/static/images/ico16_job.svg') 0 6px no-repeat;
 }
 
 /* 전자지갑 가이드(20241220) */
@@ -11332,15 +11332,15 @@ span.box_ipt.w530 {
 }
 
 .dgt_guide_wrp .top_info.bg1 {
-    background-image: url('/cm/static/images/bg_dgt_guide1.png');
+    background-image: url('https://www.work24.go.kr/cm/static/images/bg_dgt_guide1.png');
 }
 
 .dgt_guide_wrp .top_info.bg2 {
-    background-image: url('/cm/static/images/bg_dgt_guide2.png');
+    background-image: url('https://www.work24.go.kr/cm/static/images/bg_dgt_guide2.png');
 }
 
 .dgt_guide_wrp .top_info.bg3 {
-    background-image: url('/cm/static/images/bg_dgt_guide3.png');
+    background-image: url('https://www.work24.go.kr/cm/static/images/bg_dgt_guide3.png');
 }
 
 .dgt_guide_wrp .top_info .title {
@@ -11400,7 +11400,7 @@ span.box_ipt.w530 {
 }
 
 .full_pop.pop_dgt_resume > .closed {
-    background: url('/cm/static/images/ico32_close02.svg') 0 0 no-repeat
+    background: url('https://www.work24.go.kr/cm/static/images/ico32_close02.svg') 0 0 no-repeat
 }
 
 .pop_dgt_resume h2.b_line {
@@ -11477,7 +11477,7 @@ span.box_ipt.w530 {
     right: 16px;
     width: 24px;
     height: 24px;
-    background: url('/cm/static/images/ico24_ui_close_circle.svg') no-repeat right center
+    background: url('https://www.work24.go.kr/cm/static/images/ico24_ui_close_circle.svg') no-repeat right center
 }
 
 /* 20250701 GNB 공지사항 수정 */
@@ -11544,11 +11544,11 @@ span.box_ipt.w530 {
 }
 
 .top_noti_area .noti_banner_slide .btn_container .btn.noti_pause {
-    background: url('/cm/static/images/icon/24/ico24_stop.svg') no-repeat center;
+    background: url('https://www.work24.go.kr/cm/static/images/icon/24/ico24_stop.svg') no-repeat center;
 }
 
 .top_noti_area .noti_banner_slide .btn_container .btn.noti_play {
-    background: url('/cm/static/images/icon/24/ico24_play.svg') no-repeat center;
+    background: url('https://www.work24.go.kr/cm/static/images/icon/24/ico24_play.svg') no-repeat center;
 }
 
 /* // 20250701 GNB 공지사항 수정 */
@@ -11601,50 +11601,50 @@ span.box_ipt.w530 {
 }
 
 .login--style .login_wrp .link-mobile-anyId .cert_list dt {
-    background: url("/cm/static/images/login_new/ico48_certi_mobile.svg") 0 0 no-repeat;
+    background: url("https://www.work24.go.kr/cm/static/images/login_new/ico48_certi_mobile.svg") 0 0 no-repeat;
 }
 
 .login--style .login_wrp .link-easy-anyId .cert_list dt {
-    background: url("/cm/static/images/login_new/ico48_certi_easy.svg") 0 0 no-repeat;
+    background: url("https://www.work24.go.kr/cm/static/images/login_new/ico48_certi_easy.svg") 0 0 no-repeat;
 }
 
 .login--style .login_wrp .link-cmn-anyId .cert_list dt {
-    background: url("/cm/static/images/login_new/ico48_certi_public.svg") 0 0 no-repeat;
+    background: url("https://www.work24.go.kr/cm/static/images/login_new/ico48_certi_public.svg") 0 0 no-repeat;
 }
 
 .login--style .login_wrp .link-bnk-anyId .cert_list dt {
-    background: url("/cm/static/images/login_new/ico48_certi_financial.svg") 0 0 no-repeat;
+    background: url("https://www.work24.go.kr/cm/static/images/login_new/ico48_certi_financial.svg") 0 0 no-repeat;
 }
 
 .login--style .login_wrp .link-ipin .cert_list dt {
-    background: url("/cm/static/images/login_new/ico48_certi_ipin.svg") 0 0 no-repeat;
+    background: url("https://www.work24.go.kr/cm/static/images/login_new/ico48_certi_ipin.svg") 0 0 no-repeat;
 }
 
 .login--style .login_wrp .link-id .cert_list dt {
-    background: url("/cm/static/images/login_new/ico48_certi_id.svg") 0 0 no-repeat;
+    background: url("https://www.work24.go.kr/cm/static/images/login_new/ico48_certi_id.svg") 0 0 no-repeat;
 }
 
 .login--style .login_wrp .link-mobile-anyId:hover .cert_list dt {
-    background: url("/cm/static/images/login_new/ico48_certi_mobile_hover.svg") 0 0 no-repeat;
+    background: url("https://www.work24.go.kr/cm/static/images/login_new/ico48_certi_mobile_hover.svg") 0 0 no-repeat;
 }
 
 .login--style .login_wrp .link-easy-anyId:hover .cert_list dt {
-    background: url("/cm/static/images/login_new/ico48_certi_easy_hover.svg") 0 0 no-repeat;
+    background: url("https://www.work24.go.kr/cm/static/images/login_new/ico48_certi_easy_hover.svg") 0 0 no-repeat;
 }
 
 .login--style .login_wrp .link-cmn-anyId:hover .cert_list dt {
-    background: url("/cm/static/images/login_new/ico48_certi_public_hover.svg") 0 0 no-repeat;
+    background: url("https://www.work24.go.kr/cm/static/images/login_new/ico48_certi_public_hover.svg") 0 0 no-repeat;
 }
 
 .login--style .login_wrp .link-bnk-anyId:hover .cert_list dt {
-    background: url("/cm/static/images/login_new/ico48_certi_financial_hover.svg") 0 0 no-repeat;
+    background: url("https://www.work24.go.kr/cm/static/images/login_new/ico48_certi_financial_hover.svg") 0 0 no-repeat;
 }
 
 .login--style .login_wrp .cert_list dt .tit {
     display: inline-block;
     padding-right: 28px;
     line-height: 30px;
-    background: url("/cm/static/images/ico24_arrow2_right_black.svg") right center no-repeat;
+    background: url("https://www.work24.go.kr/cm/static/images/ico24_arrow2_right_black.svg") right center no-repeat;
     font-size: 20px;
     color: var(--col_body);
 }
@@ -11674,7 +11674,7 @@ span.box_ipt.w530 {
 }
 
 .login--style .login_wrp a:hover .cert_list dt .tit, .login--style .login_wrp a:focus .cert_list dt .tit {
-    background-image: url("/cm/static/images/icon/24/ico24_arrow2_right_blue.svg");
+    background-image: url("https://www.work24.go.kr/cm/static/images/icon/24/ico24_arrow2_right_blue.svg");
     color: var(--col_blue);
 }
 
@@ -11691,7 +11691,7 @@ span.box_ipt.w530 {
 
 .customer .home .btn_link.blue::before {
     top: 6px;
-    background: url("/cm/static/images/icon/16/ico16_share_blue.svg") 0 0 no-repeat !important;
+    background: url("https://www.work24.go.kr/cm/static/images/icon/16/ico16_share_blue.svg") 0 0 no-repeat !important;
 }
 
 .customer .home .num_list_area .num {
@@ -11718,13 +11718,13 @@ span.box_ipt.w530 {
 
 .customer .home .cntr_box_blue .bg_center {
     padding-left: 84px;
-    background: url("/cm/static/images/customer/bg_center.svg") 0 center no-repeat;
+    background: url("https://www.work24.go.kr/cm/static/images/customer/bg_center.svg") 0 center no-repeat;
 }
 
 .customer .home .nodata {
     padding-top: 76px;
     line-height: 28px;
-    background: url("/cm/static/images/customer/bg_data.svg") center 0 no-repeat;
+    background: url("https://www.work24.go.kr/cm/static/images/customer/bg_data.svg") center 0 no-repeat;
     font-weight: 600;
     font-size: 16px;
     color: var(--col_body);
@@ -11773,7 +11773,7 @@ span.box_ipt.w530 {
     display: block;
     width: 32px;
     height: 32px;
-    background: url("/cm/static/images/icon/32/ico32_ui_search_blue_bold.svg") center center no-repeat;
+    background: url("https://www.work24.go.kr/cm/static/images/icon/32/ico32_ui_search_blue_bold.svg") center center no-repeat;
     border-radius: initial;
 }
 
@@ -11787,7 +11787,7 @@ span.box_ipt.w530 {
 .customer .home .cont_search_wrap .keyword_wrap .tit {
     margin-top: 6px;
     padding-left: 20px;
-    background: url("/cm/static/images/icon/16/ico16_thumbs.svg") 0 0 no-repeat;
+    background: url("https://www.work24.go.kr/cm/static/images/icon/16/ico16_thumbs.svg") 0 0 no-repeat;
     flex-shrink: 0;
     color: var(--col_h);
 }
@@ -11852,7 +11852,7 @@ span.box_ipt.w530 {
     top: 9px;
     width: 24px;
     height: 24px;
-    background: url("/cm/static/images/icon/24/ico24_arrow_circle_down.svg") right center no-repeat;
+    background: url("https://www.work24.go.kr/cm/static/images/icon/24/ico24_arrow_circle_down.svg") right center no-repeat;
     transition: all 0.2s;
 }
 
@@ -11962,19 +11962,19 @@ span.box_ipt.w530 {
 }
 
 .customer .home .cntr_contact .menu_type .title .ico_employ::before {
-    background-image: url("/cm/static/images/customer/ico40_contact01.svg");
+    background-image: url("https://www.work24.go.kr/cm/static/images/customer/ico40_contact01.svg");
 }
 
 .customer .home .cntr_contact .menu_type .title .ico_apply::before {
-    background-image: url("/cm/static/images/customer/ico40_contact02.svg");
+    background-image: url("https://www.work24.go.kr/cm/static/images/customer/ico40_contact02.svg");
 }
 
 .customer .home .cntr_contact .menu_type .title .ico_report::before {
-    background-image: url("/cm/static/images/customer/ico40_contact03.svg");
+    background-image: url("https://www.work24.go.kr/cm/static/images/customer/ico40_contact03.svg");
 }
 
 .customer .home .cntr_contact .menu_type .title .ico_system::before {
-    background-image: url("/cm/static/images/customer/ico40_contact04.svg");
+    background-image: url("https://www.work24.go.kr/cm/static/images/customer/ico40_contact04.svg");
 }
 
 .customer .home .cntr_contact .cntr_box_blue {
@@ -12000,7 +12000,7 @@ span.box_ipt.w530 {
     position: relative;
     display: inline-block;
     padding-left: 20px;
-    background: url("/cm/static/images/ico16_call_filled_blue.svg") 0 6px no-repeat;
+    background: url("https://www.work24.go.kr/cm/static/images/ico16_call_filled_blue.svg") 0 6px no-repeat;
     font-weight: 600;
     color: var(--col_blue);
 }
@@ -12048,7 +12048,7 @@ span.box_ipt.w530 {
     right: 14px;
     top: 50%;
     margin: 0;
-    background: url("/cm/static/images/icon/16/ico16_share.svg") 0 0 no-repeat;
+    background: url("https://www.work24.go.kr/cm/static/images/icon/16/ico16_share.svg") 0 0 no-repeat;
     transform: translateY(-50%);
 }
 
@@ -12099,7 +12099,7 @@ span.box_ipt.w530 {
     display: inline-block;
     width: 16px;
     height: 16px;
-    background: url("/cm/static/images/icon/16/ico16_line_right_blue.svg") 0 0 no-repeat;
+    background: url("https://www.work24.go.kr/cm/static/images/icon/16/ico16_line_right_blue.svg") 0 0 no-repeat;
     vertical-align: -3px;
     content: "";
 }
@@ -12120,7 +12120,7 @@ span.box_ipt.w530 {
     display: block;
     width: 24px;
     height: 24px;
-    background: url("/cm/static/images/icon/24/ico24_arrow_light.svg") 0 0 no-repeat;
+    background: url("https://www.work24.go.kr/cm/static/images/icon/24/ico24_arrow_light.svg") 0 0 no-repeat;
     transform: translateY(-50%);
     content: "";
 }
@@ -12137,7 +12137,7 @@ span.box_ipt.w530 {
 }
 
 .customer .cstm_qna > li a:hover::after {
-    background: url("/cm/static/images/icon/24/ico24_arrow2_right_blue.svg") 0 0 no-repeat;
+    background: url("https://www.work24.go.kr/cm/static/images/icon/24/ico24_arrow2_right_blue.svg") 0 0 no-repeat;
 }
 
 .customer .cstm_qna > li + li {
@@ -12166,23 +12166,23 @@ span.box_ipt.w530 {
 }
 
 .customer .cstm_qna .support::before {
-    background: url("/cm/static/images/customer/ico40_qus01.svg") center center no-repeat;
+    background: url("https://www.work24.go.kr/cm/static/images/customer/ico40_qus01.svg") center center no-repeat;
 }
 
 .customer .cstm_qna .system::before {
-    background: url("/cm/static/images/customer/ico40_qus02.svg") center center no-repeat;
+    background: url("https://www.work24.go.kr/cm/static/images/customer/ico40_qus02.svg") center center no-repeat;
 }
 
 .customer .cstm_qna .progress::before {
-    background: url("/cm/static/images/customer/ico40_qus03.svg") center center no-repeat;
+    background: url("https://www.work24.go.kr/cm/static/images/customer/ico40_qus03.svg") center center no-repeat;
 }
 
 .customer .cstm_qna .guide::before {
-    background: url("/cm/static/images/customer/ico40_qus04.svg") center center no-repeat;
+    background: url("https://www.work24.go.kr/cm/static/images/customer/ico40_qus04.svg") center center no-repeat;
 }
 
 .customer .cstm_qna .util::before {
-    background: url("/cm/static/images/customer/ico40_qus05.svg") center center no-repeat;
+    background: url("https://www.work24.go.kr/cm/static/images/customer/ico40_qus05.svg") center center no-repeat;
 }
 
 .customer .cstm_qna > li a:hover .txt, .customer .cstm_qna > li a:focus .txt {
@@ -12271,7 +12271,7 @@ span.box_ipt.w530 {
     right: 0;
     top: 0;
     bottom: 0;
-    background: var(--col_bg) url(/cm/static/images/customer/bg_work24_symbol.svg) no-repeat right 40px bottom 40px;
+    background: var(--col_bg) url(https://www.work24.go.kr/cm/static/images/customer/bg_work24_symbol.svg) no-repeat right 40px bottom 40px;
     border-radius: 50px;
     transition: transform .2s;
     border-radius: 0;
@@ -12302,7 +12302,7 @@ span.box_ipt.w530 {
     height: 78px;
     padding: 24px;
     font-size: 24px;
-    background: var(--col_white) url(/cm/static/images/customer/ico24_ts_select.svg) no-repeat right 16px center;
+    background: var(--col_white) url(https://www.work24.go.kr/cm/static/images/customer/ico24_ts_select.svg) no-repeat right 16px center;
     border: 1px solid var(--col_button);
     border-radius: 4px;
     appearance: none;
@@ -12319,7 +12319,7 @@ span.box_ipt.w530 {
     display: block;
     width: 48px;
     height: 48px;
-    background: url("/cm/static/images/icon/48/ico48_close.svg") no-repeat center/contain;
+    background: url("https://www.work24.go.kr/cm/static/images/icon/48/ico48_close.svg") no-repeat center/contain;
 }
 
 #header_menutree .layer_ts.show .layer_bg {
@@ -12435,7 +12435,7 @@ span.box_ipt.w530 {
     width: 16px;
     height: 16px;
     margin-left: 4px;
-    background: url("/cm/static/images/icon/16/ico16_close.svg") no-repeat center/contain;
+    background: url("https://www.work24.go.kr/cm/static/images/icon/16/ico16_close.svg") no-repeat center/contain;
 }
 
 #header_menutree .layer_ts .hot_item .my .keyword {
@@ -12469,7 +12469,7 @@ span.box_ipt.w530 {
     display: block;
     width: 16px;
     height: 16px;
-    background: url("/cm/static/images/icon/16/ico16_close.svg") no-repeat center/contain;
+    background: url("https://www.work24.go.kr/cm/static/images/icon/16/ico16_close.svg") no-repeat center/contain;
 }
 
 #header_menutree .layer_ts .hot_item .my .keyword li ~ li {
@@ -12629,7 +12629,7 @@ span.box_ipt.w530 {
     width: 24px;
     height: 24px;
     margin-right: 0;
-    background: url("/cm/static/images/customer/ico24_ts_close.svg") no-repeat center/contain;
+    background: url("https://www.work24.go.kr/cm/static/images/customer/ico24_ts_close.svg") no-repeat center/contain;
 }
 
 #header_menutree .layer_ts .main_search_area .inner_search .btn_vrt_keyboard {
@@ -12647,7 +12647,7 @@ span.box_ipt.w530 {
     width: 32px;
     height: 32px;
     margin-right: 0;
-    background: url(/cm/static/images/main_new/ico_keyboard.svg) no-repeat;
+    background: url(https://www.work24.go.kr/cm/static/images/main_new/ico_keyboard.svg) no-repeat;
 }
 
 #header_menutree .layer_ts .main_search_area .inner_search .btn_main_search {
@@ -12665,7 +12665,7 @@ span.box_ipt.w530 {
     width: 32px;
     height: 32px;
     margin-right: 0;
-    background: url("/cm/static/images/ico32_search_blue.svg") no-repeat;
+    background: url("https://www.work24.go.kr/cm/static/images/ico32_search_blue.svg") no-repeat;
 }
 
 #header_menutree .layer_ts .main_search_area .layer_cate_search {
@@ -12805,7 +12805,7 @@ span.box_ipt.w530 {
     width: 24px;
     height: 24px;
     margin-right: 0;
-    background: url("/cm/static/images/customer/ico24_ts_close.svg") no-repeat center/contain;
+    background: url("https://www.work24.go.kr/cm/static/images/customer/ico24_ts_close.svg") no-repeat center/contain;
 }
 
 #container .customer .ts .main_search_area .inner_search .btn_vrt_keyboard {
@@ -12823,7 +12823,7 @@ span.box_ipt.w530 {
     width: 32px;
     height: 32px;
     margin-right: 0;
-    background: url(/cm/static/images/main_new/ico_keyboard.svg) no-repeat;
+    background: url(https://www.work24.go.kr/cm/static/images/main_new/ico_keyboard.svg) no-repeat;
 }
 
 #container .customer .ts .main_search_area .inner_search .btn_main_search {
@@ -12841,7 +12841,7 @@ span.box_ipt.w530 {
     width: 32px;
     height: 32px;
     margin-right: 0;
-    background: url("/cm/static/images/ico32_search_blue.svg") no-repeat;
+    background: url("https://www.work24.go.kr/cm/static/images/ico32_search_blue.svg") no-repeat;
 }
 
 .customer .ts .search_area {
@@ -12902,7 +12902,7 @@ span.box_ipt.w530 {
     width: 16px;
     height: 16px;
     margin-right: 4px;
-    background: url("/cm/static/images/ico16_ui_checked03_blue.svg") no-repeat;
+    background: url("https://www.work24.go.kr/cm/static/images/ico16_ui_checked03_blue.svg") no-repeat;
 }
 
 .customer .ts .search_area .form_related li .button[aria-selected=true] .label::before {
@@ -12911,7 +12911,7 @@ span.box_ipt.w530 {
     width: 16px;
     height: 16px;
     margin-right: 4px;
-    background: url("/cm/static/images/ico16_ui_checked03_blue.svg") no-repeat;
+    background: url("https://www.work24.go.kr/cm/static/images/ico16_ui_checked03_blue.svg") no-repeat;
 }
 
 .customer .ts .search_area .related_item {
@@ -13086,7 +13086,7 @@ span.box_ipt.w530 {
     display: block;
     width: 16px;
     height: 16px;
-    background: url("/cm/static/images/icon/16/ico16_line_up.svg") no-repeat center;
+    background: url("https://www.work24.go.kr/cm/static/images/icon/16/ico16_line_up.svg") no-repeat center;
 }
 
 .customer .ts .option .head .button[aria-expanded="false"] .icon {
@@ -13230,7 +13230,7 @@ span.box_ipt.w530 {
     display: block;
     width: 16px;
     height: 16px;
-    background: url("/cm/static/images/icon/16/ico16_close.svg") no-repeat center;
+    background: url("https://www.work24.go.kr/cm/static/images/icon/16/ico16_close.svg") no-repeat center;
 }
 
 .customer .ts .page .heading {
@@ -13613,7 +13613,7 @@ span.box_ipt.w530 {
     height: 16px;
     margin: -2px 0 0 4px;
     vertical-align: middle;
-    background: url(/cm/static/images/icon/16/ico16_line_right_black.svg) no-repeat;
+    background: url(https://www.work24.go.kr/cm/static/images/icon/16/ico16_line_right_black.svg) no-repeat;
 }
 
 .mypage .home .todo_wrap .emptylist a p {
@@ -13859,7 +13859,7 @@ span.box_ipt.w530 {
     width: 16px;
     height: 16px;
     margin-right: 0;
-    background: url(/cm/static/images/icon/16/ico16_share_gray.svg) no-repeat center/contain;
+    background: url(https://www.work24.go.kr/cm/static/images/icon/16/ico16_share_gray.svg) no-repeat center/contain;
 }
 
 .mypage .home .todo_wrap .list .btn_group.Add_left {
@@ -13902,7 +13902,7 @@ span.box_ipt.w530 {
     width: 16px;
     height: 16px;
     margin-left: 4px;
-    background: url(/cm/static/images/icon/16/ico16_line_right_blue.svg) no-repeat;
+    background: url(https://www.work24.go.kr/cm/static/images/icon/16/ico16_line_right_blue.svg) no-repeat;
 }
 
 .mypage .home .todo_wrap .list .btn_groups .line:hover {
@@ -13928,7 +13928,7 @@ span.box_ipt.w530 {
     width: 16px;
     height: 16px;
     margin-left: 4px;
-    background: url(/cm/static/images/icon/16/ico16_line_right_white.svg) no-repeat;
+    background: url(https://www.work24.go.kr/cm/static/images/icon/16/ico16_line_right_white.svg) no-repeat;
 }
 
 .mypage .home .todo_wrap .list .btn_groups .blue:hover {
@@ -13953,7 +13953,7 @@ span.box_ipt.w530 {
     width: 40px;
     height: 40px;
     margin-right: 12px;
-    background: url(/cm/static/images/main_new/ico40_arrow_circle_left.svg) no-repeat;
+    background: url(https://www.work24.go.kr/cm/static/images/main_new/ico40_arrow_circle_left.svg) no-repeat;
     cursor: pointer;
 }
 
@@ -13965,7 +13965,7 @@ span.box_ipt.w530 {
     width: 40px;
     height: 40px;
     margin-left: 12px;
-    background: url(/cm/static/images/main_new/ico40_arrow_circle_right.svg) no-repeat;
+    background: url(https://www.work24.go.kr/cm/static/images/main_new/ico40_arrow_circle_right.svg) no-repeat;
     cursor: pointer;
 }
 
@@ -14061,7 +14061,7 @@ span.box_ipt.w530 {
     display: block;
     width: 24px;
     height: 24px;
-    background: url(/cm/static/images/icon/24/ico24_bell.svg) no-repeat;
+    background: url(https://www.work24.go.kr/cm/static/images/icon/24/ico24_bell.svg) no-repeat;
 }
 
 .mypage .home .my_wrap .top .flex .bell .txt {
@@ -14109,7 +14109,7 @@ span.box_ipt.w530 {
     width: 7px;
     height: 10px;
     margin-top: -5px;
-    background: url(/cm/static/images/mypage/img_alram_edge.svg) no-repeat;
+    background: url(https://www.work24.go.kr/cm/static/images/mypage/img_alram_edge.svg) no-repeat;
 }
 
 .mypage .home .my_wrap .top .flex .bell.active:hover .txt {
@@ -14270,7 +14270,7 @@ span.box_ipt.w530 {
     top: 0;
     width: 24px;
     height: 24px;
-    background: url(/cm/static/images/icon/24/ico24_alram_close.svg) no-repeat;
+    background: url(https://www.work24.go.kr/cm/static/images/icon/24/ico24_alram_close.svg) no-repeat;
 }
 
 .mypage .home .my_wrap .notice .alram .alramtabs {
@@ -14444,7 +14444,7 @@ span.box_ipt.w530 {
     width: 16px;
     height: 16px;
     margin-right: 4px;
-    background: url(/cm/static/images/icon/16/ico16_setting.svg) no-repeat;
+    background: url(https://www.work24.go.kr/cm/static/images/icon/16/ico16_setting.svg) no-repeat;
 }
 
 .mypage .home .title_wrap .title .button:hover {
@@ -14468,11 +14468,11 @@ span.box_ipt.w530 {
     display: block;
     width: 24px;
     height: 24px;
-    background: url(/cm/static/images/icon/24/ico24_plus.svg) no-repeat;
+    background: url(https://www.work24.go.kr/cm/static/images/icon/24/ico24_plus.svg) no-repeat;
 }
 
 .mypage .home .title_wrap .expand[aria-expanded=true]::after {
-    background-image: url(/cm/static/images/icon/24/ico24_miuns.svg);
+    background-image: url(https://www.work24.go.kr/cm/static/images/icon/24/ico24_miuns.svg);
 }
 
 .mypage .home .title_wrap .expand:hover {
@@ -14482,11 +14482,11 @@ span.box_ipt.w530 {
 }
 
 .mypage .home .title_wrap .expand:hover::after {
-    background-image: url(/cm/static/images/icon/24/ico24_plus_blue.svg);
+    background-image: url(https://www.work24.go.kr/cm/static/images/icon/24/ico24_plus_blue.svg);
 }
 
 .mypage .home .title_wrap .expand[aria-expanded=true]:hover::after {
-    background-image: url(/cm/static/images/icon/24/ico24_miuns_blue.svg);
+    background-image: url(https://www.work24.go.kr/cm/static/images/icon/24/ico24_miuns_blue.svg);
 }
 
 .mypage .home .service_wrap .maintabs {
@@ -14650,7 +14650,7 @@ span.box_ipt.w530 {
     display: block;
     width: 16px;
     height: 16px;
-    background: url(/cm/static/images/icon/16/ico16_line_up.svg) no-repeat;
+    background: url(https://www.work24.go.kr/cm/static/images/icon/16/ico16_line_up.svg) no-repeat;
     transform: rotate(0);
     transition: transform .2s;
 }
@@ -14690,31 +14690,31 @@ span.box_ipt.w530 {
 }
 
 .mypage .home .service_wrap .subject h4.icon1::before {
-    background: url(/cm/static/images/mypage/ico24_tab1.svg) no-repeat;
+    background: url(https://www.work24.go.kr/cm/static/images/mypage/ico24_tab1.svg) no-repeat;
 }
 
 .mypage .home .service_wrap .subject h4.icon2::before {
-    background: url(/cm/static/images/mypage/ico24_tab2.svg) no-repeat;
+    background: url(https://www.work24.go.kr/cm/static/images/mypage/ico24_tab2.svg) no-repeat;
 }
 
 .mypage .home .service_wrap .subject h4.icon3::before {
-    background: url(/cm/static/images/mypage/ico24_tab3.svg) no-repeat;
+    background: url(https://www.work24.go.kr/cm/static/images/mypage/ico24_tab3.svg) no-repeat;
 }
 
 .mypage .home .service_wrap .subject h4.icon4::before {
-    background: url(/cm/static/images/mypage/ico24_tab4.svg) no-repeat;
+    background: url(https://www.work24.go.kr/cm/static/images/mypage/ico24_tab4.svg) no-repeat;
 }
 
 .mypage .home .service_wrap .subject h4.icon5::before {
-    background: url(/cm/static/images/mypage/ico24_tab5.svg) no-repeat;
+    background: url(https://www.work24.go.kr/cm/static/images/mypage/ico24_tab5.svg) no-repeat;
 }
 
 .mypage .home .service_wrap .subject h4.icon6::before {
-    background: url(/cm/static/images/mypage/ico24_tab6.svg) no-repeat;
+    background: url(https://www.work24.go.kr/cm/static/images/mypage/ico24_tab6.svg) no-repeat;
 }
 
 .mypage .home .service_wrap .subject h4.icon7::before {
-    background: url(/cm/static/images/mypage/ico24_tab7.svg) no-repeat;
+    background: url(https://www.work24.go.kr/cm/static/images/mypage/ico24_tab7.svg) no-repeat;
 }
 
 .mypage .home .service_wrap .dropdown {
@@ -14859,7 +14859,7 @@ span.box_ipt.w530 {
     width: 16px;
     height: 16px;
     margin-left: 4px;
-    background: url(/cm/static/images/icon/16/ico16_line_right_black.svg) no-repeat;
+    background: url(https://www.work24.go.kr/cm/static/images/icon/16/ico16_line_right_black.svg) no-repeat;
 }
 
 .mypage .home .service_wrap .moregroup .more:hover {
@@ -14980,7 +14980,7 @@ span.box_ipt.w530 {
     width: 24px;
     height: 24px;
     margin-right: 4px;
-    background: url(/cm/static/images/mypage/ico24_box1.svg) no-repeat;
+    background: url(https://www.work24.go.kr/cm/static/images/mypage/ico24_box1.svg) no-repeat;
 }
 
 .mypage .home .service_wrap .list_inter .box2 .title::before {
@@ -14989,7 +14989,7 @@ span.box_ipt.w530 {
     width: 24px;
     height: 24px;
     margin-right: 4px;
-    background: url(/cm/static/images/mypage/ico24_box2.svg) no-repeat;
+    background: url(https://www.work24.go.kr/cm/static/images/mypage/ico24_box2.svg) no-repeat;
 }
 
 .mypage .home .service_wrap .list_inter .box3 {
@@ -15002,7 +15002,7 @@ span.box_ipt.w530 {
     width: 24px;
     height: 24px;
     margin-right: 4px;
-    background: url(/cm/static/images/mypage/ico24_box3.svg) no-repeat;
+    background: url(https://www.work24.go.kr/cm/static/images/mypage/ico24_box3.svg) no-repeat;
 }
 
 .mypage .home .service_wrap .list_inter .box3 ul {
@@ -15444,7 +15444,7 @@ span.box_ipt.w530 {
     width: 24px;
     height: 24px;
     margin-right: 8px;
-    background: url(/cm/static/images/mypage/ico24_ui_like.svg) no-repeat;
+    background: url(https://www.work24.go.kr/cm/static/images/mypage/ico24_ui_like.svg) no-repeat;
 }
 
 .mypage .home .info_m .group {
@@ -15479,7 +15479,7 @@ span.box_ipt.w530 {
     width: 16px;
     height: 16px;
     margin: -2px 0 0 4px;
-    background: url(/cm/static/images/icon/16/ico16_share.svg) no-repeat;
+    background: url(https://www.work24.go.kr/cm/static/images/icon/16/ico16_share.svg) no-repeat;
 }
 
 .mypage .home .info_m .group a .txt span {
@@ -15548,7 +15548,7 @@ span.box_ipt.w530 {
     display: block;
     width: 48px;
     height: 48px;
-    background: url(/cm/static/images/mypage/img_box1.svg) no-repeat center/contain;
+    background: url(https://www.work24.go.kr/cm/static/images/mypage/img_box1.svg) no-repeat center/contain;
 }
 
 .mypage .home .help_m .group .box2 .txt::before {
@@ -15556,7 +15556,7 @@ span.box_ipt.w530 {
     display: block;
     width: 48px;
     height: 48px;
-    background: url(/cm/static/images/mypage/img_box2.svg) no-repeat center/contain;
+    background: url(https://www.work24.go.kr/cm/static/images/mypage/img_box2.svg) no-repeat center/contain;
 }
 
 .mypage .home .help_m .group .box3 .txt::before {
@@ -15564,7 +15564,7 @@ span.box_ipt.w530 {
     display: block;
     width: 48px;
     height: 48px;
-    background: url(/cm/static/images/mypage/img_box3.svg) no-repeat center/contain;
+    background: url(https://www.work24.go.kr/cm/static/images/mypage/img_box3.svg) no-repeat center/contain;
 }
 
 .mypage .home .help_m .group .box4 .txt::before {
@@ -15572,7 +15572,7 @@ span.box_ipt.w530 {
     display: block;
     width: 48px;
     height: 48px;
-    background: url(/cm/static/images/mypage/img_box4.svg) no-repeat center/contain;
+    background: url(https://www.work24.go.kr/cm/static/images/mypage/img_box4.svg) no-repeat center/contain;
 }
 
 .mypage .home .help_m .group .box .txt span {
@@ -15602,7 +15602,7 @@ span.box_ipt.w530 {
     width: 16px;
     height: 16px;
     margin-left: 4px;
-    background: url(/cm/static/images/icon/16/ico16_line_right_black.svg) no-repeat;
+    background: url(https://www.work24.go.kr/cm/static/images/icon/16/ico16_line_right_black.svg) no-repeat;
 }
 
 .mypage .home .help_m .group .box2 .bottom::after {
@@ -15677,11 +15677,11 @@ span.box_ipt.w530 {
 }
 
 .company .mypage .home .todo_wrap .activity .col .icon1 {
-    background: url(/cm/static/images/mypage/ico60_front1.svg) no-repeat;
+    background: url(https://www.work24.go.kr/cm/static/images/mypage/ico60_front1.svg) no-repeat;
 }
 
 .company .mypage .home .todo_wrap .activity .col .icon2 {
-    background: url(/cm/static/images/mypage/ico60_front2.svg) no-repeat;
+    background: url(https://www.work24.go.kr/cm/static/images/mypage/ico60_front2.svg) no-repeat;
 }
 
 .company .mypage .home .todo_wrap .activity .front .text {
@@ -15776,7 +15776,7 @@ span.box_ipt.w530 {
     width: 8px;
     height: 8px;
     margin-left: -4px;
-    background: url(/cm/static/images/mypage/bg_edge_c.svg) no-repeat;
+    background: url(https://www.work24.go.kr/cm/static/images/mypage/bg_edge_c.svg) no-repeat;
 }
 
 .company .mypage .home .todo_wrap .range_wrap .draw.first .step {
@@ -15790,7 +15790,7 @@ span.box_ipt.w530 {
 .company .mypage .home .todo_wrap .range_wrap .draw.first .step span::after {
     left: 0;
     margin-left: 0;
-    background-image: url(/cm/static/images/mypage/bg_edge_l.svg);
+    background-image: url(https://www.work24.go.kr/cm/static/images/mypage/bg_edge_l.svg);
 }
 
 .company .mypage .home .todo_wrap .range_wrap .draw.last .step {
@@ -15804,7 +15804,7 @@ span.box_ipt.w530 {
 .company .mypage .home .todo_wrap .range_wrap .draw.last .step span::after {
     left: calc(100% - 8px);
     margin-left: 0;
-    background-image: url(/cm/static/images/mypage/bg_edge_r.svg);
+    background-image: url(https://www.work24.go.kr/cm/static/images/mypage/bg_edge_r.svg);
 }
 
 .company .mypage .home .todo_wrap .emptylist a {
@@ -15840,7 +15840,7 @@ span.box_ipt.w530 {
     width: 16px;
     height: 16px;
     margin-left: 4px;
-    background: url(/cm/static/images/icon/16/ico16_line_right_black.svg) no-repeat;
+    background: url(https://www.work24.go.kr/cm/static/images/icon/16/ico16_line_right_black.svg) no-repeat;
 }
 
 .company .mypage .home .my_wrap .select_w .select {
@@ -15867,7 +15867,7 @@ span.box_ipt.w530 {
 .company .mypage .home .my_wrap .select_w .select .icon {
     width: 24px;
     height: 24px;
-    background: url("/cm/static/images/icon/24/ico24_arrow_light.svg") no-repeat;
+    background: url("https://www.work24.go.kr/cm/static/images/icon/24/ico24_arrow_light.svg") no-repeat;
 }
 
 .company .mypage .home .service_wrap .item_category {
@@ -15904,59 +15904,59 @@ span.box_ipt.w530 {
 }
 
 .company .mypage .home .service_wrap .item_category a .category1 .icon {
-    background: url(/cm/static/images/icon/24/ico24_recg.svg) no-repeat;
+    background: url(https://www.work24.go.kr/cm/static/images/icon/24/ico24_recg.svg) no-repeat;
 }
 
 .company .mypage .home .service_wrap .item_category a .category2 .icon {
-    background: url(/cm/static/images/icon/24/ico24_empty.svg) no-repeat;
+    background: url(https://www.work24.go.kr/cm/static/images/icon/24/ico24_empty.svg) no-repeat;
 }
 
 .company .mypage .home .service_wrap .item_category a .category3 .icon {
-    background: url(/cm/static/images/icon/24/ico24_messasge.svg) no-repeat;
+    background: url(https://www.work24.go.kr/cm/static/images/icon/24/ico24_messasge.svg) no-repeat;
 }
 
 .company .mypage .home .service_wrap .item_category a .category4 .icon {
-    background: url(/cm/static/images/icon/24/ico24_chek.svg) no-repeat;
+    background: url(https://www.work24.go.kr/cm/static/images/icon/24/ico24_chek.svg) no-repeat;
 }
 
 .company .mypage .home .service_wrap .item_category a .category5 .icon {
-    background: url(/cm/static/images/icon/24/ico24_ui_checked2.svg) no-repeat;
+    background: url(https://www.work24.go.kr/cm/static/images/icon/24/ico24_ui_checked2.svg) no-repeat;
 }
 
 .company .mypage .home .service_wrap .item_category a .category6 .icon {
-    background: url(/cm/static/images/icon/24/ico24_circle_filled2.svg) no-repeat;
+    background: url(https://www.work24.go.kr/cm/static/images/icon/24/ico24_circle_filled2.svg) no-repeat;
 }
 
 .company .mypage .home .service_wrap .item_category a .category7 .icon {
-    background: url(/cm/static/images/icon/24/ico24_time2.svg) no-repeat;
+    background: url(https://www.work24.go.kr/cm/static/images/icon/24/ico24_time2.svg) no-repeat;
 }
 
 .company .mypage .home .service_wrap .item_category a:hover .category1 .icon {
-    background-image: url(/cm/static/images/icon/24/ico24_recg_blue.svg);
+    background-image: url(https://www.work24.go.kr/cm/static/images/icon/24/ico24_recg_blue.svg);
 }
 
 .company .mypage .home .service_wrap .item_category a:hover .category2 .icon {
-    background-image: url(/cm/static/images/icon/24/ico24_empty_blue.svg);
+    background-image: url(https://www.work24.go.kr/cm/static/images/icon/24/ico24_empty_blue.svg);
 }
 
 .company .mypage .home .service_wrap .item_category a:hover .category3 .icon {
-    background-image: url(/cm/static/images/icon/24/ico24_messasge_blue.svg);
+    background-image: url(https://www.work24.go.kr/cm/static/images/icon/24/ico24_messasge_blue.svg);
 }
 
 .company .mypage .home .service_wrap .item_category a:hover .category4 .icon {
-    background-image: url(/cm/static/images/icon/24/ico24_chek_blue.svg);
+    background-image: url(https://www.work24.go.kr/cm/static/images/icon/24/ico24_chek_blue.svg);
 }
 
 .company .mypage .home .service_wrap .item_category a:hover .category5 .icon {
-    background-image: url(/cm/static/images/icon/24/ico24_ui_checked2_blue.svg);
+    background-image: url(https://www.work24.go.kr/cm/static/images/icon/24/ico24_ui_checked2_blue.svg);
 }
 
 .company .mypage .home .service_wrap .item_category a:hover .category6 .icon {
-    background-image: url(/cm/static/images/icon/24/ico24_circle_filled2_blue.svg);
+    background-image: url(https://www.work24.go.kr/cm/static/images/icon/24/ico24_circle_filled2_blue.svg);
 }
 
 .company .mypage .home .service_wrap .item_category a:hover .category7 .icon {
-    background-image: url(/cm/static/images/icon/24/ico24_time2_blue.svg);
+    background-image: url(https://www.work24.go.kr/cm/static/images/icon/24/ico24_time2_blue.svg);
 }
 
 .company .mypage .home .service_wrap .item_category a .b {
@@ -16053,11 +16053,11 @@ span.box_ipt.w530 {
 }
 
 .company .mypage .home .service_wrap .list_program .boxgrid .icon1 {
-    background: url(/cm/static/images/icon/16/ico16_training.svg) no-repeat;
+    background: url(https://www.work24.go.kr/cm/static/images/icon/16/ico16_training.svg) no-repeat;
 }
 
 .company .mypage .home .service_wrap .list_program .boxgrid .icon2 {
-    background: url(/cm/static/images/icon/16/ico16_career.svg) no-repeat;
+    background: url(https://www.work24.go.kr/cm/static/images/icon/16/ico16_career.svg) no-repeat;
 }
 
 .company .mypage .home .service_wrap .list_program .boxgrid .title {
@@ -16139,7 +16139,7 @@ span.box_ipt.w530 {
     top: 0;
     width: 17px;
     height: 44px;
-    background: url(/cm/static/images/mypage/bg_order_b.svg) no-repeat;
+    background: url(https://www.work24.go.kr/cm/static/images/mypage/bg_order_b.svg) no-repeat;
 }
 
 .comm_orderlist li .txt::after {
@@ -16149,7 +16149,7 @@ span.box_ipt.w530 {
     top: 0;
     width: 19px;
     height: 44px;
-    background: url(/cm/static/images/mypage/bg_order_a.svg) no-repeat;
+    background: url(https://www.work24.go.kr/cm/static/images/mypage/bg_order_a.svg) no-repeat;
 }
 
 .comm_orderlist li:last-child {
@@ -16170,11 +16170,11 @@ span.box_ipt.w530 {
 }
 
 .comm_orderlist li .txt.active::before {
-    background-image: url(/cm/static/images/mypage/bg_order_b_active.svg)
+    background-image: url(https://www.work24.go.kr/cm/static/images/mypage/bg_order_b_active.svg)
 }
 
 .comm_orderlist li .txt.active::after {
-    background-image: url(/cm/static/images/mypage/bg_order_a_active.svg)
+    background-image: url(https://www.work24.go.kr/cm/static/images/mypage/bg_order_a_active.svg)
 }
 
 .comm_orderlist li .txt.before {
@@ -16182,11 +16182,11 @@ span.box_ipt.w530 {
 }
 
 .comm_orderlist li .txt.before::before {
-    background-image: url(/cm/static/images/mypage/bg_order_b_before.svg)
+    background-image: url(https://www.work24.go.kr/cm/static/images/mypage/bg_order_b_before.svg)
 }
 
 .comm_orderlist li .txt.before::after {
-    background-image: url(/cm/static/images/mypage/bg_order_a_before.svg)
+    background-image: url(https://www.work24.go.kr/cm/static/images/mypage/bg_order_a_before.svg)
 }
 
 .comm_orderlist li .txt.before span {
@@ -16200,23 +16200,23 @@ span.box_ipt.w530 {
     width: 16px;
     height: 16px;
     margin-left: 4px;
-    background: url(/cm/static/images/ico16_ui_checked03.svg) no-repeat;
+    background: url(https://www.work24.go.kr/cm/static/images/ico16_ui_checked03.svg) no-repeat;
 }
 
 .company .mypage .home .help_m .group .box1 .txt::before {
-    background-image: url(/cm/static/images/mypage/img_box1_corp.svg);
+    background-image: url(https://www.work24.go.kr/cm/static/images/mypage/img_box1_corp.svg);
 }
 
 .company .mypage .home .help_m .group .box2 .txt::before {
-    background-image: url(/cm/static/images/mypage/img_box2_corp.svg);
+    background-image: url(https://www.work24.go.kr/cm/static/images/mypage/img_box2_corp.svg);
 }
 
 .company .mypage .home .help_m .group .box3 .txt::before {
-    background-image: url(/cm/static/images/mypage/img_box3_corp.svg);
+    background-image: url(https://www.work24.go.kr/cm/static/images/mypage/img_box3_corp.svg);
 }
 
 .company .mypage .home .help_m .group .box4 .txt::before {
-    background-image: url(/cm/static/images/mypage/img_box4_corp.svg);
+    background-image: url(https://www.work24.go.kr/cm/static/images/mypage/img_box4_corp.svg);
 }
 
 .company .mypage .home .help_m .group .box:not(.box2):hover .txt {
@@ -16377,7 +16377,7 @@ span.box_ipt.w530 {
     width: 17px;
     height: 17px;
     margin-top: 1px;
-    background: url("/cm/static/images/icon/16/ico16_fileattachments.svg") no-repeat center;
+    background: url("https://www.work24.go.kr/cm/static/images/icon/16/ico16_fileattachments.svg") no-repeat center;
 }
 
 .atfl_area .atfl_data .btn .ico_file::after {
@@ -16486,7 +16486,7 @@ span.box_ipt.w530 {
 }
 
 .atfl_area .flch_wrap .box_filelist_wrap ul li .box_filelist_btn .ico24_file.del {
-    background: url(/cm/static/images/ico16_delete.svg) no-repeat center;
+    background: url(https://www.work24.go.kr/cm/static/images/ico16_delete.svg) no-repeat center;
 }
 
 .layer_govf .tb_govf {
@@ -16561,7 +16561,7 @@ span.box_ipt.w530 {
     transform: translateY(-50%);
     width: 16px;
     height: 16px;
-    background: url(/cm/static/images/ico16_ui_checked03.svg) no-repeat center / contain;
+    background: url(https://www.work24.go.kr/cm/static/images/ico16_ui_checked03.svg) no-repeat center / contain;
 }
 
 .layer_mdim .box_step > li.is-active .txt {
@@ -16763,27 +16763,27 @@ span.box_ipt.w530 {
     transform: translateY(-50%);
     width: 24px;
     height: 24px;
-    background: url(/cm/static/images/icon/24/ico24_eazy.svg) no-repeat center / contain;
+    background: url(https://www.work24.go.kr/cm/static/images/icon/24/ico24_eazy.svg) no-repeat center / contain;
 }
 
 .layer_mdim .esign_area .esign_btn_wrap button.btn_gcrt:before {
-    background-image: url(/cm/static/images/icon/24/ico24_gcrt.svg);
+    background-image: url(https://www.work24.go.kr/cm/static/images/icon/24/ico24_gcrt.svg);
 }
 
 .layer_mdim .esign_area .esign_btn_wrap button.btn_finc:before {
-    background-image: url(/cm/static/images/icon/24/ico24_finc.svg);
+    background-image: url(https://www.work24.go.kr/cm/static/images/icon/24/ico24_finc.svg);
 }
 
 .layer_mdim .esign_area .esign_btn_wrap button:hover:before, .layer_mdim .esign_area .esign_btn_wrap button:focus:before {
-    background-image: url(/cm/static/images/icon/24/ico24_eazy_on.svg);
+    background-image: url(https://www.work24.go.kr/cm/static/images/icon/24/ico24_eazy_on.svg);
 }
 
 .layer_mdim .esign_area .esign_btn_wrap button.btn_gcrt:hover:before, .layer_mdim .esign_area .esign_btn_wrap button.btn_gcrt:focus:before {
-    background-image: url(/cm/static/images/icon/24/ico24_gcrt_on.svg);
+    background-image: url(https://www.work24.go.kr/cm/static/images/icon/24/ico24_gcrt_on.svg);
 }
 
 .layer_mdim .esign_area .esign_btn_wrap button.btn_finc:hover:before, .layer_mdim .esign_area .esign_btn_wrap button.btn_finc:focus:before {
-    background-image: url(/cm/static/images/icon/24/ico24_finc_on.svg);
+    background-image: url(https://www.work24.go.kr/cm/static/images/icon/24/ico24_finc_on.svg);
 }
 
 .layer_mdim .esign_area .esign_btn_wrap button:after {
@@ -16794,7 +16794,7 @@ span.box_ipt.w530 {
     transform: translateY(-50%);
     width: 16px;
     height: 16px;
-    background: url(/cm/static/images/ico16_arrow_right.svg) no-repeat center / contain;
+    background: url(https://www.work24.go.kr/cm/static/images/ico16_arrow_right.svg) no-repeat center / contain;
 }
 
 .layer_mdim .esign_area .esign_btn_wrap button:hover, .layer_mdim .esign_area .esign_btn_wrap button:focus {
@@ -16807,7 +16807,7 @@ span.box_ipt.w530 {
 }
 
 .layer_mdim .esign_area .esign_btn_wrap button:hover:after, .layer_mdim .esign_area .esign_btn_wrap button:focus:after {
-    background-image: url(/cm/static/images/icon/16/ico16_line_right_blue.svg);
+    background-image: url(https://www.work24.go.kr/cm/static/images/icon/16/ico16_line_right_blue.svg);
 }
 
 .layer_mdim .pmdf_list {
@@ -16959,7 +16959,7 @@ span.box_ipt.w530 {
     display: block;
     width: 16px;
     height: 16px;
-    background: url(/cm/static/images/icon/16/ico16_caution_b.svg) no-repeat;
+    background: url(https://www.work24.go.kr/cm/static/images/icon/16/ico16_caution_b.svg) no-repeat;
 }
 
 .comm_htxt .text {
@@ -16981,7 +16981,7 @@ span.box_ipt.w530 {
 .atfl_area .atfl_data .atfl_data_tit .list_total { font-weight: 400;}
 .atfl_area .atfl_data .atfl_data_tit .mb { font-weight: 400; color: var(--col_gray);}
 .atfl_area .atfl_data .btn .ico_file { display: flex; align-items: center; gap: 4px;}
-.atfl_area .atfl_data .btn .ico_file::before { content: ''; display: block; width: 17px; height: 17px; margin-top: 1px; background: url("/cm/static/pub/pub_use/images/icon/16/ico16_fileattachments.svg") no-repeat center;}
+.atfl_area .atfl_data .btn .ico_file::before { content: ''; display: block; width: 17px; height: 17px; margin-top: 1px; background: url("https://www.work24.go.kr/cm/static/pub/pub_use/images/icon/16/ico16_fileattachments.svg") no-repeat center;}
 .atfl_area .atfl_data .btn .ico_file::after { display: none;}
 .atfl_area .prfd_data { margin-top: 24px;}
 .atfl_area .prfd_data ~ .prfd_data { padding-top: 24px; border-top: 1px dashed var(--col_btn);}
@@ -16999,7 +16999,7 @@ span.box_ipt.w530 {
 .atfl_area .prfd_data .filegroup { margin-top: 16px; padding-top: 0; border-top: none;}
 .atfl_area .box_file_wrap { display: block; min-height: inherit; margin-top: 16px; padding: 16px; border: 1px solid var(--col_btn); background-color: var(--col_white); border-radius: 8px;}
 .atfl_area .box_file_wrap .text { margin: 8px 0; font-weight: 600; text-align: center; letter-spacing: -0.32px;}
-.atfl_area .box_file_wrap .text::before { content: ''; display: inline-block; width: 57px; height: 60px; margin-right: 4px; vertical-align: middle; background: url(/cm/static/pub/pub_use/images/bg_temple.svg) no-repeat;}
+.atfl_area .box_file_wrap .text::before { content: ''; display: inline-block; width: 57px; height: 60px; margin-right: 4px; vertical-align: middle; background: url(https://www.work24.go.kr/cm/static/pub/pub_use/images/bg_temple.svg) no-repeat;}
 .atfl_area .box_file_wrap.fileover { border: 1px dashed var(--col_blue); background-color: var(--col_skyblue_light);}
 .atfl_area .box_file_list .template-upload { display: flex; justify-content: space-between; align-items: center; flex-wrap:inherit; line-height:inherit; gap: 8px; position: relative;}
 .atfl_area .box_file_list .template-upload ~ .template-upload { margin-top: 8px;}

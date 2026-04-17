@@ -96,7 +96,7 @@
     width: 24px;
     height: 24px;
     margin: 0 10px 0 4px;
-    background: url("/cm/static/images/icon/24/ico24_drag.svg") no-repeat;
+    background: url("https://www.work24.go.kr/cm/static/images/icon/24/ico24_drag.svg") no-repeat;
 }
 
 .dictionary_popup .dc_header .hd_tns .hover {
@@ -123,7 +123,7 @@
     top: 7px;
     width: 7px;
     height: 10px;
-    background: url("/cm/static/images/main_new/img_dc_p.svg") no-repeat;
+    background: url("https://www.work24.go.kr/cm/static/images/main_new/img_dc_p.svg") no-repeat;
 }
 
 .dictionary_popup .dc_header .hd_tns.add_hover .hover {
@@ -180,7 +180,7 @@
     display: block;
     width: 16px;
     height: 16px;
-    background: url("/cm/static/images/icon/16/ico16_close.svg") no-repeat;
+    background: url("https://www.work24.go.kr/cm/static/images/icon/16/ico16_close.svg") no-repeat;
 }
 
 .dictionary_popup .dc_search .rtn {
@@ -278,7 +278,7 @@
     padding: 96px 0 40px;
     font-size: 14px;
     text-align: center;
-    background: url(/cm/static/images/main_new/img_dc_empth.svg) no-repeat center top 40px;
+    background: url(https://www.work24.go.kr/cm/static/images/main_new/img_dc_empth.svg) no-repeat center top 40px;
     border-radius: 8px;}
 
 
@@ -367,7 +367,7 @@
 .tn_quick_dictionary .icon {
     width: 32px;
     height: 32px;
-    background: url(/cm/static/images/icon/32/ico32_dc_close.svg) no-repeat center;
+    background: url(https://www.work24.go.kr/cm/static/images/icon/32/ico32_dc_close.svg) no-repeat center;
 }
 
 @media (max-width: 1930px) {
