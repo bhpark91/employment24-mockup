@@ -574,7 +574,7 @@
                   <td>
                     <div class="box_radio-group">
                       <span><input type="radio" name="empmSalaryAt" id="empmSalaryY" value="Y" onchange="toggleSub('sub2',true)"><label for="empmSalaryY">예</label></span>
-                      <span><input type="radio" name="empmSalaryAt" id="empmSalaryN" value="N" checked onchange="toggleSub('sub2',false)"><label for="empmSalaryN">아니오</label></span>
+                      <span><input type="radio" name="empmSalaryAt" id="empmSalaryN" value="N" onchange="toggleSub('sub2',false)"><label for="empmSalaryN">아니오</label></span>
                     </div>
                   </td>
                 </tr>
@@ -600,7 +600,7 @@
                   <td>
                     <div class="box_radio-group">
                       <span><input type="radio" name="chgFactAt" id="chgFactY" value="Y" onchange="toggleSub('sub3',true)"><label for="chgFactY">예</label></span>
-                      <span><input type="radio" name="chgFactAt" id="chgFactN" value="N" checked onchange="toggleSub('sub3',false)"><label for="chgFactN">아니오</label></span>
+                      <span><input type="radio" name="chgFactAt" id="chgFactN" value="N" onchange="toggleSub('sub3',false)"><label for="chgFactN">아니오</label></span>
                     </div>
                   </td>
                 </tr>
@@ -632,7 +632,7 @@
                   <td>
                     <div class="box_radio-group">
                       <span><input type="radio" name="rstcRsnAt" id="rstcRsnY" value="Y" onchange="toggleSub('sub4',true)"><label for="rstcRsnY">예</label></span>
-                      <span><input type="radio" name="rstcRsnAt" id="rstcRsnN" value="N" checked onchange="toggleSub('sub4',false)"><label for="rstcRsnN">아니오</label></span>
+                      <span><input type="radio" name="rstcRsnAt" id="rstcRsnN" value="N" onchange="toggleSub('sub4',false)"><label for="rstcRsnN">아니오</label></span>
                     </div>
                   </td>
                 </tr>
@@ -660,7 +660,7 @@
                   <td>
                     <div class="box_radio-group">
                       <span><input type="radio" name="reqstBabyOtherFtmAt" id="secLeaveY" value="Y"><label for="secLeaveY">예</label></span>
-                      <span><input type="radio" name="reqstBabyOtherFtmAt" id="secLeaveN" value="N" checked><label for="secLeaveN">아니오</label></span>
+                      <span><input type="radio" name="reqstBabyOtherFtmAt" id="secLeaveN" value="N"><label for="secLeaveN">아니오</label></span>
                     </div>
                   </td>
                 </tr>
@@ -747,7 +747,7 @@
                   <td>
                     <div class="box_radio-group">
                       <span><input type="radio" name="sgprYn" id="sgprYnY" value="Y"><label for="sgprYnY">예</label></span>
-                      <span><input type="radio" name="sgprYn" id="sgprYnN" value="N" checked><label for="sgprYnN">아니오</label></span>
+                      <span><input type="radio" name="sgprYn" id="sgprYnN" value="N"><label for="sgprYnN">아니오</label></span>
                     </div>
                   </td>
                 </tr>
@@ -781,19 +781,19 @@
                 <tr>
                   <td colspan="2" style="background:#fff">
                     <div class="box_radio-group">
-                      <span><input type="radio" name="prssInsttSe" id="center1" value="1" checked onchange="selectCenter('civil')"><label for="center1">민원인 주소</label></span>
+                      <span><input type="radio" name="prssInsttSe" id="center1" value="1" onchange="selectCenter('civil')"><label for="center1">민원인 주소</label></span>
                       <span><input type="radio" name="prssInsttSe" id="center2" value="2" onchange="selectCenter('biz')"><label for="center2">사업장 주소</label></span>
                       <span><input type="radio" name="prssInsttSe" id="center3" value="3" onchange="selectCenter('existing')"><label for="center3">기존 처리센터</label></span>
                     </div>
                     <p class="s1_r mt08">급여신청서 접수 후 지급계좌 번호 변경을 원하실 경우 관할 고용센터로 연락하시기 바랍니다.</p>
 
-                    <div class="center_info" id="centerInfoExisting">
+                    <div class="center_info" id="centerInfoExisting" style="display:none">
                       <p><b>&lt;기존 처리센터&gt;</b></p>
                       <p><span class="center_label">관할센터 :</span> 서울관악고용센터</p>
                       <p>대표전화 : 02-3282-9200</p>
                       <p>주소 : (08378) 서울특별시 구로구 디지털로34길27 2,3층(구로동,대륭포스트타워 3차)</p>
                     </div>
-                    <div class="center_info mt08" id="centerInfoCivil">
+                    <div class="center_info mt08" id="centerInfoCivil" style="display:none">
                       <p><b>&lt;민원인 주소&gt; 선택</b></p>
                       <p><span class="center_label">관할센터 :</span> 서울관악고용센터</p>
                       <p>대표전화 : 02-3282-9200</p>
@@ -986,7 +986,7 @@
             <div class="agree_r mt16">
               <p>신청인 : 이수미</p>
               <div class="box_radio-group mt08" style="justify-content:flex-end">
-                <span><input type="radio" name="amsifoUtizeAgreAt" id="adminAgreeY" value="Y" checked><label for="adminAgreeY">동의합니다.</label></span>
+                <span><input type="radio" name="amsifoUtizeAgreAt" id="adminAgreeY" value="Y"><label for="adminAgreeY">동의합니다.</label></span>
                 <span><input type="radio" name="amsifoUtizeAgreAt" id="adminAgreeN" value="N"><label for="adminAgreeN">동의하지 않습니다.</label></span>
               </div>
             </div>
@@ -1008,7 +1008,7 @@
             <div class="agree_r mt16">
               <p>신청인 : 이수미</p>
               <div class="box_radio-group mt08" style="justify-content:flex-end">
-                <span><input type="radio" name="idifClctAgreYn" id="privAgreeY" value="Y" checked><label for="privAgreeY">동의합니다.</label></span>
+                <span><input type="radio" name="idifClctAgreYn" id="privAgreeY" value="Y"><label for="privAgreeY">동의합니다.</label></span>
                 <span><input type="radio" name="idifClctAgreYn" id="privAgreeN" value="N"><label for="privAgreeN">동의하지 않습니다.</label></span>
               </div>
             </div>
@@ -1374,7 +1374,15 @@ function resetForm() {
 }
 
 function validateAndSave() {
-  // Check fraud confirmation
+  // Check if 전문보기 has been opened
+  var fullTextArea = document.getElementById('fullTextArea');
+  if (fullTextArea.style.display === 'none' || fullTextArea.style.display === '') {
+    alert('부정수급 안내의 전문보기를 확인해 주세요.');
+    document.getElementById('btnFullText').scrollIntoView({ behavior: 'smooth', block: 'center' });
+    return;
+  }
+
+  // Check fraud confirmation checkbox
   var chk = document.getElementById('ilpInfoChk');
   if (!chk.checked) {
     alert('부정수급 안내 확인 체크박스를 선택해 주세요.');
