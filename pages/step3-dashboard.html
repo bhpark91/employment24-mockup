@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>고용24 - 마이페이지</title>
+<title>고용24</title>
 <link rel="stylesheet" href="../assets/css/reset.css">
 <link rel="stylesheet" href="../assets/css/font.css">
 <link rel="stylesheet" href="../assets/css/common.css">
@@ -12,374 +12,780 @@
 <link rel="stylesheet" href="../assets/css/dictionary.css">
 <link rel="stylesheet" href="../assets/css/mockup.css">
 <style>
-  /* Step3 Dashboard inline styles */
+/* ====== Main page layout (not in local CSS files) ====== */
+.main_wrap.person { background: #fff; }
+.main_inner { max-width: 1248px; margin: 0 auto; padding: 0 24px; }
 
-  /* Logged-in header util override */
-  .header-loggedin {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    font-size: 13px;
-    color: #666;
-  }
-  .header-loggedin .session-time {
-    color: #e53e3e;
-    font-weight: 600;
-    font-size: 12px;
-  }
-  .header-loggedin .btn-logout {
-    display: inline-block;
-    padding: 4px 12px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 13px;
-    color: #555;
-    text-decoration: none;
-    background: #fff;
-  }
-  .header-loggedin .btn-extend {
-    display: inline-block;
-    padding: 4px 12px;
-    border: 1px solid #1a56db;
-    border-radius: 4px;
-    font-size: 12px;
-    color: #1a56db;
-    text-decoration: none;
-    background: #f0f4ff;
-  }
+/* Search area */
+.main_search_wrp { text-align: center; padding: 48px 0 0; background: linear-gradient(180deg, #f0f5ff 0%, #e8f0fe 100%); }
+.main_search_wrp .main_title { font-size: 28px; font-weight: 700; color: #1a1a1a; margin-bottom: 24px; }
+.main_search_wrp .main_title strong { color: var(--col_blue, #1a56db); }
+.main_search_wrp .form_search_wrap { max-width: 680px; margin: 0 auto; padding: 0 24px 0; }
+.main_search_wrp .main_top_search {
+  display: flex; align-items: center; height: 64px; border: 3px solid var(--col_blue, #1a56db);
+  border-radius: 32px; background: #fff; position: relative; overflow: hidden;
+}
+.main_search_wrp .main_top_search .inner_select { position: absolute; left: 0; top: 0; z-index: 1; }
+.main_search_wrp .main_top_search .btn_cate_select {
+  display: flex; align-items: center; justify-content: center;
+  position: relative; height: 58px; padding: 0 16px 0 24px; border: none; background: transparent;
+  font-size: 18px; font-weight: 600; cursor: pointer; color: #333;
+}
+.main_search_wrp .main_top_search .btn_cate_select::after {
+  content: ''; display: block; position: absolute; right: 0; top: 50%;
+  width: 1px; height: 30px; margin-top: -15px; background-color: #d1d5db;
+}
+.main_search_wrp .main_top_search .input_wrap { flex: 1; }
+.main_search_wrp .main_top_search input[type="text"] {
+  width: 100%; height: 58px; padding: 0 16px 0 24px; border: none; background: transparent;
+  font-size: 18px; outline: none; color: #888;
+}
+.main_search_wrp .main_top_search .btn_main_search {
+  display: inline-block; width: 36px; height: 36px; margin-right: 16px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%231a56db' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='11' cy='11' r='8'/%3E%3Cpath d='m21 21-4.3-4.3'/%3E%3C/svg%3E") no-repeat center;
+  background-size: 28px; border: none; cursor: pointer; flex-shrink: 0;
+}
 
-  /* Search area */
-  .dash-visual {
-    background: linear-gradient(135deg, #f0f6ff 0%, #e8f0fe 100%);
-    padding: 40px 0 32px;
-    text-align: center;
-  }
-  .dash-visual .search-title {
-    font-size: 26px;
-    font-weight: 700;
-    color: #1a1a1a;
-    margin-bottom: 18px;
-  }
-  .dash-visual .search-title span {
-    color: #1a56db;
-  }
-  .dash-visual .search-bar {
-    display: flex;
-    justify-content: center;
-    max-width: 560px;
-    margin: 0 auto;
-  }
-  .dash-visual .search-bar input {
-    flex: 1;
-    height: 48px;
-    padding: 0 18px;
-    border: 2px solid #1a56db;
-    border-right: none;
-    border-radius: 8px 0 0 8px;
-    font-size: 15px;
-    outline: none;
-    background: #fff;
-  }
-  .dash-visual .search-bar button {
-    width: 48px;
-    height: 48px;
-    background: #1a56db;
-    border: 2px solid #1a56db;
-    border-radius: 0 8px 8px 0;
-    color: #fff;
-    font-size: 18px;
-    cursor: pointer;
-  }
+/* Tabs */
+.main_favorite { background: linear-gradient(180deg, #e8f0fe 0%, #fff 60%); padding: 0 0 20px; }
+.main_favorite .txt_c { text-align: center; }
+.main_favorite .tab { display: inline-flex; gap: 0; padding: 16px 0 0; }
+.main_favorite .tab button {
+  padding: 12px 20px; font-size: 16px; font-weight: 500; color: #666;
+  background: transparent; border: none; border-bottom: 3px solid transparent;
+  cursor: pointer; transition: all 0.2s;
+}
+.main_favorite .tab button:hover { color: var(--col_blue, #1a56db); }
+.main_favorite .tab button.active,
+.main_favorite .tab button[aria-selected="true"] {
+  color: var(--col_blue, #1a56db); font-weight: 700;
+  border-bottom-color: var(--col_blue, #1a56db);
+}
+.main_favorite .tab button.btn_bookmark {
+  background: var(--col_blue, #1a56db); color: #fff; border-radius: 20px;
+  padding: 8px 20px; margin-left: 8px; border-bottom: none;
+}
+.main_favorite .tab button.btn_bookmark.active { background: var(--col_blue, #1a56db); color: #fff; }
 
-  /* Shortcuts section */
-  .my-shortcuts {
-    padding: 36px 0;
-    background: #fff;
-  }
-  .my-shortcuts .area {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-  }
-  .my-shortcuts .section-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 20px;
-  }
-  .my-shortcuts .section-header h3 {
-    font-size: 18px;
-    font-weight: 700;
-    color: #1a1a1a;
-  }
-  .my-shortcuts .section-header .btn-edit {
-    font-size: 13px;
-    color: #1a56db;
-    text-decoration: none;
-    border: 1px solid #1a56db;
-    padding: 6px 14px;
-    border-radius: 4px;
-  }
-  .shortcut-grid {
-    display: flex;
-    gap: 16px;
-    flex-wrap: wrap;
-  }
-  .shortcut-card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    width: 140px;
-    height: 120px;
-    border: 1px solid #e0e3e8;
-    border-radius: 10px;
-    background: #fff;
-    cursor: pointer;
-    transition: all 0.2s;
-    text-decoration: none;
-    color: #333;
-    position: relative;
-  }
-  .shortcut-card:hover {
-    border-color: #1a56db;
-    box-shadow: 0 2px 12px rgba(26, 86, 219, 0.12);
-    transform: translateY(-1px);
-  }
-  .shortcut-card.highlight {
-    border-color: #1a56db;
-    background: #f8faff;
-    animation: mockup-glow 1.5s ease-in-out infinite;
-  }
-  .shortcut-card .sc-icon {
-    font-size: 28px;
-  }
-  .shortcut-card .sc-label {
-    font-size: 13px;
-    font-weight: 600;
-    text-align: center;
-    line-height: 1.3;
-  }
-  .shortcut-card .sc-badge {
-    position: absolute;
-    top: 8px;
-    right: 8px;
-    background: #e53e3e;
-    color: #fff;
-    font-size: 11px;
-    font-weight: 700;
-    padding: 2px 7px;
-    border-radius: 10px;
-    line-height: 1.3;
-  }
-  .shortcut-card.add-card {
-    border-style: dashed;
-    border-color: #ccc;
-    color: #aaa;
-  }
-  .shortcut-card.add-card .sc-icon {
-    font-size: 32px;
-    color: #ccc;
-  }
-  .shortcut-card.add-card .sc-label {
-    color: #aaa;
-    font-weight: 500;
-  }
+/* Favorites swiper (logged-in) */
+.favorite_swiper_wrp { max-width: 1200px; margin: 24px auto 0; padding: 0 24px; }
+.favorite_swiper_wrp.login .swiper-wrapper {
+  display: flex; gap: 12px; justify-content: center; list-style: none; padding: 0; margin: 0;
+}
+.favorite_swiper_wrp.login .swiper-slide {
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  width: 160px !important; height: 160px; background: #fff; border: 1px solid #e0e3e8;
+  border-radius: 16px; transition: all 0.2s; cursor: pointer; text-align: center;
+  text-decoration: none; box-sizing: border-box;
+}
+.favorite_swiper_wrp.login .swiper-slide:hover {
+  border-color: var(--col_blue, #1a56db); box-shadow: 0 4px 16px rgba(26,86,219,0.12);
+}
+.favorite_swiper_wrp.login .swiper-slide a {
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  width: 100%; height: 100%; text-decoration: none; color: #333; padding: 16px 8px;
+  box-sizing: border-box;
+}
+.favorite_swiper_wrp.login .swiper-slide.status {
+  background: linear-gradient(135deg, #4a7cf7 0%, #1a56db 100%);
+  border-color: transparent;
+}
+.favorite_swiper_wrp.login .swiper-slide.status a { color: #fff; }
+.favorite_swiper_wrp.login .swiper-slide.status .count {
+  font-size: 14px; color: rgba(255,255,255,0.9); margin-bottom: 4px;
+}
+.favorite_swiper_wrp.login .swiper-slide.status .count strong {
+  font-size: 40px; font-weight: 800; color: #fff; display: block; line-height: 1.1;
+}
+.favorite_swiper_wrp.login .swiper-slide.status .txt { color: #fff; font-size: 13px; line-height: 1.4; }
+.favorite_swiper_wrp.login .swiper-slide.status .txt .clamp_wrap { margin-bottom: 2px; }
+.favorite_swiper_wrp.login .swiper-slide.status .txt .clamp1 { font-weight: 700; font-size: 14px; }
+.favorite_swiper_wrp.login .swiper-slide.status .txt .sub { font-size: 13px; font-weight: 400; }
 
-  /* Tab navigation */
-  .dash-tab-nav {
-    display: flex;
-    justify-content: center;
-    gap: 0;
-    background: #fff;
-    border-bottom: 1px solid #e5e7eb;
-    max-width: 900px;
-    margin: 0 auto;
-  }
-  .dash-tab-nav a {
-    flex: 1;
-    text-align: center;
-    padding: 14px 12px;
-    font-size: 15px;
-    font-weight: 500;
-    color: #666;
-    text-decoration: none;
-    border-bottom: 3px solid transparent;
-    transition: all 0.2s;
-  }
-  .dash-tab-nav a:hover {
-    color: #1a56db;
-  }
-  .dash-tab-nav a.active {
-    color: #1a56db;
-    font-weight: 700;
-    border-bottom-color: #1a56db;
-  }
+/* 메뉴 추가/설정 slots */
+.favorite_swiper_wrp.login .swiper-slide .img_area_wrap {
+  display: flex; align-items: center; justify-content: center; margin-bottom: 8px;
+}
+.favorite_swiper_wrp.login .swiper-slide .img_area_wrap i.set {
+  display: block; width: 48px; height: 48px; border: 2px dashed #c0c4cc; border-radius: 50%;
+  position: relative;
+}
+.favorite_swiper_wrp.login .swiper-slide .img_area_wrap i.set::before,
+.favorite_swiper_wrp.login .swiper-slide .img_area_wrap i.set::after {
+  content: ''; position: absolute; background: #c0c4cc;
+}
+.favorite_swiper_wrp.login .swiper-slide .img_area_wrap i.set::before {
+  width: 2px; height: 20px; left: 50%; top: 50%; transform: translate(-50%, -50%);
+}
+.favorite_swiper_wrp.login .swiper-slide .img_area_wrap i.set::after {
+  width: 20px; height: 2px; left: 50%; top: 50%; transform: translate(-50%, -50%);
+}
+.favorite_swiper_wrp.login .swiper-slide .txt.blue span { color: var(--col_blue, #1a56db); font-size: 14px; font-weight: 600; }
+.text_set { text-align: center; margin-top: 16px; font-size: 14px; color: #666; padding-bottom: 8px; }
+.text_set a { color: var(--col_blue, #1a56db); font-weight: 600; }
 
-  /* Stats section */
-  .stats-section {
-    padding: 28px 0;
-    background: #f8f9fb;
-    border-top: 1px solid #e5e7eb;
-    border-bottom: 1px solid #e5e7eb;
-  }
-  .stats-section .area {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-    display: flex;
-    justify-content: center;
-    gap: 60px;
-  }
-  .stat-item {
-    text-align: center;
-  }
-  .stat-item .stat-label {
-    font-size: 14px;
-    color: #666;
-    margin-bottom: 6px;
-  }
-  .stat-item .stat-value {
-    font-size: 26px;
-    font-weight: 700;
-    color: #1a56db;
-  }
-  .stat-item .stat-value em {
-    font-style: normal;
-    font-size: 15px;
-    color: #999;
-    margin-left: 2px;
-  }
+/* Stats */
+.main_info { display: flex; align-items: center; gap: 40px; padding: 48px 0; max-width: 1200px; margin: 0 auto; }
+.main_info .title { flex: 0 0 320px; }
+.main_info .title h2 { font-size: 24px; font-weight: 700; color: #1a1a1a; line-height: 1.5; }
+.main_info .title h2 strong { color: var(--col_blue, #1a56db); }
+.main_info .box_wrap { flex: 1; display: flex; gap: 20px; }
+.main_info .box {
+  flex: 1; background: #f8faff; border: 1px solid #e0e7f5;
+  border-radius: 16px; padding: 28px 24px;
+}
+.main_info .box .link { display: block; text-decoration: none; margin-bottom: 16px; }
+.main_info .box .tit { display: block; font-size: 14px; color: #666; margin-bottom: 4px; }
+.main_info .box .count { display: block; font-size: 32px; font-weight: 700; color: var(--col_blue, #1a56db); }
+.main_info .box .count span { margin-right: 2px; }
+.main_info .box ul { list-style: none; padding: 0; margin: 0; }
+.main_info .box ul li { padding: 3px 0; }
+.main_info .box ul li a { font-size: 14px; color: #666; text-decoration: none; }
+.main_info .box ul li a:hover { color: var(--col_blue, #1a56db); }
+.main_info .box ul li a::before { content: '> '; color: #999; }
 
-  .dash-content {
-    min-height: 600px;
-  }
+/* 고용정책 정보 */
+.main_svc { padding: 48px 0; border-top: 1px solid #e5e7eb; max-width: 1200px; margin: 0 auto; }
+.main_svc h2 { font-size: 22px; font-weight: 700; color: #1a1a1a; margin-bottom: 24px; }
+.main_svc ul.service { display: grid; grid-template-columns: repeat(5, 1fr); gap: 16px; list-style: none; padding: 0; margin: 0; }
+.main_svc ul.service > li { }
+.main_svc ul.service > li > a {
+  display: block; background: #fff; border-radius: 12px; padding: 28px 20px 20px;
+  text-align: center; text-decoration: none; color: #333; border: 1px solid #e8eaed;
+  transition: box-shadow 0.2s, transform 0.2s; min-height: 140px;
+}
+.main_svc ul.service > li > a:hover { box-shadow: 0 4px 16px rgba(0,0,0,0.08); transform: translateY(-2px); }
+.main_svc ul.service .tit { display: block; font-size: 16px; font-weight: 700; margin-bottom: 8px; }
+.main_svc ul.service .txt_ellipsis { font-size: 13px; color: #888; line-height: 1.5; margin-bottom: 12px; }
+.main_svc ul.service .ico_arr { font-size: 13px; color: var(--col_blue, #1a56db); }
+
+/* 이용가이드 */
+.main_svc ul.service.col3 { grid-template-columns: repeat(3, 1fr); }
+.main_svc ul.service.col3.ty2 > li > a { text-align: left; padding: 28px 24px; }
+.main_svc ul.service.col3.ty2 > li > a p { font-size: 14px; color: #666; line-height: 1.6; margin-bottom: 12px; }
+.main_svc ul.service.col3.ty2 > li.purple > a { background: #f5f3ff; border-color: #e0d8f7; }
+.main_svc ul.service.col3.ty2 > li.green > a { background: #ecfdf5; border-color: #c6f6d5; }
+.main_svc ul.service.col3.ty2 > li.blue > a { background: #eff6ff; border-color: #bfdbfe; }
+
+/* 고용뉴스 / 공지사항 */
+.main_svc.flex_box { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+.main_svc .news h2, .main_svc .notice h2 { font-size: 18px; font-weight: 700; margin-bottom: 16px; }
+.main_svc .news ul, .main_svc .notice ul { list-style: none; padding: 0; margin: 0; }
+.main_svc .news ul li { padding: 12px 0; border-bottom: 1px solid #f0f0f0; }
+.main_svc .news ul li a { text-decoration: none; color: #333; display: block; }
+.main_svc .news ul li a .tit { display: block; font-size: 15px; font-weight: 600; margin-bottom: 4px; }
+.main_svc .news ul li a .cont { font-size: 13px; color: #888; }
+.main_svc .news ul li a .cont .date { margin-right: 8px; color: #999; }
+.main_svc .notice ul li { padding: 10px 0; border-bottom: 1px solid #f0f0f0; }
+.main_svc .notice ul li a {
+  display: flex; justify-content: space-between; gap: 16px;
+  text-decoration: none; color: #333; font-size: 14px;
+}
+.main_svc .notice ul li a .txt { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.main_svc .notice ul li a .date { color: #999; font-size: 13px; flex-shrink: 0; }
+.btn_more { display: block; text-align: right; margin-top: 12px; font-size: 13px; color: #888; text-decoration: none; }
+
+/* Banner */
+.main_bann_wrap { padding: 32px 0; max-width: 1200px; margin: 0 auto; }
+.main_bann_wrap .swiper-slide a { display: block; }
+.main_bann_wrap .swiper-slide a img { width: 100%; border-radius: 12px; }
+
+/* ====== GNB dropdown override for mockup ====== */
+.new #gnb .gnb2depth {
+  background: #fff; border-bottom: 1px solid #d1d5db;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+  top: 48px; left: 0; padding: 24px 0 24px 12px;
+}
+.new #gnb > ul > li:hover > .gnb2depth,
+.new #gnb > ul > li.menu-open > .gnb2depth {
+  display: flex !important; opacity: 1;
+}
+.new #gnb .gnb2depth > li { position: relative; }
+.new #gnb .gnb3depth {
+  position: relative !important; left: auto !important; top: auto !important;
+  display: none !important; flex-wrap: wrap; padding: 4px 0 0 16px !important;
+  opacity: 1 !important; z-index: 1 !important;
+}
+.new #gnb .gnb2depth > li:hover > .gnb3depth,
+.new #gnb .gnb2depth > li.open > .gnb3depth {
+  display: flex !important;
+}
+.new #gnb .gnb3depth li {
+  width: 100% !important; margin: 0 !important;
+}
+.new #gnb .gnb3depth li a {
+  min-height: auto !important; padding: 6px 16px 6px 0 !important;
+  font-size: 14px !important; font-weight: 400 !important;
+  -webkit-line-clamp: initial !important;
+}
+.new #gnb .gnb3depth li a:hover { color: var(--col_blue, #1a56db); }
+.new #gnb .gnb3depth li a.mockup-pulse {
+  color: var(--col_blue, #1a56db) !important;
+  font-weight: 700 !important;
+}
+
+/* Footer adjustments */
+#footer .group .area { max-width: 1248px; margin: 0 auto; padding: 32px 24px; }
+#footer .group .logos { margin-bottom: 16px; }
+#footer .group .logos img { height: 32px; }
+#footer .group .logos.gov { margin-top: 24px; display: flex; align-items: center; gap: 16px; }
+#footer .group .logos.gov img { height: 28px; }
+#footer .group .logos.gov .copyright { font-size: 12px; color: #999; }
+#footer .group .flex { display: flex; justify-content: space-between; gap: 40px; }
+#footer .group .flex_left p { font-size: 13px; color: #666; line-height: 1.8; }
+#footer .group .flex_left p.etc { margin-top: 8px; font-size: 12px; color: #999; }
+#footer .group .flex_right .guide { display: flex; gap: 12px; }
+#footer .group .flex_right .guide a { font-size: 13px; color: #666; text-decoration: none; }
+#footer .group .control { margin-top: 20px; padding-top: 16px; border-top: 1px solid #e5e7eb; }
+#footer .group .control .links { display: flex; flex-wrap: wrap; gap: 8px 16px; margin-bottom: 8px; }
+#footer .group .control .links a { font-size: 13px; color: #666; text-decoration: none; }
+#footer .group .control .links a strong { color: var(--col_blue, #1a56db); }
+#footer .group .control .copyright { font-size: 12px; color: #999; display: block; }
+#footer .site { background: #f8f9fb; border-top: 1px solid #e5e7eb; }
+#footer .site .area { max-width: 1248px; margin: 0 auto; padding: 12px 24px; display: flex; gap: 12px; }
+#footer .site .btnsite {
+  padding: 8px 16px; font-size: 13px; background: #fff; border: 1px solid #d1d5db;
+  border-radius: 4px; cursor: pointer; display: flex; align-items: center; gap: 4px;
+}
 </style>
 </head>
 <body>
 <div id="wrap" class="person">
 
+<!-- #HEADER -->
 <header class="new">
-  <div class="header_top">
-    <div class="area">
-      <div class="top_noti_area">
-        <p class="desc"><span class="ico_gov"></span> 이 누리집은 대한민국 공식 전자정부 누리집입니다.</p>
-      </div>
-      <div class="tab_area">
-        <a href="javascript:void(0)" class="is-active"><span>개인</span></a>
-        <a href="javascript:void(0)"><span>기업</span></a>
-      </div>
+  <!-- #header_top -->
+  <div id="header_top">
+    <div class="header_top_area">
+      <ul class="header_type">
+        <li><a href="javascript:void(0);" title="개인 선택됨">개인</a></li>
+        <li><a href="javascript:void(0);">기업</a></li>
+        <li class="top_noti_area">
+          <div class="noti_banner_slide">
+            <div class="swiper-wrapper" style="flex-direction: column;">
+              <div class="swiper-slide swiper-slide-active" style="height: 52px;">
+                <span class="ad_title_p"><span class="ico16_loudspeaker_white"></span>웹브라우저(크롬, 엣지) 업데이트에 따른 권한 허용 설정 안내(PC사용자)</span>
+                <a href="javascript:void(0)" class="link btn xxsmall btn_round type02"><span>자세히 보기</span></a>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
     </div>
   </div>
-  <div class="header_bottom">
-    <div class="area">
-      <h1 class="logo">
-        <a href="javascript:void(0)" title="고용24 로고">
-          <img src="../assets/images/logo_main_work24.svg" alt="고용24">
+  <!-- //#header_top -->
+
+  <!-- #header_menu -->
+  <div id="header_menutree">
+    <div class="header_lt">
+      <ul class="header_info">
+        <li><a href="javascript:void(0);">고객센터</a></li>
+        <li class="line"><a href="javascript:void(0);" title="새창 열림">원격지원</a></li>
+        <li class="line">
+          <button type="button" class="btn_screen JS-screenToggle" aria-controls="fontSize" aria-expanded="false"><span>글자·화면 설정</span></button>
+        </li>
+      </ul>
+
+      <ul class="header_util">
+        <!-- 로그인 후 -->
+        <li class="after">
+          <a href="javascript:void(0)" class="btn btn_logoutProcessTimer">
+            <span class="ico ico13"></span><span>로그아웃</span>
+          </a>
+          <div class="col">
+            <i class="icons"></i>
+            <span id="timeOut">59분50초</span>
+            <a href="javascript:void(0);" class="btn">시간연장</a>
+          </div>
+          &nbsp;<a href="javascript:void(0);" title="마이페이지"><span class="ico ico14"></span><span>마이페이지</span></a>
+        </li>
+        <!-- //로그인 후 -->
+
+        <!-- utility: 검색 -->
+        <li class="header_search">
+          <a href="javascript:void(0);" class="JS-searchToggle" aria-pressed="false" role="button">
+            <span class="ico ico09"></span>
+            <span>검색</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <!-- //#header_menu -->
+
+  <!-- #header_bottom -->
+  <div id="header_bottom" class="">
+    <div class="header_bottom_area">
+      <h1>
+        <a class="go24_ci" href="javascript:void(0);" title="홈으로">
+          <img src="../assets/images/logo_main_work24.svg" alt="고용24" class="work24_logo" style="height:48px;">
         </a>
       </h1>
-      <div class="header_util">
-        <div class="header-loggedin">
-          <span class="session-time">59분50초</span>
-          <a href="javascript:void(0)" class="btn-extend">시간연장</a>
-          <a href="javascript:void(0)" class="btn-logout">로그아웃</a>
+      <div class="gnb_wrap">
+        <!-- gnb -->
+        <div id="gnb">
+          <ul>
+            <li>
+              <a href="javascript:void(0);" aria-expanded="false"><span>채용정보</span></a>
+              <ul class="gnb2depth">
+                <li>
+                  <a href="javascript:void(0);"><span>일자리 찾기</span></a>
+                  <ul class="gnb3depth">
+                    <li class="txt_list"><a href="javascript:void(0);"><span>채용정보 상세검색</span></a></li>
+                    <li class="txt_list"><a href="javascript:void(0);"><span>직종별</span></a></li>
+                    <li class="txt_list"><a href="javascript:void(0);"><span>지역별</span></a></li>
+                    <li class="txt_list"><a href="javascript:void(0);"><span>테마별</span></a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="javascript:void(0);"><span>구직신청</span></a>
+                  <ul class="gnb3depth">
+                    <li class="txt_list"><a href="javascript:void(0);"><span>구직신청</span></a></li>
+                    <li class="txt_list"><a href="javascript:void(0);"><span>이력서/자기소개서 관리</span></a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="javascript:void(0);"><span>채용행사</span></a>
+                  <ul class="gnb3depth">
+                    <li class="txt_list"><a href="javascript:void(0);"><span>채용행사</span></a></li>
+                    <li class="txt_list"><a href="javascript:void(0);"><span>채용박람회</span></a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="javascript:void(0);" aria-expanded="false"><span>취업지원</span></a>
+              <ul class="gnb2depth">
+                <li>
+                  <a href="javascript:void(0);"><span>청년 취업역량강화</span></a>
+                  <ul class="gnb3depth">
+                    <li class="txt_list"><a href="javascript:void(0);"><span>취업지원 프로그램 통합검색</span></a></li>
+                    <li class="txt_list"><a href="javascript:void(0);"><span>청년취업역량 강화 프로그램</span></a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="javascript:void(0);"><span>취업가이드</span></a>
+                  <ul class="gnb3depth">
+                    <li class="txt_list"><a href="javascript:void(0);"><span>이력서, 자소서 작성가이드</span></a></li>
+                    <li class="txt_list"><a href="javascript:void(0);"><span>직업심리검사</span></a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="javascript:void(0);"><span>국민취업지원제도</span></a>
+                  <ul class="gnb3depth">
+                    <li class="txt_list"><a href="javascript:void(0);"><span>취업지원신청</span></a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="javascript:void(0);" aria-expanded="false"><span>실업급여</span></a>
+              <ul class="gnb2depth">
+                <li>
+                  <a href="javascript:void(0);"><span>수급자격</span></a>
+                  <ul class="gnb3depth">
+                    <li class="txt_list"><a href="javascript:void(0);"><span>수급자격 신청자 온라인 교육</span></a></li>
+                    <li class="txt_list"><a href="javascript:void(0);"><span>수급자격 신청서 인터넷 제출</span></a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="javascript:void(0);"><span>실업인정</span></a>
+                  <ul class="gnb3depth">
+                    <li class="txt_list"><a href="javascript:void(0);"><span>실업인정 인터넷 신청</span></a></li>
+                    <li class="txt_list"><a href="javascript:void(0);"><span>취업사실 신고</span></a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="javascript:void(0);"><span>이직확인서</span></a>
+                  <ul class="gnb3depth">
+                    <li class="txt_list"><a href="javascript:void(0);"><span>이직확인서</span></a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="javascript:void(0);" aria-expanded="false"><span>직업 능력 개발</span></a>
+              <ul class="gnb2depth">
+                <li>
+                  <a href="javascript:void(0);"><span>훈련 찾기·신청</span></a>
+                  <ul class="gnb3depth">
+                    <li class="txt_list"><a href="javascript:void(0);"><span>훈련 통합검색</span></a></li>
+                    <li class="txt_list"><a href="javascript:void(0);"><span>국민내일배움카드 훈련과정</span></a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="javascript:void(0);"><span>내일배움카드</span></a>
+                  <ul class="gnb3depth">
+                    <li class="txt_list"><a href="javascript:void(0);"><span>국민내일배움카드 발급신청</span></a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li id="gnb-parental">
+              <a href="javascript:void(0);" aria-expanded="false" data-mockup-action="parental-leave"><span>출산휴가·육아휴직</span></a>
+              <ul class="gnb2depth">
+                <li>
+                  <a href="javascript:void(0);"><span>출산휴가</span></a>
+                  <ul class="gnb3depth">
+                    <li class="txt_list"><a href="javascript:void(0);"><span>출산전후(유산,사산,배우자,난임치료)휴가 급여신청</span></a></li>
+                    <li class="txt_list"><a href="javascript:void(0);"><span>기간제·파견근로자 출산전후휴가 급여등에 상당하는 금액 신청</span></a></li>
+                    <li class="txt_list"><a href="javascript:void(0);"><span>예술인·노무제공자 출산전후급여등 신청</span></a></li>
+                    <li class="txt_list"><a href="javascript:void(0);"><span>고용보험 미적용자 출산(유산·사산) 급여 신청</span></a></li>
+                    <li class="txt_list"><a href="javascript:void(0);"><span>출산휴가 사용현황</span></a></li>
+                  </ul>
+                </li>
+                <li class="open">
+                  <a href="javascript:void(0);"><span>육아휴직</span></a>
+                  <ul class="gnb3depth" style="display:flex !important;">
+                    <li class="txt_list"><a href="step4-form.html" class="mockup-pulse" data-mockup-action="apply-parental"><span>육아휴직급여 신청</span></a></li>
+                    <li class="txt_list"><a href="javascript:void(0);"><span>육아기 근로시간 단축 급여 신청</span></a></li>
+                    <li class="txt_list"><a href="javascript:void(0);"><span>육아휴직/육아기 근로시간 단축 사용현황</span></a></li>
+                    <li class="txt_list"><a href="javascript:void(0);"><span>육아휴직 급여 사후지급금 확인 요청</span></a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+          </ul>
         </div>
+        <!-- //gnb -->
+        <a href="javascript:void(0)" class="header_allmenu" title="전체메뉴 버튼">
+          <div class="lines">
+            <span class="t"></span>
+            <span class="c"></span>
+            <span class="b"></span>
+          </div>
+          <span>전체 메뉴</span>
+        </a>
       </div>
-      <nav class="gnb_wrap">
-        <ul>
-          <li><a href="javascript:void(0)">채용정보</a></li>
-          <li><a href="javascript:void(0)">취업지원</a></li>
-          <li><a href="javascript:void(0)">실업급여</a></li>
-          <li><a href="javascript:void(0)">직업 능력 개발</a></li>
-          <li><a href="step4-form.html" class="on" style="color:#1a56db;font-weight:700" data-mockup-action="parental-leave">출산휴가·육아휴직</a></li>
-        </ul>
-      </nav>
-      <a href="javascript:void(0)" class="header_allmenu" title="전체메뉴">
-        <div class="lines"><span class="t"></span><span class="c"></span><span class="b"></span></div>
-        <span>전체 메뉴</span>
-      </a>
     </div>
   </div>
+  <!-- //#header_bottom -->
 </header>
 
-<main class="dash-content">
-  <!-- Search area -->
-  <div class="dash-visual">
-    <h2 class="search-title">나만의 고용서비스, <span>고용24</span></h2>
-    <div class="search-bar">
-      <input type="text" placeholder="검색어를 입력하세요" readonly>
-      <button type="button" aria-label="검색">&#x1F50D;</button>
+<section id="container">
+  <h2 class="blind">고용24 개인 서비스</h2>
+  <div class="main_wrap person">
+    <div class="main_inner">
+
+      <!-- ====== Search area ====== -->
+      <div class="main_search_wrp">
+        <p class="main_title">나만의 고용서비스, <strong>고용24</strong></p>
+        <div class="form_search_wrap">
+          <div class="main_top_search">
+            <div class="inner_select" id="srchCateDiv">
+              <button type="button" class="btn_cate_select" id="topQuerySelect" title="검색 유형 열기">
+                <span>전체</span>
+              </button>
+            </div>
+            <div class="input_wrap">
+              <input type="text" placeholder="필요한 서비스를 찾아보세요" title="검색어 입력" id="topQuery" maxlength="150" readonly>
+            </div>
+            <a href="javascript:void(0);" id="findSearchData" class="btn_main_search"><span class="blind">검색</span></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- ====== Tab area (즐겨찾기 active) ====== -->
+      <div class="main_favorite">
+        <div>
+          <div class="txt_c">
+            <div class="tab" role="tablist">
+              <button id="tab-1100" type="button" role="tab" aria-selected="false" aria-controls="panel-1100">취업준비</button>
+              <button id="tab-1200" type="button" role="tab" aria-selected="false" aria-controls="panel-1200">일자리 찾기</button>
+              <button id="tab-1300" type="button" role="tab" aria-selected="false" aria-controls="panel-1300">훈련 역량 강화</button>
+              <button id="tab-1400" type="button" role="tab" aria-selected="false" aria-controls="panel-1400">실업·육아휴직</button>
+              <button id="tab-fav" aria-controls="panel-fav" type="button" role="tab" class="btn_bookmark active" aria-selected="true">즐겨찾기</button>
+            </div>
+          </div>
+
+          <!-- ====== 즐겨찾기 패널 (logged-in) ====== -->
+          <div class="favorite_swiper_wrp login tabpanels" id="wrp-pan-fav">
+            <div id="panel-fav-login" class="favorite_swiper">
+              <ul class="swiper-wrapper" aria-live="polite">
+                <!-- 신청현황 카드 -->
+                <li class="swiper-slide status swiper-slide-active">
+                  <a class="img_area_pr" href="javascript:void(0);">
+                    <div class="img_area_wrap">
+                      <p class="count"><strong>0</strong> 건</p>
+                    </div>
+                    <div class="txt" style="display:block;">
+                      <div class="clamp_wrap">
+                        <span class="clamp1 color_person">박기희</span>
+                        <em class="sub">님의</em>
+                      </div>
+                      <span>신청현황</span>
+                    </div>
+                  </a>
+                </li>
+                <!-- 메뉴 추가/설정 슬롯들 -->
+                <li class="swiper-slide">
+                  <a href="javascript:void(0)">
+                    <div class="img_area_wrap"><i class="set"></i></div>
+                    <p class="txt blue"><span>메뉴 추가/설정</span></p>
+                  </a>
+                </li>
+                <li class="swiper-slide">
+                  <a href="javascript:void(0)">
+                    <div class="img_area_wrap"><i class="set"></i></div>
+                    <p class="txt blue"><span>메뉴 추가/설정</span></p>
+                  </a>
+                </li>
+                <li class="swiper-slide">
+                  <a href="javascript:void(0)">
+                    <div class="img_area_wrap"><i class="set"></i></div>
+                    <p class="txt blue"><span>메뉴 추가/설정</span></p>
+                  </a>
+                </li>
+                <li class="swiper-slide">
+                  <a href="javascript:void(0)">
+                    <div class="img_area_wrap"><i class="set"></i></div>
+                    <p class="txt blue"><span>메뉴 추가/설정</span></p>
+                  </a>
+                </li>
+                <li class="swiper-slide">
+                  <a href="javascript:void(0)">
+                    <div class="img_area_wrap"><i class="set"></i></div>
+                    <p class="txt blue"><span>메뉴 추가/설정</span></p>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <p class="text_set">나만의 메뉴를 <a href="javascript:void(0)" class="f_weight_600 txt_underline">설정</a>하고 더 편하게 이용하세요.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- ====== Stats section ====== -->
+      <div class="main_info">
+        <div class="title">
+          <h2><strong>채용공고</strong>와 참여 가능한<br><strong>교육·훈련</strong>을 확인해 보세요.</h2>
+        </div>
+        <div class="box_wrap">
+          <div class="box">
+            <a href="javascript:void(0);" class="link">
+              <span class="tit">채용공고 수 &rsaquo;</span>
+              <strong class="count"><span>131,600</span>건</strong>
+            </a>
+            <ul>
+              <li><a href="javascript:void(0);">지역별 일자리 정보 찾기</a></li>
+              <li><a href="javascript:void(0);">직종별 일자리 정보 찾기</a></li>
+              <li><a href="javascript:void(0);">테마별 일자리 정보 찾기</a></li>
+            </ul>
+          </div>
+          <div class="box">
+            <a href="javascript:void(0);" class="link">
+              <span class="tit">교육·훈련 수 &rsaquo;</span>
+              <strong class="count"><span>22,307</span>건</strong>
+            </a>
+            <ul>
+              <li><a href="javascript:void(0);">국민내일배움카드 훈련과정</a></li>
+              <li><a href="javascript:void(0);">K-디지털 아카데미 훈련과정</a></li>
+              <li><a href="javascript:void(0);">정부부처별 훈련과정</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- ====== 고용정책 정보 ====== -->
+      <div class="main_svc">
+        <h2>고용정책 정보</h2>
+        <ul class="service">
+          <li>
+            <a href="javascript:void(0)" class="ico60_bag">
+              <strong class="tit">취업준비</strong>
+              <p class="txt_ellipsis line2">취업은 하고 싶은데, 어떻게 해야 할지 모르겠어요</p>
+              <span class="ico_arr">바로가기</span>
+            </a>
+          </li>
+          <li>
+            <a href="javascript:void(0)" class="ico60_search">
+              <strong class="tit">일자리 찾기</strong>
+              <p class="txt_ellipsis line2">내게 맞는 일자리를 찾고 싶어요</p>
+              <span class="ico_arr">바로가기</span>
+            </a>
+          </li>
+          <li>
+            <a href="javascript:void(0)" class="ico60_card">
+              <strong class="tit">교육훈련</strong>
+              <p class="txt_ellipsis line2">취업하기 위해 공부하거나 자격증을 따고 싶어요</p>
+              <span class="ico_arr">바로가기</span>
+            </a>
+          </li>
+          <li>
+            <a href="javascript:void(0)" class="ico60_pay">
+              <strong class="tit">실업급여</strong>
+              <p class="txt_ellipsis line2">최근에 어쩔 수 없이 퇴사했어요</p>
+              <span class="ico_arr">바로가기</span>
+            </a>
+          </li>
+          <li>
+            <a href="javascript:void(0)" class="ico60_tipheart">
+              <strong class="tit">출산·육아</strong>
+              <p class="txt_ellipsis line2">출산/육아를 위해 일을 쉬거나 근무 시간을 줄여야 할 거 같아요</p>
+              <span class="ico_arr">바로가기</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- ====== 이용가이드 ====== -->
+      <div class="main_svc">
+        <h2>이용가이드</h2>
+        <ul class="service col3 ty2">
+          <li class="purple">
+            <a href="javascript:void(0);">
+              <strong class="tit">고용센터 찾기</strong>
+              <p>가까운 고용센터를 찾아 취업지원과<br>고용 관련 상담을 받으세요.</p>
+              <span class="ico_arr mt16">바로가기</span>
+            </a>
+          </li>
+          <li class="green">
+            <a href="javascript:void(0);">
+              <strong class="tit">이용 방법</strong>
+              <p>고용24 서비스의 다양한 기능을 쉽게<br>활용할 수 있는 이용 방법을 확인하세요.</p>
+              <span class="ico_arr mt16">바로가기</span>
+            </a>
+          </li>
+          <li class="blue">
+            <a href="javascript:void(0);">
+              <strong class="tit">서식 자료</strong>
+              <p>필요한 서식을 다운로드하여<br>간편하게 서류를 작성하세요.</p>
+              <span class="ico_arr mt16">바로가기</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- ====== 고용뉴스 / 공지사항 ====== -->
+      <div class="main_svc flex_box">
+        <div class="news">
+          <h2>고용뉴스</h2>
+          <ul>
+            <li>
+              <a href="javascript:void(0);">
+                <strong class="tit txt_ellipsis line2">광주교통공사, 신규직원 24명 공개 채용</strong>
+                <p class="cont">
+                  <span class="date">2026-04-16</span>
+                  <span class="text">광주교통공사(사장 문석환)는 도시철도 서비스 향상과 지역 일자리 창출을 위해 신규직원 24명을 공개 채용한다.</span>
+                </p>
+              </a>
+            </li>
+            <li>
+              <a href="javascript:void(0);">
+                <strong class="tit txt_ellipsis line2">마키나락스, AI 만드는 FDE 중심 대규모 인재 채용</strong>
+                <p class="cont">
+                  <span class="date">2026-04-16</span>
+                  <span class="text">피지컬 AI(Physical AI) 기업 마키나락스는 제조·국방 AI 사업 확장에 힘입어 전방배치엔지니어(FDE)를 중심으로 두 자릿수 규모의 인재 영입에 나선다.</span>
+                </p>
+              </a>
+            </li>
+          </ul>
+          <a href="javascript:void(0);" class="btn_more"><span class="blind">고용뉴스</span> 더보기</a>
+        </div>
+        <div class="notice">
+          <h2>공지사항</h2>
+          <ul>
+            <li>
+              <a href="javascript:void(0);">
+                <span class="txt">공동인증서 로그인(AnySign) 버전 업데이트 안내</span>
+                <span class="date">2026-03-24</span>
+              </a>
+            </li>
+            <li>
+              <a href="javascript:void(0);">
+                <span class="txt">웹브라우저(크롬, 엣지) 업데이트에 따른 권한 허용 설정 안내(PC사용자)</span>
+                <span class="date">2026-04-15</span>
+              </a>
+            </li>
+            <li>
+              <a href="javascript:void(0);">
+                <span class="txt">고용24 AI 인재채용, 더 똑똑해졌습니다!</span>
+                <span class="date">2026-03-31</span>
+              </a>
+            </li>
+            <li>
+              <a href="javascript:void(0);">
+                <span class="txt">고용24 시스템 작업 안내(3.26)</span>
+                <span class="date">2026-03-26</span>
+              </a>
+            </li>
+          </ul>
+          <a href="javascript:void(0);" class="btn_more"><span class="blind">공지사항</span> 더보기</a>
+        </div>
+      </div>
+
+      <!-- ====== Banner ====== -->
+      <div class="main_bann_wrap">
+        <div class="main_bann_swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide swiper-slide-active">
+              <a href="javascript:void(0);">
+                <div style="width:100%;height:120px;background:linear-gradient(135deg,#2146a8 0%,#3b7dff 100%);border-radius:12px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:18px;font-weight:600;">
+                  개인 회원가입 가이드: 쉽고 간편하게 고용24 서비스를 이용해 보세요.
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </div>
   </div>
+</section>
 
-  <!-- My shortcuts -->
-  <section class="my-shortcuts">
-    <div class="area">
-      <div class="section-header">
-        <h3>나의 바로가기</h3>
-        <a href="javascript:void(0)" class="btn-edit">편집</a>
-      </div>
-      <div class="shortcut-grid">
-        <a href="javascript:void(0)" class="shortcut-card">
-          <span class="sc-badge">0건</span>
-          <span class="sc-icon">&#x1F4CB;</span>
-          <span class="sc-label">미처리<br>실업 인정</span>
-        </a>
-        <a href="step4-form.html" class="shortcut-card highlight mockup-pulse" data-mockup-action="apply">
-          <span class="sc-icon">&#x1F476;</span>
-          <span class="sc-label">육아휴직<br>급여 신청</span>
-        </a>
-        <a href="javascript:void(0)" class="shortcut-card">
-          <span class="sc-icon">&#x1F4B0;</span>
-          <span class="sc-label">실업급여<br>신청</span>
-        </a>
-        <a href="javascript:void(0)" class="shortcut-card">
-          <span class="sc-icon">&#x1F4DD;</span>
-          <span class="sc-label">구직신청<br>현황</span>
-        </a>
-        <a href="javascript:void(0)" class="shortcut-card add-card">
-          <span class="sc-icon">+</span>
-          <span class="sc-label">추가</span>
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Tab navigation -->
-  <div class="dash-tab-nav">
-    <a href="javascript:void(0)">취업준비</a>
-    <a href="javascript:void(0)">일자리 찾기</a>
-    <a href="javascript:void(0)">교육 훈련 정보 인전</a>
-    <a href="javascript:void(0)">실업급여</a>
-    <a href="step4-form.html" class="active" data-mockup-action="parental-leave">육아휴직</a>
-  </div>
-
-  <!-- Stats -->
-  <section class="stats-section">
-    <div class="area">
-      <div class="stat-item">
-        <p class="stat-label">채용공고 수</p>
-        <p class="stat-value">131,600<em>건</em></p>
-      </div>
-      <div class="stat-item">
-        <p class="stat-label">교육 훈련수</p>
-        <p class="stat-value">22,307<em>건</em></p>
-      </div>
-    </div>
-  </section>
-</main>
-
+<!-- ====== Footer ====== -->
 <footer id="footer">
-  <div class="foot_area">
+  <div class="site">
     <div class="area">
-      <div class="foot_info">
-        <p>고용노동부 | 한국고용정보원</p>
-        <p class="foot_copy">Copyright &copy; 한국고용정보원. All Rights Reserved.</p>
+      <button type="button" class="btnsite btn_family" aria-expanded="false">
+        <span class="text">패밀리사이트</span>
+        <span class="icon"></span>
+      </button>
+      <button type="button" class="btnsite btn_related" aria-expanded="false">
+        <span class="text">유관기관</span>
+        <span class="icon"></span>
+      </button>
+    </div>
+  </div>
+
+  <div class="group">
+    <div class="area">
+      <div class="logos">
+        <img src="../assets/images/logo_main_work24.svg" alt="고용24">
       </div>
-      <div class="foot_logo">
-        <img src="../assets/images/footer_ci02.png" alt="고용노동부">
-        <img src="../assets/images/footer_ci03.png" alt="한국고용정보원">
+      <div class="flex">
+        <div class="flex_left">
+          <p>(27740) 충청북도 음성군 맹동면 태정로 6 한국고용정보원</p>
+          <p><strong>홈페이지 전산 이용 문의 1577-7114</strong> (유료, 한국고용정보원 고객상담센터, 평일 09시 ~ 18시)</p>
+          <p><strong>고용·노동 분야 제도 문의 국번없이 1350</strong> (유료, 고용노동부 고객상담센터, 평일 09시 ~ 18시)</p>
+          <p class="etc">
+            고용24는 <strong>통신판매중개자</strong>이며, 통신판매의 당사자가 아닙니다.<br>
+            상품(훈련), 상품(훈련)정보, 거래에 관한 <strong>의무와 책임은 판매자(훈련기관)</strong>에게 있습니다.
+          </p>
+        </div>
+        <div class="flex_right">
+          <div class="guide">
+            <a role="button" href="javascript:void(0);"><span>고객센터</span></a>
+            <a role="button" href="javascript:void(0);"><span>이용안내</span><i class="icon"></i></a>
+            <a role="button" href="javascript:void(0);" title="새창 열림"><span>원격지원</span><i class="icon"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="control">
+        <div class="links">
+          <a href="javascript:void(0)">이용약관</a>
+          <a href="javascript:void(0)"><strong class="point_color02">개인정보처리방침</strong></a>
+          <a href="javascript:void(0)">이메일무단수집거부</a>
+          <a href="javascript:void(0)">저작권보호정책</a>
+          <a href="javascript:void(0)">오픈API 서비스</a>
+          <a href="javascript:void(0)">사이트맵</a>
+        </div>
+        <span class="copyright">&copy; Ministry of Employment and Labor, Korea Employment Information Service. All rights reserved.</span>
+      </div>
+      <div class="logos gov">
+        <a href="javascript:void(0)" title="새창 열림"><img src="../assets/images/footer_ci02.png" alt="고용노동부"></a>
+        <a href="javascript:void(0)" title="새창 열림"><img src="../assets/images/footer_ci03.png" alt="한국고용정보원"></a>
+        <span class="copyright">이 누리집은 고용노동부와 고용노동부 산하기관 한국고용정보원의 누리집 입니다.</span>
       </div>
     </div>
   </div>
@@ -387,14 +793,54 @@
 
 </div><!-- #wrap -->
 
+<!-- Mockup Timer Widget -->
 <div id="mockup-timer" style="display:none">
   <span class="timer-icon"></span>
   <span>소요 시간:</span>
   <span class="timer-value">00:00</span>
 </div>
 
-<div class="mockup-hint">💡 '출산휴가·육아휴직' 메뉴를 클릭하세요</div>
+<!-- Mockup Hint -->
+<div class="mockup-hint">&#x1F4A1; '출산휴가·육아휴직' 메뉴에서 '육아휴직급여 신청'을 클릭하세요</div>
 
 <script src="../assets/js/mockup.js"></script>
+<script>
+(function() {
+  // Continue the timer from previous step
+  Mockup.Timer.renderWidget();
+
+  // GNB dropdown: clicking the 출산휴가·육아휴직 menu toggles its dropdown
+  var parentalLi = document.getElementById('gnb-parental');
+  if (parentalLi) {
+    var topLink = parentalLi.querySelector(':scope > a');
+
+    // Highlight the menu item
+    if (topLink) {
+      topLink.style.color = '#1a56db';
+      topLink.style.fontWeight = '700';
+      var topSpan = topLink.querySelector('span');
+      if (topSpan) topSpan.style.color = '#1a56db';
+    }
+
+    // Toggle dropdown on click
+    topLink.addEventListener('click', function(e) {
+      e.preventDefault();
+      parentalLi.classList.toggle('menu-open');
+      var expanded = parentalLi.classList.contains('menu-open');
+      topLink.setAttribute('aria-expanded', expanded ? 'true' : 'false');
+    });
+
+    // Close other menus on hover
+    var allGnbLis = document.querySelectorAll('#gnb > ul > li');
+    allGnbLis.forEach(function(li) {
+      li.addEventListener('mouseenter', function() {
+        allGnbLis.forEach(function(other) {
+          if (other !== li) other.classList.remove('menu-open');
+        });
+      });
+    });
+  }
+})();
+</script>
 </body>
 </html>

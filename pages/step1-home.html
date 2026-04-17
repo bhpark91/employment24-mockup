@@ -3,679 +3,689 @@
 <head>
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>고용24 - 나만의 고용서비스</title>
+<meta name="viewport" content="width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>고용24</title>
+<link rel="icon" href="../assets/images/logo_main_work24.svg">
 <link rel="stylesheet" href="../assets/css/reset.css">
 <link rel="stylesheet" href="../assets/css/font.css">
 <link rel="stylesheet" href="../assets/css/common.css">
 <link rel="stylesheet" href="../assets/css/contents.css">
 <link rel="stylesheet" href="../assets/css/dictionary.css">
 <link rel="stylesheet" href="../assets/css/mockup.css">
-<style>
-  /* ── Hero / Search ── */
-  .main-visual {
-    background: linear-gradient(180deg, #f0f5ff 0%, #e8f0fe 100%);
-    padding: 44px 0 0;
-    text-align: center;
-  }
-  .main-visual .search-title {
-    font-size: 28px;
-    font-weight: 700;
-    color: #1a1a1a;
-    margin-bottom: 22px;
-  }
-  .main-visual .search-title span { color: #1a56db; }
-
-  .search-bar-wrap {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    max-width: 620px;
-    margin: 0 auto 28px;
-    background: #fff;
-    border-radius: 8px;
-    border: 2px solid #1a56db;
-    overflow: hidden;
-  }
-  .search-bar-wrap .search-cat {
-    height: 48px;
-    padding: 0 14px;
-    border: none;
-    border-right: 1px solid #d1d5db;
-    background: #fff;
-    font-size: 15px;
-    font-weight: 600;
-    color: #333;
-    cursor: pointer;
-    outline: none;
-  }
-  .search-bar-wrap input {
-    flex: 1;
-    height: 48px;
-    padding: 0 16px;
-    border: none;
-    font-size: 15px;
-    outline: none;
-    background: #fff;
-    color: #888;
-  }
-  .search-bar-wrap .search-btn {
-    width: 52px;
-    height: 48px;
-    background: #1a56db;
-    border: none;
-    color: #fff;
-    font-size: 18px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  /* ── Tab navigation ── */
-  .main-tab-nav {
-    display: flex;
-    justify-content: center;
-    gap: 0;
-    max-width: 620px;
-    margin: 0 auto;
-  }
-  .main-tab-nav a {
-    flex: 1;
-    text-align: center;
-    padding: 14px 12px;
-    font-size: 15px;
-    font-weight: 500;
-    color: #666;
-    text-decoration: none;
-    border-bottom: 3px solid transparent;
-    transition: all 0.2s;
-    background: transparent;
-  }
-  .main-tab-nav a:hover { color: #1a56db; }
-  .main-tab-nav a.active {
-    color: #1a56db;
-    font-weight: 700;
-    border-bottom-color: #1a56db;
-    background: rgba(255,255,255,0.6);
-  }
-
-  /* ── Quick service icons ── */
-  .quick-service {
-    padding: 32px 0 36px;
-    background: linear-gradient(180deg, #e8f0fe 0%, #fff 100%);
-  }
-  .quick-icons {
-    display: flex;
-    justify-content: center;
-    gap: 24px;
-    max-width: 700px;
-    margin: 0 auto;
-    flex-wrap: wrap;
-  }
-  .quick-icons .icon-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-    text-decoration: none;
-    color: #333;
-    width: 88px;
-    cursor: pointer;
-    transition: transform 0.15s;
-  }
-  .quick-icons .icon-item:hover { transform: translateY(-3px); }
-  .quick-icons .icon-item .icon-box {
-    width: 60px;
-    height: 60px;
-    border-radius: 16px;
-    background: #6366f1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 26px;
-    color: #fff;
-    box-shadow: 0 2px 8px rgba(99,102,241,0.25);
-  }
-  .quick-icons .icon-item.highlight .icon-box {
-    background: #1a56db;
-    box-shadow: 0 0 0 4px rgba(26,86,219,0.2);
-    animation: mockup-glow 1.5s ease-in-out infinite;
-  }
-  .quick-icons .icon-item span {
-    font-size: 13px;
-    font-weight: 500;
-    text-align: center;
-    line-height: 1.3;
-  }
-
-  /* ── Stats section ── */
-  .stats-section {
-    padding: 40px 0;
-    background: #fff;
-  }
-  .stats-wrap {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 0 24px;
-    display: flex;
-    align-items: center;
-    gap: 40px;
-  }
-  .stats-prompt {
-    flex: 0 0 280px;
-  }
-  .stats-prompt p {
-    font-size: 20px;
-    font-weight: 700;
-    color: #1a1a1a;
-    line-height: 1.5;
-  }
-  .stats-prompt p em {
-    color: #1a56db;
-    font-style: normal;
-  }
-  .stats-cards {
-    flex: 1;
-    display: flex;
-    gap: 20px;
-  }
-  .stat-card {
-    flex: 1;
-    background: #f8faff;
-    border: 1px solid #e0e7f5;
-    border-radius: 12px;
-    padding: 24px;
-  }
-  .stat-card .stat-label {
-    font-size: 14px;
-    color: #666;
-    margin-bottom: 8px;
-  }
-  .stat-card .stat-value {
-    font-size: 32px;
-    font-weight: 700;
-    color: #1a56db;
-  }
-  .stat-card .stat-value em {
-    font-style: normal;
-    font-size: 16px;
-    color: #999;
-    margin-left: 2px;
-  }
-  .stat-card .stat-links {
-    margin-top: 12px;
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-  }
-  .stat-card .stat-links a {
-    font-size: 13px;
-    color: #666;
-    text-decoration: none;
-  }
-  .stat-card .stat-links a:hover { color: #1a56db; }
-
-  /* ── 고용정책 정보 ── */
-  .policy-section {
-    padding: 48px 0;
-    background: #f8f9fb;
-    border-top: 1px solid #e5e7eb;
-  }
-  .section-area {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 0 24px;
-  }
-  .section-title {
-    font-size: 22px;
-    font-weight: 700;
-    color: #1a1a1a;
-    margin-bottom: 24px;
-  }
-  .policy-cards {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 16px;
-  }
-  .policy-card {
-    background: #fff;
-    border-radius: 12px;
-    padding: 28px 16px 20px;
-    text-align: center;
-    text-decoration: none;
-    color: #333;
-    border: 1px solid #e8eaed;
-    transition: box-shadow 0.2s, transform 0.2s;
-    cursor: pointer;
-  }
-  .policy-card:hover {
-    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
-    transform: translateY(-2px);
-  }
-  .policy-card .pc-icon {
-    font-size: 32px;
-    margin-bottom: 12px;
-    display: block;
-  }
-  .policy-card .pc-name {
-    font-size: 15px;
-    font-weight: 600;
-    display: block;
-    margin-bottom: 8px;
-  }
-  .policy-card .pc-desc {
-    font-size: 12px;
-    color: #888;
-    line-height: 1.5;
-  }
-  .policy-card.highlight-card {
-    border-color: #1a56db;
-    background: #f0f5ff;
-  }
-  .policy-card .pc-more {
-    display: inline-block;
-    margin-top: 10px;
-    font-size: 12px;
-    color: #1a56db;
-    text-decoration: none;
-  }
-
-  /* ── 이용가이드 ── */
-  .guide-section {
-    padding: 48px 0;
-    background: #fff;
-    border-top: 1px solid #e5e7eb;
-  }
-  .guide-cards {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 16px;
-  }
-  .guide-card {
-    background: #f3f4f6;
-    border-radius: 12px;
-    padding: 28px 24px;
-    text-decoration: none;
-    color: #333;
-    transition: box-shadow 0.2s;
-    cursor: pointer;
-  }
-  .guide-card:hover { box-shadow: 0 4px 16px rgba(0,0,0,0.08); }
-  .guide-card .gc-name {
-    font-size: 16px;
-    font-weight: 700;
-    margin-bottom: 8px;
-    display: block;
-  }
-  .guide-card .gc-desc {
-    font-size: 13px;
-    color: #666;
-    line-height: 1.6;
-  }
-
-  /* ── 고용뉴스 / 공지사항 ── */
-  .news-section {
-    padding: 48px 0;
-    background: #fff;
-    border-top: 1px solid #e5e7eb;
-  }
-  .news-wrap {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 40px;
-  }
-  .news-block .nb-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 16px;
-  }
-  .news-block .nb-title {
-    font-size: 18px;
-    font-weight: 700;
-    color: #1a1a1a;
-  }
-  .news-block .nb-more {
-    font-size: 13px;
-    color: #888;
-    text-decoration: none;
-  }
-  .news-block .nb-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-  .news-block .nb-list li {
-    padding: 10px 0;
-    border-bottom: 1px solid #f0f0f0;
-  }
-  .news-block .nb-list li a {
-    font-size: 14px;
-    color: #333;
-    text-decoration: none;
-    display: flex;
-    justify-content: space-between;
-    gap: 12px;
-  }
-  .news-block .nb-list li a .nb-date {
-    color: #999;
-    font-size: 13px;
-    flex-shrink: 0;
-  }
-  .news-block .nb-list li a .nb-text {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-  }
-
-  /* ── Banner ── */
-  .banner-section {
-    padding: 32px 0;
-    background: #fff;
-  }
-  .banner-card {
-    background: linear-gradient(135deg, #2146a8 0%, #3b7dff 100%);
-    border-radius: 12px;
-    padding: 28px 40px;
-    color: #fff;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-  .banner-card h3 {
-    font-size: 20px;
-    font-weight: 700;
-    margin-bottom: 6px;
-  }
-  .banner-card p {
-    font-size: 14px;
-    opacity: 0.85;
-  }
-
-  /* ── 기업 서비스 전환 ── */
-  .biz-switch {
-    background: #f0f2f5;
-    padding: 16px 0;
-    text-align: center;
-    border-top: 1px solid #e5e7eb;
-  }
-  .biz-switch span {
-    font-size: 14px;
-    color: #666;
-    margin-right: 8px;
-  }
-  .biz-switch a {
-    font-size: 14px;
-    color: #1a56db;
-    font-weight: 600;
-    text-decoration: none;
-  }
-</style>
 </head>
 <body>
 <div id="wrap" class="person">
 
+<!-- skip navigation -->
+<nav id="skipnav">
+    <a href="#container">본문 바로가기</a>
+    <a href="#gnb">주메뉴 바로가기</a>
+</nav>
+
+<!-- #HEADER -->
 <header class="new">
-  <div class="header_top">
-    <div class="area">
-      <div class="top_noti_area">
-        <p class="desc"><span class="ico_gov"></span> 이 누리집은 대한민국 공식 전자정부 누리집입니다.</p>
-      </div>
-      <div class="tab_area">
-        <a href="javascript:void(0)" class="is-active"><span>개인</span></a>
-        <a href="javascript:void(0)"><span>기업</span></a>
-      </div>
+
+<!-- #header_top -->
+<div id="header_top">
+    <div class="header_lt">
+        <div class="get_top">
+            <i class="icon" aria-label="태극기" role="img"></i>
+            <span class="text">이 누리집은 대한민국 공식 전자정부 누리집입니다.</span>
+        </div>
     </div>
-  </div>
-  <div class="header_bottom">
-    <div class="area">
-      <h1 class="logo">
-        <a href="javascript:void(0)" title="고용24 로고">
-          <img src="../assets/images/logo_main_work24.svg" alt="고용24">
-        </a>
-      </h1>
-      <div class="header_util">
-        <span class="util_link"><a href="javascript:void(0)">고객센터</a></span>
-        <span class="util_link"><a href="javascript:void(0)">원격지원</a></span>
-        <span class="util_link"><a href="javascript:void(0)">글자·화면 설정</a></span>
-        <span class="util_link"><a href="javascript:void(0)">로그인</a></span>
-        <span class="util_link"><a href="javascript:void(0)">회원가입</a></span>
-        <span class="util_link"><a href="javascript:void(0)">검색</a></span>
-      </div>
-      <nav class="gnb_wrap">
-        <ul>
-          <li><a href="javascript:void(0)">채용정보</a></li>
-          <li><a href="javascript:void(0)">취업지원</a></li>
-          <li><a href="javascript:void(0)">실업급여</a></li>
-          <li><a href="javascript:void(0)">직업 능력 개발</a></li>
-          <li><a href="step2-login.html" class="on mockup-pulse" data-mockup-action="login" style="color:#1a56db;font-weight:700">출산휴가·육아휴직</a></li>
+    <div class="header_top_area">
+        <ul class="header_type">
+            <li><a href="javascript:void(0);" title="개인 선택됨">개인</a></li>
+            <li><a href="javascript:void(0);">기업</a></li>
+            <li class="top_noti_area">
+                <div class="noti_banner_slide">
+                    <div class="swiper-wrapper" style="flex-direction: column;">
+                        <div class="swiper-slide swiper-slide-active" style="height: 52px;">
+                            <span class="ad_title_p"><span class="ico16_loudspeaker_white"></span>웹브라우저(크롬, 엣지) 업데이트에 따른 권한 허용 설정 안내(PC사용자)</span>
+                            <a href="javascript:void(0);" class="link btn xxsmall btn_round type02"><span>자세히 보기</span></a>
+                        </div>
+                    </div>
+                    <div class="btn_container">
+                        <button type="button" class="btn noti_pause"><span class="blind">멈춤</span></button>
+                        <button type="button" class="btn noti_play" style="display:none"><span class="blind">재생</span></button>
+                    </div>
+                </div>
+            </li>
         </ul>
-      </nav>
-      <a href="javascript:void(0)" class="header_allmenu" title="전체메뉴">
-        <div class="lines"><span class="t"></span><span class="c"></span><span class="b"></span></div>
-        <span>전체 메뉴</span>
-      </a>
     </div>
-  </div>
+</div>
+<!-- //#header_top -->
+
+<!-- #header_menu -->
+<div id="header_menutree">
+    <div class="header_lt">
+        <ul class="header_info">
+            <li><a href="javascript:void(0);">고객센터</a></li>
+            <li class="line">
+                <a href="javascript:void(0);" target="_blank" title="새창 열림">원격지원</a>
+            </li>
+            <li class="line">
+                <button type="button" class="btn_screen JS-screenToggle" aria-controls="fontSize" aria-expanded="false"><span>글자·화면 설정</span></button>
+            </li>
+        </ul>
+        <ul class="header_util">
+            <!-- 로그인 전 -->
+            <li class="before">
+                <a href="step2-login.html">
+                    <span class="ico ico11"></span><span>로그인</span>
+                </a>
+                <a href="javascript:void(0);">
+                    <span class="ico ico12"></span><span>회원가입</span>
+                </a>
+            </li>
+            <!-- //로그인 전 -->
+            <!-- utility -->
+            <li class="header_search">
+                <a href="javascript:void(0);" class="JS-searchToggle" aria-pressed="false" role="button">
+                    <span class="ico ico09"></span>
+                    <span>검색</span>
+                </a>
+            </li>
+            <!-- //utility -->
+        </ul>
+    </div>
+</div>
+<!-- //#header_menu -->
+
+<!-- #header_bottom -->
+<div id="header_bottom" class="">
+    <div class="header_bottom_area">
+        <h1>
+            <a class="go24_ci" href="javascript:void(0);" title="홈으로">
+                <img src="../assets/images/logo_main_work24.svg" class="work24_logo" alt="고용24">
+            </a>
+        </h1>
+        <div class="gnb_wrap">
+            <!-- gnb -->
+            <div id="gnb">
+                <ul>
+                    <li>
+                        <a href="javascript:void(0);" aria-expanded="false"><span>채용정보</span></a>
+                        <ul class="gnb2depth">
+                            <li>
+                                <a href="javascript:void(0);"><span>일자리 찾기</span></a>
+                                <ul class="gnb3depth">
+                                    <li class="txt_list"><a href="javascript:void(0);"><span>채용정보 상세검색</span></a></li>
+                                    <li class="txt_list"><a href="javascript:void(0);"><span>직종별</span></a></li>
+                                    <li class="txt_list"><a href="javascript:void(0);"><span>지역별</span></a></li>
+                                    <li class="txt_list"><a href="javascript:void(0);"><span>테마별</span></a></li>
+                                    <li class="txt_list"><a href="javascript:void(0);"><span>채용 캘린더</span></a></li>
+                                    <li class="txt_list"><a href="javascript:void(0);"><span>e-채용마당</span></a></li>
+                                    <li class="txt_list"><a href="javascript:void(0);"><span>통합기업정보</span></a></li>
+                                    <li class="txt_list"><a href="javascript:void(0);"><span>내 주변 채용정보</span></a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);"><span>구직신청</span></a>
+                                <ul class="gnb3depth">
+                                    <li class="txt_list"><a href="javascript:void(0);"><span>구직신청</span></a></li>
+                                    <li class="txt_list"><a href="javascript:void(0);"><span>이력서/자기소개서 관리</span></a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);"><span>채용행사</span></a>
+                                <ul class="gnb3depth">
+                                    <li class="txt_list"><a href="javascript:void(0);"><span>채용행사</span></a></li>
+                                    <li class="txt_list"><a href="javascript:void(0);"><span>채용박람회</span></a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);" class="btn_link_new" title="새창 열림"><span>강소기업</span></a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);" aria-expanded="false"><span>취업지원</span></a>
+                        <ul class="gnb2depth">
+                            <li>
+                                <a href="javascript:void(0);"><span>청년 취업역량강화</span></a>
+                                <ul class="gnb3depth">
+                                    <li class="txt_list"><a href="javascript:void(0);"><span>취업지원 프로그램 통합검색</span></a></li>
+                                    <li class="txt_list"><a href="javascript:void(0);"><span>청년취업역량 강화 프로그램</span></a></li>
+                                    <li class="txt_list"><a href="javascript:void(0);"><span>청년도전지원사업</span></a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);"><span>취업역량강화</span></a>
+                                <ul class="gnb3depth">
+                                    <li class="txt_list"><a href="javascript:void(0);"><span>구직자취업역량 강화프로그램</span></a></li>
+                                    <li class="txt_list"><a href="javascript:void(0);"><span>중장년내일센터</span></a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);"><span>취업가이드</span></a>
+                                <ul class="gnb3depth">
+                                    <li class="txt_list"><a href="javascript:void(0);"><span>이력서, 자소서 작성가이드</span></a></li>
+                                    <li class="txt_list"><a href="javascript:void(0);"><span>직업심리검사</span></a></li>
+                                    <li class="txt_list"><a href="javascript:void(0);"><span>취업동향 모아보기</span></a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);"><span>국민취업지원제도</span></a>
+                                <ul class="gnb3depth">
+                                    <li class="txt_list"><a href="javascript:void(0);"><span>국취이야기</span></a></li>
+                                    <li class="txt_list"><a href="javascript:void(0);"><span>취업지원신청</span></a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);" aria-expanded="false"><span>실업급여</span></a>
+                        <ul class="gnb2depth">
+                            <li>
+                                <a href="javascript:void(0);"><span>수급자격</span></a>
+                                <ul class="gnb3depth">
+                                    <li class="txt_list"><a href="javascript:void(0);"><span>수급자격 신청자 온라인 교육</span></a></li>
+                                    <li class="txt_list"><a href="javascript:void(0);"><span>수급자격 신청서 인터넷 제출</span></a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);"><span>실업인정</span></a>
+                                <ul class="gnb3depth">
+                                    <li class="txt_list"><a href="javascript:void(0);"><span>실업인정 인터넷 신청</span></a></li>
+                                    <li class="txt_list"><a href="javascript:void(0);"><span>온라인 취업특강</span></a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);"><span>취업촉진수당</span></a>
+                                <ul class="gnb3depth">
+                                    <li class="txt_list"><a href="javascript:void(0);"><span>조기재취업수당 청구</span></a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);"><span>이직확인서</span></a>
+                                <ul class="gnb3depth">
+                                    <li class="txt_list"><a href="javascript:void(0);"><span>이직확인서</span></a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);" aria-expanded="false"><span>직업 능력 개발</span></a>
+                        <ul class="gnb2depth">
+                            <li>
+                                <a href="javascript:void(0);"><span>훈련 찾기·신청</span></a>
+                                <ul class="gnb3depth">
+                                    <li class="txt_list"><a href="javascript:void(0);"><span>훈련 통합검색</span></a></li>
+                                    <li class="txt_list"><a href="javascript:void(0);"><span>국민내일배움카드 훈련과정</span></a></li>
+                                    <li class="txt_list"><a href="javascript:void(0);"><span>K-디지털 훈련</span></a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);"><span>국민내일배움카드</span></a>
+                                <ul class="gnb3depth">
+                                    <li class="txt_list"><a href="javascript:void(0);"><span>발급 신청</span></a></li>
+                                    <li class="txt_list"><a href="javascript:void(0);"><span>직업훈련이력</span></a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);"><span>훈련 기관·강사</span></a>
+                                <ul class="gnb3depth">
+                                    <li class="txt_list"><a href="javascript:void(0);"><span>훈련교사관리</span></a></li>
+                                    <li class="txt_list"><a href="javascript:void(0);"><span>훈련기관평가정보</span></a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="step2-login.html" class="mockup-pulse" aria-expanded="false"><span>출산휴가·육아휴직</span></a>
+                        <ul class="gnb2depth">
+                            <li>
+                                <a href="javascript:void(0);"><span>출산휴가</span></a>
+                                <ul class="gnb3depth">
+                                    <li class="txt_list"><a href="javascript:void(0);"><span>출산전후(유산,사산,배우자,난임치료)휴가 급여신청</span></a></li>
+                                    <li class="txt_list"><a href="javascript:void(0);"><span>출산휴가 사용현황</span></a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);"><span>육아휴직</span></a>
+                                <ul class="gnb3depth">
+                                    <li class="txt_list"><a href="step2-login.html"><span>육아휴직급여 신청</span></a></li>
+                                    <li class="txt_list"><a href="javascript:void(0);"><span>육아기 근로시간 단축 급여 신청</span></a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <!-- //gnb -->
+            <a href="javascript:void(0)" class="header_allmenu" title="전체메뉴 버튼">
+                <div class="lines">
+                    <span class="t"></span>
+                    <span class="c"></span>
+                    <span class="b"></span>
+                </div>
+                <span>전체 메뉴</span>
+            </a>
+        </div>
+    </div>
+</div>
+<!-- //#header_bottom -->
 </header>
 
-<main>
-  <!-- Hero / Search -->
-  <div class="main-visual">
-    <h2 class="search-title">나만의 고용서비스, <span>고용24</span></h2>
-    <div class="search-bar-wrap">
-      <select class="search-cat" disabled>
-        <option>전체</option>
-      </select>
-      <input type="text" placeholder="필요한 서비스를 찾아보세요" readonly>
-      <button class="search-btn" type="button" aria-label="검색">&#x1F50D;</button>
-    </div>
-    <div class="main-tab-nav">
-      <a href="javascript:void(0)">취업준비</a>
-      <a href="javascript:void(0)" class="active">일자리 찾기</a>
-      <a href="javascript:void(0)">훈련 역량 강화</a>
-      <a href="step2-login.html" data-mockup-action="login">실업·육아휴직</a>
-    </div>
-  </div>
+<section id="container">
+    <h2 class="blind">고용24 개인 서비스</h2>
+    <div class="main_wrap person">
+        <div class="main_inner">
+            <!-- 검색 영역 -->
+            <div class="main_search_wrp">
+                <p class="main_title">나만의 고용서비스, <strong>고용24</strong></p>
+                <div class="form_search_wrap">
+                    <div class="main_top_search">
+                        <div class="inner_select" id="srchCateDiv">
+                            <button type="button" class="btn_cate_select" id="topQuerySelect" title="검색 유형 열기">
+                                <span>전체</span>
+                            </button>
+                        </div>
+                        <div class="input_wrap">
+                            <input type="text" placeholder="필요한 서비스를 찾아보세요" title="검색어 입력" id="topQuery" maxlength="150" autocomplete="off">
+                            <button type="button" id="topQueryDelBtn" class="btn_del" aria-label="검색어 삭제" style="display: none;"></button>
+                        </div>
+                        <a href="javascript:void(0);" id="findSearchData" class="btn_main_search"><span class="blind">검색</span></a>
+                    </div>
+                </div>
+            </div>
 
-  <!-- Quick service icons -->
-  <section class="quick-service">
-    <div class="quick-icons">
-      <a href="javascript:void(0)" class="icon-item">
-        <div class="icon-box">&#x1F4BC;</div>
-        <span>일자리 찾기</span>
-      </a>
-      <a href="javascript:void(0)" class="icon-item">
-        <div class="icon-box">&#x1F4DD;</div>
-        <span>구직신청</span>
-      </a>
-      <a href="javascript:void(0)" class="icon-item">
-        <div class="icon-box">&#x1F4CB;</div>
-        <span>구직관리</span>
-      </a>
-      <a href="javascript:void(0)" class="icon-item">
-        <div class="icon-box">&#x2B50;</div>
-        <span>맞춤채용정보</span>
-      </a>
-      <a href="javascript:void(0)" class="icon-item">
-        <div class="icon-box">&#x1F916;</div>
-        <span>AI추천<br>(일자리)</span>
-      </a>
-      <a href="javascript:void(0)" class="icon-item">
-        <div class="icon-box">&#x1F3AA;</div>
-        <span>채용행사</span>
-      </a>
-    </div>
-  </section>
+            <!-- 퀵서비스 탭 -->
+            <div class="main_favorite">
+                <div>
+                    <div class="txt_c">
+                        <div class="tab" role="tablist">
+                            <button id="tab-1100" type="button" role="tab" aria-selected="false" aria-controls="panel-1100">취업준비</button>
+                            <button id="tab-1200" type="button" role="tab" class="active" aria-selected="true" aria-controls="panel-1200">일자리 찾기</button>
+                            <button id="tab-1300" type="button" role="tab" aria-selected="false" aria-controls="panel-1300">훈련 역량 강화</button>
+                            <button id="tab-1400" type="button" role="tab" aria-selected="false" aria-controls="panel-1400">실업·육아휴직</button>
+                        </div>
+                    </div>
+                    <div class="favorite_swiper_wrp" id="wrp-pan-else">
+                        <!-- 일자리 찾기 -->
+                        <div id="panel-1200" class="swiper-container favorite_swiper" role="tabpanel" aria-labelledby="tab-1200">
+                            <ul class="swiper-wrapper p_ty2">
+                                <li class="swiper-slide">
+                                    <a href="javascript:void(0);">
+                                        <div class="img_area_wrap">
+                                            <span class="img_area">
+                                                <img src="" alt="" onerror="this.style.display='none'">
+                                            </span>
+                                        </div>
+                                        <p class="txt"><span>일자리 찾기</span></p>
+                                    </a>
+                                </li>
+                                <li class="swiper-slide">
+                                    <a href="javascript:void(0);">
+                                        <div class="img_area_wrap">
+                                            <span class="img_area">
+                                                <img src="" alt="" onerror="this.style.display='none'">
+                                            </span>
+                                        </div>
+                                        <p class="txt"><span>구직신청</span></p>
+                                    </a>
+                                </li>
+                                <li class="swiper-slide">
+                                    <a href="javascript:void(0);">
+                                        <div class="img_area_wrap">
+                                            <span class="img_area">
+                                                <img src="" alt="" onerror="this.style.display='none'">
+                                            </span>
+                                        </div>
+                                        <p class="txt"><span>구직관리</span></p>
+                                    </a>
+                                </li>
+                                <li class="swiper-slide">
+                                    <a href="javascript:void(0);">
+                                        <div class="img_area_wrap">
+                                            <span class="img_area">
+                                                <img src="" alt="" onerror="this.style.display='none'">
+                                            </span>
+                                        </div>
+                                        <p class="txt"><span>맞춤채용정보</span></p>
+                                    </a>
+                                </li>
+                                <li class="swiper-slide">
+                                    <a href="javascript:void(0);">
+                                        <div class="img_area_wrap">
+                                            <span class="img_area">
+                                                <img src="" alt="" onerror="this.style.display='none'">
+                                            </span>
+                                        </div>
+                                        <p class="txt"><span>AI추천(일자리)</span></p>
+                                    </a>
+                                </li>
+                                <li class="swiper-slide">
+                                    <a href="javascript:void(0);">
+                                        <div class="img_area_wrap">
+                                            <span class="img_area">
+                                                <img src="" alt="" onerror="this.style.display='none'">
+                                            </span>
+                                        </div>
+                                        <p class="txt"><span>채용행사</span></p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-  <!-- Stats -->
-  <section class="stats-section">
-    <div class="stats-wrap">
-      <div class="stats-prompt">
-        <p><em>채용공고</em>와 참여 가능한<br><em>교육·훈련</em>을 확인해 보세요.</p>
-      </div>
-      <div class="stats-cards">
-        <div class="stat-card">
-          <p class="stat-label">채용공고 수</p>
-          <p class="stat-value">130,828<em>건</em></p>
-          <div class="stat-links">
-            <a href="javascript:void(0)">지역별 일자리 정보 찾기</a>
-            <a href="javascript:void(0)">직종별 일자리 정보 찾기</a>
-            <a href="javascript:void(0)">테마별 일자리 정보 찾기</a>
-          </div>
+            <!-- 채용공고 / 교육훈련 수 -->
+            <div class="main_info">
+                <div class="title">
+                    <h2><strong>채용공고</strong>와 참여 가능한<br><strong>교육·훈련</strong>을 확인해 보세요.</h2>
+                </div>
+                <div class="box_wrap">
+                    <div class="box">
+                        <a href="javascript:void(0);" class="link">
+                            <span class="tit">채용공고 수</span>
+                            <strong class="count"><span>130,828</span>건</strong>
+                        </a>
+                        <ul>
+                            <li><a href="javascript:void(0);">지역별 일자리 정보 찾기</a></li>
+                            <li><a href="javascript:void(0);">직종별 일자리 정보 찾기</a></li>
+                            <li><a href="javascript:void(0);">테마별 일자리 정보 찾기</a></li>
+                        </ul>
+                    </div>
+                    <div class="box">
+                        <a href="javascript:void(0);" class="link">
+                            <span class="tit">교육·훈련 수</span>
+                            <strong class="count"><span>21,877</span>건</strong>
+                        </a>
+                        <ul>
+                            <li><a href="javascript:void(0);">국민내일배움카드 훈련과정</a></li>
+                            <li><a href="javascript:void(0);">K-디지털 아카데미 훈련과정</a></li>
+                            <li><a href="javascript:void(0);">정부부처별 훈련과정</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 고용정책 정보 -->
+            <div class="main_svc">
+                <h2>고용정책 정보</h2>
+                <ul class="service">
+                    <li>
+                        <a href="javascript:void(0);" class="ico60_bag">
+                            <strong class="tit">취업준비</strong>
+                            <p class="txt_ellipsis line2">취업은 하고 싶은데, 어떻게 해야 할지 모르겠어요</p>
+                            <span class="ico_arr">바로가기</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);" class="ico60_search">
+                            <strong class="tit">일자리 찾기</strong>
+                            <p class="txt_ellipsis line2">내게 맞는 일자리를 찾고 싶어요</p>
+                            <span class="ico_arr">바로가기</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);" class="ico60_card">
+                            <strong class="tit">교육훈련</strong>
+                            <p class="txt_ellipsis line2">취업하기 위해 공부하거나 자격증을 따고 싶어요</p>
+                            <span class="ico_arr">바로가기</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);" class="ico60_pay">
+                            <strong class="tit">실업급여</strong>
+                            <p class="txt_ellipsis line2">최근에 어쩔 수 없이 퇴사했어요.조만간 퇴사할 것 같아요</p>
+                            <span class="ico_arr">바로가기</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="step2-login.html" class="ico60_tipheart mockup-pulse">
+                            <strong class="tit">출산·육아</strong>
+                            <p class="txt_ellipsis line2">출산/육아를 위해 일을 쉬거나 근무 시간을 줄여야 할 거 같아요</p>
+                            <span class="ico_arr">바로가기</span>
+                        </a>
+                    </li>
+                </ul>
+                <a href="javascript:void(0);" class="btn_more"><span class="blind">고용정책 정보</span> 더보기</a>
+            </div>
+
+            <!-- 이용가이드 -->
+            <div class="main_svc">
+                <h2>이용가이드</h2>
+                <ul class="service col3 ty2">
+                    <li class="purple">
+                        <a href="javascript:void(0);">
+                            <strong class="tit">고용센터 찾기</strong>
+                            <p>가까운 고용센터를 찾아 취업지원과<br>고용 관련 상담을 받으세요.</p>
+                            <span class="ico_arr mt16">바로가기</span>
+                        </a>
+                    </li>
+                    <li class="green">
+                        <a href="javascript:void(0);">
+                            <strong class="tit">이용 방법</strong>
+                            <p>고용24 서비스의 다양한 기능을 쉽게<br>활용할 수 있는 이용 방법을 확인하세요.</p>
+                            <span class="ico_arr mt16">바로가기</span>
+                        </a>
+                    </li>
+                    <li class="blue">
+                        <a href="javascript:void(0);">
+                            <strong class="tit">서식 자료</strong>
+                            <p>필요한 서식을 다운로드하여<br>간편하게 서류를 작성하세요.</p>
+                            <span class="ico_arr mt16">바로가기</span>
+                        </a>
+                    </li>
+                </ul>
+                <a href="javascript:void(0);" class="btn_more"><span class="blind">이용가이드</span> 더보기</a>
+            </div>
+
+            <!-- 고용뉴스 / 공지사항 -->
+            <div class="main_svc flex_box">
+                <div class="news">
+                    <h2>고용뉴스</h2>
+                    <ul>
+                        <li>
+                            <a href="javascript:void(0);">
+                                <strong class="tit txt_ellipsis line2">광주교통공사, 신규직원 24명 공개 채용</strong>
+                                <p class="cont">
+                                    <span class="date">2026-04-16</span>
+                                    <span class="text">광주교통공사(사장 문석환)는 도시철도 서비스 향상과 지역 일자리 창출을 위해 신규직원 24명을 공개 채용한다.</span>
+                                </p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);">
+                                <strong class="tit txt_ellipsis line2">마키나락스, AI 만드는 FDE 중심 대규모 인재 채용</strong>
+                                <p class="cont">
+                                    <span class="date">2026-04-16</span>
+                                    <span class="text">피지컬 AI(Physical AI) 기업 마키나락스는 제조·국방 AI 사업 확장에 힘입어 전방배치엔지니어(FDE)를 중심으로 두 자릿수 규모의 인재 영입에 나선다.</span>
+                                </p>
+                            </a>
+                        </li>
+                    </ul>
+                    <a href="javascript:void(0);" class="btn_more"><span class="blind">고용뉴스</span> 더보기</a>
+                </div>
+                <div class="notice">
+                    <h2>공지사항</h2>
+                    <ul>
+                        <li>
+                            <a href="javascript:void(0);">
+                                <span class="txt">공동인증서 로그인(AnySign) 버전 업데이트 안내</span>
+                                <span class="date">2026-03-24</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);">
+                                <span class="txt">웹브라우저(크롬, 엣지) 업데이트에 따른 권한 허용 설정 안내(PC사용자)</span>
+                                <span class="date">2026-04-15</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);">
+                                <span class="txt">고용24 AI 인재채용, 더 똑똑해졌습니다!</span>
+                                <span class="date">2026-03-31</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);">
+                                <span class="txt">고용24 시스템 작업 안내(3.26)</span>
+                                <span class="date">2026-03-26</span>
+                            </a>
+                        </li>
+                    </ul>
+                    <a href="javascript:void(0);" class="btn_more"><span class="blind">공지사항</span> 더보기</a>
+                </div>
+            </div>
+
+            <!-- 배너 -->
+            <div class="main_bann_wrap">
+                <div class="swiper-container main_bann_swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide swiper-slide-active" style="width: 1200px;">
+                            <a href="javascript:void(0);"><img src="" alt="개인 회원가입 가이드: 쉽고 간편하게 고용 24 서비스를 이용해 보세요." onerror="this.parentElement.parentElement.style.background='#e8f0fe';this.alt='개인 회원가입 가이드';this.style.display='none'"></a>
+                        </div>
+                    </div>
+                    <div class="pagination_container">
+                        <button type="button" class="btn_main_banner pause"><span class="blind">멈춤</span></button>
+                        <button type="button" class="btn_main_banner play" style="display: none"><span class="blind">재생</span></button>
+                        <div class="swiper-pagination-fraction swiper-pagination-horizontal"><span class="blind">현재 페이지</span><span class="swiper-pagination-current">1</span> / <span class="blind">전체 페이지 수</span><span class="swiper-pagination-total">1</span></div>
+                        <button type="button" class="swiper-button-prev btn_left" title="이전 배너로 이동"></button>
+                        <button type="button" class="swiper-button-next btn_right" title="다음 배너로 이동"></button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 기업 서비스 전환 -->
+            <div class="user_type">
+                <p><strong>기업 회원이신가요?</strong>구인 등록부터 고용 관리까지, 효율적인 인재 채용을 지원합니다.</p>
+                <a href="javascript:void(0)" class="link">기업 서비스로 이동하기</a>
+            </div>
         </div>
-        <div class="stat-card">
-          <p class="stat-label">교육·훈련 수</p>
-          <p class="stat-value">21,877<em>건</em></p>
-          <div class="stat-links">
-            <a href="javascript:void(0)">국민내일배움카드 훈련과정</a>
-            <a href="javascript:void(0)">K-디지털 아카데미 훈련과정</a>
-            <a href="javascript:void(0)">정부부처별 훈련과정</a>
-          </div>
-        </div>
-      </div>
     </div>
-  </section>
+</section>
 
-  <!-- 고용정책 정보 -->
-  <section class="policy-section">
-    <div class="section-area">
-      <h3 class="section-title">고용정책 정보</h3>
-      <div class="policy-cards">
-        <a href="javascript:void(0)" class="policy-card">
-          <span class="pc-icon">&#x1F4DA;</span>
-          <span class="pc-name">취업준비</span>
-          <span class="pc-desc">취업은 하고 싶은데, 어떻게 해야 할지 모르겠어요</span>
-          <span class="pc-more">바로가기 &rsaquo;</span>
-        </a>
-        <a href="javascript:void(0)" class="policy-card">
-          <span class="pc-icon">&#x1F4BC;</span>
-          <span class="pc-name">일자리 찾기</span>
-          <span class="pc-desc">내게 맞는 일자리를 찾고 싶어요</span>
-          <span class="pc-more">바로가기 &rsaquo;</span>
-        </a>
-        <a href="javascript:void(0)" class="policy-card">
-          <span class="pc-icon">&#x1F393;</span>
-          <span class="pc-name">교육훈련</span>
-          <span class="pc-desc">취업하기 위해 공부하거나 자격증을 따고 싶어요</span>
-          <span class="pc-more">바로가기 &rsaquo;</span>
-        </a>
-        <a href="javascript:void(0)" class="policy-card">
-          <span class="pc-icon">&#x1F4B0;</span>
-          <span class="pc-name">실업급여</span>
-          <span class="pc-desc">최근에 어쩔 수 없이 퇴사했어요</span>
-          <span class="pc-more">바로가기 &rsaquo;</span>
-        </a>
-        <a href="step2-login.html" class="policy-card highlight-card" data-mockup-action="login">
-          <span class="pc-icon">&#x1F476;</span>
-          <span class="pc-name">출산·육아</span>
-          <span class="pc-desc">출산/육아를 위해 일을 쉬거나 근무 시간을 줄여야 할 거 같아요</span>
-          <span class="pc-more">바로가기 &rsaquo;</span>
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- 이용가이드 -->
-  <section class="guide-section">
-    <div class="section-area">
-      <h3 class="section-title">이용가이드</h3>
-      <div class="guide-cards">
-        <a href="javascript:void(0)" class="guide-card">
-          <span class="gc-name">고용센터 찾기</span>
-          <span class="gc-desc">가까운 고용센터를 찾아 취업지원과 고용 관련 상담을 받으세요.</span>
-        </a>
-        <a href="javascript:void(0)" class="guide-card">
-          <span class="gc-name">이용 방법</span>
-          <span class="gc-desc">고용24 서비스의 다양한 기능을 쉽게 활용할 수 있는 이용 방법을 확인하세요.</span>
-        </a>
-        <a href="javascript:void(0)" class="guide-card">
-          <span class="gc-name">서식 자료</span>
-          <span class="gc-desc">필요한 서식을 다운로드하여 간편하게 서류를 작성하세요.</span>
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- 고용뉴스 / 공지사항 -->
-  <section class="news-section">
-    <div class="section-area">
-      <div class="news-wrap">
-        <div class="news-block">
-          <div class="nb-header">
-            <span class="nb-title">고용뉴스</span>
-            <a href="javascript:void(0)" class="nb-more">더보기 &rsaquo;</a>
-          </div>
-          <ul class="nb-list">
-            <li><a href="javascript:void(0)"><span class="nb-text">포항시, 올해 일자리 3만4500개 만든다…6198억 투입</span><span class="nb-date">2026-04-17</span></a></li>
-            <li><a href="javascript:void(0)"><span class="nb-text">송파구, 장애인 고용지원 모델 구축…취업률 전국 평균 1.9배</span><span class="nb-date">2026-04-17</span></a></li>
-          </ul>
-        </div>
-        <div class="news-block">
-          <div class="nb-header">
-            <span class="nb-title">공지사항</span>
-            <a href="javascript:void(0)" class="nb-more">더보기 &rsaquo;</a>
-          </div>
-          <ul class="nb-list">
-            <li><a href="javascript:void(0)"><span class="nb-text">웹브라우저 업데이트에 따른 권한 허용 설정 안내(PC사용자)</span><span class="nb-date">2026-04-15</span></a></li>
-            <li><a href="javascript:void(0)"><span class="nb-text">2026년도「청년일자리도약장려금」사업운영 지침 일부 개정 안내</span><span class="nb-date">2026-04-15</span></a></li>
-            <li><a href="javascript:void(0)"><span class="nb-text">공동인증서 로그인(AnySign) 업데이트 안내</span><span class="nb-date">2026-03-24</span></a></li>
-            <li><a href="javascript:void(0)"><span class="nb-text">고용24 AI 인재추천, 더 똑똑해졌습니다!</span><span class="nb-date">2026-04-01</span></a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Banner -->
-  <section class="banner-section">
-    <div class="section-area">
-      <div class="banner-card">
-        <div>
-          <h3>2026 대한민국 상생 채용박람회</h3>
-          <p>청년취업, 함께하는 대한민국 — 사전등록 시 행운쿠폰 선착순 증정!</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- 기업 서비스 전환 -->
-  <div class="biz-switch">
-    <span>기업 회원이신가요?</span>
-    <a href="javascript:void(0)">기업 서비스로 이동하기 &rarr;</a>
-  </div>
-</main>
-
-<footer id="footer">
-  <div class="foot_area">
-    <div class="area">
-      <div class="foot_info">
-        <p><strong>고용24</strong></p>
-        <p>(27740) 충청북도 음성군 맹동면 태정로 6 한국고용정보원</p>
-        <p>홈페이지 전산 이용 문의 <strong>1577-7114</strong> (유료, 한국고용정보원 고객상담센터, 평일 09시 ~ 18시)</p>
-        <p>고용·노동 분야 제도 문의 국번없이 <strong>1350</strong> (유료, 고용노동부 고객상담센터, 평일 09시 ~ 18시)</p>
-        <p class="foot_copy">Copyright &copy; Ministry of Employment and Labor, Korea Employment Information Service. All rights reserved.</p>
-      </div>
-      <div class="foot_logo">
-        <img src="../assets/images/footer_ci02.png" alt="고용노동부">
-        <img src="../assets/images/footer_ci03.png" alt="한국고용정보원">
-      </div>
-    </div>
-  </div>
-</footer>
-
-</div><!-- #wrap -->
-
-<div id="mockup-timer" style="display:none">
-  <span class="timer-icon"></span>
-  <span>소요 시간:</span>
-  <span class="timer-value">00:00</span>
+<!-- 좌하단 fixed btn -->
+<div class="quick_top">
+    <button type="button" class="tn_quick_dictionary" aria-haspopup="dialog" aria-controls="dictionary_popup" aria-label="용어 사전 열기">용어<br>사전</button>
+    <a href="javascript:void(0)" class="btn_quick_guide" title="이용안내">이용<br>안내</a>
+    <a href="javascript:void(0)" class="btn_quick_top"><span class="blind">맨위로 가기</span></a>
 </div>
 
+<!-- #footer -->
+<footer id="footer">
+    <div class="site">
+        <div class="area">
+            <button type="button" class="btnsite btn_family" aria-expanded="false">
+                <span class="text">패밀리사이트</span>
+                <span class="icon"></span>
+            </button>
+            <div class="site_list">
+                <div class="list list--family" style="display: none;">
+                    <ul>
+                        <li class="item"><a href="javascript:void(0);">고용행정통계</a></li>
+                        <li class="item"><a href="javascript:void(0);">고용복지센터</a></li>
+                        <li class="item"><a href="javascript:void(0);">장애인고용포털</a></li>
+                        <li class="item"><a href="javascript:void(0);">사이버진로교육센터</a></li>
+                        <li class="item"><a href="javascript:void(0);">임금직업포털</a></li>
+                    </ul>
+                </div>
+            </div>
+            <button type="button" class="btnsite btn_related" aria-expanded="false">
+                <span class="text">유관기관</span>
+                <span class="icon"></span>
+            </button>
+            <div class="site_list">
+                <div class="list list--related" style="display: none;">
+                    <ul>
+                        <li class="item"><a href="javascript:void(0);">4대사회보험정보연계센터</a></li>
+                        <li class="item"><a href="javascript:void(0);">근로복지공단</a></li>
+                        <li class="item"><a href="javascript:void(0);">한국산업인력공단</a></li>
+                        <li class="item"><a href="javascript:void(0);">한국폴리텍대학</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="group">
+        <div class="area">
+            <div class="logos">
+                <img src="../assets/images/logo_main_work24.svg" alt="고용24">
+            </div>
+            <div class="flex">
+                <div class="flex_left">
+                    <p>(27740) 충청북도 음성군 맹동면 태정로 6 한국고용정보원</p>
+                    <p><strong>홈페이지 전산 이용 문의 1577-7114</strong> (유료, 한국고용정보원 고객상담센터, 평일 09시 ~ 18시)</p>
+                    <p><strong>고용·노동 분야 제도 문의 국번없이 1350</strong> (유료, 고용노동부 고객상담센터, 평일 09시 ~ 18시)</p>
+                    <p class="etc">
+                        고용24는 <strong>통신판매중개자</strong>이며, 통신판매의 당사자가 아닙니다.<br>
+                        상품(훈련), 상품(훈련)정보, 거래에 관한 <strong>의무와 책임은 판매자(훈련기관)</strong>에게 있습니다.
+                    </p>
+                </div>
+                <div class="flex_right">
+                    <div class="guide">
+                        <a role="button" href="javascript:void(0);">
+                            <span>이용안내</span>
+                            <i class="icon"></i>
+                        </a>
+                        <a role="button" href="javascript:void(0);" target="_blank" title="새창 열림">
+                            <span>원격지원</span>
+                            <i class="icon"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="control">
+                <div class="links">
+                    <a href="javascript:void(0);">이용약관</a>
+                    <a href="javascript:void(0);"><strong class="point_color02">개인정보처리방침</strong></a>
+                    <a href="javascript:void(0);">이메일무단수집거부</a>
+                    <a href="javascript:void(0);">저작권보호정책</a>
+                    <a href="javascript:void(0);">오픈API 서비스</a>
+                    <a href="javascript:void(0);">사이트맵</a>
+                </div>
+                <span class="copyright">&copy; Ministry of Employment and Labor, Korea Employment Information Service. All rights reserved.</span>
+            </div>
+            <div class="logos gov">
+                <a href="javascript:void(0);" target="_blank" title="새창 열림"><img src="../assets/images/footer_ci02.png" alt="고용노동부"></a>
+                <a href="javascript:void(0);" target="_blank" title="새창 열림"><img src="../assets/images/footer_ci03.png" alt="한국고용정보원"></a>
+                <span class="copyright">이 누리집은 고용노동부와 고용노동부 산하기관 한국고용정보원의 누리집 입니다.</span>
+            </div>
+        </div>
+    </div>
+</footer>
+
+</div><!-- //wrap -->
+
+<!-- Mockup Timer Widget -->
+<div id="mockup-timer" style="display:none;">
+    <span class="timer-icon"></span>
+    <span class="timer-value">00:00</span>
+</div>
+
+<!-- Mockup Loading Overlay -->
+<div id="mockup-loading" class="mockup-loading">
+    <div class="spinner"></div>
+    <div class="loading-text">처리 중...</div>
+</div>
+
+<!-- Mockup Hint -->
 <div class="mockup-hint">&#x1F4A1; '출산휴가·육아휴직' 메뉴 또는 '출산·육아' 카드를 클릭하세요</div>
 
 <script src="../assets/js/mockup.js"></script>
-<script>Mockup.Timer.start();</script>
+<script>
+    // Start timer on page load
+    Mockup.Timer.start();
+    Mockup.Timer.renderWidget();
+
+    // Tab switching functionality
+    document.querySelectorAll('.main_favorite .tab button').forEach(function(btn) {
+        btn.addEventListener('click', function() {
+            document.querySelectorAll('.main_favorite .tab button').forEach(function(b) {
+                b.classList.remove('active');
+                b.setAttribute('aria-selected', 'false');
+            });
+            this.classList.add('active');
+            this.setAttribute('aria-selected', 'true');
+        });
+    });
+</script>
 </body>
 </html>

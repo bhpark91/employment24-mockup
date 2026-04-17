@@ -263,14 +263,16 @@
 <script>
 document.addEventListener('DOMContentLoaded', function() {
   var elapsed = Mockup.Timer.getStoredElapsed();
-  if (!elapsed) elapsed = 300000; // fallback 5min
+  if (!elapsed || elapsed <= 0) elapsed = 300000; // fallback 5min
 
   var totalSec = Math.floor(elapsed / 1000);
   var min = Math.floor(totalSec / 60);
   var sec = totalSec % 60;
 
+  // Format 1회 소요 시간
   document.getElementById('time-once').textContent = min + '분 ' + sec + '초';
 
+  // 연간 총 소요 시간 (x12)
   var total12 = elapsed * 12;
   var total12Min = Math.floor(total12 / 60000);
   var total12Hr = Math.floor(total12Min / 60);
@@ -278,6 +280,7 @@ document.addEventListener('DOMContentLoaded', function() {
   document.getElementById('time-total').textContent =
     (total12Hr > 0 ? total12Hr + '시간 ' : '') + total12RemMin + '분';
 
+  // 절약되는 시간 (x11)
   var saved = elapsed * 11;
   var savedMin = Math.floor(saved / 60000);
   var savedHr = Math.floor(savedMin / 60);

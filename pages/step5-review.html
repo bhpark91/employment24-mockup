@@ -36,7 +36,7 @@
       </h1>
       <div class="header_util">
         <span class="util_link"><a href="javascript:void(0)">로그아웃</a></span>
-        <span class="util_link">59분47초 <button type="button" class="btn small type02">시간연장</button></span>
+        <span class="util_link">59분50초 <button type="button" class="btn small type02">시간연장</button></span>
         <span class="util_link"><a href="javascript:void(0)">마이페이지</a></span>
         <span class="util_link"><a href="javascript:void(0)">검색</a></span>
       </div>
@@ -107,6 +107,16 @@
           <li><span class="txt">5. 지급 완료</span></li>
         </ol>
 
+        <!-- 안내 -->
+        <div class="box_notice_wrap mb08 mt10">
+          <p class="tit">안내</p>
+          <ul class="box_list_area">
+            <li class="txt_list">육아휴직급여: [고용정책안내] 버튼을 클릭하면 육아휴직 급여 제도 확인 가능</li>
+            <li class="txt_list">(신청기간) 휴직개시일 1개월 이후부터 휴직종료일 이후 1년 이내</li>
+            <li class="txt_list">사후지급금: 육아휴직급여('25년 1월 1일 이전 휴직기간 급여) 중 25%는 (휴직한 사업장에) 복직한 이후 6개월 이상 근로한 경우 지급</li>
+          </ul>
+        </div>
+
         <!-- Toolbar -->
         <div class="box_btn_wrap flex_al_r mt24 mb08">
           <a href="javascript:void(0)" class="btn large type02"><span>기존내역 조회</span></a>
@@ -115,71 +125,95 @@
           <a href="javascript:void(0)" class="btn large type02"><span>서식다운로드</span></a>
         </div>
 
-        <!-- 신청 정보 조회 -->
+        <!-- ==================== 신청 정보 조회 ==================== -->
         <div class="box_table_wrap write">
           <div class="box_table_hd mb0">
             <h3 class="t2_sb">신청 정보 조회</h3>
           </div>
           <table class="box_table mb0">
-            <colgroup><col style="width:20%"><col><col style="width:20%"><col></colgroup>
+            <caption>접수번호,접수일자,처리기간,급여 신청 구분을 제공하는 표</caption>
+            <colgroup>
+              <col style="width:20%">
+              <col style="width:27%">
+              <col style="width:14%">
+              <col style="width:14%">
+              <col style="width:14%">
+              <col style="width:12%">
+            </colgroup>
             <tbody>
               <tr>
                 <th scope="row">접수번호</th>
-                <td>MOCK2026EIEA300100001</td>
+                <td>12061002026EIEA300134201</td>
                 <th scope="row">접수일자</th>
-                <td>2026-04-17</td>
-              </tr>
-              <tr>
+                <td></td>
                 <th scope="row">처리기간</th>
-                <td>14일</td>
-                <th scope="row">급여 신청 구분</th>
-                <td>육아휴직 급여</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-
-        <!-- 신청인 정보 -->
-        <div class="box_table_wrap write">
-          <h3 class="t2_sb">신청인 정보</h3>
-          <table class="box_table">
-            <colgroup><col style="width:20%"><col><col style="width:18%"><col></colgroup>
-            <tbody>
-              <tr>
-                <th scope="row">성명</th>
-                <td>김지은</td>
-                <th scope="row">주민등록번호</th>
-                <td>910315-2******</td>
-              </tr>
-              <tr>
-                <th scope="row">주소</th>
-                <td colspan="3">(06236) 서울특별시 강남구 테헤란로 123(역삼동, 무궁화아파트) 503-1201</td>
-              </tr>
-              <tr>
-                <th scope="row">휴대전화</th>
-                <td>010-1234-5678</td>
-                <th scope="row">일반전화</th>
                 <td></td>
               </tr>
               <tr>
-                <th scope="row">대상자녀 주민등록번호</th>
-                <td>230812-4******</td>
-                <th scope="row">출산(예정)일</th>
-                <td>2023-08-12</td>
+                <th scope="row">급여 신청 구분</th>
+                <td colspan="5">육아휴직 급여</td>
               </tr>
             </tbody>
           </table>
         </div>
 
-        <!-- 신청 내용 -->
+        <!-- ==================== 신청인 정보 ==================== -->
+        <div class="box_table_wrap write">
+          <h3 class="t2_sb">신청인 정보</h3>
+          <table class="box_table">
+            <caption>성명,주민등록번호,주소,휴대전화,일반전화,대상자녀 주민등록번호,출산(예정)일을 제공하는 표</caption>
+            <colgroup>
+              <col style="width:20%">
+              <col>
+              <col style="width:18%">
+              <col>
+            </colgroup>
+            <tbody>
+              <tr>
+                <th scope="row">성명</th>
+                <td>이수미</td>
+                <th scope="row">주민등록번호</th>
+                <td>880619-*******</td>
+              </tr>
+              <tr>
+                <th scope="row" class="v_top">주소</th>
+                <td colspan="3">(08833) 서울특별시 관악구 관악로5길 42(봉천동, 갑을아파트)101-207</td>
+              </tr>
+              <tr>
+                <th scope="row">휴대전화</th>
+                <td>010-3895-0695</td>
+                <th scope="row">일반전화</th>
+                <td>--</td>
+              </tr>
+              <tr>
+                <th scope="row">대상자녀의 주민등록번호</th>
+                <td>220517-*******</td>
+                <th scope="row">출산(예정)일</th>
+                <td>2022-05-17</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- ==================== 신청 내용 ==================== -->
         <div class="box_table_wrap write">
           <h3 class="t2_sb">신청 내용</h3>
           <table class="box_table">
-            <colgroup><col style="width:20%"><col><col style="width:18%"><col></colgroup>
+            <caption>확인서 신청일,급여신청기간,추가 부여기간,은행명,계좌번호,예금주를 제공하는 표</caption>
+            <colgroup>
+              <col style="width:20%">
+              <col>
+              <col style="width:18%">
+              <col>
+            </colgroup>
             <tbody>
               <tr>
+                <th scope="row">확인서 신청일</th>
+                <td colspan="3">2025-05-21</td>
+              </tr>
+              <tr>
                 <th scope="row">① 급여신청기간</th>
-                <td colspan="3">2025-05-25 ~ 2025-06-24 (30일)</td>
+                <td colspan="3">2025-05-25 ~ 2025-06-24 <span class="box_int_txt">31일</span></td>
               </tr>
               <tr>
                 <th scope="row">①-1 추가 부여기간</th>
@@ -187,58 +221,110 @@
               </tr>
               <tr>
                 <th scope="row">은행명</th>
-                <td>국민은행</td>
-                <th scope="row">계좌번호</th>
-                <td>356-****-****-23</td>
+                <td colspan="3">농협</td>
               </tr>
               <tr>
+                <th scope="row">② 계좌번호</th>
+                <td>3020696302111</td>
                 <th scope="row">예금주</th>
-                <td colspan="3">김지은</td>
+                <td>기등록계좌없음</td>
               </tr>
             </tbody>
           </table>
         </div>
 
-        <!-- 확인사항 -->
+        <!-- ==================== 확인사항 ==================== -->
         <div class="box_table_wrap write">
           <h3 class="t2_sb">확인사항</h3>
           <table class="box_table">
-            <colgroup><col><col style="width:17%"></colgroup>
+            <colgroup>
+              <col>
+              <col style="width:17%">
+            </colgroup>
             <tbody>
               <tr>
-                <th scope="row">② 사업주로부터 급여를 받은 사실</th>
+                <th scope="row">② 급여 신청기간 중 사업주로부터 급여를 받은 사실이 있습니까?</th>
                 <td>아니오</td>
               </tr>
               <tr>
-                <th scope="row">③ 조기복직, 퇴사, 취직, 창업 여부</th>
+                <th scope="row">③ 급여 신청기간 중에 조기복직, 퇴사, 다른 사업장에 취직, 창업한 사실이 있습니까?</th>
                 <td>아니오</td>
               </tr>
               <tr>
-                <th scope="row">④ 주15시간 이상 취업 또는 소득 150만원 이상</th>
+                <th scope="row">④ (급여 제한사유 확인) 급여 신청기간중 주15시간 이상 취업 또는 소득이 150만원 이상 발생한 사실이 있습니까?</th>
                 <td>아니오</td>
               </tr>
               <tr>
-                <th scope="row">⑤ 같은 자녀에 대해 두 번째 육아휴직자</th>
+                <th scope="row">⑤ (특례급여 적용대상 확인) 같은 자녀에 대해 신청인이 두 번째 육아휴직자입니까?</th>
                 <td>아니오</td>
               </tr>
               <tr>
-                <th scope="row">⑧ 한부모 근로자 해당 여부</th>
+                <th scope="row">⑦-1 같은 자녀에 대해 배우자와 육아휴직이 겹치는 기간이 있습니까?</th>
                 <td>아니오</td>
               </tr>
               <tr>
-                <th scope="row">접수센터</th>
-                <td>민원인 주소</td>
+                <th scope="row">⑧ 신청인은 한부모 근로자에 해당합니까? (배우자와의 이혼 등)</th>
+                <td>아니오</td>
+              </tr>
+              <tr>
+                <th scope="row" colspan="2">접수센터</th>
+              </tr>
+              <tr>
+                <td colspan="2">
+                  <div class="box_radio-group">
+                    <span>
+                      <input type="radio" name="prssInsttSe" id="prssInttSe1" value="1" disabled checked>
+                      <label for="prssInttSe1">민원인 주소</label>
+                    </span>
+                    <span>
+                      <input type="radio" name="prssInsttSe" id="prssInttSe2" value="2" disabled>
+                      <label for="prssInttSe2">사업장 주소</label>
+                    </span>
+                    <span>
+                      <input type="radio" name="prssInsttSe" id="prssInttSe0" value="0" disabled>
+                      <label for="prssInttSe0">기존 처리센터</label>
+                    </span>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td colspan="2">
+                  <p>급여신청서 접수 후 지급계좌 번호 변경을 원하실 경우 관할 고용센터로 연락하시기 바랍니다.</p>
+                  <ul class="box_list_area mt16">
+                    <li class="txt_list">
+                      <p class="b1_sb">접수센터</p>
+                      <ul class="txt_list_area">
+                        <li>
+                          <p class="tit">관할센터 :</p>
+                          <p class="desc"> 서울관악고용센터</p>
+                          <button type="button" class="btn small type02 ml16" disabled>자세히 보기</button>
+                        </li>
+                        <li>
+                          <p class="tit">대표전화 :</p>
+                          <p class="desc">02-3282-9200</p>
+                        </li>
+                        <li>
+                          <p class="tit">팩스번호 :</p>
+                          <p class="desc">02-6915-4104</p>
+                        </li>
+                        <li>
+                          <p class="tit">주소 :</p>
+                          <p class="desc">(08378) 서울특별시 구로구 디지털로34길27 2,3층(구로동,대륭포스트타워 3차)</p>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </td>
               </tr>
             </tbody>
           </table>
         </div>
 
-        <!-- 부정수급 안내 -->
+        <!-- ==================== 부정수급 안내 ==================== -->
         <div class="box_table_wrap write">
           <h3 class="t2_sb">부정수급 안내</h3>
           <div class="box_message_wrap bg_type tit_type">
-            <p class="tit">부정수급이란?</p>
-            <p style="margin-top:8px">거짓이나 그 밖의 부정한 방법으로 실업급여(구직급여, 취업촉진수당), 육아휴직 급여, 출산전후휴가 급여 등을 받거나 받으려 한 행위를 말합니다.</p>
+            <p class="txt_message">실제 근로하지 않고도 <u>사업주와 공모하여 허위로 급여를 신청</u>한 경우 <span style="color:var(--col_red,#dc2626)">부정수급</span>에 해당합니다. 그 외 부정수급으로 확인되는 사례는 아래 전문 내용을 확인하시기 바랍니다.<br>위 급여신청서에 기재한 내용에 거짓이 있는 등 부정수급에 해당할 경우에는 급여 지급이 중단될 뿐만 아니라 <span style="color:var(--col_red,#dc2626)">최대 6배</span>의 금액을 징수할 수 있으며, 경우에 따라 <u>형사처벌도 받을 수 있습니다.</u></p>
             <button type="button" id="btnFullText" class="btn small type02 mt08" onclick="toggleFullText()">전문보기</button>
             <div id="fullTextArea" style="display:none;margin-top:16px;padding:16px;background:#f9fafb;border:1px solid #e5e7eb;border-radius:4px;font-size:14px;line-height:1.8">
               <p><strong>[허위근로 등에 의한 부정수급]</strong></p>
@@ -247,6 +333,7 @@
                 <li>실제 육아휴직을 하지 않았음에도 육아휴직을 한 것처럼 서류를 허위로 작성하여 급여를 신청하는 행위</li>
                 <li>사업주와 공모하여 허위의 육아휴직 확인서를 발급받아 급여를 신청하는 행위</li>
                 <li>급여 수급 자격이 없는 자가 타인의 명의를 도용하여 급여를 신청하는 행위</li>
+                <li>(※ 친인척 또는 지인사업장 여부 등과 무관하게 실제 근로하지 않고도 취업한 것처럼 허위로 신고한 경우 부정수급에 해당)</li>
               </ul>
               <p><strong>[변동사항 미신고에 의한 부정수급]</strong></p>
               <ul style="margin:8px 0 0 16px;list-style:disc">
@@ -254,18 +341,19 @@
                 <li>육아휴직 기간 중 주 15시간 이상 취업하거나 월 소득 150만원 이상의 소득이 발생하였음에도 신고하지 않은 행위</li>
                 <li>사업주로부터 육아휴직 기간 중 급여(임금)를 지급받으면서도 이를 신고하지 않은 행위</li>
                 <li>육아휴직 급여를 받으면서 동시에 다른 고용보험 급여(구직급여 등)를 중복 수급하는 행위</li>
+                <li>(※ 그 외 거짓이나 그 밖의 부정한 방법으로 급여를 수급한 경우 부정수급에 해당)</li>
               </ul>
             </div>
           </div>
           <div class="mt16">
             <label style="display:flex;align-items:flex-start;gap:8px;cursor:pointer">
               <input type="checkbox" id="ilpInfoChk" style="margin-top:3px;width:18px;height:18px;flex-shrink:0">
-              <span>위 사례와 같이 부정수급에 해당할 경우, 기존에 수급한 급여의 최대 6배까지 징수될 수 있음을 확인하였습니다.</span>
+              <span><strong>위 사례와 같이 부정수급에 해당할 경우, 기존에 수급한 급여의 최대 6배까지 징수될 수 있음을 확인하였습니다.</strong></span>
             </label>
           </div>
         </div>
 
-        <!-- Bottom buttons -->
+        <!-- ==================== Bottom buttons ==================== -->
         <div class="box_btn_wrap flex_al_s mt40">
           <div class="cell">
             <button type="button" class="btn type02 big" disabled>확인서 출력</button>
@@ -304,7 +392,9 @@
     <h3>첨부구비서류 제출 선택</h3>
     <button type="button" class="modal-close" onclick="Mockup.Modal.close('modal-documents')">&times;</button>
     <div style="padding:16px 0">
-      <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:12px">
+      <p class="b1_sb">첨부구비서류 제출 선택</p>
+      <p class="s1_r mt08" style="color:#dc2626">※ 첨부구비서류를 센터에 보내실 때에는 반드시 접수증을 동봉하여 보내시기 바랍니다.</p>
+      <ul style="list-style:none;padding:0;margin:16px 0 0 0;display:flex;flex-direction:column;gap:12px">
         <li>
           <label style="display:flex;align-items:flex-start;gap:8px;cursor:pointer">
             <input type="radio" name="docSubmitType" value="1" style="margin-top:3px;flex-shrink:0">
@@ -345,11 +435,9 @@
 </div>
 
 <!-- Loading overlay -->
-<div id="mockup-loading" class="mockup-loading-overlay" style="display:none">
-  <div class="mockup-loading-content">
-    <div class="mockup-spinner"></div>
-    <p class="mockup-loading-text"></p>
-  </div>
+<div class="mockup-loading" id="mockup-loading" style="display:none">
+  <div class="spinner"></div>
+  <p class="loading-text">전송 중입니다...</p>
 </div>
 
 <!-- Hint -->
@@ -380,10 +468,18 @@ function submitForm() {
 
 function confirmSubmit() {
   Mockup.Modal.close('modal-documents');
-  if (confirm('육아휴직급여 신청서를 제출하시겠습니까?')) {
-    Mockup.Loading.show('전송 중입니다...', 2000, function() {
+  if (confirm('육아휴직 급여 신청서를 제출하시겠습니까?')) {
+    // Show loading
+    var overlay = document.getElementById('mockup-loading');
+    if (overlay) {
+      overlay.style.display = 'flex';
+      setTimeout(function() {
+        overlay.style.display = 'none';
+        window.location.href = 'step6-complete.html';
+      }, 2000);
+    } else {
       window.location.href = 'step6-complete.html';
-    });
+    }
   }
 }
 </script>

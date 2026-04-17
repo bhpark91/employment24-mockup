@@ -11,6 +11,212 @@
 <link rel="stylesheet" href="../assets/css/contents.css">
 <link rel="stylesheet" href="../assets/css/dictionary.css">
 <link rel="stylesheet" href="../assets/css/mockup.css">
+<style>
+/* ===== Step4 Form Page Inline Styles ===== */
+.box_table { border-top: 2px solid #333; }
+.box_table table { width: 100%; border-collapse: collapse; }
+.box_table table th,
+.box_table table td { padding: 12px 16px; border-bottom: 1px solid #e5e7eb; font-size: 14px; line-height: 1.6; text-align: left; vertical-align: middle; }
+.box_table table th { background: #f8f9fb; color: #333; font-weight: 500; }
+.box_table table td { color: #555; }
+.box_table table th .essential { display: inline-block; width: 6px; height: 6px; border-radius: 50%; background: #e53e3e; vertical-align: super; margin-left: 2px; }
+.box_table table th .essential .blind { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0,0,0,0); }
+.box_table table th .s1_r { display: block; font-size: 12px; color: #888; font-weight: 400; margin-top: 2px; }
+
+.input_txt { height: 38px; padding: 0 12px; border: 1px solid #d1d5db; border-radius: 4px; font-size: 14px; box-sizing: border-box; background: #fff; }
+.input_txt:read-only { background: #f3f4f6; color: #666; }
+.input_txt::placeholder { color: #aaa; }
+
+.form_box { display: flex; align-items: center; gap: 4px; flex-wrap: wrap; }
+.box_ipt { display: inline-flex; align-items: center; position: relative; }
+.box_ipt .input_txt { width: 100%; }
+.box_ipt.w_small { width: 120px; }
+.box_ipt.w_xsmall { width: 80px; }
+
+.sel { display: inline-block; }
+.sel select { height: 38px; padding: 0 30px 0 12px; border: 1px solid #d1d5db; border-radius: 4px; font-size: 14px; background: #fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='7'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23666' fill='none' stroke-width='1.5'/%3E%3C/svg%3E") no-repeat right 10px center; appearance: none; cursor: pointer; }
+.sel.w_xsmall select { width: 80px; }
+
+.box_radio-group { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; }
+.box_radio-group.block_type { flex-direction: column; align-items: flex-start; gap: 8px; }
+.box_radio-group span { display: flex; align-items: center; gap: 4px; }
+.box_radio-group input[type="radio"] { width: 16px; height: 16px; margin: 0; accent-color: #1a56db; cursor: pointer; }
+.box_radio-group label { font-size: 14px; cursor: pointer; color: #333; }
+
+.box_chk-group { display: flex; align-items: center; gap: 16px; margin-top: 8px; }
+.box_chk-group.block_type { flex-direction: column; align-items: flex-start; }
+.box_chk-group span { display: flex; align-items: center; gap: 4px; }
+.box_chk-group input[type="checkbox"] { width: 16px; height: 16px; margin: 0; accent-color: #1a56db; cursor: pointer; }
+.box_chk-group label { font-size: 14px; cursor: pointer; }
+
+.box_table_group { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+.box_table_group .cell { display: inline-flex; align-items: center; gap: 4px; }
+.box_table_group .cell_wrap { display: inline-flex; align-items: center; gap: 4px; }
+.box_int_txt { font-size: 14px; color: #333; }
+
+.zipcode_area { flex-direction: column; align-items: flex-start; gap: 8px; }
+.zipcode_area .cell { width: 100%; }
+.zipcode_area .cell .box_ipt { width: 100%; }
+
+.box_email_area { display: flex; align-items: center; gap: 4px; }
+
+/* Buttons */
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 4px; border: 1px solid #d1d5db; border-radius: 4px; background: #fff; font-size: 13px; color: #555; cursor: pointer; text-decoration: none; white-space: nowrap; font-family: inherit; }
+.btn.small { padding: 4px 12px; font-size: 12px; }
+.btn.medium { padding: 6px 16px; }
+.btn.large { padding: 8px 20px; font-size: 14px; }
+.btn.big { padding: 12px 40px; font-size: 16px; font-weight: 600; }
+.btn.type01 { background: #1a56db; color: #fff; border-color: #1a56db; }
+.btn.type01:hover { background: #1544b8; }
+.btn.type02 { background: #fff; color: #555; border-color: #d1d5db; }
+.btn.type02:hover { background: #f3f4f6; }
+
+/* Section titles and helpers */
+.t2_sb { font-size: 18px; font-weight: 700; color: #1a1a1a; margin-top: 0; }
+.txt_essential { font-size: 12px; color: #888; }
+.txt_essential .essential { display: inline-block; width: 6px; height: 6px; border-radius: 50%; background: #e53e3e; vertical-align: middle; margin-right: 2px; }
+.box_table_hd { display: flex; justify-content: space-between; align-items: flex-end; }
+.box_table_hd.mb0 { margin-bottom: 0; }
+
+.box_table_wrap.write { margin-top: 32px; }
+.box_table_wrap.write .box_table { margin-top: 8px; }
+
+/* Info box */
+.box_notice_wrap { background: #f0f6ff; border-radius: 8px; padding: 20px 24px; }
+.box_notice_wrap .tit { display: flex; align-items: center; gap: 8px; font-size: 16px; font-weight: 700; color: #1a56db; margin-bottom: 8px; }
+.box_notice_wrap .tit::before { content: ""; display: inline-block; width: 24px; height: 24px; background: #1a56db; border-radius: 50%; }
+.box_list_area { list-style: none; padding: 0; margin: 0; }
+.box_list_area .txt_list { position: relative; padding-left: 12px; font-size: 14px; color: #555; line-height: 1.8; }
+.box_list_area .txt_list::before { content: "\2022"; position: absolute; left: 0; color: #1a56db; }
+
+/* Step indicator */
+.box_step { display: flex; list-style: none; padding: 0; margin: 0; counter-reset: step; border-radius: 8px; overflow: hidden; }
+.box_step li { flex: 1; text-align: center; padding: 14px 8px; background: #f3f4f6; color: #888; font-size: 14px; font-weight: 500; position: relative; border-right: 1px solid #e5e7eb; }
+.box_step li:last-child { border-right: none; }
+.box_step li.is-active { background: #1a56db; color: #fff; font-weight: 700; }
+.box_step li .txt { display: block; }
+
+/* Button row */
+.box_btn_wrap { display: flex; gap: 8px; }
+.box_btn_wrap.flex_al_r { justify-content: center; }
+.box_btn_wrap.flex_al_c { justify-content: center; }
+.btn_ico { display: flex; align-items: center; gap: 6px; }
+
+/* Spacing */
+.mt04 { margin-top: 4px; }
+.mt08 { margin-top: 8px; }
+.mt10 { margin-top: 10px; }
+.mt16 { margin-top: 16px; }
+.mt20 { margin-top: 20px; }
+.mt24 { margin-top: 24px; }
+.mt40 { margin-top: 40px; }
+.mb0 { margin-bottom: 0; }
+.mb04 { margin-bottom: 4px; }
+.mb08 { margin-bottom: 8px; }
+.ml08 { margin-left: 8px; }
+.ml16 { margin-left: 16px; }
+
+/* Text helpers */
+.s1_r { font-size: 12px; color: #888; font-weight: 400; }
+.b1_r { font-size: 14px; color: #555; }
+.b1_sb { font-size: 14px; color: #333; font-weight: 600; }
+.b2_r { font-size: 13px; color: #888; }
+.sub_txt { font-size: 12px; color: #888; }
+.text-danger { color: #e53e3e !important; }
+.tc { text-align: center !important; }
+.v_top { vertical-align: top !important; }
+
+/* Agreement area */
+.box_border_type { border: 1px solid #e5e7eb; border-radius: 8px; padding: 24px; }
+.box_border_type.type01 { background: #fafbfc; }
+.agree_r { text-align: right; }
+.agree_r p { font-size: 14px; color: #333; }
+
+/* Fraud warning box */
+.fraud_box { background: #fafbfc; border: 1px solid #e5e7eb; border-radius: 8px; padding: 24px; margin-top: 16px; }
+.fraud_box p { font-size: 14px; line-height: 1.8; color: #555; }
+.fraud_box u { text-decoration: underline; }
+.fraud_detail { display: none; margin-top: 16px; padding-top: 16px; border-top: 1px solid #e5e7eb; }
+.fraud_detail .fraud_section_title { font-size: 14px; font-weight: 700; color: #c53030; margin: 16px 0 8px; }
+.fraud_detail .fraud_section_title:first-child { margin-top: 0; }
+.fraud_detail .fraud_item { font-size: 14px; color: #555; line-height: 1.8; padding-left: 8px; }
+.fraud_confirm_box { background: #fafbfc; border: 1px solid #e5e7eb; border-radius: 8px; padding: 16px 24px; margin-top: 12px; display: flex; align-items: center; gap: 8px; }
+
+/* File upload area */
+.file_upload_area { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+.file_upload_area .btn_file { display: inline-flex; align-items: center; justify-content: center; padding: 6px 16px; border: 1px solid #1a56db; border-radius: 4px; background: #f0f6ff; color: #1a56db; font-size: 13px; cursor: pointer; }
+.file_upload_area .file_guide { font-size: 13px; color: #888; }
+.mydata_box { background: #f0f6ff; border: 1px solid #d0dcf0; border-radius: 8px; padding: 16px; margin-top: 8px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
+.mydata_box p { font-size: 13px; color: #555; }
+.mydata_box .btn_mydata { display: inline-flex; align-items: center; gap: 4px; }
+
+/* Caution box */
+.box_message_wrap.tit_type { background: #fff8f0; border: 1px solid #fde2c4; border-radius: 8px; padding: 20px 24px; }
+.box_message_wrap.tit_type .tit { display: flex; align-items: center; gap: 8px; font-size: 15px; font-weight: 700; color: #c05621; margin-bottom: 8px; }
+
+/* Bank modal grid */
+.bank-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; margin: 16px 0; }
+.bank-grid .bank-item { display: flex; align-items: center; gap: 8px; padding: 10px 12px; border: 1px solid #e5e7eb; border-radius: 6px; cursor: pointer; font-size: 13px; color: #333; background: #fff; transition: all 0.15s; }
+.bank-grid .bank-item:hover { border-color: #1a56db; background: #f0f6ff; }
+.bank-grid .bank-item.selected { border-color: #1a56db; background: #f0f6ff; font-weight: 600; }
+.bank-grid .bank-item .bank-icon { width: 24px; height: 24px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 10px; font-weight: 700; flex-shrink: 0; }
+
+/* Period modal */
+.period-info-box { background: #f8f9fb; border: 1px solid #e5e7eb; border-radius: 4px; padding: 12px 16px; margin-bottom: 16px; display: flex; }
+.period-info-box th { width: 180px; font-size: 14px; color: #555; font-weight: 500; text-align: left; }
+.period-info-box td { font-size: 14px; color: #333; }
+.period-table { width: 100%; border-collapse: collapse; border-top: 2px solid #333; }
+.period-table th, .period-table td { padding: 12px 16px; border-bottom: 1px solid #e5e7eb; font-size: 14px; text-align: center; }
+.period-table th { background: #f8f9fb; font-weight: 600; color: #333; }
+.period-table .btn-select { padding: 4px 16px; border: 1px solid #1a56db; border-radius: 4px; background: #fff; color: #1a56db; font-size: 13px; cursor: pointer; }
+.period-table .btn-select:hover { background: #f0f6ff; }
+.period-notes { margin-top: 16px; }
+.period-notes p { font-size: 13px; color: #e53e3e; line-height: 1.8; }
+
+/* Account lookup modal */
+.account-table { width: 100%; border-collapse: collapse; border-top: 2px solid #333; }
+.account-table th, .account-table td { padding: 12px 16px; border-bottom: 1px solid #e5e7eb; font-size: 14px; text-align: center; }
+.account-table th { background: #f8f9fb; font-weight: 600; }
+
+/* Prev request button */
+.btn_prev_request { display: inline-flex; align-items: center; gap: 6px; padding: 8px 16px; border: 1px solid #1a56db; border-radius: 4px; background: #f0f6ff; color: #1a56db; font-size: 13px; cursor: pointer; margin-top: 8px; }
+
+/* Center info display */
+.center_info { margin-top: 12px; background: #f8f9fb; border-radius: 8px; padding: 16px 20px; }
+.center_info p { font-size: 14px; color: #555; line-height: 1.8; }
+.center_info .center_label { font-weight: 600; color: #1a56db; }
+
+/* Notice box with icon */
+.notice_info_box { background: #fff8f0; border: 1px solid #fde2c4; border-radius: 8px; padding: 20px 24px; margin-top: 24px; }
+.notice_info_box .tit { display: flex; align-items: center; gap: 8px; font-size: 15px; font-weight: 700; color: #333; margin-bottom: 8px; }
+.notice_info_box .tit::before { content: "\26A0"; font-size: 18px; }
+
+/* Toggle button */
+.btn_toggle { display: inline-flex; align-items: center; gap: 4px; padding: 6px 16px; border: 1px solid #d1d5db; border-radius: 4px; background: #fff; color: #555; font-size: 13px; cursor: pointer; float: right; }
+.btn_toggle::after { content: "\25BC"; font-size: 10px; }
+.btn_toggle.open::after { content: "\25B2"; }
+
+/* Textarea */
+.textarea_wrap textarea { width: 100%; height: 60px; padding: 12px; border: 1px solid #d1d5db; border-radius: 4px; font-size: 14px; font-family: inherit; resize: vertical; box-sizing: border-box; }
+.textarea_wrap .byte_count { text-align: right; font-size: 12px; color: #888; margin-top: 4px; }
+
+/* 6+6 info box */
+.info_66_box { background: #f8f9fb; border: 1px solid #e5e7eb; border-radius: 8px; padding: 16px 20px; margin-top: 8px; }
+.info_66_box p { font-size: 13px; color: #555; line-height: 1.8; }
+.info_66_box .highlight { color: #1a56db; font-weight: 600; }
+
+/* Benefit type options */
+.benefit_type_options { margin-top: 8px; }
+.benefit_type_options .benefit_item { padding: 8px 0 8px 16px; border-bottom: 1px solid #f0f0f0; }
+.benefit_type_options .benefit_item:last-child { border-bottom: none; }
+.benefit_type_options .benefit_desc { font-size: 13px; color: #888; padding-left: 20px; margin-top: 2px; }
+
+.ico16_delete { background: none; border: none; cursor: pointer; font-size: 14px; color: #aaa; padding: 2px; }
+.ico16_delete:hover { color: #666; }
+
+/* Ensure consistent layout inside .cont_wrap_area */
+.cont_wrap_area { max-width: none; }
+</style>
 </head>
 <body>
 <div id="wrap" class="person">
@@ -29,10 +235,10 @@
   </div>
   <div class="header_bottom">
     <div class="area">
-      <h1 class="logo"><a href="javascript:void(0)"><img src="../assets/images/logo_main_work24.svg" alt="고용24"></a></h1>
+      <h1 class="logo"><a href="javascript:void(0)" title="고용24"><img src="../assets/images/logo_main_work24.svg" alt="고용24"></a></h1>
       <div class="header_util">
         <span class="util_link"><a href="javascript:void(0)">로그아웃</a></span>
-        <span class="util_link">59분47초 <button type="button" class="btn small type02">시간연장</button></span>
+        <span class="util_link">59분43초 <button type="button" class="btn small type02">시간연장</button></span>
         <span class="util_link"><a href="javascript:void(0)">마이페이지</a></span>
         <span class="util_link"><a href="javascript:void(0)">검색</a></span>
       </div>
@@ -43,7 +249,7 @@
         <li><a href="javascript:void(0)">직업 능력 개발</a></li>
         <li><a href="javascript:void(0)" style="color:#1a56db;font-weight:700">출산휴가·육아휴직</a></li>
       </ul></nav>
-      <a href="javascript:void(0)" class="header_allmenu"><div class="lines"><span class="t"></span><span class="c"></span><span class="b"></span></div><span>전체 메뉴</span></a>
+      <a href="javascript:void(0)" class="header_allmenu" title="전체메뉴"><div class="lines"><span class="t"></span><span class="c"></span><span class="b"></span></div><span>전체 메뉴</span></a>
     </div>
   </div>
 </header>
@@ -51,14 +257,24 @@
 <section id="container">
   <div id="contents">
 
+    <!-- ===== LNB (Left Navigation Bar) ===== -->
     <div class="lnb">
       <h2 class="h2_sb">출산휴가·육아휴직</h2>
       <ul>
-        <li class="depth"><a href="javascript:void(0)">출산휴가</a></li>
+        <li class="depth">
+          <a href="javascript:void(0)" role="button" aria-expanded="false">출산휴가</a>
+          <ul class="menuLevel3LiClassChk" style="display:none">
+            <li><a href="javascript:void(0)">출산전후(유산,사산,배우자,난임치료)휴가 급여신청</a></li>
+            <li><a href="javascript:void(0)">기간제·파견근로자 출산전후휴가 급여등에 상당하는 금액 신청</a></li>
+            <li><a href="javascript:void(0)">예술인·노무제공자 출산전후급여등 신청</a></li>
+            <li><a href="javascript:void(0)">고용보험 미적용자 출산(유산·사산) 급여 신청</a></li>
+            <li><a href="javascript:void(0)">출산휴가 사용현황</a></li>
+          </ul>
+        </li>
         <li class="depth on">
-          <a href="javascript:void(0)" class="on" aria-expanded="true">육아휴직</a>
+          <a href="javascript:void(0)" class="on" role="button" aria-expanded="true">육아휴직</a>
           <ul class="menuLevel3LiClassChk" style="display:block">
-            <li class="on"><a href="javascript:void(0)" class="on">육아휴직급여 신청</a></li>
+            <li class="on"><a href="javascript:void(0)" class="on" aria-current="page">육아휴직급여 신청</a></li>
             <li><a href="javascript:void(0)">육아기 근로시간 단축 급여 신청</a></li>
             <li><a href="javascript:void(0)">육아휴직/육아기 근로시간 단축 사용현황</a></li>
             <li><a href="javascript:void(0)">육아휴직 급여 사후지급금 확인 요청</a></li>
@@ -67,9 +283,27 @@
       </ul>
     </div>
 
+    <!-- ===== Content Area ===== -->
     <div class="cont_wrap">
-      <div class="cont_wrap_area">
-        <div class="sub_tl"><h2 class="h2_sb">육아휴직 급여 신청</h2></div>
+
+      <!-- Breadcrumb / Location -->
+      <div class="location">
+        <ul class="location_cont">
+          <li class="home"><a href="javascript:void(0)" title="홈으로 이동">홈</a></li>
+          <li><button type="button" class="btn_downgrill"><span>출산휴가·육아...</span></button></li>
+          <li><button type="button" class="btn_downgrill"><span>육아휴직</span></button></li>
+          <li><button type="button" class="btn_downgrill"><span>육아휴직급여...</span></button></li>
+          <li class="on"><a href="javascript:void(0)">육아휴직 급여 신청서</a></li>
+        </ul>
+      </div>
+
+      <div class="cont_wrap_area" id="content">
+        <!-- Page Title -->
+        <div class="sub_tl">
+          <h2 class="h2_sb">육아휴직급여 신청</h2>
+        </div>
+
+        <!-- Step Indicator -->
         <ol class="box_step mt24">
           <li class="is-active"><span class="txt"><i class="blind">현재 단계</i>1. 작성 중</span></li>
           <li><span class="txt">2. 제출 완료</span></li>
@@ -77,42 +311,49 @@
           <li><span class="txt">4. 처리 완료</span></li>
         </ol>
 
-        <!-- 안내 -->
+        <!-- Info Box -->
         <div class="box_notice_wrap mb08 mt10">
           <p class="tit">안내</p>
           <ul class="box_list_area">
             <li class="txt_list">육아휴직급여: [고용정책안내] 버튼을 클릭하면 육아휴직 급여 제도 확인 가능</li>
             <li class="txt_list">(신청기간) 휴직개시일 1개월 이후부터 휴직종료일 이후 1년 이내</li>
-            <li class="txt_list">사후지급금: 육아휴직급여 중 25%는 복직한 이후 6개월 이상 근로한 경우 지급</li>
+            <li class="txt_list">사후지급금: 육아휴직급여(25년 1월 1일 이전 휴직기간 급여) 중 25%는 (휴직한 사업장에) 복직한 이후 6개월 이상 근로한 경우 지급</li>
           </ul>
         </div>
 
-        <!-- 상단 버튼 -->
+        <!-- Action Buttons Row -->
         <div class="box_btn_wrap flex_al_r mt24 mb08">
-          <a href="javascript:void(0)" class="btn large type02"><span>기존내역 조회</span></a>
-          <a href="javascript:void(0)" class="btn large type02"><span>동영상 가이드</span></a>
-          <a href="javascript:void(0)" class="btn large type02"><span>작성방법</span></a>
-          <a href="javascript:void(0)" class="btn large type02"><span>고용정책안내</span></a>
-          <a href="javascript:void(0)" class="btn large type02"><span>서식다운로드</span></a>
+          <a href="javascript:void(0)" class="btn large type02"><span class="btn_ico">기존내역 조회</span></a>
+          <a href="javascript:void(0)" class="btn large type02"><span class="btn_ico">동영상 가이드</span></a>
+          <a href="javascript:void(0)" class="btn large type02"><span class="btn_ico">작성방법</span></a>
+          <a href="javascript:void(0)" class="btn large type02"><span class="btn_ico">고용정책안내</span></a>
+          <a href="javascript:void(0)" class="btn large type02"><span class="btn_ico">서식다운로드</span></a>
         </div>
 
-        <form id="form1">
+        <form id="form1" onsubmit="return false;">
 
-        <!-- ==================== 섹션 1: 확인서 정보 ==================== -->
-        <div class="box_table_wrap write mt24">
-          <h3 class="t2_sb">확인서 정보</h3>
+        <!-- ==================== 확인서 정보 ==================== -->
+        <div class="box_table_wrap write">
+          <div class="box_table_hd mb0">
+            <h3 class="t2_sb">확인서 정보</h3>
+            <p class="txt_essential">(<span class="essential"><i class="blind">필수</i></span>표시된 부분은 필수입력 항목입니다.)</p>
+          </div>
           <div class="box_table mt08">
             <table>
-              <caption>확인서 정보</caption>
-              <colgroup>
-                <col style="width:180px">
-                <col>
-              </colgroup>
+              <caption>사업주 서류제출일을(를) 제공하는 표</caption>
+              <colgroup><col style="width:20%"><col></colgroup>
               <tbody>
                 <tr>
-                  <th scope="row">사업주 서류제출일 <em class="required" title="필수">필수</em></th>
+                  <th scope="row">사업주 서류제출일<span class="essential"><i class="blind">필수</i></span><br><span class="s1_r">(육아휴직 확인서)</span></th>
                   <td>
-                    <input type="text" class="input" value="2025-05-21" readonly style="width:160px">
+                    <div class="box_table_group">
+                      <div class="cell">
+                        <span class="box_ipt"><input type="text" class="input_txt" title="사업주 서류제출일 입력" value="2025-05-21" readonly style="width:160px"></span>
+                      </div>
+                      <div class="cell">
+                        <button type="button" class="btn medium type02">검색</button>
+                      </div>
+                    </div>
                   </td>
                 </tr>
               </tbody>
@@ -120,71 +361,114 @@
           </div>
         </div>
 
-        <!-- ==================== 섹션 2: 신청인 정보 ==================== -->
-        <div class="box_table_wrap write mt24">
+        <!-- ==================== 신청인 정보 ==================== -->
+        <div class="box_table_wrap write">
           <h3 class="t2_sb">신청인 정보</h3>
           <div class="box_table mt08">
             <table>
-              <caption>신청인 정보</caption>
-              <colgroup>
-                <col style="width:180px">
-                <col>
-                <col style="width:180px">
-                <col>
-              </colgroup>
+              <caption>신청인 정보를 제공하는 표</caption>
+              <colgroup><col style="width:20%"><col><col style="width:18%"><col></colgroup>
               <tbody>
                 <tr>
                   <th scope="row">성명</th>
-                  <td>
-                    <input type="text" class="input" value="김지은" readonly style="width:160px">
-                  </td>
+                  <td><input type="text" class="input_txt" value="이수미" readonly style="width:160px"></td>
                   <th scope="row">주민등록번호</th>
                   <td>
-                    <span class="box_input_group">
-                      <input type="text" class="input" value="910315" readonly style="width:100px">
-                      <span class="dash">-</span>
-                      <input type="text" class="input" value="2******" readonly style="width:100px">
-                    </span>
+                    <div class="form_box">
+                      <span class="box_ipt"><input type="text" class="input_txt" value="880619" readonly style="width:100px"></span>
+                      -
+                      <span class="box_ipt"><input type="password" class="input_txt" value="2069811" readonly style="width:100px"></span>
+                    </div>
                   </td>
                 </tr>
                 <tr>
-                  <th scope="row">주소</th>
+                  <th scope="row" class="v_top">주소<span class="essential"><i class="blind">필수</i></span></th>
                   <td colspan="3">
-                    <span class="box_input_group">
-                      <input type="text" class="input" value="(06236)" readonly style="width:80px">
-                      <input type="text" class="input" value="서울특별시 강남구 테헤란로 123(역삼동, 무궁화아파트)" readonly style="width:420px">
-                    </span>
-                    <span class="box_input_group mt04">
-                      <input type="text" class="input" value="503-1201" readonly style="width:200px" placeholder="상세주소">
-                    </span>
+                    <div class="zipcode_area">
+                      <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap">
+                        <button type="button" class="btn medium type02">주소 검색</button>
+                        <span class="s1_r">※ 주소 변경은 [마이페이지] 내 '회원정보 수정' 페이지에서 가능합니다.</span>
+                      </div>
+                      <div class="cell" style="margin-top:8px">
+                        <span class="box_ipt" style="width:100%"><input type="text" class="input_txt" value="(08833) 서울특별시 관악구 관악로5길 42(봉천동, 갑을아파트)" readonly style="width:100%"></span>
+                      </div>
+                      <div class="cell" style="margin-top:8px">
+                        <span class="box_ipt" style="width:300px;position:relative">
+                          <input type="text" class="input_txt" value="101-207" style="width:100%;padding-right:28px">
+                          <button type="reset" class="ico16_delete" style="position:absolute;right:8px;top:50%;transform:translateY(-50%)">&#10005;</button>
+                        </span>
+                      </div>
+                    </div>
                   </td>
                 </tr>
                 <tr>
-                  <th scope="row">휴대전화</th>
+                  <th scope="row">휴대전화<span class="essential"><i class="blind">필수</i></span></th>
                   <td>
-                    <span class="box_input_group">
-                      <input type="text" class="input" value="010" readonly style="width:60px">
-                      <span class="dash">-</span>
-                      <input type="text" class="input" value="12345678" readonly style="width:140px">
-                    </span>
+                    <div class="form_box">
+                      <div class="box_email_area">
+                        <div class="cell">
+                          <span class="sel w_xsmall">
+                            <select title="휴대전화 앞자리 선택">
+                              <option value="010" selected>010</option>
+                              <option value="011">011</option>
+                              <option value="016">016</option>
+                            </select>
+                          </span>
+                        </div>
+                        <div class="cell">
+                          <span class="box_ipt" style="width:160px;position:relative">
+                            <input type="text" class="input_txt" value="38950695" style="width:100%;padding-right:28px">
+                            <button type="reset" class="ico16_delete" style="position:absolute;right:8px;top:50%;transform:translateY(-50%)">&#10005;</button>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
                   </td>
-                  <th scope="row">이메일</th>
+                  <th scope="row">일반전화</th>
                   <td>
-                    <input type="text" class="input" value="jieun.kim@email.com" readonly style="width:240px">
+                    <div class="form_box">
+                      <div class="box_email_area">
+                        <div class="cell">
+                          <span class="sel w_xsmall">
+                            <select title="일반전화 앞자리 선택">
+                              <option value="" selected>선택</option>
+                              <option value="02">02</option>
+                              <option value="031">031</option>
+                              <option value="032">032</option>
+                              <option value="051">051</option>
+                              <option value="070">070</option>
+                            </select>
+                          </span>
+                        </div>
+                        <div class="cell">
+                          <span class="box_ipt" style="width:160px;position:relative">
+                            <input type="text" class="input_txt" placeholder="일반전화번호 뒷자리" style="width:100%;padding-right:28px">
+                            <button type="reset" class="ico16_delete" style="position:absolute;right:8px;top:50%;transform:translateY(-50%)">&#10005;</button>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
                   </td>
                 </tr>
                 <tr>
-                  <th scope="row">대상자녀 주민번호</th>
+                  <th scope="row">대상자녀의 주민등록번호<br><span class="s1_r">(임신 중에 육아휴직을 사용하는 경우 출산예정일)</span></th>
                   <td>
-                    <span class="box_input_group">
-                      <input type="text" class="input" value="230812" readonly style="width:100px">
-                      <span class="dash">-</span>
-                      <input type="text" class="input" value="4******" readonly style="width:100px">
-                    </span>
+                    <div class="form_box">
+                      <span class="box_ipt w_small"><input type="text" class="input_txt" value="220517" readonly style="width:100%"></span>
+                      -
+                      <span class="box_ipt w_small"><input type="text" class="input_txt" value="3481558" readonly style="width:100%"></span>
+                    </div>
+                    <p class="s1_r mt04">*사업주 서류제출일 검색시 조회됩니다.</p>
+                    <div class="box_chk-group block_type" style="margin-top:8px">
+                      <span>
+                        <input type="checkbox" id="strElemen2Yn">
+                        <label for="strElemen2Yn">초등학교 2학년 여부</label>
+                      </span>
+                    </div>
                   </td>
-                  <th scope="row">출산(예정)일</th>
-                  <td>
-                    <input type="text" class="input" value="2023-08-12" readonly style="width:160px">
+                  <th scope="row" class="v_top">출산(예정)일</th>
+                  <td class="v_top">
+                    <input type="text" class="input_txt" value="2022-05-17" readonly style="width:160px">
                   </td>
                 </tr>
               </tbody>
@@ -192,333 +476,328 @@
           </div>
         </div>
 
-        <!-- ==================== 섹션 3: 신청 정보 ==================== -->
-        <div class="box_table_wrap write mt24">
+        <!-- ==================== 신청 정보 ==================== -->
+        <div class="box_table_wrap write">
           <h3 class="t2_sb">신청 정보</h3>
           <div class="box_table mt08">
             <table>
-              <caption>신청 정보</caption>
-              <colgroup>
-                <col style="width:180px">
-                <col>
-              </colgroup>
+              <caption>신청 정보를 제공하는 표</caption>
+              <colgroup><col style="width:20%"><col><col style="width:14%"><col style="width:14%"><col style="width:14%"></colgroup>
               <tbody>
+                <!-- 급여신청기간 -->
                 <tr>
-                  <th scope="row">&#9312; 급여신청기간 <em class="required" title="필수">필수</em></th>
-                  <td>
-                    <span class="box_input_group">
-                      <input type="text" class="input" id="salaryReqstBeginDe" placeholder="YYYY-MM-DD" readonly style="width:140px">
-                      <span class="dash">~</span>
-                      <input type="text" class="input" id="salaryReqstEndDe" placeholder="YYYY-MM-DD" readonly style="width:140px">
-                      <input type="text" class="input" id="salaryReqstDyct" placeholder="" readonly style="width:60px">
-                      <span>일</span>
-                      <button type="button" class="btn medium type02" onclick="openPeriodModal()">신청기간 선택</button>
-                    </span>
+                  <th scope="row"><b style="font-size:120%">&oplus;</b> 급여신청기간<span class="essential"><i class="blind">필수</i></span><p class="s1_r">(사업주로부터 부여받은 총 휴직기간 중 급여를 지급받으려는 기간)</p></th>
+                  <td colspan="4">
+                    <div class="form_box">
+                      <span class="box_ipt"><input type="text" class="input_txt" id="salaryReqstBeginDe" placeholder="YYYY-MM-DD" readonly style="width:140px"></span>
+                      ~
+                      <span class="box_ipt"><input type="text" class="input_txt" id="salaryReqstEndDe" placeholder="YYYY-MM-DD" readonly style="width:140px"></span>
+                      <div class="box_table_group ml16">
+                        <div class="cell_wrap">
+                          <span class="box_ipt w_xsmall"><input type="text" class="input_txt" id="salaryReqstDyct" readonly style="width:60px"></span>
+                          <span class="box_int_txt">일</span>
+                          <button type="button" class="btn medium type02 ml08" onclick="Mockup.Modal.open('modal-period')">신청기간 선택</button>
+                        </div>
+                      </div>
+                    </div>
                   </td>
                 </tr>
+                <!-- 추가 부여기간 포함여부 -->
                 <tr>
-                  <th scope="row">&#9312;-1 육아휴직 추가 부여기간(6개월) 포함 여부 <em class="required" title="필수">필수</em></th>
+                  <th scope="row" colspan="4"><b style="font-size:120%">&oplus;</b>-1 위 급여 신청기간에 &#12300;남녀고용평등과 일&#183;가정 양립 지원에 관한 법률&#12301; 제19조제2항 단서에 따른 육아휴직 추가 부여기간(6개월)이 포함되어 있습니까?<span class="essential"><i class="blind">필수</i></span></th>
                   <td>
                     <div class="box_radio-group">
-                      <span>
-                        <input type="radio" name="rqutAditAlwnPrdRscdSelYn" id="addPrdY" value="Y" onchange="toggleAddPrdReason(true)">
-                        <label for="addPrdY">예</label>
-                      </span>
-                      <span>
-                        <input type="radio" name="rqutAditAlwnPrdRscdSelYn" id="addPrdN" value="N" onchange="toggleAddPrdReason(false)">
-                        <label for="addPrdN">아니오</label>
-                      </span>
+                      <span><input type="radio" name="rqutAditAlwnPrdRscdSelYn" id="addPrdY" value="Y" onchange="toggleAddPrd(true)"><label for="addPrdY">예</label></span>
+                      <span><input type="radio" name="rqutAditAlwnPrdRscdSelYn" id="addPrdN" value="N" onchange="toggleAddPrd(false)"><label for="addPrdN">아니오</label></span>
                     </div>
                   </td>
                 </tr>
+                <!-- 추가 부여 사유 -->
                 <tr>
-                  <th scope="row">&#9312;-2 추가 부여기간 사유</th>
-                  <td>
-                    <div class="box_radio-group" id="addPrdReasonGroup">
-                      <span>
-                        <input type="radio" name="rqutAditAlwnPrdRscd" id="addReason1" value="01" disabled>
-                        <label for="addReason1">배우자 사망</label>
-                      </span>
-                      <span>
-                        <input type="radio" name="rqutAditAlwnPrdRscd" id="addReason2" value="02" disabled>
-                        <label for="addReason2">배우자 부상·질병·장애</label>
-                      </span>
-                      <span>
-                        <input type="radio" name="rqutAditAlwnPrdRscd" id="addReason3" value="03" disabled>
-                        <label for="addReason3">이혼</label>
-                      </span>
-                      <span>
-                        <input type="radio" name="rqutAditAlwnPrdRscd" id="addReason4" value="04" disabled>
-                        <label for="addReason4">배우자의 군복무</label>
-                      </span>
-                      <span>
-                        <input type="radio" name="rqutAditAlwnPrdRscd" id="addReason5" value="05" disabled>
-                        <label for="addReason5">배우자의 교정시설 수감</label>
-                      </span>
+                  <th scope="row" colspan="5"><b style="font-size:120%">&oplus;</b>-2 (&oplus;-1란을 '예'로 선택한 경우). 육아휴직 추가 부여기간(6개월)이 포함된 경우 그 사유는 무엇입니까?</th>
+                </tr>
+                <tr>
+                  <td colspan="5">
+                    <div class="box_radio-group block_type" id="addPrdReasonGroup">
+                      <span><input type="radio" name="rqutAditAlwnPrdRscdSel" id="addReasonB" value="B" disabled><label for="addReasonB">같은 자녀를 대상으로 부모가 모두 육아휴직을 각각 3개월 이상 사용한 경우의 부(父) 또는 모(母)</label></span>
+                      <span><input type="radio" name="rqutAditAlwnPrdRscdSel" id="addReasonH" value="H" disabled><label for="addReasonH">&#12300;한부모가족지원법&#12301; 제4조제1호의 부 또는 모</label></span>
+                      <span><input type="radio" name="rqutAditAlwnPrdRscdSel" id="addReasonD" value="D" disabled><label for="addReasonD">&#12300;장애인복지법 시행규칙&#12301; 별표 1에 따른 장애의 정도가 심한 장애아동의 부 또는 모</label></span>
                     </div>
                   </td>
                 </tr>
+                <!-- 은행명 -->
                 <tr>
-                  <th scope="row">은행명 <em class="required" title="필수">필수</em></th>
-                  <td>
-                    <span class="box_input_group">
-                      <input type="text" class="input" id="bankNm" placeholder="은행선택" readonly style="width:160px">
-                      <button type="button" class="btn medium type02" onclick="openBankModal()">은행선택</button>
-                      <button type="button" class="btn medium type02" onclick="openAccountModal()">계좌 불러오기</button>
+                  <th scope="row">은행명<span class="essential"><i class="blind">필수</i></span></th>
+                  <td colspan="2">
+                    <div class="form_box">
+                      <button type="button" class="btn medium type02" onclick="Mockup.Modal.open('modal-bank')">은행선택</button>
+                      <span class="box_ipt"><input type="text" class="input_txt" id="bankNm" placeholder="은행선택" readonly style="width:120px"></span>
+                    </div>
+                  </td>
+                  <td colspan="2">
+                    <div class="form_box" style="justify-content:flex-start">
+                      <span style="font-size:14px;color:#333;white-space:nowrap">계좌 불러오기</span>
+                      <button type="button" class="btn medium type02" onclick="Mockup.Modal.open('modal-account')">검색</button>
+                    </div>
+                  </td>
+                </tr>
+                <!-- 계좌번호 -->
+                <tr>
+                  <th scope="row">계좌번호<span class="essential"><i class="blind">필수</i></span></th>
+                  <td colspan="2">
+                    <span class="box_ipt" style="width:240px;position:relative">
+                      <input type="text" class="input_txt" id="acnutn" placeholder="계좌번호 입력" style="width:100%;padding-right:28px">
+                      <button type="reset" class="ico16_delete" style="position:absolute;right:8px;top:50%;transform:translateY(-50%)">&#10005;</button>
                     </span>
                   </td>
-                </tr>
-                <tr>
-                  <th scope="row">계좌번호 <em class="required" title="필수">필수</em></th>
-                  <td>
-                    <input type="text" class="input" id="acnutn" placeholder="계좌번호를 입력하세요" style="width:240px">
-                  </td>
-                </tr>
-                <tr>
-                  <th scope="row">예금주</th>
-                  <td>
-                    <input type="text" class="input" id="dpstrNm" value="기등록계좌없음" readonly style="width:160px">
-                  </td>
+                  <td style="font-size:14px;color:#333;font-weight:500">예금주</td>
+                  <td><input type="text" class="input_txt" id="dpstrNm" value="기등록계좌없음" readonly style="width:160px"></td>
                 </tr>
               </tbody>
             </table>
           </div>
+          <p class="s1_r mt04">※ 예금주(기등록계좌없음): 계좌번호를 신규 등록한 경우 표시됨(예금주는 고용센터에서 급여처리시 갱신)</p>
         </div>
 
-        <!-- ==================== 섹션 4: 확인사항 ==================== -->
-        <div class="box_table_wrap write mt24">
+        <!-- ==================== 확인사항 ==================== -->
+        <div class="box_table_wrap write">
           <h3 class="t2_sb">확인사항</h3>
-          <div class="box_table notCaption mt08">
+          <div class="box_table mt08">
             <table>
-              <caption>확인사항</caption>
-              <colgroup>
-                <col style="width:50%">
-                <col style="width:50%">
-              </colgroup>
+              <caption>확인사항을 제공하는 표</caption>
+              <colgroup><col style="width:80%"><col style="width:20%"></colgroup>
               <tbody>
 
                 <!-- ② 급여 수령 여부 -->
                 <tr>
-                  <th scope="row">&#9313; 급여 신청기간 중 사업주로부터 급여를 받은 사실이 있습니까? <em class="required" title="필수">필수</em></th>
+                  <th scope="row"><b style="font-size:120%">&circledcirc;</b> 급여 신청기간 중 사업주로부터 급여를 받은 사실이 있습니까?<span class="essential"><i class="blind">필수</i></span></th>
                   <td>
                     <div class="box_radio-group">
-                      <span>
-                        <input type="radio" name="rdYesNo7" id="rdYesNo7_Y" value="Y" onchange="toggleSub('sub2', true)">
-                        <label for="rdYesNo7_Y">예</label>
-                      </span>
-                      <span>
-                        <input type="radio" name="rdYesNo7" id="rdYesNo7_N" value="N" onchange="toggleSub('sub2', false)">
-                        <label for="rdYesNo7_N">아니오</label>
-                      </span>
+                      <span><input type="radio" name="empmSalaryAt" id="empmSalaryY" value="Y" onchange="toggleSub('sub2',true)"><label for="empmSalaryY">예</label></span>
+                      <span><input type="radio" name="empmSalaryAt" id="empmSalaryN" value="N" checked onchange="toggleSub('sub2',false)"><label for="empmSalaryN">아니오</label></span>
                     </div>
-                    <div id="sub2" style="display:none" class="mt08">
-                      <p class="b2_r mb04">급여를 받은 기간</p>
-                      <span class="box_input_group">
-                        <input type="text" class="input" placeholder="YYYY-MM-DD" style="width:140px">
-                        <span class="dash">~</span>
-                        <input type="text" class="input" placeholder="YYYY-MM-DD" style="width:140px">
+                  </td>
+                </tr>
+                <tr id="sub2" style="display:none">
+                  <td colspan="2">
+                    <div class="form_box" style="flex-wrap:wrap;gap:8px">
+                      <span style="font-size:14px;color:#333">급여를 받은 기간</span>
+                      <span class="box_ipt"><input type="text" class="input_txt" placeholder="YYYY-MM-DD" style="width:140px"></span>
+                      ~
+                      <span class="box_ipt"><input type="text" class="input_txt" placeholder="YYYY-MM-DD" style="width:140px"></span>
+                      <span class="box_ipt" style="margin-left:16px;position:relative">
+                        <input type="text" class="input_txt" placeholder="급여를 입력해 주세요" style="width:180px;padding-right:28px">
+                        <button type="reset" class="ico16_delete" style="position:absolute;right:8px;top:50%;transform:translateY(-50%)">&#10005;</button>
                       </span>
-                      <p class="b2_r mb04 mt08">금액 (원)</p>
-                      <input type="text" class="input" placeholder="금액 입력" style="width:200px">
+                      <span style="font-size:14px;color:#333">원</span>
                     </div>
                   </td>
                 </tr>
 
                 <!-- ③ 조기복직 등 -->
                 <tr>
-                  <th scope="row">&#9314; 조기복직, 퇴사, 다른 사업장에 취직, 창업한 사실이 있습니까? <em class="required" title="필수">필수</em></th>
+                  <th scope="row"><b style="font-size:120%">&circledcirc;</b> 급여 신청기간 중에 조기복직, 퇴사, 다른 사업장에 취직, 창업한 사실이 있습니까?<span class="essential"><i class="blind">필수</i></span></th>
                   <td>
                     <div class="box_radio-group">
-                      <span>
-                        <input type="radio" name="rdYesNo8" id="rdYesNo8_Y" value="Y" onchange="toggleSub('sub3', true)">
-                        <label for="rdYesNo8_Y">예</label>
-                      </span>
-                      <span>
-                        <input type="radio" name="rdYesNo8" id="rdYesNo8_N" value="N" onchange="toggleSub('sub3', false)">
-                        <label for="rdYesNo8_N">아니오</label>
-                      </span>
+                      <span><input type="radio" name="chgFactAt" id="chgFactY" value="Y" onchange="toggleSub('sub3',true)"><label for="chgFactY">예</label></span>
+                      <span><input type="radio" name="chgFactAt" id="chgFactN" value="N" checked onchange="toggleSub('sub3',false)"><label for="chgFactN">아니오</label></span>
                     </div>
-                    <div id="sub3" style="display:none" class="mt08">
+                  </td>
+                </tr>
+                <tr id="sub3" style="display:none">
+                  <td colspan="2">
+                    <div style="display:flex;flex-direction:column;gap:8px">
                       <div class="box_radio-group">
-                        <span><input type="radio" name="earlyReturnType" id="ert1" value="01"><label for="ert1">조기복직</label></span>
-                        <span><input type="radio" name="earlyReturnType" id="ert2" value="02"><label for="ert2">퇴사</label></span>
-                        <span><input type="radio" name="earlyReturnType" id="ert3" value="03"><label for="ert3">취직</label></span>
-                        <span><input type="radio" name="earlyReturnType" id="ert4" value="04"><label for="ert4">창업</label></span>
+                        <span><input type="radio" name="earlyReturnType" id="ert1" value="1"><label for="ert1">조기복직</label></span>
+                        <span><input type="radio" name="earlyReturnType" id="ert2" value="2"><label for="ert2">퇴사</label></span>
+                        <span><input type="radio" name="earlyReturnType" id="ert3" value="3"><label for="ert3">취직</label></span>
+                        <span><input type="radio" name="earlyReturnType" id="ert4" value="4"><label for="ert4">창업</label></span>
+                        <span class="box_ipt"><input type="text" class="input_txt" placeholder="YYYY-MM-DD" style="width:140px"></span>
                       </div>
-                      <p class="b2_r mb04 mt08">해당 일자</p>
-                      <input type="text" class="input" placeholder="YYYY-MM-DD" style="width:140px">
-                      <p class="b2_r mb04 mt08">금액 (원)</p>
-                      <input type="text" class="input" placeholder="금액 입력" style="width:200px">
+                      <div class="form_box">
+                        <span style="font-size:14px;color:#333">소득예정액</span>
+                        <span class="box_ipt" style="position:relative">
+                          <input type="text" class="input_txt" placeholder="소득예정액을 입력하세요" style="width:200px;padding-right:28px">
+                          <button type="reset" class="ico16_delete" style="position:absolute;right:8px;top:50%;transform:translateY(-50%)">&#10005;</button>
+                        </span>
+                        <span style="font-size:14px;color:#333">원 (취직 또는 창업의 경우에만 작성합니다)</span>
+                      </div>
                     </div>
                   </td>
                 </tr>
 
-                <!-- ④ 급여 제한사유 -->
+                <!-- ④ 급여 제한사유 확인 -->
                 <tr>
-                  <th scope="row">&#9315; (급여 제한사유 확인) 주15시간 이상 취업 또는 소득이 150만원 이상입니까? <em class="required" title="필수">필수</em></th>
+                  <th scope="row"><b style="font-size:120%">&circledcirc;</b>(급여 제한사유 확인)급여 신청기간중 주15시간 이상 취업 또는 소득이 150만원 이상 발생한 사실이 있습니까?<span class="essential"><i class="blind">필수</i></span></th>
                   <td>
                     <div class="box_radio-group">
-                      <span>
-                        <input type="radio" name="rdYesNo12" id="rdYesNo12_Y" value="Y" onchange="toggleSub('sub4', true)">
-                        <label for="rdYesNo12_Y">예</label>
-                      </span>
-                      <span>
-                        <input type="radio" name="rdYesNo12" id="rdYesNo12_N" value="N" onchange="toggleSub('sub4', false)">
-                        <label for="rdYesNo12_N">아니오</label>
-                      </span>
+                      <span><input type="radio" name="rstcRsnAt" id="rstcRsnY" value="Y" onchange="toggleSub('sub4',true)"><label for="rstcRsnY">예</label></span>
+                      <span><input type="radio" name="rstcRsnAt" id="rstcRsnN" value="N" checked onchange="toggleSub('sub4',false)"><label for="rstcRsnN">아니오</label></span>
                     </div>
-                    <div id="sub4" style="display:none" class="mt08">
-                      <p class="b2_r mb04">취업 또는 소득 발생 기간</p>
-                      <span class="box_input_group">
-                        <input type="text" class="input" placeholder="YYYY-MM-DD" style="width:140px">
-                        <span class="dash">~</span>
-                        <input type="text" class="input" placeholder="YYYY-MM-DD" style="width:140px">
-                      </span>
+                  </td>
+                </tr>
+                <tr id="sub4" style="display:none">
+                  <td colspan="2">
+                    <div class="form_box">
+                      <span style="font-size:14px;color:#333">취업 또는 소득 발생 기간</span>
+                      <span class="box_ipt"><input type="text" class="input_txt" placeholder="YYYY-MM-DD" style="width:140px"></span>
+                      ~
+                      <span class="box_ipt"><input type="text" class="input_txt" placeholder="YYYY-MM-DD" style="width:140px"></span>
                     </div>
                   </td>
                 </tr>
 
-                <!-- ⑤ 두 번째 육아휴직자 -->
+                <!-- 이전 회차 불러오기 -->
                 <tr>
-                  <th scope="row">&#9316; 같은 자녀에 대해 신청인이 두 번째 육아휴직자입니까? <em class="required" title="필수">필수</em></th>
+                  <td colspan="2" style="background:#fff">
+                    <button type="button" class="btn_prev_request">이전 회차 신청서 불러오기</button>
+                  </td>
+                </tr>
+
+                <!-- ⑤ 특례급여 적용대상 확인 -->
+                <tr>
+                  <th scope="row"><b style="font-size:120%">&circledcirc;</b> (특례급여 적용대상 확인) 같은 자녀에 대해 신청인이 두 번째 육아휴직자입니까?<span class="essential"><i class="blind">필수</i></span></th>
                   <td>
                     <div class="box_radio-group">
-                      <span>
-                        <input type="radio" name="reqstBabyOtherFtmAt" id="secLeave_Y" value="Y">
-                        <label for="secLeave_Y">예</label>
-                      </span>
-                      <span>
-                        <input type="radio" name="reqstBabyOtherFtmAt" id="secLeave_N" value="N">
-                        <label for="secLeave_N">아니오</label>
-                      </span>
+                      <span><input type="radio" name="reqstBabyOtherFtmAt" id="secLeaveY" value="Y"><label for="secLeaveY">예</label></span>
+                      <span><input type="radio" name="reqstBabyOtherFtmAt" id="secLeaveN" value="N" checked><label for="secLeaveN">아니오</label></span>
                     </div>
                   </td>
                 </tr>
 
-                <!-- ⑥ 자녀 연령 18개월 이내 -->
+                <!-- ⑥ 6+6 부모육아휴직제 -->
                 <tr>
-                  <th scope="row">&#9317; 육아휴직 시작일 기준 대상 자녀 연령이 생후 18개월 이내입니까?</th>
+                  <th scope="row"><b style="font-size:120%">&circledcirc;</b> (6+6 부모육아휴직제 적용대상 확인) 육아휴직 시작일을 기준으로 대상 자녀의 연령이 생후 18개월 이내입니까?</th>
                   <td>
                     <div class="box_radio-group">
-                      <span>
-                        <input type="radio" name="babyAge18mAt" id="age18m_Y" value="Y" disabled>
-                        <label for="age18m_Y">예</label>
+                      <span><input type="radio" name="babyAge18mAt" id="age18mY" value="Y" onchange="toggle66Section(true)"><label for="age18mY">예</label></span>
+                      <span><input type="radio" name="babyAge18mAt" id="age18mN" value="N" onchange="toggle66Section(false)"><label for="age18mN">아니오</label></span>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td colspan="2" style="background:#fff">
+                    <p class="s1_r">- '23년 이전에 육아휴직을 최초로 개시한 경우에는 6+6 부모육아휴직제 시행일('24.1.1.) 기준 자녀 연령이 18개월 이내여야 합니다.</p>
+                  </td>
+                </tr>
+
+                <!-- ⑥-1 배우자 정보 -->
+                <tr id="section66" style="display:none">
+                  <td colspan="2" style="background:#fff">
+                    <div class="info_66_box">
+                      <p><b>&circledcirc;-1</b> (&circledcirc;란을 '예'로 선택한 경우) 6+6부모육아휴직제로 배우자에게 추가지급분이 발생할 경우 지급할 배우자의 계좌번호 및 인적사항을 적습니다.</p>
+                      <p class="mt08">&bull; 6+6부모육아휴직제: 첫 6개월간 부모 각각의 육아휴직급여를 통상임금의 100%(상한 250~450만원)으로 지급합니다.</p>
+                      <p>&bull; (상한) 첫 1개월째 250만원, 2개월째 250만원, 3개월째 300만원, 4개월째 350만원, 5개월째 400만원, 6개월째 450만원(「고용보험법 시행령」 제95조의3제1항)</p>
+                      <p class="mt08">※ 배우자가 공무원인 경우, 고용보험 육아휴직급여의 추가지급 요건에 해당하지 않으므로 "아니오"를 선택해주시기 바랍니다.</p>
+                    </div>
+                    <div class="form_box mt16" style="flex-wrap:wrap;gap:12px">
+                      <span style="font-size:14px;color:#333">배우자 주민등록 번호</span>
+                      <span class="box_ipt" style="position:relative"><input type="text" class="input_txt" placeholder="주민등록번호" style="width:120px;padding-right:28px"><button type="reset" class="ico16_delete" style="position:absolute;right:8px;top:50%;transform:translateY(-50%)">&#10005;</button></span>
+                      -
+                      <span class="box_ipt" style="position:relative"><input type="text" class="input_txt" placeholder="주민등록번호" style="width:120px;padding-right:28px"><button type="reset" class="ico16_delete" style="position:absolute;right:8px;top:50%;transform:translateY(-50%)">&#10005;</button></span>
+                      <span style="font-size:14px;color:#333;margin-left:16px">배우자성명</span>
+                      <span class="box_ipt" style="position:relative"><input type="text" class="input_txt" placeholder="배우자성명을 입력하세요" style="width:160px;padding-right:28px"><button type="reset" class="ico16_delete" style="position:absolute;right:8px;top:50%;transform:translateY(-50%)">&#10005;</button></span>
+                    </div>
+                    <div class="form_box mt08" style="flex-wrap:wrap;gap:12px">
+                      <span style="font-size:14px;color:#333">배우자 계좌번호</span>
+                      <span class="sel">
+                        <select title="배우자 은행 선택">
+                          <option value="" selected>선택</option>
+                          <option value="농협">농협</option>
+                          <option value="국민은행">국민은행</option>
+                          <option value="신한은행">신한은행</option>
+                          <option value="우리은행">우리은행</option>
+                          <option value="하나은행">하나은행</option>
+                          <option value="카카오뱅크">카카오뱅크</option>
+                        </select>
                       </span>
-                      <span>
-                        <input type="radio" name="babyAge18mAt" id="age18m_N" value="N" disabled>
-                        <label for="age18m_N">아니오</label>
-                      </span>
+                      <span class="box_ipt" style="position:relative"><input type="text" class="input_txt" placeholder="계좌번호를 입력하세요" style="width:200px;padding-right:28px"><button type="reset" class="ico16_delete" style="position:absolute;right:8px;top:50%;transform:translateY(-50%)">&#10005;</button></span>
+                      <input type="text" class="input_txt" readonly style="width:100px" placeholder="">
                     </div>
                   </td>
                 </tr>
 
-                <!-- ⑥-1 배우자 추가지급분 -->
+                <!-- ⑦ 급여 종류 선택 -->
                 <tr>
-                  <th scope="row">&#9317;-1 배우자에게 추가지급분 발생 시 본인 급여에서 차감하여 지급하는 것에 동의합니까?</th>
-                  <td>
-                    <div class="box_radio-group">
-                      <span>
-                        <input type="radio" name="sposAditPayAgre" id="sposAgre_Y" value="Y" disabled>
-                        <label for="sposAgre_Y">예</label>
-                      </span>
-                      <span>
-                        <input type="radio" name="sposAditPayAgre" id="sposAgre_N" value="N" disabled>
-                        <label for="sposAgre_N">아니오</label>
-                      </span>
-                    </div>
-                    <div class="mt08">
-                      <p class="b2_r mb04">배우자 성명</p>
-                      <input type="text" class="input" style="width:160px" disabled>
-                      <p class="b2_r mb04 mt08">배우자 주민번호</p>
-                      <span class="box_input_group">
-                        <input type="text" class="input" style="width:100px" disabled>
-                        <span class="dash">-</span>
-                        <input type="text" class="input" style="width:100px" disabled>
-                      </span>
-                    </div>
-                  </td>
+                  <th scope="row"><b style="font-size:120%">&circledcirc;</b> (&circledcirc;란을 '아니오'로 선택한 경우) 신청하고자 하는 육아휴직급여의 종류를 선택합니다. <a href="javascript:void(0)" style="color:#1a56db;text-decoration:none;font-size:13px;border:1px solid #1a56db;padding:2px 8px;border-radius:4px;margin-left:4px">육아휴직 모의계산 바로가기</a></th>
+                  <td></td>
                 </tr>
-
-                <!-- ⑦ 급여 종류 -->
                 <tr>
-                  <th scope="row">&#9318; 육아휴직급여의 종류 선택</th>
-                  <td>
-                    <div class="box_radio-group">
-                      <span>
-                        <input type="radio" name="alwnKindCd" id="alwnKind1" value="01" disabled>
-                        <label for="alwnKind1">통상 육아휴직급여</label>
-                      </span>
-                      <span>
-                        <input type="radio" name="alwnKindCd" id="alwnKind2" value="02" disabled>
-                        <label for="alwnKind2">6+6 부모육아휴직제</label>
-                      </span>
-                      <span>
-                        <input type="radio" name="alwnKindCd" id="alwnKind3" value="03" disabled>
-                        <label for="alwnKind3">한부모 특례</label>
-                      </span>
-                    </div>
-                  </td>
-                </tr>
-
-                <!-- ⑦-1 배우자 겹침 기간 -->
-                <tr>
-                  <th scope="row">&#9318;-1 배우자와 육아휴직이 겹치는 기간이 있습니까? <em class="required" title="필수">필수</em></th>
-                  <td>
-                    <div class="box_radio-group">
-                      <span>
-                        <input type="radio" name="sposOverlapYn" id="sposOvlp_Y" value="Y" disabled>
-                        <label for="sposOvlp_Y">예</label>
-                      </span>
-                      <span>
-                        <input type="radio" name="sposOverlapYn" id="sposOvlp_N" value="N" disabled>
-                        <label for="sposOvlp_N">아니오</label>
-                      </span>
+                  <td colspan="2" style="background:#fff">
+                    <div class="benefit_type_options">
+                      <div class="benefit_item">
+                        <div class="box_radio-group"><span><input type="radio" name="alwnKindCd" id="alwnKind1" value="01"><label for="alwnKind1">일반육아휴직급여</label></span></div>
+                        <p class="benefit_desc">&bull; (1~3개월) 상한 월 250만원(통상임금 100%)</p>
+                      </div>
+                      <div class="benefit_item">
+                        <div class="box_radio-group"><span><input type="radio" name="alwnKindCd" id="alwnKind2" value="02"><label for="alwnKind2">6+6 부모육아휴직제</label></span></div>
+                        <p class="benefit_desc">&bull; (상한) 첫 1개월째 250만원 ~ 6개월째 450만원(통상임금 100%)</p>
+                      </div>
+                      <div class="benefit_item">
+                        <div class="box_radio-group"><span><input type="radio" name="alwnKindCd" id="alwnKind3" value="03"><label for="alwnKind3">한부모 특례</label></span></div>
+                        <p class="benefit_desc">&bull; (1~3개월) 상한 월 300만원(통상임금 100%)</p>
+                      </div>
                     </div>
                   </td>
                 </tr>
 
                 <!-- ⑧ 한부모 근로자 -->
                 <tr>
-                  <th scope="row">&#9319; 한부모 근로자에 해당합니까? <em class="required" title="필수">필수</em></th>
+                  <th scope="row"><b style="font-size:120%">&circledcirc;</b> 신청인은 한부모 근로자에 해당합니까? (배우자와의 이혼 등) <span class="essential"><i class="blind">필수</i></span> <a href="javascript:void(0)" style="color:#1a56db;text-decoration:none;font-size:13px;border:1px solid #1a56db;padding:2px 8px;border-radius:4px;margin-left:4px">한부모가족지원법 제4조1호</a></th>
                   <td>
                     <div class="box_radio-group">
-                      <span>
-                        <input type="radio" name="sgprYn" id="sgprYn_Y" value="Y">
-                        <label for="sgprYn_Y">예</label>
-                      </span>
-                      <span>
-                        <input type="radio" name="sgprYn" id="sgprYn_N" value="N">
-                        <label for="sgprYn_N">아니오</label>
-                      </span>
+                      <span><input type="radio" name="sgprYn" id="sgprYnY" value="Y"><label for="sgprYnY">예</label></span>
+                      <span><input type="radio" name="sgprYn" id="sgprYnN" value="N" checked><label for="sgprYnN">아니오</label></span>
                     </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td colspan="2" style="background:#fff">
+                    <p class="s1_r">&bull; 한부모 근로자란? (한부모가족지원법)</p>
+                    <p class="s1_r">&nbsp;&nbsp;&oplus; 배우자와 사별 또는 이혼한 근로자</p>
+                    <p class="s1_r">&nbsp;&nbsp;&oplus; 미혼인 근로자(사실혼(事實婚) 관계에 있는 자는 제외)</p>
+                    <p class="s1_r">&nbsp;&nbsp;&oplus; 정신이나 신체의 장애로 장기간 노동능력을 상실한 배우자를 가진 근로자 등</p>
+                    <p class="s1_r">&nbsp;&nbsp;- 그 외 한부모에 대해서는 &#12300;한부모가족지원법&#12301; 제4조 참조</p>
                   </td>
                 </tr>
 
                 <!-- ⑨ 급여 신청기간 연장 사유 -->
                 <tr>
-                  <th scope="row">&#9320; 급여 신청기간 연장 사유</th>
-                  <td>
-                    <input type="text" class="input" placeholder="연장 사유가 있는 경우 입력하세요" style="width:100%">
+                  <th scope="row" colspan="2"><b style="font-size:120%">&circledcirc;</b> 급여 신청기간 연장 사유(육아휴직 또는 육아기 근로시간 단축 기간이 끝난 후 12개월이 지나 신청하는 경우에만 적습니다.)</th>
+                </tr>
+                <tr>
+                  <td colspan="2" style="background:#fff">
+                    <div class="textarea_wrap">
+                      <textarea id="extRsnTxt" placeholder="연장 사유를 입력해 주세요." maxlength="300" oninput="updateByteCount(this)"></textarea>
+                      <p class="byte_count"><span id="byteCount">0</span> / 300Byte</p>
+                    </div>
                   </td>
                 </tr>
 
                 <!-- 접수센터 -->
                 <tr>
-                  <th scope="row">접수센터 <em class="required" title="필수">필수</em></th>
-                  <td>
+                  <th scope="row" colspan="2">접수센터<span class="essential"><i class="blind">필수</i></span></th>
+                </tr>
+                <tr>
+                  <td colspan="2" style="background:#fff">
                     <div class="box_radio-group">
-                      <span>
-                        <input type="radio" name="prssInsttSe" id="center1" value="01">
-                        <label for="center1">민원인 주소</label>
-                      </span>
-                      <span>
-                        <input type="radio" name="prssInsttSe" id="center2" value="02">
-                        <label for="center2">사업장 주소</label>
-                      </span>
-                      <span>
-                        <input type="radio" name="prssInsttSe" id="center3" value="03">
-                        <label for="center3">기존 처리센터</label>
-                      </span>
+                      <span><input type="radio" name="prssInsttSe" id="center1" value="1" checked onchange="selectCenter('civil')"><label for="center1">민원인 주소</label></span>
+                      <span><input type="radio" name="prssInsttSe" id="center2" value="2" onchange="selectCenter('biz')"><label for="center2">사업장 주소</label></span>
+                      <span><input type="radio" name="prssInsttSe" id="center3" value="3" onchange="selectCenter('existing')"><label for="center3">기존 처리센터</label></span>
+                    </div>
+                    <p class="s1_r mt08">급여신청서 접수 후 지급계좌 번호 변경을 원하실 경우 관할 고용센터로 연락하시기 바랍니다.</p>
+
+                    <div class="center_info" id="centerInfoExisting">
+                      <p><b>&lt;기존 처리센터&gt;</b></p>
+                      <p><span class="center_label">관할센터 :</span> 서울관악고용센터</p>
+                      <p>대표전화 : 02-3282-9200</p>
+                      <p>주소 : (08378) 서울특별시 구로구 디지털로34길27 2,3층(구로동,대륭포스트타워 3차)</p>
+                    </div>
+                    <div class="center_info mt08" id="centerInfoCivil">
+                      <p><b>&lt;민원인 주소&gt; 선택</b></p>
+                      <p><span class="center_label">관할센터 :</span> 서울관악고용센터</p>
+                      <p>대표전화 : 02-3282-9200</p>
+                      <p>주소 : (08378) 서울특별시 구로구 디지털로34길27 2,3층(구로동,대륭포스트타워 3차)</p>
                     </div>
                   </td>
                 </tr>
@@ -528,179 +807,241 @@
           </div>
         </div>
 
-        <!-- ==================== 섹션 5: 부정수급 안내 ==================== -->
-        <div class="box_message_wrap tit_type type2 mt40">
-          <h3 class="t2_sb">부정수급 안내</h3>
-          <div class="inner type2">
-            <p class="txt_message">실제 근로하지 않고도 <u>사업주와 공모하여 허위로 급여를 신청</u>한 경우 <span style="color:var(--col_red);">부정수급</span>에 해당합니다. 아래 전문보기를 클릭하여 부정수급 사례를 반드시 확인하시기 바랍니다.</p>
-            <div class="in_contents">
-              <a href="javascript:void(0)" class="btn medium type02 btn_form" id="btnFullText" onclick="toggleFullText()">전문보기</a>
-              <div class="in_form" id="fullTextArea" style="display:none">
-                <div class="mt08">
-                  <p class="b1_sb">1. 허위근로</p>
-                  <p class="b2_r mt04">실제로 육아휴직을 사용하지 않았음에도 불구하고, 사업주와 공모하여 육아휴직 확인서를 허위로 작성·제출하고 육아휴직급여를 수급하는 행위는 「고용보험법」 제116조에 따라 부정수급에 해당합니다. 부정수급으로 적발될 경우, 이미 수급한 급여의 반환은 물론 추가징수(최대 5배)가 부과될 수 있으며, 형사고발 대상이 됩니다.</p>
-                </div>
-                <div class="mt16">
-                  <p class="b1_sb">2. 변동사항 미신고</p>
-                  <p class="b2_r mt04">육아휴직급여 수급 기간 중 조기복직, 퇴사, 재취업, 자영업 등 변동사항이 발생하였음에도 이를 신고하지 않고 계속하여 급여를 수급하는 행위도 부정수급에 해당합니다. 또한 육아휴직 기간 중 주 15시간 이상 취업하거나 월 소득이 150만원 이상 발생한 경우에도 해당 기간의 급여가 제한되며, 이를 신고하지 않은 경우 부정수급으로 처리됩니다.</p>
-                </div>
-              </div>
-            </div>
+        <!-- ==================== 부정수급 안내 ==================== -->
+        <h3 class="t2_sb mt40">부정수급 안내</h3>
+        <div class="fraud_box">
+          <p>실제 근로하지 않고도 <u>사업주와 공모하여 허위로 급여를 신청</u>한 경우 <span style="color:#e53e3e;font-weight:700">부정수급</span>에 해당합니다. 그 외 부정수급으로 확인되는 사례는 아래 전문 내용을 확인하시기 바랍니다.</p>
+          <p class="mt08">위 급여신청서에 기재한 내용에 거짓이 있는 등 부정수급에 해당할 경우에는 급여 지급이 중단될 뿐만 아니라 <span style="color:#e53e3e;font-weight:700">최대 6배</span>의 금액을 징수할 수 있으며, 경우에 따라 <u>형사처벌도 받을 수 있습니다.</u></p>
+          <div style="text-align:right;margin-top:8px">
+            <button type="button" class="btn_toggle" id="btnFullText" onclick="toggleFullText()">전문보기</button>
           </div>
-          <div class="box_message_wrap tit_type mt20">
-            <div class="box_chk-group">
-              <span>
-                <input type="checkbox" name="ilpInfoChk" id="ilpInfoChk" value="Y">
-                <label for="ilpInfoChk"><strong>위 사례와 같이 부정수급에 해당할 경우, 기존에 수급한 급여의 최대 6배까지 징수될 수 있음을 확인하였습니다.</strong></label>
-              </span>
-            </div>
+          <div class="fraud_detail" id="fullTextArea">
+            <p class="fraud_section_title">[허위 근로 등 근로조건을 거짓 신고하고 급여를 수급한 경우]</p>
+            <p class="fraud_item">&oplus; 사업주와 공모하여 통상임금을 허위로 신고하고 육아휴직 급여를 과다하게 수급한 경우</p>
+            <p class="fraud_item">&oplus; 사업주의 친인적 또는 지인으로, 실제 근무하지 않고 취업한 것처럼 허위로 신고한 경우</p>
+            <p class="fraud_item">&oplus; 동거 친족만으로 구성된 사업장에서 피보험자격을 허위로 신고한 경우</p>
+            <p class="fraud_item">&oplus; 사업장에 출퇴근이 어려운 원격지에 거주하면서 실제 근로하지 않는 경우</p>
+            <p class="fraud_item">(※ 친인적 또는 지인사업장 여부 등과 무관하게 실제 근로하지 않고도 취업한 것처럼 허위로 신고한 경우 부정수급에 해당)</p>
+
+            <p class="fraud_section_title">[취업, 조기복직 등 변동사항을 신고하지 급여를 수급한 경우]</p>
+            <p class="fraud_item">&oplus; 육아휴직 기간 중에 이직을 하였으나, 고의로 신고하지 않은 경우</p>
+            <p class="fraud_item">&oplus; 육아휴직 기간 중 사업주가 급품을 지급하였으나, 고의로 신고하지 않은 경우</p>
+            <p class="fraud_item">&oplus; 육아휴직 중 조기 복직하여 육아휴직을 하지 않음에도 고의로 신고하지 않은 경우</p>
+            <p class="fraud_item">&oplus; 육아휴직 중 사업장 폐업 시 육아휴직이 종료되나, 고의로 신고하지 않은 경우</p>
+            <p class="fraud_item">&oplus;육아휴직 중 주 15시간 이상이거나 자영업을 통한 소득 또는 근로소득이 월 150만원 이상이나, 고의로 신고하지 않은 경우</p>
+            <p class="fraud_item">(※ 그 외 거짓이나 그 밖의 부정한 방법으로 급여를 수급한 경우 부정수급에 해당)</p>
           </div>
         </div>
+        <div class="fraud_confirm_box">
+          <input type="checkbox" id="ilpInfoChk" value="Y">
+          <label for="ilpInfoChk" style="font-size:14px;color:#333;cursor:pointer">위 사례와 같이 부정수급에 해당할 경우, 기존에 수급한 급여의 최대 6배까지 징수될 수 있음을 확인하였습니다.</label>
+        </div>
 
-        <!-- ==================== 섹션 6: 첨부파일 ==================== -->
+        <!-- ==================== 알려드립니다 ==================== -->
+        <div class="notice_info_box">
+          <p class="tit">알려드립니다.</p>
+          <ul class="box_list_area">
+            <li class="txt_list">구비서류 제출은 온라인 또는 팩스/우편/센터 방문으로 병행 선택하여 제출하실 수 있습니다.</li>
+            <li class="txt_list">구비서류는 빠짐없이 제출하셔야 접수가 완료됩니다.</li>
+            <li class="txt_list">2차 신청부터 제출이 필요 없는 서류는 제출하지 않으셔도 됩니다.</li>
+          </ul>
+        </div>
+
+        <!-- ==================== 첨부파일 ==================== -->
         <div class="box_table_wrap write mt40">
-          <h3 class="t2_sb">첨부파일</h3>
-          <div class="box_table mt08">
-            <table>
-              <caption>첨부파일</caption>
-              <colgroup>
-                <col style="width:40px">
-                <col style="width:280px">
-                <col>
-              </colgroup>
-              <thead>
-                <tr>
-                  <th scope="col">No</th>
-                  <th scope="col">서류명</th>
-                  <th scope="col">첨부</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td class="tc">1</td>
-                  <td>육아휴직 급여 신청서</td>
-                  <td><button type="button" class="btn small type02" disabled>파일첨부</button> <span class="b2_r" style="color:#999">자동생성</span></td>
-                </tr>
-                <tr>
-                  <td class="tc">2</td>
-                  <td>육아휴직 확인서 (사업주 제출)</td>
-                  <td><button type="button" class="btn small type02" disabled>파일첨부</button> <span class="b2_r" style="color:#999">사업주 제출완료</span></td>
-                </tr>
-                <tr>
-                  <td class="tc">3</td>
-                  <td>통상임금 산정 증빙자료</td>
-                  <td><button type="button" class="btn small type02" disabled>파일첨부</button></td>
-                </tr>
-                <tr>
-                  <td class="tc">4</td>
-                  <td>급여이체 통장 사본</td>
-                  <td><button type="button" class="btn small type02" disabled>파일첨부</button></td>
-                </tr>
-                <tr>
-                  <td class="tc">5</td>
-                  <td>가족관계증명서</td>
-                  <td><button type="button" class="btn small type02" disabled>파일첨부</button> <span class="b2_r" style="color:#999">행정정보 공동이용 동의 시 생략 가능</span></td>
-                </tr>
-                <tr>
-                  <td class="tc">6</td>
-                  <td>주민등록등본</td>
-                  <td><button type="button" class="btn small type02" disabled>파일첨부</button> <span class="b2_r" style="color:#999">행정정보 공동이용 동의 시 생략 가능</span></td>
-                </tr>
-                <tr>
-                  <td class="tc">7</td>
-                  <td>한부모 가족 증명서 (해당자)</td>
-                  <td><button type="button" class="btn small type02" disabled>파일첨부</button></td>
-                </tr>
-                <tr>
-                  <td class="tc">8</td>
-                  <td>기타 증빙서류</td>
-                  <td><button type="button" class="btn small type02" disabled>파일첨부</button></td>
-                </tr>
-              </tbody>
-            </table>
+          <h3 class="t2_sb" style="display:flex;align-items:center;gap:8px"><span style="color:#1a56db">&#9998;</span> 첨부파일</h3>
+          <div style="margin-top:8px">
+            <ul class="box_list_area">
+              <li class="txt_list" style="color:#e53e3e">파일용량은 15MB 이하이며, 1개 파일 업로드 가능합니다.</li>
+              <li class="txt_list" style="color:#1a56db">등록 가능 파일 : zip,rar,bmp,tif,gif,jpg,jpeg,pdf,hwp,hwpx,doc,docx,ppt,pptx,xls,xlsx,chm,tiff,png,arj,lzh,tar,gz</li>
+            </ul>
+          </div>
+
+          <!-- File 1 -->
+          <div style="margin-top:20px">
+            <p class="b1_sb">1. &#12300;고용보험법 시행규칙&#12301; 제118조에 따른 육아휴직 확인서 1부 (최초 1회만 제출합니다)</p>
+            <div class="file_upload_area mt08">
+              <button type="button" class="btn_file">첨부파일 등록</button>
+              <span class="file_guide">[첨부파일 등록] 버튼을 클릭하여 파일을 첨부하거나, 원하는 파일을 마우스로 끌어오세요.</span>
+            </div>
+          </div>
+
+          <!-- File 2 -->
+          <div style="margin-top:20px">
+            <p class="b1_sb">2. 육아휴직 급여 신청서</p>
+            <div class="file_upload_area mt08">
+              <button type="button" class="btn_file">첨부파일 등록</button>
+              <span class="file_guide">[첨부파일 등록] 버튼을 클릭하여 파일을 첨부하거나, 원하는 파일을 마우스로 끌어오세요.</span>
+            </div>
+          </div>
+
+          <!-- File 3 -->
+          <div style="margin-top:20px">
+            <p class="b1_sb">3. 통상임금을 확인할 수 있는 증명자료(임금대장, 근로계약서 등) 사본 1부</p>
+            <div class="file_upload_area mt08">
+              <button type="button" class="btn_file">첨부파일 등록</button>
+              <span class="file_guide">[첨부파일 등록] 버튼을 클릭하여 파일을 첨부하거나, 원하는 파일을 마우스로 끌어오세요.</span>
+            </div>
+          </div>
+
+          <!-- File 4 -->
+          <div style="margin-top:20px">
+            <p class="b1_sb">4. 급여 수령 계좌를 확인할 수 있는 서류 사본 1부</p>
+            <div class="file_upload_area mt08">
+              <button type="button" class="btn_file">첨부파일 등록</button>
+              <span class="file_guide">[첨부파일 등록] 버튼을 클릭하여 파일을 첨부하거나, 원하는 파일을 마우스로 끌어오세요.</span>
+            </div>
+          </div>
+
+          <!-- File 5 -->
+          <div style="margin-top:20px">
+            <p class="b1_sb">5. 대상 자녀의 가족관계기록사항에 관한 증명서 1부</p>
+            <div class="file_upload_area mt08">
+              <button type="button" class="btn_file">첨부파일 등록</button>
+              <span class="file_guide">[첨부파일 등록] 버튼을 클릭하여 파일을 첨부하거나, 원하는 파일을 마우스로 끌어오세요.</span>
+            </div>
+            <div class="mydata_box">
+              <p>공공 마이데이터를 통해 민원신청에 필요한 각종 서식을 제출할 수 있습니다.</p>
+              <div class="btn_mydata">
+                <button type="button" class="btn medium type02" style="font-size:12px">공공 마이데이터로 가져올 수 있는 정보</button>
+                <button type="button" class="btn medium type01" style="font-size:12px">공공 마이데이터 가져오기</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- File 6 -->
+          <div style="margin-top:20px">
+            <p class="b1_sb">6. 주민등록등본 1부</p>
+            <div class="file_upload_area mt08">
+              <button type="button" class="btn_file">첨부파일 등록</button>
+              <span class="file_guide">[첨부파일 등록] 버튼을 클릭하여 파일을 첨부하거나, 원하는 파일을 마우스로 끌어오세요.</span>
+            </div>
+            <div class="mydata_box">
+              <p>공공 마이데이터를 통해 민원신청에 필요한 각종 서식을 제출할 수 있습니다.</p>
+              <div class="btn_mydata">
+                <button type="button" class="btn medium type02" style="font-size:12px">공공 마이데이터로 가져올 수 있는 정보</button>
+                <button type="button" class="btn medium type01" style="font-size:12px">공공 마이데이터 가져오기</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- File 7 -->
+          <div style="margin-top:20px">
+            <p class="b1_sb">7. 한부모 증명자료(해당자에 한함)</p>
+            <div class="file_upload_area mt08">
+              <button type="button" class="btn_file">첨부파일 등록</button>
+              <span class="file_guide">[첨부파일 등록] 버튼을 클릭하여 파일을 첨부하거나, 원하는 파일을 마우스로 끌어오세요.</span>
+            </div>
+          </div>
+
+          <!-- File 8 -->
+          <div style="margin-top:20px">
+            <p class="b1_sb">8. 육아휴직 기간 중 별도 소득발생 사실을 확인할 수 있는 자료(국세청 사업소득명세서 등) 사본 1부</p>
+            <div class="file_upload_area mt08">
+              <button type="button" class="btn_file">첨부파일 등록</button>
+              <span class="file_guide">[첨부파일 등록] 버튼을 클릭하여 파일을 첨부하거나, 원하는 파일을 마우스로 끌어오세요.</span>
+            </div>
+            <div class="mydata_box">
+              <p>공공 마이데이터를 통해 민원신청에 필요한 각종 서식을 제출할 수 있습니다.</p>
+              <div class="btn_mydata">
+                <button type="button" class="btn medium type02" style="font-size:12px">공공 마이데이터로 가져올 수 있는 정보</button>
+                <button type="button" class="btn medium type01" style="font-size:12px">공공 마이데이터 가져오기</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- File 9 -->
+          <div style="margin-top:20px">
+            <p class="b1_sb">9. 기타</p>
+            <div style="display:flex;align-items:center;gap:8px;margin-top:8px">
+              <span class="box_ipt" style="flex:1;position:relative">
+                <input type="text" class="input_txt" placeholder="파일명을 입력해 주세요." style="width:100%;padding-right:28px">
+                <button type="reset" class="ico16_delete" style="position:absolute;right:8px;top:50%;transform:translateY(-50%)">&#10005;</button>
+              </span>
+              <button type="button" class="btn medium type02">삭제 -</button>
+              <button type="button" class="btn medium type02">추가 +</button>
+            </div>
+            <div class="file_upload_area mt08">
+              <button type="button" class="btn_file">첨부파일 등록</button>
+              <span class="file_guide">[첨부파일 등록] 버튼을 클릭하여 파일을 첨부하거나, 원하는 파일을 마우스로 끌어오세요.</span>
+            </div>
+          </div>
+
+          <!-- File 10 -->
+          <div style="margin-top:20px">
+            <p class="b1_sb">10. 배우자가 3개월 이상 육아휴직을 사용, 한부모, 중증장에 아동의 부모 중 어느 하나에 해당함을 확인할 수 있는 증명자료 사본</p>
+            <div class="file_upload_area mt08">
+              <button type="button" class="btn_file">첨부파일 등록</button>
+              <span class="file_guide">[첨부파일 등록] 버튼을 클릭하여 파일을 첨부하거나, 원하는 파일을 마우스로 끌어오세요.</span>
+            </div>
           </div>
         </div>
 
-        <!-- ==================== 섹션 7: 행정정보 공동이용 동의서 ==================== -->
+        <!-- ==================== 행정정보 공동이용 동의서 ==================== -->
         <h3 class="t2_sb mt40">행정정보 공동이용 동의서</h3>
-        <div class="box_border_type type01 mt24">
+        <div class="box_border_type type01 mt08">
           <div class="line_type">
-            <p class="b1_r">본인은 이 건 업무처리와 관련하여 담당 직원이 「전자정부법」 제36조제1항에 따른 행정정보의 공동이용을 통하여 위의 담당 직원 확인 사항을 확인하는 것에 동의합니다. *동의하지 않는 경우에는 신청인이 직접 관련 서류를 제출하여야 합니다.</p>
+            <p class="b1_r">본인은 이 건 업무처리와 관련하여 담당 공무원이 &#12300;전자정부법&#12301; 제36조제1항에 따른 행정정보의 공동이용을 통하여 '담당 공무원 확인사항'을 확인하는 것에 동의합니다.</p>
+            <p class="b2_r mt04">&bull; 동의하지 않는 경우에는 신청(고)인이 직접 관련 서류를 제출하여야 합니다.</p>
             <div class="agree_r mt16">
-              <p>신청인 : 김지은</p>
-              <div class="box_radio-group mt16">
-                <span>
-                  <input type="radio" name="amsifoUtizeAgreAt" id="agree" value="Y">
-                  <label for="agree">동의합니다.</label>
-                </span>
-                <span>
-                  <input type="radio" name="amsifoUtizeAgreAt" id="disagree" value="N">
-                  <label for="disagree">동의하지 않습니다.</label>
-                </span>
+              <p>신청인 : 이수미</p>
+              <div class="box_radio-group mt08" style="justify-content:flex-end">
+                <span><input type="radio" name="amsifoUtizeAgreAt" id="adminAgreeY" value="Y" checked><label for="adminAgreeY">동의합니다.</label></span>
+                <span><input type="radio" name="amsifoUtizeAgreAt" id="adminAgreeN" value="N"><label for="adminAgreeN">동의하지 않습니다.</label></span>
               </div>
             </div>
             <div class="agree_r mt16">
-              <p>배우자 : </p>
-              <div class="box_radio-group mt16">
-                <span>
-                  <input type="radio" name="sposAdifUtzeAgreYn" id="sposAgreeY" value="Y" disabled>
-                  <label for="sposAgreeY">동의합니다.</label>
-                </span>
-                <span>
-                  <input type="radio" name="sposAdifUtzeAgreYn" id="sposAgreeN" value="N" disabled>
-                  <label for="sposAgreeN">동의하지 않습니다.</label>
-                </span>
+              <p>배우자 :</p>
+              <div class="box_radio-group mt08" style="justify-content:flex-end">
+                <span><input type="radio" name="sposAdifUtzeAgreYn" id="sposAdminY" value="Y"><label for="sposAdminY">동의합니다.</label></span>
+                <span><input type="radio" name="sposAdifUtzeAgreYn" id="sposAdminN" value="N"><label for="sposAdminN">동의하지 않습니다.</label></span>
               </div>
             </div>
           </div>
         </div>
 
-        <!-- ==================== 섹션 8: 개인정보 수집 및 이용 동의서(선택) ==================== -->
+        <!-- ==================== 개인정보 수집 및 이용 동의서(선택) ==================== -->
         <h3 class="t2_sb mt40">개인정보 수집 및 이용 동의서(선택)</h3>
-        <div class="box_border_type type01 mt24">
+        <div class="box_border_type type01 mt08">
           <div class="line_type">
-            <p class="b1_r">「개인정보 보호법」 제15조제1항제1호, 제17조제1항제1호, 제24조제1항제1호에 따라 개인정보의 수집·이용에 관하여 동의를 받고자 합니다. 아래의 내용을 충분히 읽으신 후 동의 여부를 결정하여 주시기 바랍니다.</p>
-            <div class="mt12">
-              <p class="b2_r">- 수집 항목: 성명, 주민등록번호, 주소, 연락처, 계좌정보, 가족관계 등</p>
-              <p class="b2_r">- 수집 목적: 육아휴직급여 신청·심사·지급</p>
-              <p class="b2_r">- 보유 기간: 급여 지급 종료 후 5년</p>
+            <p class="b1_r">본인은 이 건 민원사무처리에 대한 고객만족도 조사 및 관련 제도개선에 필요한 의견 조사를 위해 전화번호, 휴대전화번호 등을 수집 &#183; 이용하는 것에 동의합니다. 위와 같이 개인정보를 수집 &#183; 이용하는 것에 동의하십니까?</p>
+            <div class="agree_r mt16">
+              <p>신청인 : 이수미</p>
+              <div class="box_radio-group mt08" style="justify-content:flex-end">
+                <span><input type="radio" name="idifClctAgreYn" id="privAgreeY" value="Y" checked><label for="privAgreeY">동의합니다.</label></span>
+                <span><input type="radio" name="idifClctAgreYn" id="privAgreeN" value="N"><label for="privAgreeN">동의하지 않습니다.</label></span>
+              </div>
             </div>
             <div class="agree_r mt16">
-              <p>신청인 : 김지은</p>
-              <div class="box_radio-group mt16">
-                <span>
-                  <input type="radio" name="idifClctAgreYn" id="privAgree" value="Y">
-                  <label for="privAgree">동의합니다.</label>
-                </span>
-                <span>
-                  <input type="radio" name="idifClctAgreYn" id="privDisagree" value="N">
-                  <label for="privDisagree">동의하지 않습니다.</label>
-                </span>
+              <p>배우자 :</p>
+              <div class="box_radio-group mt08" style="justify-content:flex-end">
+                <span><input type="radio" name="sposPrivAgreYn" id="sposPrivY" value="Y"><label for="sposPrivY">동의합니다.</label></span>
+                <span><input type="radio" name="sposPrivAgreYn" id="sposPrivN" value="N"><label for="sposPrivN">동의하지 않습니다.</label></span>
               </div>
             </div>
           </div>
         </div>
 
         <!-- ==================== 작성 시 유의사항 ==================== -->
-        <div class="box_message_wrap tit_type mt40">
-          <p class="tit"><span class="ico24_notice"></span>작성 시 유의사항</p>
+        <div class="notice_info_box mt40" style="background:#fff;border:1px solid #e5e7eb">
+          <p class="tit" style="color:#333">작성 시 유의사항</p>
           <ul class="box_list_area">
-            <li class="txt_list">기재하신 정보가 정확히 입력되었는지 다시 한 번 확인하시기 바랍니다.</li>
-            <li class="txt_list">거짓이나 그 밖의 부정한 방법으로 급여 및 지원금 등을 신청하거나 지급받는 경우</li>
-            <li class="txt_list">법에 따라 행정처분(반환 및 추가징수)과 형사처벌 등의 불이익을 받을 수 있습니다.</li>
+            <li class="txt_list" style="color:#e53e3e">기재하신 정보가 정확히 입력되었는지 다시 한 번 확인하시기 바랍니다.</li>
+            <li class="txt_list" style="color:#e53e3e">거짓이나 그 밖의 부정한 방법으로 급여 및 지원금 등을 신청하거나 지급받는 경우</li>
+            <li class="txt_list" style="color:#e53e3e">법률에 따라 행정처분(반환 및 추가징수)과 형사처벌 등의 불이익을 받을 수 있습니다.</li>
           </ul>
           <ul class="box_list_area mt08">
-            <li class="txt_list"><strong>주요 부정행위 유형 예</strong></li>
-            <li class="txt_list">휴가 · 휴직기간 거짓 신고</li>
-            <li class="txt_list">휴가 · 휴직기간 중 복직, 퇴직, 이직 및 재취업 사실 미신고</li>
+            <li class="txt_list">&bull; 주요 부정행위 유형 예</li>
+            <li class="txt_list">휴가 &#183; 휴직기간 거짓 신고</li>
+            <li class="txt_list">휴가 &#183; 휴직기간 중 복직, 퇴업, 이직 및 재취업 사실 미신고</li>
             <li class="txt_list">고용보험 허위가입 후 급여 수급</li>
           </ul>
         </div>
 
         <!-- ==================== 하단 버튼 ==================== -->
-        <div class="box_btn_wrap flex_al_c mt40">
+        <div class="box_btn_wrap flex_al_c mt40" style="margin-bottom:40px">
           <button type="button" class="btn type02 big" onclick="resetForm()">초기화</button>
-          <button type="button" class="btn type01 big mockup-pulse" onclick="validateAndSave()">임시저장</button>
+          <button type="button" class="btn type01 big mockup-pulse" onclick="validateAndSave()" data-mockup-action="save">임시저장</button>
         </div>
 
         </form>
@@ -727,400 +1068,331 @@
 
 </div><!-- #wrap -->
 
-<!-- ==================== 모달: 신청기간 선택 ==================== -->
-<div class="mockup-modal-overlay" id="modal-period" style="display:none">
-  <div class="mockup-modal" style="max-width:560px">
-    <div class="mockup-modal-header">
-      <h3>신청기간 선택</h3>
-      <button type="button" class="mockup-modal-close" onclick="Mockup.Modal.close('modal-period')">&times;</button>
+<!-- ==================== Modal: 신청기간 선택 ==================== -->
+<div class="mockup-modal-overlay" id="modal-period">
+  <div class="mockup-modal" style="max-width:700px">
+    <h3>육아휴직 신청가능 기간 조회</h3>
+    <button type="button" class="modal-close" onclick="Mockup.Modal.close('modal-period')">&times;</button>
+
+    <table style="width:100%;border-collapse:collapse;margin-bottom:16px">
+      <tr>
+        <td style="background:#f8f9fb;padding:12px 16px;width:200px;font-size:14px;font-weight:500;border:1px solid #e5e7eb">수급한 육아휴직 급여기간</td>
+        <td style="padding:12px 16px;font-size:14px;border:1px solid #e5e7eb">2025-03-25~ 2025-05-24</td>
+      </tr>
+    </table>
+
+    <table class="period-table">
+      <thead>
+        <tr><th>수급 개월수</th><th>수급 신청기간</th><th>선택</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>01개월</td>
+          <td>2025-05-25~ 2025-06-24</td>
+          <td><button type="button" class="btn-select" onclick="selectPeriod('2025-05-25','2025-06-24',31)">선택</button></td>
+        </tr>
+        <tr>
+          <td>02개월</td>
+          <td>2025-05-25~ 2025-07-24</td>
+          <td><button type="button" class="btn-select" onclick="selectPeriod('2025-05-25','2025-07-24',61)">선택</button></td>
+        </tr>
+        <tr>
+          <td>03개월</td>
+          <td>2025-05-25~ 2025-07-31</td>
+          <td><button type="button" class="btn-select" onclick="selectPeriod('2025-05-25','2025-07-31',68)">선택</button></td>
+        </tr>
+        <tr>
+          <td>조기복직</td>
+          <td>
+            <span style="font-size:14px">2025-05-25 ~</span>
+            <input type="text" class="input_txt" placeholder="YYYY-MM-DD" style="width:130px;margin-left:4px" id="earlyReturnDate">
+          </td>
+          <td><button type="button" class="btn-select" onclick="selectEarlyReturn()">선택</button></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="period-notes">
+      <p>※ 예정된 수급신청기간보다 빨리 복직하게된 경우에는 조기복직을 선택해주세요.</p>
+      <p>※ 조기복직일이 2024.09.24 인 경우 급여 신청기간은 2024.09.23 까지입니다.</p>
+      <p>※ 육아휴직 급여 신청은 해당 회차 종료일 이후부터 신청이 가능합니다.</p>
+      <p>※ 육아휴직을 시작한 날 이후 매 1개월이 종료된 이후에 비용 신청 가능합니다.</p>
     </div>
-    <div class="mockup-modal-body">
-      <div class="box_table mt08">
-        <table>
-          <caption>수급 회차 선택</caption>
-          <colgroup>
-            <col style="width:40px">
-            <col style="width:100px">
-            <col>
-          </colgroup>
-          <thead>
-            <tr>
-              <th scope="col">선택</th>
-              <th scope="col">수급 회차수</th>
-              <th scope="col">수급 신청기간</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td class="tc"><input type="radio" name="periodSel" id="period1" value="1"></td>
-              <td class="tc"><label for="period1">1회차</label></td>
-              <td class="tc">2025-03-25 ~ 2025-04-24</td>
-            </tr>
-            <tr>
-              <td class="tc"><input type="radio" name="periodSel" id="period2" value="2"></td>
-              <td class="tc"><label for="period2">2회차</label></td>
-              <td class="tc">2025-04-25 ~ 2025-05-24</td>
-            </tr>
-            <tr>
-              <td class="tc"><input type="radio" name="periodSel" id="period3" value="3"></td>
-              <td class="tc"><label for="period3">3회차</label></td>
-              <td class="tc">2025-05-25 ~ 2025-06-24</td>
-            </tr>
-            <tr>
-              <td class="tc"><input type="radio" name="periodSel" id="period4" value="4"></td>
-              <td class="tc"><label for="period4">4회차</label></td>
-              <td class="tc">2025-06-25 ~ 2025-07-24</td>
-            </tr>
-            <tr>
-              <td class="tc"><input type="radio" name="periodSel" id="period5" value="5"></td>
-              <td class="tc"><label for="period5">5회차</label></td>
-              <td class="tc">2025-07-25 ~ 2025-08-24</td>
-            </tr>
-            <tr>
-              <td class="tc"><input type="radio" name="periodSel" id="period6" value="6"></td>
-              <td class="tc"><label for="period6">6회차</label></td>
-              <td class="tc">2025-08-25 ~ 2025-09-24</td>
-            </tr>
-            <tr>
-              <td class="tc"><input type="radio" name="periodSel" id="period7" value="7"></td>
-              <td class="tc"><label for="period7">7회차</label></td>
-              <td class="tc">2025-09-25 ~ 2025-10-24</td>
-            </tr>
-            <tr>
-              <td class="tc"><input type="radio" name="periodSel" id="period8" value="8"></td>
-              <td class="tc"><label for="period8">8회차</label></td>
-              <td class="tc">2025-10-25 ~ 2025-11-24</td>
-            </tr>
-            <tr>
-              <td class="tc"><input type="radio" name="periodSel" id="period9" value="9"></td>
-              <td class="tc"><label for="period9">9회차</label></td>
-              <td class="tc">2025-11-25 ~ 2025-12-24</td>
-            </tr>
-            <tr>
-              <td class="tc"><input type="radio" name="periodSel" id="period10" value="10"></td>
-              <td class="tc"><label for="period10">10회차</label></td>
-              <td class="tc">2025-12-25 ~ 2026-01-24</td>
-            </tr>
-            <tr>
-              <td class="tc"><input type="radio" name="periodSel" id="period11" value="11"></td>
-              <td class="tc"><label for="period11">11회차</label></td>
-              <td class="tc">2026-01-25 ~ 2026-02-24</td>
-            </tr>
-            <tr>
-              <td class="tc"><input type="radio" name="periodSel" id="period12" value="12"></td>
-              <td class="tc"><label for="period12">12회차</label></td>
-              <td class="tc">2026-02-25 ~ 2026-03-24</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-    <div class="mockup-modal-footer">
-      <button type="button" class="btn medium type02" onclick="Mockup.Modal.close('modal-period')">취소</button>
-      <button type="button" class="btn medium type01" onclick="confirmPeriod()">확인</button>
+
+    <div class="modal-footer">
+      <button type="button" class="btn medium type02" onclick="Mockup.Modal.close('modal-period')">닫기</button>
     </div>
   </div>
 </div>
 
-<!-- ==================== 모달: 은행 선택 ==================== -->
-<div class="mockup-modal-overlay" id="modal-bank" style="display:none">
-  <div class="mockup-modal" style="max-width:520px">
-    <div class="mockup-modal-header">
-      <h3>은행 선택</h3>
-      <button type="button" class="mockup-modal-close" onclick="Mockup.Modal.close('modal-bank')">&times;</button>
+<!-- ==================== Modal: 은행 선택 ==================== -->
+<div class="mockup-modal-overlay" id="modal-bank">
+  <div class="mockup-modal" style="max-width:780px">
+    <h3>은행 선택</h3>
+    <button type="button" class="modal-close" onclick="Mockup.Modal.close('modal-bank')">&times;</button>
+
+    <div class="bank-grid" id="bankGrid">
+      <div class="bank-item" onclick="selectBank(this,'농협')"><span class="bank-icon" style="background:#00a651;color:#fff">NH</span>농협</div>
+      <div class="bank-item" onclick="selectBank(this,'우체국')"><span class="bank-icon" style="background:#e4002b;color:#fff">우</span>우체국</div>
+      <div class="bank-item" onclick="selectBank(this,'국민은행')"><span class="bank-icon" style="background:#ffbc00;color:#333">KB</span>국민은행</div>
+      <div class="bank-item" onclick="selectBank(this,'우리은행')"><span class="bank-icon" style="background:#0066b3;color:#fff">우</span>우리은행</div>
+      <div class="bank-item" onclick="selectBank(this,'신한은행')"><span class="bank-icon" style="background:#0046ff;color:#fff">SH</span>신한은행</div>
+      <div class="bank-item" onclick="selectBank(this,'기업은행')"><span class="bank-icon" style="background:#0054a6;color:#fff">IBK</span>기업은행</div>
+      <div class="bank-item" onclick="selectBank(this,'하나은행')"><span class="bank-icon" style="background:#009490;color:#fff">하</span>하나은행</div>
+      <div class="bank-item" onclick="selectBank(this,'부산은행')"><span class="bank-icon" style="background:#e4002b;color:#fff">BN</span>부산은행</div>
+      <div class="bank-item" onclick="selectBank(this,'대구은행')"><span class="bank-icon" style="background:#00a651;color:#fff">DG</span>대구은행</div>
+      <div class="bank-item" onclick="selectBank(this,'카카오뱅크')"><span class="bank-icon" style="background:#fee500;color:#333">K</span>카카오뱅크</div>
+      <div class="bank-item" onclick="selectBank(this,'SC제일은행')"><span class="bank-icon" style="background:#0072ce;color:#fff">SC</span>SC제일은행</div>
+      <div class="bank-item" onclick="selectBank(this,'지역농협')"><span class="bank-icon" style="background:#00a651;color:#fff">지</span>지역농협</div>
+      <div class="bank-item" onclick="selectBank(this,'새마을금고')"><span class="bank-icon" style="background:#0054a6;color:#fff">새</span>새마을금고</div>
+      <div class="bank-item" onclick="selectBank(this,'경남은행')"><span class="bank-icon" style="background:#e4002b;color:#fff">경</span>경남은행</div>
+      <div class="bank-item" onclick="selectBank(this,'광주은행')"><span class="bank-icon" style="background:#0072ce;color:#fff">광</span>광주은행</div>
+      <div class="bank-item" onclick="selectBank(this,'한국씨티은행')"><span class="bank-icon" style="background:#003ea4;color:#fff">CT</span>한국씨티은행</div>
+      <div class="bank-item" onclick="selectBank(this,'전북은행')"><span class="bank-icon" style="background:#0054a6;color:#fff">전</span>전북은행</div>
+      <div class="bank-item" onclick="selectBank(this,'신협조합')"><span class="bank-icon" style="background:#0072ce;color:#fff">신</span>신협조합</div>
+      <div class="bank-item" onclick="selectBank(this,'수협')"><span class="bank-icon" style="background:#0054a6;color:#fff">수</span>수협</div>
+      <div class="bank-item" onclick="selectBank(this,'제주은행')"><span class="bank-icon" style="background:#00a651;color:#fff">제</span>제주은행</div>
+      <div class="bank-item" onclick="selectBank(this,'산업은행')"><span class="bank-icon" style="background:#0054a6;color:#fff">산</span>산업은행</div>
+      <div class="bank-item" onclick="selectBank(this,'HSBC은행')"><span class="bank-icon" style="background:#e4002b;color:#fff">HS</span>HSBC은행</div>
+      <div class="bank-item" onclick="selectBank(this,'상호저축')"><span class="bank-icon" style="background:#0072ce;color:#fff">상</span>상호저축</div>
+      <div class="bank-item" onclick="selectBank(this,'한국은행')"><span class="bank-icon" style="background:#003ea4;color:#fff">한</span>한국은행</div>
+      <div class="bank-item" onclick="selectBank(this,'BNP Paribas')"><span class="bank-icon" style="background:#00a651;color:#fff">BP</span>BNP Paribas</div>
+      <div class="bank-item" onclick="selectBank(this,'BOA은행')"><span class="bank-icon" style="background:#e4002b;color:#fff">BA</span>BOA은행</div>
+      <div class="bank-item" onclick="selectBank(this,'도이치은행')"><span class="bank-icon" style="background:#0054a6;color:#fff">DB</span>도이치은행</div>
+      <div class="bank-item" onclick="selectBank(this,'모건스탠리은행')"><span class="bank-icon" style="background:#003ea4;color:#fff">MS</span>모건스탠리은행</div>
+      <div class="bank-item" onclick="selectBank(this,'미쓰비시도쿄UFJ은행')"><span class="bank-icon" style="background:#e4002b;color:#fff">UF</span>미쓰비시도쿄UFJ은행</div>
+      <div class="bank-item" onclick="selectBank(this,'미즈호코퍼레이트은행')"><span class="bank-icon" style="background:#0054a6;color:#fff">미</span>미즈호코퍼레이트은행</div>
+      <div class="bank-item" onclick="selectBank(this,'산림조합')"><span class="bank-icon" style="background:#00a651;color:#fff">산</span>산림조합</div>
+      <div class="bank-item" onclick="selectBank(this,'제이피모간체이스은행')"><span class="bank-icon" style="background:#003ea4;color:#fff">JP</span>제이피모간체이스은행</div>
+      <div class="bank-item" onclick="selectBank(this,'케이뱅크')"><span class="bank-icon" style="background:#5e35b1;color:#fff">K</span>케이뱅크</div>
+      <div class="bank-item" onclick="selectBank(this,'토스뱅크')"><span class="bank-icon" style="background:#0064ff;color:#fff">T</span>토스뱅크</div>
     </div>
-    <div class="mockup-modal-body">
-      <div class="box_radio-group" style="display:grid; grid-template-columns:repeat(3,1fr); gap:8px;">
-        <span><input type="radio" name="bankSel" id="bank01" value="국민은행"><label for="bank01">국민은행</label></span>
-        <span><input type="radio" name="bankSel" id="bank02" value="기업은행"><label for="bank02">기업은행</label></span>
-        <span><input type="radio" name="bankSel" id="bank03" value="농협"><label for="bank03">농협</label></span>
-        <span><input type="radio" name="bankSel" id="bank04" value="신한은행"><label for="bank04">신한은행</label></span>
-        <span><input type="radio" name="bankSel" id="bank05" value="우리은행"><label for="bank05">우리은행</label></span>
-        <span><input type="radio" name="bankSel" id="bank06" value="하나은행"><label for="bank06">하나은행</label></span>
-        <span><input type="radio" name="bankSel" id="bank07" value="SC제일은행"><label for="bank07">SC제일은행</label></span>
-        <span><input type="radio" name="bankSel" id="bank08" value="대구은행"><label for="bank08">대구은행</label></span>
-        <span><input type="radio" name="bankSel" id="bank09" value="부산은행"><label for="bank09">부산은행</label></span>
-        <span><input type="radio" name="bankSel" id="bank10" value="광주은행"><label for="bank10">광주은행</label></span>
-        <span><input type="radio" name="bankSel" id="bank11" value="제주은행"><label for="bank11">제주은행</label></span>
-        <span><input type="radio" name="bankSel" id="bank12" value="전북은행"><label for="bank12">전북은행</label></span>
-        <span><input type="radio" name="bankSel" id="bank13" value="경남은행"><label for="bank13">경남은행</label></span>
-        <span><input type="radio" name="bankSel" id="bank14" value="수협"><label for="bank14">수협</label></span>
-        <span><input type="radio" name="bankSel" id="bank15" value="한국씨티은행"><label for="bank15">한국씨티은행</label></span>
-        <span><input type="radio" name="bankSel" id="bank16" value="우체국"><label for="bank16">우체국</label></span>
-        <span><input type="radio" name="bankSel" id="bank17" value="새마을금고"><label for="bank17">새마을금고</label></span>
-        <span><input type="radio" name="bankSel" id="bank18" value="신협"><label for="bank18">신협</label></span>
-        <span><input type="radio" name="bankSel" id="bank19" value="카카오뱅크"><label for="bank19">카카오뱅크</label></span>
-        <span><input type="radio" name="bankSel" id="bank20" value="케이뱅크"><label for="bank20">케이뱅크</label></span>
-        <span><input type="radio" name="bankSel" id="bank21" value="토스뱅크"><label for="bank21">토스뱅크</label></span>
-      </div>
-    </div>
-    <div class="mockup-modal-footer">
-      <button type="button" class="btn medium type02" onclick="Mockup.Modal.close('modal-bank')">취소</button>
-      <button type="button" class="btn medium type01" onclick="confirmBank()">확인</button>
+
+    <div class="modal-footer">
+      <button type="button" class="btn medium type02" onclick="Mockup.Modal.close('modal-bank')">닫기</button>
+      <button type="button" class="btn medium type01" onclick="applyBank()">적용</button>
     </div>
   </div>
 </div>
 
-<!-- ==================== 모달: 계좌 불러오기 ==================== -->
-<div class="mockup-modal-overlay" id="modal-account" style="display:none">
-  <div class="mockup-modal" style="max-width:560px">
-    <div class="mockup-modal-header">
-      <h3>기등록 계좌 선택</h3>
-      <button type="button" class="mockup-modal-close" onclick="Mockup.Modal.close('modal-account')">&times;</button>
+<!-- ==================== Modal: 등록계좌 조회 ==================== -->
+<div class="mockup-modal-overlay" id="modal-account">
+  <div class="mockup-modal" style="max-width:700px">
+    <h3>등록계좌 조회</h3>
+    <button type="button" class="modal-close" onclick="Mockup.Modal.close('modal-account')">&times;</button>
+
+    <p style="font-size:14px;color:#333;margin-bottom:12px">전체 <b>4</b>건</p>
+
+    <table class="account-table">
+      <thead>
+        <tr><th>은행명</th><th>계좌번호</th><th>예금주</th><th>검증여부</th><th>선택</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>농협</td>
+          <td>302*****02111</td>
+          <td></td>
+          <td></td>
+          <td><button type="button" class="btn-select" onclick="selectAccount('농협','3020696302111','')">선택</button></td>
+        </tr>
+        <tr>
+          <td>신한은행</td>
+          <td>110*****5627</td>
+          <td>이수미</td>
+          <td>Y</td>
+          <td><button type="button" class="btn-select" onclick="selectAccount('신한은행','1100000005627','이수미')">선택</button></td>
+        </tr>
+        <tr>
+          <td>신한은행</td>
+          <td>110*****5627</td>
+          <td>이수미</td>
+          <td></td>
+          <td><button type="button" class="btn-select" onclick="selectAccount('신한은행','1100000005627','이수미')">선택</button></td>
+        </tr>
+        <tr>
+          <td>우리은행</td>
+          <td>100*****45723</td>
+          <td>이수미</td>
+          <td>Y</td>
+          <td><button type="button" class="btn-select" onclick="selectAccount('우리은행','1000000045723','이수미')">선택</button></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div style="text-align:center;margin-top:16px">
+      <span style="display:inline-flex;align-items:center;gap:8px">
+        <button type="button" class="btn small type02">&lt;</button>
+        <span style="font-size:14px;font-weight:600">1</span>
+        <span style="font-size:14px;color:#888">/ 1</span>
+        <button type="button" class="btn small type02">&gt;</button>
+      </span>
     </div>
-    <div class="mockup-modal-body">
-      <div class="box_table mt08">
-        <table>
-          <caption>기등록 계좌 목록</caption>
-          <colgroup>
-            <col style="width:40px">
-            <col style="width:120px">
-            <col>
-            <col style="width:100px">
-          </colgroup>
-          <thead>
-            <tr>
-              <th scope="col">선택</th>
-              <th scope="col">은행명</th>
-              <th scope="col">계좌번호</th>
-              <th scope="col">예금주</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td class="tc"><input type="radio" name="accountSel" id="acct1" value="1" checked></td>
-              <td class="tc">국민은행</td>
-              <td class="tc">356-****-****-23</td>
-              <td class="tc">김지은</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-    <div class="mockup-modal-footer">
-      <button type="button" class="btn medium type02" onclick="Mockup.Modal.close('modal-account')">취소</button>
-      <button type="button" class="btn medium type01" onclick="selectAccount()">확인</button>
+
+    <div class="modal-footer">
+      <button type="button" class="btn medium type02" onclick="Mockup.Modal.close('modal-account')">닫기</button>
     </div>
   </div>
 </div>
 
-<!-- 타이머 위젯 -->
+<!-- Timer widget -->
 <div id="mockup-timer" style="display:none">
   <span class="timer-icon"></span>
-  <span>소요 시간:</span>
   <span class="timer-value">00:00</span>
 </div>
 
-<!-- 힌트 -->
-<div class="mockup-hint">💡 모든 필수 항목을 선택한 후 '임시저장' 버튼을 클릭하세요</div>
+<!-- Hint -->
+<div class="mockup-hint">&#x1F4A1; 모든 필수 항목을 확인한 후 '임시저장' 버튼을 클릭하세요</div>
 
 <script src="../assets/js/mockup.js"></script>
 <script>
-// Period data
-var periodData = [
-  { begin: '2025-03-25', end: '2025-04-24', days: '30' },
-  { begin: '2025-04-25', end: '2025-05-24', days: '30' },
-  { begin: '2025-05-25', end: '2025-06-24', days: '30' },
-  { begin: '2025-06-25', end: '2025-07-24', days: '30' },
-  { begin: '2025-07-25', end: '2025-08-24', days: '30' },
-  { begin: '2025-08-25', end: '2025-09-24', days: '30' },
-  { begin: '2025-09-25', end: '2025-10-24', days: '30' },
-  { begin: '2025-10-25', end: '2025-11-24', days: '30' },
-  { begin: '2025-11-25', end: '2025-12-24', days: '30' },
-  { begin: '2025-12-25', end: '2026-01-24', days: '30' },
-  { begin: '2026-01-25', end: '2026-02-24', days: '30' },
-  { begin: '2026-02-25', end: '2026-03-24', days: '28' }
-];
+// ===== Step4 Form Page Script =====
 
-// Track whether full text has been viewed
-var fullTextViewed = false;
+// --- Period Selection ---
+function selectPeriod(begin, end, days) {
+  document.getElementById('salaryReqstBeginDe').value = begin;
+  document.getElementById('salaryReqstEndDe').value = end;
+  document.getElementById('salaryReqstDyct').value = days;
+  Mockup.Modal.close('modal-period');
+}
 
-// Toggle full text for 부정수급
+function selectEarlyReturn() {
+  var earlyDate = document.getElementById('earlyReturnDate').value;
+  if (!earlyDate || earlyDate === 'YYYY-MM-DD') {
+    alert('조기복직 종료일을 입력해 주세요.');
+    return;
+  }
+  document.getElementById('salaryReqstBeginDe').value = '2025-05-25';
+  document.getElementById('salaryReqstEndDe').value = earlyDate;
+  // Calculate approximate days
+  var start = new Date('2025-05-25');
+  var end = new Date(earlyDate);
+  var diff = Math.ceil((end - start) / (1000 * 60 * 60 * 24)) + 1;
+  document.getElementById('salaryReqstDyct').value = diff > 0 ? diff : '';
+  Mockup.Modal.close('modal-period');
+}
+
+// --- Bank Selection ---
+var selectedBankName = '';
+function selectBank(el, bankName) {
+  document.querySelectorAll('.bank-item').forEach(function(item) { item.classList.remove('selected'); });
+  el.classList.add('selected');
+  selectedBankName = bankName;
+}
+
+function applyBank() {
+  if (!selectedBankName) {
+    alert('은행을 선택해 주세요.');
+    return;
+  }
+  document.getElementById('bankNm').value = selectedBankName;
+  document.getElementById('acnutn').value = '';
+  document.getElementById('dpstrNm').value = '기등록계좌없음';
+  Mockup.Modal.close('modal-bank');
+}
+
+// --- Account Selection ---
+function selectAccount(bankName, accountNo, depositor) {
+  document.getElementById('bankNm').value = bankName;
+  document.getElementById('acnutn').value = accountNo;
+  document.getElementById('dpstrNm').value = depositor || '기등록계좌없음';
+  Mockup.Modal.close('modal-account');
+}
+
+// --- Toggle Sections ---
+function toggleSub(id, show) {
+  var el = document.getElementById(id);
+  if (el) el.style.display = show ? '' : 'none';
+}
+
+function toggleAddPrd(show) {
+  var radios = document.querySelectorAll('#addPrdReasonGroup input[type="radio"]');
+  radios.forEach(function(r) { r.disabled = !show; });
+}
+
+function toggle66Section(show) {
+  var el = document.getElementById('section66');
+  if (el) el.style.display = show ? '' : 'none';
+}
+
+// --- Full Text Toggle ---
 function toggleFullText() {
   var area = document.getElementById('fullTextArea');
   var btn = document.getElementById('btnFullText');
-  if (area.style.display === 'none') {
+  if (area.style.display === 'none' || area.style.display === '') {
     area.style.display = 'block';
-    btn.textContent = '접기';
-    fullTextViewed = true;
+    btn.textContent = '전문닫기';
+    btn.classList.add('open');
   } else {
     area.style.display = 'none';
     btn.textContent = '전문보기';
+    btn.classList.remove('open');
   }
 }
 
-// Toggle sub-sections based on 예/아니오
-function toggleSub(id, show) {
-  document.getElementById(id).style.display = show ? 'block' : 'none';
-}
-
-// Toggle ①-2 추가 부여기간 사유
-function toggleAddPrdReason(enabled) {
-  var radios = document.querySelectorAll('input[name="rqutAditAlwnPrdRscd"]');
-  radios.forEach(function(r) { r.disabled = !enabled; });
-}
-
-// Validate and navigate to step5
-function validateAndSave() {
-  var errors = [];
-
-  // Check ①-1 radio (추가 부여기간)
-  if (!document.querySelector('input[name="rqutAditAlwnPrdRscdSelYn"]:checked'))
-    errors.push('①-1 육아휴직 추가 부여기간(6개월) 포함 여부');
-
-  // Check ② radio
-  if (!document.querySelector('input[name="rdYesNo7"]:checked'))
-    errors.push('② 사업주로부터 급여를 받은 사실');
-
-  // Check ③ radio
-  if (!document.querySelector('input[name="rdYesNo8"]:checked'))
-    errors.push('③ 조기복직, 퇴사, 취직, 창업 여부');
-
-  // Check ④ radio
-  if (!document.querySelector('input[name="rdYesNo12"]:checked'))
-    errors.push('④ 주15시간 이상 취업 또는 소득 150만원 이상');
-
-  // Check ⑤ radio
-  if (!document.querySelector('input[name="reqstBabyOtherFtmAt"]:checked'))
-    errors.push('⑤ 두 번째 육아휴직자 여부');
-
-  // Check ⑧ radio
-  if (!document.querySelector('input[name="sgprYn"]:checked'))
-    errors.push('⑧ 한부모 근로자 해당 여부');
-
-  // Check 접수센터 radio
-  if (!document.querySelector('input[name="prssInsttSe"]:checked'))
-    errors.push('접수센터');
-
-  // Check 부정수급 checkbox
-  if (!document.getElementById('ilpInfoChk').checked)
-    errors.push('부정수급 안내 확인');
-
-  // Check 행정정보 동의
-  if (!document.querySelector('input[name="amsifoUtizeAgreAt"]:checked'))
-    errors.push('행정정보 공동이용 동의서');
-
-  // Check 개인정보 동의
-  if (!document.querySelector('input[name="idifClctAgreYn"]:checked'))
-    errors.push('개인정보 수집 및 이용 동의서');
-
-  if (errors.length > 0) {
-    alert('다음 필수 항목을 입력해주세요:\n\n- ' + errors.join('\n- '));
-    return;
+// --- Textarea Byte Count ---
+function updateByteCount(textarea) {
+  var text = textarea.value;
+  var byteLen = 0;
+  for (var i = 0; i < text.length; i++) {
+    byteLen += text.charCodeAt(i) > 127 ? 3 : 1;
   }
-
-  // Also check 신청기간 is filled
-  var beginDe = document.getElementById('salaryReqstBeginDe').value;
-  if (!beginDe) {
-    alert('급여신청기간을 선택해주세요.\n\n신청기간 선택 버튼을 클릭하세요.');
-    return;
+  document.getElementById('byteCount').textContent = byteLen;
+  if (byteLen > 300) {
+    textarea.value = textarea.value.slice(0, -1);
+    updateByteCount(textarea);
   }
-
-  window.location.href = 'step5-review.html';
 }
 
-// Reset form
+// --- Center Selection ---
+function selectCenter(type) {
+  // Mockup: just toggle visibility
+  var existing = document.getElementById('centerInfoExisting');
+  var civil = document.getElementById('centerInfoCivil');
+  existing.style.display = 'block';
+  civil.style.display = (type === 'civil') ? 'block' : 'none';
+}
+
+// --- Form Actions ---
 function resetForm() {
-  if (confirm('양식을 초기화하시겠습니까?')) {
-    document.querySelectorAll('#form1 input[type="radio"]').forEach(function(r) {
-      if (!r.disabled) r.checked = false;
-    });
-    document.getElementById('ilpInfoChk').checked = false;
+  if (confirm('입력하신 내용을 모두 초기화하시겠습니까?')) {
+    document.getElementById('form1').reset();
     document.getElementById('salaryReqstBeginDe').value = '';
     document.getElementById('salaryReqstEndDe').value = '';
     document.getElementById('salaryReqstDyct').value = '';
     document.getElementById('bankNm').value = '';
     document.getElementById('acnutn').value = '';
     document.getElementById('dpstrNm').value = '기등록계좌없음';
-    // Hide sub sections
-    ['sub2','sub3','sub4'].forEach(function(id) {
-      document.getElementById(id).style.display = 'none';
-    });
-    // Disable ①-2
-    toggleAddPrdReason(false);
+    // Hide conditional sections
+    toggleSub('sub2', false);
+    toggleSub('sub3', false);
+    toggleSub('sub4', false);
+    document.getElementById('section66').style.display = 'none';
+    document.getElementById('fullTextArea').style.display = 'none';
+    document.getElementById('btnFullText').textContent = '전문보기';
+    document.getElementById('btnFullText').classList.remove('open');
   }
 }
 
-// Period modal handlers
-function openPeriodModal() {
-  if (typeof Mockup !== 'undefined' && Mockup.Modal) {
-    Mockup.Modal.open('modal-period');
-  } else {
-    document.getElementById('modal-period').style.display = 'flex';
-  }
-}
-
-function confirmPeriod() {
-  var sel = document.querySelector('input[name="periodSel"]:checked');
-  if (!sel) {
-    alert('회차를 선택해주세요.');
-    return;
-  }
-  var idx = parseInt(sel.value) - 1;
-  var p = periodData[idx];
-  document.getElementById('salaryReqstBeginDe').value = p.begin;
-  document.getElementById('salaryReqstEndDe').value = p.end;
-  document.getElementById('salaryReqstDyct').value = p.days;
-  if (typeof Mockup !== 'undefined' && Mockup.Modal) {
-    Mockup.Modal.close('modal-period');
-  } else {
-    document.getElementById('modal-period').style.display = 'none';
-  }
-}
-
-// Bank modal handlers
-function openBankModal() {
-  if (typeof Mockup !== 'undefined' && Mockup.Modal) {
-    Mockup.Modal.open('modal-bank');
-  } else {
-    document.getElementById('modal-bank').style.display = 'flex';
-  }
-}
-
-function confirmBank() {
-  var sel = document.querySelector('input[name="bankSel"]:checked');
-  if (!sel) {
-    alert('은행을 선택해주세요.');
-    return;
-  }
-  document.getElementById('bankNm').value = sel.value;
-  if (typeof Mockup !== 'undefined' && Mockup.Modal) {
-    Mockup.Modal.close('modal-bank');
-  } else {
-    document.getElementById('modal-bank').style.display = 'none';
-  }
-}
-
-// Account modal handlers
-function openAccountModal() {
-  if (typeof Mockup !== 'undefined' && Mockup.Modal) {
-    Mockup.Modal.open('modal-account');
-  } else {
-    document.getElementById('modal-account').style.display = 'flex';
-  }
-}
-
-function selectAccount() {
-  document.getElementById('bankNm').value = '국민은행';
-  document.getElementById('acnutn').value = '356123456789023';
-  document.getElementById('dpstrNm').value = '김지은';
-  if (typeof Mockup !== 'undefined' && Mockup.Modal) {
-    Mockup.Modal.close('modal-account');
-  } else {
-    document.getElementById('modal-account').style.display = 'none';
-  }
-}
-
-// 부정수급 checkbox validation: must view full text first
-document.addEventListener('DOMContentLoaded', function() {
+function validateAndSave() {
+  // Check fraud confirmation
   var chk = document.getElementById('ilpInfoChk');
-  chk.addEventListener('click', function(e) {
-    if (!fullTextViewed) {
-      e.preventDefault();
-      alert('부정수급 안내 전문을 먼저 확인해주세요.\n\n\'전문보기\' 버튼을 클릭하세요.');
-      return false;
-    }
-  });
+  if (!chk.checked) {
+    alert('부정수급 안내 확인 체크박스를 선택해 주세요.');
+    chk.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    return;
+  }
+
+  // Navigate to review page (mockup behavior)
+  Mockup.Nav.goRelative('step5-review.html');
+}
+
+// --- Initialize ---
+document.addEventListener('DOMContentLoaded', function() {
+  // Start timer if running
+  Mockup.Timer.renderWidget();
+
+  // Initialize full text as hidden
+  document.getElementById('fullTextArea').style.display = 'none';
 });
 </script>
 </body>
