@@ -12,17 +12,27 @@
 <link rel="stylesheet" href="../assets/css/dictionary.css">
 <link rel="stylesheet" href="../assets/css/mockup.css">
 <style>
-  /* Step2 Login inline styles */
-  .login-container {
-    max-width: 720px;
+  /* ── Login page layout ── */
+  .login-content { background: #fff; min-height: 600px; }
+
+  .breadcrumb {
+    max-width: 1100px;
     margin: 0 auto;
-    padding: 48px 20px 80px;
+    padding: 16px 24px 0;
+    font-size: 13px;
+    color: #888;
+  }
+  .breadcrumb a { color: #888; text-decoration: none; }
+
+  .login-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 32px 24px 80px;
   }
   .login-container h2 {
-    font-size: 24px;
+    font-size: 26px;
     font-weight: 700;
     color: #1a1a1a;
-    text-align: center;
     margin-bottom: 24px;
   }
 
@@ -32,19 +42,24 @@
     border: 1px solid #c8d6f0;
     border-radius: 8px;
     padding: 20px 24px;
-    margin-bottom: 32px;
+    margin-bottom: 28px;
   }
-  .login-notice ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+  .login-notice .notice-label {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #1a56db;
+    margin-bottom: 10px;
   }
+  .login-notice ul { list-style: none; padding: 0; margin: 0; }
   .login-notice ul li {
     position: relative;
     padding-left: 16px;
     font-size: 14px;
     color: #444;
-    line-height: 1.7;
+    line-height: 1.8;
   }
   .login-notice ul li::before {
     content: "\2022";
@@ -54,29 +69,43 @@
     font-weight: 700;
   }
 
+  /* Government unified login toggle */
+  .gov-login-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 0;
+    margin-bottom: 8px;
+    border-bottom: 1px solid #e5e7eb;
+    font-size: 14px;
+    color: #555;
+  }
+  .gov-login-toggle .gov-label {
+    font-weight: 600;
+    color: #333;
+  }
+
   /* Member type tabs */
   .member-tabs {
     display: flex;
     margin-bottom: 24px;
-    border-bottom: 2px solid #e5e7eb;
   }
   .member-tabs button {
     flex: 1;
-    padding: 14px 0;
+    padding: 16px 0;
     font-size: 16px;
     font-weight: 600;
     border: none;
-    background: #f8f9fb;
+    background: #f3f4f6;
     color: #999;
     cursor: pointer;
     transition: all 0.2s;
-    border-bottom: 3px solid transparent;
-    margin-bottom: -2px;
+    border-radius: 0;
   }
   .member-tabs button.active {
-    background: #fff;
-    color: #1a56db;
-    border-bottom-color: #1a56db;
+    background: #1a56db;
+    color: #fff;
+    border-radius: 4px 4px 0 0;
   }
 
   /* Auth cards grid */
@@ -84,49 +113,372 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 16px;
+    margin-bottom: 40px;
   }
   .auth-card {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 12px;
-    padding: 28px 16px;
+    padding: 28px 20px;
     border: 1px solid #e0e3e8;
-    border-radius: 8px;
+    border-radius: 12px;
     background: #fff;
     cursor: pointer;
     transition: all 0.2s;
     text-decoration: none;
     color: #333;
+    min-height: 180px;
   }
   .auth-card:hover {
     border-color: #1a56db;
-    background: #f8faff;
-    box-shadow: 0 2px 12px rgba(26, 86, 219, 0.1);
-    transform: translateY(-1px);
+    background: #fafbff;
+    box-shadow: 0 2px 12px rgba(26,86,219,0.08);
   }
   .auth-card .auth-icon {
-    width: 48px;
-    height: 48px;
+    font-size: 36px;
+    margin-bottom: 14px;
+  }
+  .auth-card .auth-name {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+  .auth-card .auth-name::after {
+    content: ">";
+    font-size: 14px;
+    color: #999;
+  }
+  .auth-card .auth-desc {
+    font-size: 13px;
+    color: #777;
+    line-height: 1.6;
+    flex: 1;
+  }
+  .auth-card .auth-desc .warn {
+    color: #dc2626;
+    font-weight: 600;
+  }
+  .auth-card .auth-providers {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    margin-top: 10px;
+  }
+  .auth-card .auth-providers span {
+    display: inline-block;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    font-size: 10px;
+    line-height: 22px;
+    text-align: center;
+    font-weight: 700;
+    color: #fff;
+  }
+
+  /* 회원가입 section */
+  .signup-section {
+    background: #f3f6fb;
+    border-radius: 16px;
+    padding: 36px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 32px;
+  }
+  .signup-section .signup-left h3 {
+    font-size: 28px;
+    font-weight: 800;
+    color: #1a1a1a;
+    margin-bottom: 12px;
+    line-height: 1.3;
+  }
+  .signup-section .signup-left p {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 6px;
+  }
+  .signup-section .signup-left .signup-services {
+    font-size: 13px;
+    color: #888;
+    margin-top: 8px;
+  }
+  .signup-section .signup-btn {
+    display: inline-block;
+    margin-top: 16px;
+    padding: 12px 28px;
+    border: 1px solid #999;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #333;
+    background: #fff;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  .signup-section .signup-right {
+    font-size: 80px;
+    opacity: 0.5;
+  }
+
+  /* ═══════════════════════════════
+     간편인증 Modal
+     ═══════════════════════════════ */
+  .simple-auth-overlay {
+    display: none;
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0,0,0,0.5);
+    z-index: 9000;
+    justify-content: center;
+    align-items: center;
+  }
+  .simple-auth-overlay.open { display: flex; }
+
+  .simple-auth-modal {
+    background: #fff;
+    border-radius: 12px;
+    width: 720px;
+    max-height: 90vh;
+    overflow-y: auto;
+    display: flex;
+    box-shadow: 0 8px 40px rgba(0,0,0,0.2);
+  }
+
+  /* Left panel - provider list */
+  .sa-providers {
+    width: 260px;
+    background: #f8f9fb;
+    border-radius: 12px 0 0 12px;
+    padding: 24px 20px;
+    flex-shrink: 0;
+    border-right: 1px solid #e5e7eb;
+  }
+  .sa-providers h4 {
+    font-size: 15px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 18px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .sa-providers h4::before {
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: #1a56db;
+    border-radius: 4px;
+  }
+  .provider-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+  }
+  .provider-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    cursor: pointer;
+    padding: 6px 2px;
+    border-radius: 8px;
+    transition: background 0.15s;
+    text-decoration: none;
+    color: #555;
+  }
+  .provider-item:hover { background: #e8edf5; }
+  .provider-item.selected { background: #dbeafe; }
+  .provider-item .prov-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 32px;
-    background: #f0f4ff;
-    border-radius: 12px;
+    font-size: 11px;
+    font-weight: 700;
+    color: #fff;
   }
-  .auth-card .auth-name {
-    font-size: 15px;
-    font-weight: 600;
+  .provider-item .prov-name {
+    font-size: 10px;
     text-align: center;
+    line-height: 1.2;
+    color: #555;
+    word-break: keep-all;
   }
 
-  /* Content area */
-  .login-content {
-    min-height: 500px;
+  /* Right panel - form */
+  .sa-form-panel {
+    flex: 1;
+    padding: 24px 28px;
+  }
+  .sa-form-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 24px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid #e5e7eb;
+  }
+  .sa-form-header h4 {
+    font-size: 17px;
+    font-weight: 700;
+    color: #333;
+  }
+  .sa-form-header .sa-logo {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 14px;
+    font-weight: 700;
+    color: #1a56db;
+  }
+  .sa-form-header .sa-logo::before {
+    content: "";
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background: url('../assets/images/logo_main_work24.svg') no-repeat center/contain;
+  }
+
+  .sa-form-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 14px;
+  }
+  .sa-form-group label {
+    width: 80px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #555;
+    flex-shrink: 0;
+  }
+  .sa-form-group input,
+  .sa-form-group select {
+    height: 40px;
+    padding: 0 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    font-size: 14px;
+    outline: none;
     background: #fff;
   }
+  .sa-form-group input:focus,
+  .sa-form-group select:focus {
+    border-color: #1a56db;
+    box-shadow: 0 0 0 2px rgba(26,86,219,0.1);
+  }
+  .sa-form-group input.full { flex: 1; }
+  .sa-form-group .phone-wrap {
+    display: flex;
+    gap: 8px;
+    flex: 1;
+  }
+  .sa-form-group .phone-wrap select { width: 72px; }
+  .sa-form-group .phone-wrap input { flex: 1; }
+
+  /* Agreements */
+  .sa-agree-section {
+    margin-top: 20px;
+    border-top: 1px solid #e5e7eb;
+    padding-top: 16px;
+  }
+  .sa-agree-all {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #f0f0f0;
+    margin-bottom: 10px;
+  }
+  .sa-agree-all label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #333;
+    cursor: pointer;
+  }
+  .sa-agree-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 6px 0;
+  }
+  .sa-agree-item .agree-left {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .sa-agree-item .agree-left label {
+    font-size: 13px;
+    color: #555;
+    cursor: pointer;
+  }
+  .sa-agree-item .agree-view-btn {
+    font-size: 12px;
+    color: #888;
+    background: #f3f4f6;
+    border: 1px solid #d1d5db;
+    border-radius: 4px;
+    padding: 3px 10px;
+    cursor: pointer;
+  }
+  .sa-manual-link {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 4px;
+    margin-top: 10px;
+    font-size: 12px;
+    color: #888;
+  }
+
+  /* Footer buttons */
+  .sa-footer {
+    display: flex;
+    gap: 12px;
+    margin-top: 24px;
+    border-top: 1px solid #e5e7eb;
+    padding-top: 20px;
+  }
+  .sa-footer button {
+    flex: 1;
+    height: 48px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.15s;
+  }
+  .sa-btn-cancel {
+    background: #fff;
+    border: 1px solid #d1d5db;
+    color: #555;
+  }
+  .sa-btn-cancel:hover { background: #f8f9fb; }
+  .sa-btn-submit {
+    background: #1a56db;
+    border: none;
+    color: #fff;
+  }
+  .sa-btn-submit:hover { background: #1545b0; }
+  .sa-btn-submit:disabled {
+    background: #a8c4f0;
+    cursor: not-allowed;
+  }
+
+  /* Validation error */
+  .sa-error {
+    display: none;
+    color: #dc2626;
+    font-size: 12px;
+    margin-top: 4px;
+    padding-left: 80px;
+  }
+  .sa-error.show { display: block; }
 </style>
 </head>
 <body>
@@ -155,6 +507,8 @@
         <span class="util_link"><a href="javascript:void(0)">고객센터</a></span>
         <span class="util_link"><a href="javascript:void(0)">원격지원</a></span>
         <span class="util_link"><a href="javascript:void(0)">글자·화면 설정</a></span>
+        <span class="util_link"><a href="javascript:void(0)">로그인</a></span>
+        <span class="util_link"><a href="javascript:void(0)">회원가입</a></span>
         <span class="util_link"><a href="javascript:void(0)">검색</a></span>
       </div>
       <nav class="gnb_wrap">
@@ -175,15 +529,26 @@
 </header>
 
 <main class="login-content">
+  <div class="breadcrumb">
+    <a href="step1-home.html">홈</a> &rsaquo;
+  </div>
+
   <div class="login-container">
     <h2>로그인 방식을 선택해 주세요</h2>
 
     <div class="login-notice">
+      <div class="notice-label">&#x1F4E2; 안내</div>
       <ul>
-        <li>본인인증 후 고용24의 다양한 서비스를 이용하실 수 있습니다.</li>
-        <li>인증 수단별 이용 가능 시간이 다를 수 있습니다.</li>
-        <li>공동인증서는 사전에 등록이 필요합니다.</li>
+        <li>개인회원과 기업회원 중 원하는 유형을 선택하십시오.</li>
+        <li>각 인증을 통한 로그인은 고용24 회원가입 및 실명인증 이후 사용 가능합니다.</li>
+        <li>보건복지분야 공동인증서는 개인/기업 사업장 회원 대상 무료로 제공합니다.</li>
+        <li>공동인증서 등록은 다른 수단으로 로그인 후 [전체메뉴>마이페이지>회원정보관리>(공동) 인증서 등록] 메뉴에서 등록 후 이용 바랍니다.</li>
       </ul>
+    </div>
+
+    <div class="gov-login-toggle">
+      <span class="gov-label">정부 통합로그인</span>
+      <span style="font-size:13px;color:#888">아직 정부 통합인증(Any-ID) 사용자가 아니신가요? &nbsp; 사용자 등록 &nbsp; 사용자 관리</span>
     </div>
 
     <div class="member-tabs">
@@ -192,36 +557,75 @@
     </div>
 
     <div class="auth-grid">
+      <!-- 모바일 신분증 -->
       <a href="javascript:void(0)" class="auth-card" data-mockup-action="auth"
          onclick="Mockup.Loading.show('인증 중입니다...', 1500, function(){ window.location.href='step3-dashboard.html'; })">
         <div class="auth-icon">&#x1F4F1;</div>
         <span class="auth-name">모바일 신분증</span>
+        <span class="auth-desc">주민등록증과 동일한 법적 효력을 지녔으며, 언제든지 간편하게 확인하고 사용할 수 있는 모바일 신분증을 이용하여 로그인 해 보세요.</span>
       </a>
-      <a href="javascript:void(0)" class="auth-card" data-mockup-action="auth"
-         onclick="Mockup.Loading.show('인증 중입니다...', 1500, function(){ window.location.href='step3-dashboard.html'; })">
-        <div class="auth-icon">&#x1F6E1;&#xFE0F;</div>
+
+      <!-- 간편인증 -->
+      <a href="javascript:void(0)" class="auth-card mockup-pulse" data-mockup-action="auth"
+         onclick="openSimpleAuth()">
+        <div class="auth-icon">&#x1F511;</div>
         <span class="auth-name">간편인증</span>
+        <span class="auth-desc">네이버, 카카오 등 민간기관 또는 금융기관에서 제공하는 전자서명을 이용하여 로그인 할 수 있어요.</span>
+        <div class="auth-providers">
+          <span style="background:#f7e600">K</span>
+          <span style="background:#0064ff">KB</span>
+          <span style="background:#1ec800">N</span>
+          <span style="background:#0064ff">T</span>
+          <span style="background:#e60012">P</span>
+          <span style="background:#f27935">S</span>
+          <span style="background:#333">B</span>
+          <span style="background:#009946">H</span>
+        </div>
       </a>
+
+      <!-- 공동인증서 -->
       <a href="javascript:void(0)" class="auth-card" data-mockup-action="auth"
          onclick="Mockup.Loading.show('인증 중입니다...', 1500, function(){ window.location.href='step3-dashboard.html'; })">
-        <div class="auth-icon">&#x1F4DC;</div>
+        <div class="auth-icon">&#x2714;&#xFE0F;</div>
         <span class="auth-name">공동인증서</span>
+        <span class="auth-desc">전체메뉴 > 마이페이지 > 회원정보관리 > '(공동) 인증서 등록' 메뉴에서 <span class="warn">공동인증서를 등록</span>해주셔야 이용이 가능해요.</span>
       </a>
+
+      <!-- 금융인증서 -->
       <a href="javascript:void(0)" class="auth-card" data-mockup-action="auth"
          onclick="Mockup.Loading.show('인증 중입니다...', 1500, function(){ window.location.href='step3-dashboard.html'; })">
         <div class="auth-icon">&#x1F3E6;</div>
         <span class="auth-name">금융인증서</span>
+        <span class="auth-desc">은행 앱 또는 인터넷뱅킹 사이트에서 발급한 금융결제원 인증서로 로그인 해 보세요.</span>
       </a>
+
+      <!-- 아이핀인증 -->
+      <a href="javascript:void(0)" class="auth-card" data-mockup-action="auth"
+         onclick="Mockup.Loading.show('인증 중입니다...', 1500, function(){ window.location.href='step3-dashboard.html'; })">
+        <div class="auth-icon">&#x2139;&#xFE0F;</div>
+        <span class="auth-name">아이핀인증</span>
+        <span class="auth-desc">본인 아이핀정보로 인증 후 로그인 할 수 있습니다.</span>
+      </a>
+
+      <!-- 아이디/비밀번호 -->
       <a href="javascript:void(0)" class="auth-card" data-mockup-action="auth"
          onclick="Mockup.Loading.show('인증 중입니다...', 1500, function(){ window.location.href='step3-dashboard.html'; })">
         <div class="auth-icon">&#x1F512;</div>
         <span class="auth-name">아이디/비밀번호</span>
+        <span class="auth-desc"><span class="warn">고용24 민원신청 시 추가 본인 인증이 필요</span>하며, 아이디/비밀번호 로그인은 직업훈련 출석 확인 등 모바일에서만 사용 가능해요.</span>
       </a>
-      <a href="javascript:void(0)" class="auth-card" data-mockup-action="auth"
-         onclick="Mockup.Loading.show('인증 중입니다...', 1500, function(){ window.location.href='step3-dashboard.html'; })">
-        <div class="auth-icon">&#x1F522;</div>
-        <span class="auth-name">8자리번호</span>
-      </a>
+    </div>
+
+    <!-- 회원가입 -->
+    <div class="signup-section">
+      <div class="signup-left">
+        <h3>고용24<br>회원가입</h3>
+        <p>아직 고용24 회원이 아니신가요? 회원가입 하고 고용정보망의 온라인 서비스를 편리하게 이용해 보세요.</p>
+        <p class="signup-services">개인회원 주요 서비스 안내</p>
+        <p class="signup-services">&bull; 내 신청 조회 &bull; 증명서 발급 &bull; 잡케어(직업추천, 경력관리)</p>
+        <a href="javascript:void(0)" class="signup-btn">회원가입 하기</a>
+      </div>
+      <div class="signup-right">&#x1F438;</div>
     </div>
   </div>
 </main>
@@ -230,8 +634,11 @@
   <div class="foot_area">
     <div class="area">
       <div class="foot_info">
-        <p>고용노동부 | 한국고용정보원</p>
-        <p class="foot_copy">Copyright &copy; 한국고용정보원. All Rights Reserved.</p>
+        <p><strong>고용24</strong></p>
+        <p>(27740) 충청북도 음성군 맹동면 태정로 6 한국고용정보원</p>
+        <p>홈페이지 전산 이용 문의 <strong>1577-7114</strong> (유료, 한국고용정보원 고객상담센터, 평일 09시 ~ 18시)</p>
+        <p>고용·노동 분야 제도 문의 국번없이 <strong>1350</strong> (유료, 고용노동부 고객상담센터, 평일 09시 ~ 18시)</p>
+        <p class="foot_copy">Copyright &copy; Ministry of Employment and Labor, Korea Employment Information Service. All rights reserved.</p>
       </div>
       <div class="foot_logo">
         <img src="../assets/images/footer_ci02.png" alt="고용노동부">
@@ -242,6 +649,147 @@
 </footer>
 
 </div><!-- #wrap -->
+
+<!-- ════════════════════════════════
+     간편인증 Modal
+     ════════════════════════════════ -->
+<div class="simple-auth-overlay" id="simpleAuthOverlay">
+  <div class="simple-auth-modal">
+    <!-- Left: Provider list -->
+    <div class="sa-providers">
+      <h4>민간 인증서</h4>
+      <div class="provider-grid">
+        <a class="provider-item selected" data-provider="kb" onclick="selectProvider(this)">
+          <div class="prov-icon" style="background:#f7c948">KB</div>
+          <span class="prov-name">국민인증서</span>
+        </a>
+        <a class="provider-item" data-provider="banksalad" onclick="selectProvider(this)">
+          <div class="prov-icon" style="background:#1ec997">BS</div>
+          <span class="prov-name">뱅크샐러드</span>
+        </a>
+        <a class="provider-item" data-provider="toss" onclick="selectProvider(this)">
+          <div class="prov-icon" style="background:#0064ff">T</div>
+          <span class="prov-name">토스</span>
+        </a>
+        <a class="provider-item" data-provider="nh" onclick="selectProvider(this)">
+          <div class="prov-icon" style="background:#009b3a">NH</div>
+          <span class="prov-name">NH인증서</span>
+        </a>
+        <a class="provider-item" data-provider="kakao" onclick="selectProvider(this)">
+          <div class="prov-icon" style="background:#f7e600;color:#333">K</div>
+          <span class="prov-name">카카오톡</span>
+        </a>
+        <a class="provider-item" data-provider="pass" onclick="selectProvider(this)">
+          <div class="prov-icon" style="background:#e60012">P</div>
+          <span class="prov-name">통신사PASS</span>
+        </a>
+        <a class="provider-item" data-provider="woori" onclick="selectProvider(this)">
+          <div class="prov-icon" style="background:#0068b7">W</div>
+          <span class="prov-name">우리인증서</span>
+        </a>
+        <a class="provider-item" data-provider="naver" onclick="selectProvider(this)">
+          <div class="prov-icon" style="background:#1ec800;color:#fff">N</div>
+          <span class="prov-name">네이버</span>
+        </a>
+        <a class="provider-item" data-provider="hana" onclick="selectProvider(this)">
+          <div class="prov-icon" style="background:#009946">H</div>
+          <span class="prov-name">하나인증서</span>
+        </a>
+        <a class="provider-item" data-provider="kakaobank" onclick="selectProvider(this)">
+          <div class="prov-icon" style="background:#f7e600;color:#333">KB</div>
+          <span class="prov-name">카카오뱅크</span>
+        </a>
+        <a class="provider-item" data-provider="shinhan" onclick="selectProvider(this)">
+          <div class="prov-icon" style="background:#0046ff">SH</div>
+          <span class="prov-name">신한인증서</span>
+        </a>
+        <a class="provider-item" data-provider="samsung" onclick="selectProvider(this)">
+          <div class="prov-icon" style="background:#1428a0">SP</div>
+          <span class="prov-name">삼성패스</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- Right: Form -->
+    <div class="sa-form-panel">
+      <div class="sa-form-header">
+        <h4>간편인증</h4>
+        <div class="sa-logo">고용24</div>
+      </div>
+
+      <h5 style="font-size:14px;font-weight:600;color:#333;margin-bottom:16px">본인인증 정보 입력</h5>
+
+      <div class="sa-form-group">
+        <label for="sa-name">이름</label>
+        <input type="text" id="sa-name" class="full" placeholder="홍길동" maxlength="20">
+      </div>
+
+      <div class="sa-form-group">
+        <label for="sa-birth">생년월일</label>
+        <input type="text" id="sa-birth" class="full" placeholder="19900101" maxlength="8"
+               oninput="this.value=this.value.replace(/[^0-9]/g,'')">
+      </div>
+
+      <div class="sa-form-group">
+        <label>휴대폰 번호</label>
+        <div class="phone-wrap">
+          <select id="sa-phone-prefix">
+            <option value="010" selected>010</option>
+            <option value="011">011</option>
+            <option value="016">016</option>
+            <option value="017">017</option>
+            <option value="018">018</option>
+            <option value="019">019</option>
+          </select>
+          <input type="text" id="sa-phone" placeholder="12341234" maxlength="8"
+                 oninput="this.value=this.value.replace(/[^0-9]/g,'')">
+        </div>
+      </div>
+
+      <!-- Agreements -->
+      <div class="sa-agree-section">
+        <div class="sa-agree-all">
+          <input type="checkbox" id="sa-agree-all" onchange="toggleAllAgree(this.checked)">
+          <label for="sa-agree-all">서비스 이용에 대한 동의 &nbsp; 전체동의</label>
+        </div>
+
+        <div class="sa-agree-item">
+          <div class="agree-left">
+            <input type="checkbox" id="sa-agree1" class="sa-agree-check" onchange="checkAllAgree()">
+            <label for="sa-agree1">개인정보 이용 동의</label>
+          </div>
+          <button class="agree-view-btn" type="button">보기</button>
+        </div>
+
+        <div class="sa-agree-item">
+          <div class="agree-left">
+            <input type="checkbox" id="sa-agree2" class="sa-agree-check" onchange="checkAllAgree()">
+            <label for="sa-agree2">서비스이용약관동의</label>
+          </div>
+          <button class="agree-view-btn" type="button">보기</button>
+        </div>
+
+        <div class="sa-agree-item">
+          <div class="agree-left">
+            <input type="checkbox" id="sa-agree3" class="sa-agree-check" onchange="checkAllAgree()">
+            <label for="sa-agree3">제3자정보제공동의</label>
+          </div>
+          <button class="agree-view-btn" type="button">보기</button>
+        </div>
+
+        <div class="sa-manual-link">
+          &#x1F4D6; 사용방법 매뉴얼 안내
+        </div>
+      </div>
+
+      <!-- Action buttons -->
+      <div class="sa-footer">
+        <button type="button" class="sa-btn-cancel" onclick="closeSimpleAuth()">닫기</button>
+        <button type="button" class="sa-btn-submit" id="sa-submit-btn" onclick="submitSimpleAuth()">인증 요청</button>
+      </div>
+    </div>
+  </div>
+</div>
 
 <div id="mockup-timer" style="display:none">
   <span class="timer-icon"></span>
@@ -254,8 +802,73 @@
   <p class="loading-text">인증 중입니다...</p>
 </div>
 
-<div class="mockup-hint">💡 아무 인증 방식이나 클릭하세요</div>
+<div class="mockup-hint">&#x1F4A1; '간편인증'을 클릭하세요</div>
 
 <script src="../assets/js/mockup.js"></script>
+<script>
+/* ── 간편인증 Modal Scripts ── */
+
+function openSimpleAuth() {
+  document.getElementById('simpleAuthOverlay').classList.add('open');
+}
+
+function closeSimpleAuth() {
+  document.getElementById('simpleAuthOverlay').classList.remove('open');
+  // Reset form
+  document.getElementById('sa-name').value = '';
+  document.getElementById('sa-birth').value = '';
+  document.getElementById('sa-phone').value = '';
+  document.getElementById('sa-agree-all').checked = false;
+  document.querySelectorAll('.sa-agree-check').forEach(function(cb) { cb.checked = false; });
+}
+
+function selectProvider(el) {
+  document.querySelectorAll('.provider-item').forEach(function(item) {
+    item.classList.remove('selected');
+  });
+  el.classList.add('selected');
+}
+
+function toggleAllAgree(checked) {
+  document.querySelectorAll('.sa-agree-check').forEach(function(cb) {
+    cb.checked = checked;
+  });
+}
+
+function checkAllAgree() {
+  var checks = document.querySelectorAll('.sa-agree-check');
+  var allChecked = true;
+  checks.forEach(function(cb) {
+    if (!cb.checked) allChecked = false;
+  });
+  document.getElementById('sa-agree-all').checked = allChecked;
+}
+
+function submitSimpleAuth() {
+  var name = document.getElementById('sa-name').value.trim();
+  var birth = document.getElementById('sa-birth').value.trim();
+  var phone = document.getElementById('sa-phone').value.trim();
+  var agree1 = document.getElementById('sa-agree1').checked;
+  var agree2 = document.getElementById('sa-agree2').checked;
+  var agree3 = document.getElementById('sa-agree3').checked;
+
+  // Validation
+  if (!name) { alert('이름을 입력해 주세요.'); document.getElementById('sa-name').focus(); return; }
+  if (birth.length !== 8) { alert('생년월일 8자리를 입력해 주세요. (예: 19900101)'); document.getElementById('sa-birth').focus(); return; }
+  if (phone.length < 7) { alert('휴대폰 번호를 입력해 주세요.'); document.getElementById('sa-phone').focus(); return; }
+  if (!agree1 || !agree2 || !agree3) { alert('서비스 이용에 대한 동의가 필요합니다.'); return; }
+
+  // Close modal and show loading
+  closeSimpleAuth();
+  Mockup.Loading.show('간편인증 요청 중입니다...', 2000, function() {
+    window.location.href = 'step3-dashboard.html';
+  });
+}
+
+// Close modal on overlay click
+document.getElementById('simpleAuthOverlay').addEventListener('click', function(e) {
+  if (e.target === this) closeSimpleAuth();
+});
+</script>
 </body>
 </html>
