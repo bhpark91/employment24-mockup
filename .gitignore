@@ -1,0 +1,32 @@
+# Original saved HTML files (contain personal info)
+1.html
+2.html
+3.html
+4.html
+4-f.html
+5.html
+6.html
+
+# Original asset directories
+1_files/
+2_files/
+3_files/
+4_files/
+4-f_files/
+5_files/
+6_files/
+
+# Screenshots (too large for deployment)
+screenshots/
+*.png
+!assets/images/*.png
+
+# Video recording
+*.mp4
+
+# VS Code workspace
+*.code-workspace
+
+# System files
+.DS_Store
+Thumbs.db

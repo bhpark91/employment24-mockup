@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>고용24 - 로그인</title>
+<link rel="stylesheet" href="../assets/css/reset.css">
+<link rel="stylesheet" href="../assets/css/font.css">
+<link rel="stylesheet" href="../assets/css/common.css">
+<link rel="stylesheet" href="../assets/css/contents.css">
+<link rel="stylesheet" href="../assets/css/dictionary.css">
+<link rel="stylesheet" href="../assets/css/mockup.css">
+<style>
+  /* Step2 Login inline styles */
+  .login-container {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 48px 20px 80px;
+  }
+  .login-container h2 {
+    font-size: 24px;
+    font-weight: 700;
+    color: #1a1a1a;
+    text-align: center;
+    margin-bottom: 24px;
+  }
+
+  /* Info notice */
+  .login-notice {
+    background: #f0f4ff;
+    border: 1px solid #c8d6f0;
+    border-radius: 8px;
+    padding: 20px 24px;
+    margin-bottom: 32px;
+  }
+  .login-notice ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .login-notice ul li {
+    position: relative;
+    padding-left: 16px;
+    font-size: 14px;
+    color: #444;
+    line-height: 1.7;
+  }
+  .login-notice ul li::before {
+    content: "\2022";
+    position: absolute;
+    left: 0;
+    color: #1a56db;
+    font-weight: 700;
+  }
+
+  /* Member type tabs */
+  .member-tabs {
+    display: flex;
+    margin-bottom: 24px;
+    border-bottom: 2px solid #e5e7eb;
+  }
+  .member-tabs button {
+    flex: 1;
+    padding: 14px 0;
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+    background: #f8f9fb;
+    color: #999;
+    cursor: pointer;
+    transition: all 0.2s;
+    border-bottom: 3px solid transparent;
+    margin-bottom: -2px;
+  }
+  .member-tabs button.active {
+    background: #fff;
+    color: #1a56db;
+    border-bottom-color: #1a56db;
+  }
+
+  /* Auth cards grid */
+  .auth-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
+  .auth-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 28px 16px;
+    border: 1px solid #e0e3e8;
+    border-radius: 8px;
+    background: #fff;
+    cursor: pointer;
+    transition: all 0.2s;
+    text-decoration: none;
+    color: #333;
+  }
+  .auth-card:hover {
+    border-color: #1a56db;
+    background: #f8faff;
+    box-shadow: 0 2px 12px rgba(26, 86, 219, 0.1);
+    transform: translateY(-1px);
+  }
+  .auth-card .auth-icon {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    background: #f0f4ff;
+    border-radius: 12px;
+  }
+  .auth-card .auth-name {
+    font-size: 15px;
+    font-weight: 600;
+    text-align: center;
+  }
+
+  /* Content area */
+  .login-content {
+    min-height: 500px;
+    background: #fff;
+  }
+</style>
+</head>
+<body>
+<div id="wrap" class="person">
+
+<header class="new">
+  <div class="header_top">
+    <div class="area">
+      <div class="top_noti_area">
+        <p class="desc"><span class="ico_gov"></span> 이 누리집은 대한민국 공식 전자정부 누리집입니다.</p>
+      </div>
+      <div class="tab_area">
+        <a href="javascript:void(0)" class="is-active"><span>개인</span></a>
+        <a href="javascript:void(0)"><span>기업</span></a>
+      </div>
+    </div>
+  </div>
+  <div class="header_bottom">
+    <div class="area">
+      <h1 class="logo">
+        <a href="javascript:void(0)" title="고용24 로고">
+          <img src="../assets/images/logo_main_work24.svg" alt="고용24">
+        </a>
+      </h1>
+      <div class="header_util">
+        <span class="util_link"><a href="javascript:void(0)">고객센터</a></span>
+        <span class="util_link"><a href="javascript:void(0)">원격지원</a></span>
+        <span class="util_link"><a href="javascript:void(0)">글자·화면 설정</a></span>
+        <span class="util_link"><a href="javascript:void(0)">검색</a></span>
+      </div>
+      <nav class="gnb_wrap">
+        <ul>
+          <li><a href="javascript:void(0)">채용정보</a></li>
+          <li><a href="javascript:void(0)">취업지원</a></li>
+          <li><a href="javascript:void(0)">실업급여</a></li>
+          <li><a href="javascript:void(0)">직업 능력 개발</a></li>
+          <li><a href="javascript:void(0)" class="on" style="color:#1a56db;font-weight:700">출산휴가·육아휴직</a></li>
+        </ul>
+      </nav>
+      <a href="javascript:void(0)" class="header_allmenu" title="전체메뉴">
+        <div class="lines"><span class="t"></span><span class="c"></span><span class="b"></span></div>
+        <span>전체 메뉴</span>
+      </a>
+    </div>
+  </div>
+</header>
+
+<main class="login-content">
+  <div class="login-container">
+    <h2>로그인 방식을 선택해 주세요</h2>
+
+    <div class="login-notice">
+      <ul>
+        <li>본인인증 후 고용24의 다양한 서비스를 이용하실 수 있습니다.</li>
+        <li>인증 수단별 이용 가능 시간이 다를 수 있습니다.</li>
+        <li>공동인증서는 사전에 등록이 필요합니다.</li>
+      </ul>
+    </div>
+
+    <div class="member-tabs">
+      <button type="button" class="active">개인회원</button>
+      <button type="button">기업회원</button>
+    </div>
+
+    <div class="auth-grid">
+      <a href="javascript:void(0)" class="auth-card" data-mockup-action="auth"
+         onclick="Mockup.Loading.show('인증 중입니다...', 1500, function(){ window.location.href='step3-dashboard.html'; })">
+        <div class="auth-icon">&#x1F4F1;</div>
+        <span class="auth-name">모바일 신분증</span>
+      </a>
+      <a href="javascript:void(0)" class="auth-card" data-mockup-action="auth"
+         onclick="Mockup.Loading.show('인증 중입니다...', 1500, function(){ window.location.href='step3-dashboard.html'; })">
+        <div class="auth-icon">&#x1F6E1;&#xFE0F;</div>
+        <span class="auth-name">간편인증</span>
+      </a>
+      <a href="javascript:void(0)" class="auth-card" data-mockup-action="auth"
+         onclick="Mockup.Loading.show('인증 중입니다...', 1500, function(){ window.location.href='step3-dashboard.html'; })">
+        <div class="auth-icon">&#x1F4DC;</div>
+        <span class="auth-name">공동인증서</span>
+      </a>
+      <a href="javascript:void(0)" class="auth-card" data-mockup-action="auth"
+         onclick="Mockup.Loading.show('인증 중입니다...', 1500, function(){ window.location.href='step3-dashboard.html'; })">
+        <div class="auth-icon">&#x1F3E6;</div>
+        <span class="auth-name">금융인증서</span>
+      </a>
+      <a href="javascript:void(0)" class="auth-card" data-mockup-action="auth"
+         onclick="Mockup.Loading.show('인증 중입니다...', 1500, function(){ window.location.href='step3-dashboard.html'; })">
+        <div class="auth-icon">&#x1F512;</div>
+        <span class="auth-name">아이디/비밀번호</span>
+      </a>
+      <a href="javascript:void(0)" class="auth-card" data-mockup-action="auth"
+         onclick="Mockup.Loading.show('인증 중입니다...', 1500, function(){ window.location.href='step3-dashboard.html'; })">
+        <div class="auth-icon">&#x1F522;</div>
+        <span class="auth-name">8자리번호</span>
+      </a>
+    </div>
+  </div>
+</main>
+
+<footer id="footer">
+  <div class="foot_area">
+    <div class="area">
+      <div class="foot_info">
+        <p>고용노동부 | 한국고용정보원</p>
+        <p class="foot_copy">Copyright &copy; 한국고용정보원. All Rights Reserved.</p>
+      </div>
+      <div class="foot_logo">
+        <img src="../assets/images/footer_ci02.png" alt="고용노동부">
+        <img src="../assets/images/footer_ci03.png" alt="한국고용정보원">
+      </div>
+    </div>
+  </div>
+</footer>
+
+</div><!-- #wrap -->
+
+<div id="mockup-timer" style="display:none">
+  <span class="timer-icon"></span>
+  <span>소요 시간:</span>
+  <span class="timer-value">00:00</span>
+</div>
+
+<div id="mockup-loading" class="mockup-loading">
+  <div class="spinner"></div>
+  <p class="loading-text">인증 중입니다...</p>
+</div>
+
+<div class="mockup-hint">💡 아무 인증 방식이나 클릭하세요</div>
+
+<script src="../assets/js/mockup.js"></script>
+</body>
+</html>
