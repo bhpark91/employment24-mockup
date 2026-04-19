@@ -454,6 +454,16 @@
 
 </div><!-- //wrap -->
 
+<!-- 간편인증 모달 스타일 오버라이드 -->
+<style>
+#easyCertModal .box_form_login .box_form_table { margin-top: 8px; }
+#easyCertModal .box_form_table li + li { margin-top: 5px; }
+#easyCertModal .box_form_table .list_tit { padding-left: 10px; margin-right: 6px; min-width: auto; }
+#easyCertModal .box_form_table .list_tit::before { display: none; }
+#easyCertModal .input_txt.big { height: 28px; font-size: 14px; }
+#easyCertModal .sel select { height: 28px; font-size: 14px; }
+</style>
+
 <!-- 간편인증 모달 -->
 <div id="easyCertModal" class="mockup-modal-overlay">
     <div class="mockup-modal" style="max-width:860px; padding:0; overflow:hidden;">
@@ -513,8 +523,8 @@
                 </div>
             </div>
             <!-- 오른쪽: 간편인증 폼 -->
-            <div style="flex:1; padding:32px 28px;">
-                <div style="display:flex; align-items:center; gap:10px; margin-bottom:28px; padding-bottom:12px; border-bottom:2px solid #333;">
+            <div style="flex:1; padding:16px 28px 16px;">
+                <div style="display:flex; align-items:center; gap:10px; margin-bottom:10px; padding-bottom:8px; border-bottom:2px solid #333;">
                     <h3 style="font-size:17px; font-weight:700; margin:0;">간편인증</h3>
                     <img src="../assets/images/logo_main_work24.svg" alt="고용24" style="height:22px;">
                 </div>
@@ -572,7 +582,7 @@
                         </ul>
                     </div>
                     <!-- 서비스 약관동의 -->
-                    <div style="margin-top:20px; padding:16px; background:#f9fafb; border-radius:8px; border:1px solid #e5e7eb;">
+                    <div style="margin-top:8px; padding:12px; background:#f9fafb; border-radius:8px; border:1px solid #e5e7eb;">
                         <div style="margin-bottom:12px; padding-bottom:10px; border-bottom:1px solid #e5e7eb;">
                             <label style="display:flex; align-items:center; gap:8px; cursor:pointer; font-weight:600; font-size:14px;">
                                 <input type="checkbox" id="certAgreeAll" style="width:18px; height:18px;">
@@ -595,7 +605,7 @@
                         </div>
                     </div>
                     <!-- 버튼 -->
-                    <div style="display:flex; gap:12px; margin-top:24px;">
+                    <div style="display:flex; gap:12px; margin-top:12px;">
                         <button type="button" class="btn big type02" style="flex:1;" onclick="Mockup.Modal.close('easyCertModal')"><span>닫기</span></button>
                         <button type="button" class="btn big fill type01" style="flex:2; background-color:#4D65E1;" onclick="submitEasyCert()"><span>인증 요청</span></button>
                     </div>
